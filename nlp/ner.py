@@ -7,19 +7,20 @@ import json
 import spacy
 import copy
 
-from .compare import get_questions as get_compare_questions
-from ..models.ner import EntityRecognizer, merge_spans
-from ..models.matcher import PatternMatcher
-from ..components import printers
-from ..components.db import connect
-from ..components.preprocess import split_sentences, split_spans, add_tokens
-from ..components.sorters import prefer_uncertain
-from ..components.loaders import get_stream
-from ..components.filters import filter_tasks
-from ..core import recipe, recipe_args
-from ..util import split_evals, get_labels, get_print, combine_models
-from ..util import export_model_data, set_hashes, log, prints
-from ..util import INPUT_HASH_ATTR, TASK_HASH_ATTR
+from prodigy.models.ner import EntityRecognizer, merge_spans
+from prodigy.models.matcher import PatternMatcher
+from prodigy.components import printers
+from prodigy.components.db import connect
+from prodigy.components.preprocess import split_sentences, split_spans, add_tokens
+from prodigy.components.sorters import prefer_uncertain
+from prodigy.components.loaders import get_stream
+from prodigy.components.filters import filter_tasks
+from prodigy.core import recipe, recipe_args
+from prodigy.util import split_evals, get_labels, get_print, combine_models
+from prodigy.util import export_model_data, set_hashes, log, prints
+from prodigy.util import INPUT_HASH_ATTR, TASK_HASH_ATTR
+
+from ..compare import get_questions as get_compare_questions
 
 
 DB = connect()

@@ -6,15 +6,15 @@ import random
 import cytoolz
 import tqdm
 
-from ..models.textcat import TextClassifier
-from ..components import printers
-from ..components.loaders import get_stream
-from ..components.preprocess import split_sentences
-from ..components.db import connect
-from ..components.sorters import prefer_uncertain, find_with_terms
-from ..core import recipe, recipe_args
-from ..util import export_model_data, split_evals, get_print
-from ..util import get_seeds, get_seeds_from_set, log
+from prodigy.models.textcat import TextClassifier
+from prodigy.components import printers
+from prodigy.components.loaders import get_stream
+from prodigy.components.preprocess import split_sentences
+from prodigy.components.db import connect
+from prodigy.components.sorters import prefer_uncertain, find_with_terms
+from prodigy.core import recipe, recipe_args
+from prodigy.util import export_model_data, split_evals, get_print
+from prodigy.util import get_seeds, get_seeds_from_set, log
 
 
 DB = connect()

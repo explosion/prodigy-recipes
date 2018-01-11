@@ -4,11 +4,11 @@ from __future__ import unicode_literals, print_function
 import copy
 from collections import Counter
 
-from ..components import printers
-from ..components.loaders import get_stream
-from ..components.preprocess import fetch_images
-from ..core import recipe, recipe_args
-from ..util import TASK_HASH_ATTR, set_hashes, prints, log, b64_uri_to_bytes
+from prodigy.components import printers
+from prodigy.components.loaders import get_stream
+from prodigy.components.preprocess import fetch_images
+from prodigy.core import recipe, recipe_args
+from prodigy.util import TASK_HASH_ATTR, set_hashes, prints, log, b64_uri_to_bytes
 
 
 @recipe('mark',

@@ -3,10 +3,11 @@ from __future__ import unicode_literals, print_function
 
 import ujson
 from pathlib import Path
-from prodigy import recipe, log
+#from prodigy import recipe, log
+import prodigy
 
 
-@recipe('image.convert-via',
+@prodigy.recipe('image.convert-via',
         input_file=("VIA input file (JSON)", "positional", None, str),
         output_file=("Optional output file", "positional", None, str),
         separate_regions=("Create one task with one span per region, instead "

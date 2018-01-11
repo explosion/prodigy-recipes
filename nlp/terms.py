@@ -6,13 +6,13 @@ import spacy
 import json
 from spacy.tokens import Doc
 
-from ..core import recipe, recipe_args
-from ..components.db import connect
-from ..components.loaders import get_stream
-from ..components import preprocess
-from ..components.sorters import Probability
-from ..util import get_word2vec, prints, get_seeds, set_hashes
-from ..util import write_jsonl, log
+from prodigy.core import recipe, recipe_args
+from prodigy.components.db import connect
+from prodigy.components.loaders import get_stream
+from prodigy.components import preprocess
+from prodigy.components.sorters import Probability
+from prodigy.util import get_word2vec, prints, get_seeds, set_hashes
+from prodigy.util import write_jsonl, log
 
 
 DB = connect()
