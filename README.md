@@ -33,6 +33,7 @@ bug, feel free to submit a
 | Recipe | Description |
 | --- | --- |
 | [`textcat.teach`](textcat/textcat_teach.py) | Collect the best possible training data for a text classification model with the model in the loop. Based on your annotations, Prodigy will decide which questions to ask next. |
+| [`textcat.custom-model`](textcat/textcat_custom_model.py) | Use active learning-powered text classification with a custom model. To demonstrate how it works, this demo recipe uses a simple dummy model that "precits" random scores. But you can swap it out for any model of your choice, for example a text classification model implementation using PyTorch, TensorFlow or scikit-learn. |
 
 ### Terminology
 
