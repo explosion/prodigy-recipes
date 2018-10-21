@@ -13,6 +13,7 @@ from ner.ner_match import ner_match
 from ner.ner_manual import ner_manual
 from ner.ner_make_gold import ner_make_gold
 from ner.ner_silver_to_gold import ner_silver_to_gold
+from textcat.textcat_teach import textcat_teach
 from terms.terms_teach import terms_teach
 from image.image_manual import image_manual
 from other.mark import mark
@@ -142,6 +143,17 @@ def test_ner_silver_to_gold(dataset, spacy_model):
     assert 'tokens' in stream[0]
     assert stream[1]['text'] == 'This is a test'
     assert 'tokens' in stream[1]
+
+
+def test_textcat_teach(dataset, spacy_model, source, labels, patterns):
+    recipe = textcat_teach(dataset, spacy_model, source, labels, patterns)
+    stream = list(recipe['stream'])
+    assert recipe['view_id'] == 'classification'
+    assert recipe['dataset'] == dataset
+    assert len(stream) >= 2
+    assert 'spans' in stream[0]
+    assert 'meta' in stream[0]
+    assert 'score' in stream[0]['meta']
 
 
 def test_terms_teach(dataset):

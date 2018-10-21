@@ -28,6 +28,12 @@ bug, feel free to submit a
 | [`ner.make-gold`](ner/ner_make-gold.py) | Create gold-standard data by correcting a model's predictions manually. |
 | [`ner.silver-to-gold`](ner/ner_silver_to_gold.py) | Take an existing "silver" dataset with binary accept/reject annotations, merge the annotations to find the best possible analysis given the constraints defined in the annotations, and manually edit it to create a perfect and complete "gold" dataset. |
 
+### Text Classification
+
+| Recipe | Description |
+| --- | --- |
+| [`textcat.teach`](textcat/textcat_teach.py) | Collect the best possible training data for a text classification model with the model in the loop. Based on your annotations, Prodigy will decide which questions to ask next. |
+
 ### Terminology
 
 | Recipe | Description |
