@@ -151,7 +151,7 @@ def test_textcat_teach(dataset, spacy_model, source, labels, patterns):
     assert recipe['view_id'] == 'classification'
     assert recipe['dataset'] == dataset
     assert len(stream) >= 2
-    assert 'spans' in stream[0]
+    assert 'label' in stream[0]
     assert 'meta' in stream[0]
     assert 'score' in stream[0]['meta']
 

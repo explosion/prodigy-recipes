@@ -20,7 +20,7 @@ import spacy
     exclude=("Names of datasets to exclude", "option", "e", split_string),
     resume=("Resume from existing dataset and update matcher accordingly", "flag", "R", bool)
 )
-def ner_match(dataset, spacy_model, source=None, patterns=None, exclude=None,
+def ner_match(dataset, spacy_model, source, patterns=None, exclude=None,
               resume=False):
     """
     Suggest phrases that match a given patterns file, and mark whether they

@@ -22,7 +22,7 @@ import spacy
     exclude=("Names of datasets to exclude", "option", "e", split_string),
     long_text=("Enable long-text classification mode", "flag", "L", bool)
 )
-def textcat_teach(dataset, spacy_model, source=None, label=None, patterns=None,
+def textcat_teach(dataset, spacy_model, source, label=None, patterns=None,
                   exclude=None, long_text=False):
     """
     Collect the best possible training data for a text classification model
@@ -68,6 +68,6 @@ def textcat_teach(dataset, spacy_model, source=None, label=None, patterns=None,
         'exclude': exclude,          # List of dataset names to exclude
         'config': {                  # Additional config settings, mostly for app UI
             'lang': nlp.lang,
-            'label': ', '.join(label) if label is not None else 'all'
+            'label': ', '.join(label) if label is not None else 'n/a'
         }
     }

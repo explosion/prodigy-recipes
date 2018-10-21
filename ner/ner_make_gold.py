@@ -46,7 +46,7 @@ def make_tasks(nlp, stream, labels):
     label=("One or more comma-separated labels", "options", "l", split_string),
     exclude=("Names of datasets to exclude", "option", "e", split_string)
 )
-def ner_make_gold(dataset, spacy_model, source=None, label=None, exclude=None):
+def ner_make_gold(dataset, spacy_model, source, label=None, exclude=None):
     """
     Create gold-standard data by correcting a model's predictions manually.
     """
