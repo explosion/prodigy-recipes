@@ -42,6 +42,6 @@ using the `-F` argument. To see the recipe description and available arguments,
 you can use the `--help` flag:
 
 ```bash
-prodigy custom_recipe my_dataset my_data.jsonl -F /path/to/recipe.py
+prodigy ner.teach my_dataset my_data.jsonl -F /path/to/ner_teach.py
 prodigy custom_recipe --help -F /path/to/recipe.py
 ```
