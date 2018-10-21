@@ -28,10 +28,23 @@ bug, feel free to submit a
 | [`ner.make-gold`](ner/ner_make-gold.py) | Create gold-standard data by correcting a model's predictions manually. |
 | [`ner.silver-to-gold`](ner/ner_silver_to_gold.py) | Take an existing "silver" dataset with binary accept/reject annotations, merge the annotations to find the best possible analysis given the constraints defined in the annotations, and manually edit it to create a perfect and complete "gold" dataset. |
 
+### Terminology
+
+| Recipe | Description |
+| --- | --- |
+| [`terms.teach`](terms/terms_teach.py) | Bootstrap a terminology list with word vectors and seeds terms. Prodigy will suggest similar terms based on the word vectors, and update the target vector accordingly. |
+
+### Image
+
+| Recipe | Description |
+| --- | --- |
+| [`image.manual`](image/image_manual.py) | Manually annotate images by drawing rectangular bounding boxes or polygon shapes on the image. |
+
 ### Other
 
 | Recipe | Description |
 | --- | --- |
+| [`mark`](other/mark.py) | Click through pre-prepared examples, with no model in the loop. |
 | [`choice`](other/choice.py) | Annotate data with multiple-choice options. The annotated examples will have an additional property `"accept": []` mapping to the ID(s) of the selected option(s). |
 
 ## Usage

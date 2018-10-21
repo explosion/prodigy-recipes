@@ -13,6 +13,9 @@ from ner.ner_match import ner_match
 from ner.ner_manual import ner_manual
 from ner.ner_make_gold import ner_make_gold
 from ner.ner_silver_to_gold import ner_silver_to_gold
+from terms.terms_teach import terms_teach
+from image.image_manual import image_manual
+from other.mark import mark
 from other.choice import choice
 
 
@@ -139,6 +142,37 @@ def test_ner_silver_to_gold(dataset, spacy_model):
     assert 'tokens' in stream[0]
     assert stream[1]['text'] == 'This is a test'
     assert 'tokens' in stream[1]
+
+
+def test_terms_teach(dataset):
+    seeds = ['cat', 'dog', 'mouse']
+    recipe = terms_teach(dataset, 'en_core_web_md', seeds)
+    assert recipe['view_id'] == 'text'
+    assert recipe['dataset'] == dataset
+
+
+def test_image_manual(dataset):
+    img_dir = tempfile.mkdtemp()
+    img1 = tempfile.NamedTemporaryFile(dir=img_dir, prefix='1', suffix='.jpg')
+    img2 = tempfile.NamedTemporaryFile(dir=img_dir, prefix='2', suffix='.png')
+    no_img = tempfile.NamedTemporaryFile(dir=img_dir, prefix='3', suffix='.txt')
+    recipe = image_manual(dataset, img_dir, ['PERSON', 'DOG', 'CAT'])
+    stream = list(recipe['stream'])
+    assert recipe['view_id'] == 'image_manual'
+    assert recipe['dataset'] == dataset
+    assert len(stream) == 2
+
+
+def test_mark(dataset, source):
+    view_id = 'text'
+    recipe = mark(dataset, source, view_id)
+    stream = list(recipe['stream'])
+    assert recipe['view_id'] == view_id
+    assert recipe['dataset'] == dataset
+    assert len(stream) == 2
+    assert hasattr(recipe['update'], '__call__')
+    assert hasattr(recipe['on_load'], '__call__')
+    assert hasattr(recipe['on_exit'], '__call__')
 
 
 def test_choice(dataset, source):
