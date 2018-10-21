@@ -11,8 +11,8 @@ bug, feel free to submit a
 [pull request](https://github.com/explosion/prodigy-recipes/pulls).
 
 > ✨ **Important note:** The recipes in this repository aren't 100% identical to
-> the built-in recipes shipped with Prodigy. They've been added to include
-> comments and more informations, and some of them have been simplified to make
+> the built-in recipes shipped with Prodigy. They've been edited to include
+> comments and more information, and some of them have been simplified to make
 > it easier to follow what's going on, and to use them as the basis for a
 > custom recipe.
 
