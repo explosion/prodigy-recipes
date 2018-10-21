@@ -73,6 +73,6 @@ def textcat_custom_model(dataset, source, label=[]):
         'stream': stream,            # Incoming stream of examples
         'update': update,            # Update callback, called with batch of answers
         'config': {                  # Additional config settings, mostly for app UI
-            'label': ', '.join(label) if label is not None else 'n/a'
+            'label': ', '.join(label)
         }
     }
