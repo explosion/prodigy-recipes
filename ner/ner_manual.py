@@ -42,6 +42,7 @@ def ner_manual(dataset, spacy_model, source=None, label=None, exclude=None):
         'exclude': exclude,      # List of dataset names to exclude
         'config': {              # Additional config settings, mostly for app UI
             'lang': nlp.lang,
-            'label': ', '.join(label) if label is not None else 'all'
+            'label': ', '.join(label) if label is not None else 'all',
+            'labels': label      # Selectable label options
         }
     }

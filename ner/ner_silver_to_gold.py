@@ -6,6 +6,7 @@ from prodigy.models.ner import EntityRecognizer
 from prodigy.components.loaders import JSONL
 from prodigy.components.preprocess import add_tokens
 from prodigy.components.db import connect
+from prodigy.util import split_string
 import spacy
 
 
@@ -15,9 +16,10 @@ import spacy
 @prodigy.recipe('ner.silver-to-gold',
     silver_dataset=("Existing dataset with binary annotations", "positional", None, str),
     gold_dataset=("Name of dataset to save new annotations", "positional", None, str),
-    spacy_model=("The base model", "positional", None, str)
+    spacy_model=("The base model", "positional", None, str),
+    label=("One or more comma-separated labels", "option", "l", split_string)
 )
-def ner_silver_to_gold(silver_dataset, gold_dataset, spacy_model):
+def ner_silver_to_gold(silver_dataset, gold_dataset, spacy_model, label=[]):
     """
     Take an existing "silver" dataset with binary accept/reject annotations,
     merge the annotations to find the best possible analysis given the
@@ -52,5 +54,6 @@ def ner_silver_to_gold(silver_dataset, gold_dataset, spacy_model):
         'stream': stream,        # Incoming stream of examples
         'config': {              # Additional config settings, mostly for app UI
             'lang': nlp.lang,
+            'labels': label     # Selectable label options
         }
     }
