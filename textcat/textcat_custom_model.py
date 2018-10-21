@@ -43,7 +43,7 @@ class DummyModel(object):
     source=("The source data as a JSONL file", "positional", None, str),
     label=("One or more comma-separated labels", "option", "l", split_string)
 )
-def textcat_custom_model(dataset, source, label=None):
+def textcat_custom_model(dataset, source, label=[]):
     """
     Use active learning-powered text classification with a custom model. To
     demonstrate how it works, this demo recipe uses a simple dummy model that
