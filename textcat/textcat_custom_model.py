@@ -28,7 +28,7 @@ class DummyModel(object):
             score = (random.random() + self.weights) / 2
             yield (score, eg)
 
-    def update(answers):
+    def update(self, answers):
         # Update the model weights with the new answers. This method receives
         # the examples with an added "answer" key that either maps to "accept",
         # "reject" or "ignore".

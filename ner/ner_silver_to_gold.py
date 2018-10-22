@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 import prodigy
 from prodigy.models.ner import EntityRecognizer
-from prodigy.components.loaders import JSONL
 from prodigy.components.preprocess import add_tokens
 from prodigy.components.db import connect
 from prodigy.util import split_string
@@ -29,7 +28,7 @@ def ner_silver_to_gold(silver_dataset, gold_dataset, spacy_model, label=[]):
     # Connect to the database using the settings from prodigy.json, check
     # that the silver dataset exists and load it
     DB = connect()
-    if not silver_dataset in DB:
+    if silver_dataset not in DB:
         raise ValueError("Can't find dataset '{}'.".format(silver_dataset))
     silver_data = DB.get_dataset(silver_dataset)
 
