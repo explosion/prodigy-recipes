@@ -32,6 +32,11 @@ def spacy_model():
 
 
 @pytest.fixture
+def vectors():
+    return 'en_core_web_md'
+
+
+@pytest.fixture
 def labels():
     return ['PERSON', 'ORG']
 
@@ -166,9 +171,9 @@ def test_textcat_custom_model(dataset, source, labels):
     assert 'label' in stream[0]
 
 
-def test_terms_teach(dataset):
+def test_terms_teach(dataset, vectors):
     seeds = ['cat', 'dog', 'mouse']
-    recipe = terms_teach(dataset, 'en_core_web_md', seeds)
+    recipe = terms_teach(dataset, vectors, seeds)
     assert recipe['view_id'] == 'text'
     assert recipe['dataset'] == dataset
 
