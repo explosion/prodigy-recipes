@@ -3,11 +3,11 @@
 # Prodigy Recipes
 
 This repository contains a collection of recipes for [Prodigy](https://prodi.gy),
-our scriptable annotation tool for text and images. In order to use this repo, you'll
-need a license for Prodigy – [see this page](https://prodi.gy/buy) for more
-details. For questions and bug reports, please use the
-[Prodigy Support Forum](https://support.prodi.gy). If you've found a mistake or
-bug, feel free to submit a
+our scriptable annotation tool for text, images and other data. In order to use
+this repo, you'll need a license for Prodigy –
+[see this page](https://prodi.gy/buy) for more details. For questions and bug
+reports, please use the [Prodigy Support Forum](https://support.prodi.gy). If
+you've found a mistake or bug, feel free to submit a
 [pull request](https://github.com/explosion/prodigy-recipes/pulls).
 
 > ✨ **Important note:** The recipes in this repository aren't 100% identical to
@@ -25,7 +25,7 @@ your terminal, either directly or via `python -m`:
 python -m prodigy
 ```
 
-The `prodigy` command lists the built-in recipes. To use a recipe script,
+The `prodigy` command lists the built-in recipes. To use a custom recipe script,
 simply pass the path to the file using the `-F argument`:
 
 ```bash
@@ -35,7 +35,7 @@ python -m prodigy -F prodigy-recipes/ner/ner_teach.py
 Now you can edit the code in your `ner_teach.py` command, to customize how
 Prodigy behaves. Some things to try:
 
-* Try replacing `prefer_uncertain()` with `prefer_high_scoring()`.
+* Try replacing `prefer_uncertain()` with `prefer_high_scores()`.
 * Try writing a custom sorting function. It just needs to be a generator that
   yields a sequence of `example` dicts, given a sequence of `(score, example)` tuples.
 * Try adding a filter that drops some questions from the stream. For instance,
@@ -81,4 +81,3 @@ Prodigy behaves. Some things to try:
 | --- | --- |
 | [`mark`](other/mark.py) | Click through pre-prepared examples, with no model in the loop. |
 | [`choice`](other/choice.py) | Annotate data with multiple-choice options. The annotated examples will have an additional property `"accept": []` mapping to the ID(s) of the selected option(s). |
-
