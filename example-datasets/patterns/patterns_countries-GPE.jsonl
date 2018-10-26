@@ -1,0 +1,1010 @@
+{"label": "GPE", "pattern": [{"lower": "afghanistan"}]}
+{"label": "GPE", "pattern": [{"lower": "af"}]}
+{"label": "GPE", "pattern": [{"lower": "afġānistān"}]}
+{"label": "GPE", "pattern": [{"lower": "åland"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "ax"}]}
+{"label": "GPE", "pattern": [{"lower": "aaland"}]}
+{"label": "GPE", "pattern": [{"lower": "aland"}]}
+{"label": "GPE", "pattern": [{"lower": "ahvenanmaa"}]}
+{"label": "GPE", "pattern": [{"lower": "albania"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}]}
+{"label": "GPE", "pattern": [{"lower": "shqipëri"}]}
+{"label": "GPE", "pattern": [{"lower": "shqipëria"}]}
+{"label": "GPE", "pattern": [{"lower": "shqipnia"}]}
+{"label": "GPE", "pattern": [{"lower": "algeria"}]}
+{"label": "GPE", "pattern": [{"lower": "dz"}]}
+{"label": "GPE", "pattern": [{"lower": "dzayer"}]}
+{"label": "GPE", "pattern": [{"lower": "algérie"}]}
+{"label": "GPE", "pattern": [{"lower": "american"}, {"lower": "samoa"}]}
+{"label": "GPE", "pattern": [{"lower": "as"}]}
+{"label": "GPE", "pattern": [{"lower": "amerika"}, {"lower": "sāmoa"}]}
+{"label": "GPE", "pattern": [{"lower": "amelika"}, {"lower": "sāmoa"}]}
+{"label": "GPE", "pattern": [{"lower": "sāmoa"}, {"lower": "amelika"}]}
+{"label": "GPE", "pattern": [{"lower": "andorra"}]}
+{"label": "GPE", "pattern": [{"lower": "ad"}]}
+{"label": "GPE", "pattern": [{"lower": "principality"}, {"lower": "of"}, {"lower": "andorra"}]}
+{"label": "GPE", "pattern": [{"lower": "principat"}, {"lower": "d'andorra"}]}
+{"label": "GPE", "pattern": [{"lower": "angola"}]}
+{"label": "GPE", "pattern": [{"lower": "ao"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "angola"}]}
+{"label": "GPE", "pattern": [{"lower": "ʁɛpublika"}, {"lower": "de"}, {"lower": "an'ɡɔla"}]}
+{"label": "GPE", "pattern": [{"lower": "anguilla"}]}
+{"label": "GPE", "pattern": [{"lower": "ai"}]}
+{"label": "GPE", "pattern": [{"lower": "antarctica"}]}
+{"label": "GPE", "pattern": [{"lower": "antigua"}, {"lower": "and"}, {"lower": "barbuda"}]}
+{"label": "GPE", "pattern": [{"lower": "ag"}]}
+{"label": "GPE", "pattern": [{"lower": "argentina"}]}
+{"label": "GPE", "pattern": [{"lower": "ar"}]}
+{"label": "GPE", "pattern": [{"lower": "argentine"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "argentina"}]}
+{"label": "GPE", "pattern": [{"lower": "armenia"}]}
+{"label": "GPE", "pattern": [{"lower": "am"}]}
+{"label": "GPE", "pattern": [{"lower": "hayastan"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "armenia"}]}
+{"label": "GPE", "pattern": [{"lower": "հայաստանի"}, {"lower": "հանրապետություն"}]}
+{"label": "GPE", "pattern": [{"lower": "aruba"}]}
+{"label": "GPE", "pattern": [{"lower": "aw"}]}
+{"label": "GPE", "pattern": [{"lower": "australia"}]}
+{"label": "GPE", "pattern": [{"lower": "au"}]}
+{"label": "GPE", "pattern": [{"lower": "austria"}]}
+{"label": "GPE", "pattern": [{"lower": "at"}]}
+{"label": "GPE", "pattern": [{"lower": "österreich"}]}
+{"label": "GPE", "pattern": [{"lower": "osterreich"}]}
+{"label": "GPE", "pattern": [{"lower": "oesterreich"}]}
+{"label": "GPE", "pattern": [{"lower": "azerbaijan"}]}
+{"label": "GPE", "pattern": [{"lower": "az"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "azerbaijan"}]}
+{"label": "GPE", "pattern": [{"lower": "azərbaycan"}, {"lower": "respublikası"}]}
+{"label": "GPE", "pattern": [{"lower": "bahamas"}]}
+{"label": "GPE", "pattern": [{"lower": "bs"}]}
+{"label": "GPE", "pattern": [{"lower": "commonwealth"}, {"lower": "of"}, {"lower": "the"}, {"lower": "bahamas"}]}
+{"label": "GPE", "pattern": [{"lower": "bahrain"}]}
+{"label": "GPE", "pattern": [{"lower": "bh"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "bahrain"}]}
+{"label": "GPE", "pattern": [{"lower": "mamlakat"}, {"lower": "al"}, {"lower": "-"}, {"lower": "baḥrayn"}]}
+{"label": "GPE", "pattern": [{"lower": "bangladesh"}]}
+{"label": "GPE", "pattern": [{"lower": "bd"}]}
+{"label": "GPE", "pattern": [{"lower": "people"}, {"lower": "'s"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "bangladesh"}]}
+{"label": "GPE", "pattern": [{"lower": "gônôprôjatôntri"}, {"lower": "bangladesh"}]}
+{"label": "GPE", "pattern": [{"lower": "barbados"}]}
+{"label": "GPE", "pattern": [{"lower": "bb"}]}
+{"label": "GPE", "pattern": [{"lower": "belarus"}]}
+{"label": "GPE", "pattern": [{"lower": "by"}]}
+{"label": "GPE", "pattern": [{"lower": "bielaruś"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "belarus"}]}
+{"label": "GPE", "pattern": [{"lower": "белоруссия"}]}
+{"label": "GPE", "pattern": [{"lower": "республика"}, {"lower": "беларусь"}]}
+{"label": "GPE", "pattern": [{"lower": "belorussiya"}]}
+{"label": "GPE", "pattern": [{"lower": "respublika"}, {"lower": "belarus’"}]}
+{"label": "GPE", "pattern": [{"lower": "belgium"}]}
+{"label": "GPE", "pattern": [{"lower": "be"}]}
+{"label": "GPE", "pattern": [{"lower": "belgië"}]}
+{"label": "GPE", "pattern": [{"lower": "belgie"}]}
+{"label": "GPE", "pattern": [{"lower": "belgien"}]}
+{"label": "GPE", "pattern": [{"lower": "belgique"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "belgium"}]}
+{"label": "GPE", "pattern": [{"lower": "koninkrijk"}, {"lower": "belgië"}]}
+{"label": "GPE", "pattern": [{"lower": "royaume"}, {"lower": "de"}, {"lower": "belgique"}]}
+{"label": "GPE", "pattern": [{"lower": "königreich"}, {"lower": "belgien"}]}
+{"label": "GPE", "pattern": [{"lower": "belize"}]}
+{"label": "GPE", "pattern": [{"lower": "bz"}]}
+{"label": "GPE", "pattern": [{"lower": "benin"}]}
+{"label": "GPE", "pattern": [{"lower": "bj"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "benin"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "du"}, {"lower": "bénin"}]}
+{"label": "GPE", "pattern": [{"lower": "bermuda"}]}
+{"label": "GPE", "pattern": [{"lower": "bm"}]}
+{"label": "GPE", "pattern": [{"lower": "the"}, {"lower": "islands"}, {"lower": "of"}, {"lower": "bermuda"}]}
+{"label": "GPE", "pattern": [{"lower": "the"}, {"lower": "bermudas"}]}
+{"label": "GPE", "pattern": [{"lower": "somers"}, {"lower": "isles"}]}
+{"label": "GPE", "pattern": [{"lower": "bhutan"}]}
+{"label": "GPE", "pattern": [{"lower": "bt"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "bhutan"}]}
+{"label": "GPE", "pattern": [{"lower": "bolivia"}, {"lower": "("}, {"lower": "plurinational"}, {"lower": "state"}, {"lower": "of"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "bo"}]}
+{"label": "GPE", "pattern": [{"lower": "buliwya"}]}
+{"label": "GPE", "pattern": [{"lower": "wuliwya"}]}
+{"label": "GPE", "pattern": [{"lower": "plurinational"}, {"lower": "state"}, {"lower": "of"}, {"lower": "bolivia"}]}
+{"label": "GPE", "pattern": [{"lower": "estado"}, {"lower": "plurinacional"}, {"lower": "de"}, {"lower": "bolivia"}]}
+{"label": "GPE", "pattern": [{"lower": "buliwya"}, {"lower": "mamallaqta"}]}
+{"label": "GPE", "pattern": [{"lower": "wuliwya"}, {"lower": "suyu"}]}
+{"label": "GPE", "pattern": [{"lower": "tetã"}, {"lower": "volívia"}]}
+{"label": "GPE", "pattern": [{"lower": "bonaire"}, {"lower": ","}, {"lower": "sint"}, {"lower": "eustatius"}, {"lower": "and"}, {"lower": "saba"}]}
+{"label": "GPE", "pattern": [{"lower": "bq"}]}
+{"label": "GPE", "pattern": [{"lower": "boneiru"}]}
+{"label": "GPE", "pattern": [{"lower": "bosnia"}, {"lower": "and"}, {"lower": "herzegovina"}]}
+{"label": "GPE", "pattern": [{"lower": "ba"}]}
+{"label": "GPE", "pattern": [{"lower": "bosnia"}, {"lower": "-"}, {"lower": "herzegovina"}]}
+{"label": "GPE", "pattern": [{"lower": "босна"}, {"lower": "и"}, {"lower": "херцеговина"}]}
+{"label": "GPE", "pattern": [{"lower": "botswana"}]}
+{"label": "GPE", "pattern": [{"lower": "bw"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "botswana"}]}
+{"label": "GPE", "pattern": [{"lower": "lefatshe"}, {"lower": "la"}, {"lower": "botswana"}]}
+{"label": "GPE", "pattern": [{"lower": "bouvet"}, {"lower": "island"}]}
+{"label": "GPE", "pattern": [{"lower": "bv"}]}
+{"label": "GPE", "pattern": [{"lower": "bouvetøya"}]}
+{"label": "GPE", "pattern": [{"lower": "bouvet"}, {"lower": "-"}, {"lower": "øya"}]}
+{"label": "GPE", "pattern": [{"lower": "brazil"}]}
+{"label": "GPE", "pattern": [{"lower": "br"}]}
+{"label": "GPE", "pattern": [{"lower": "brasil"}]}
+{"label": "GPE", "pattern": [{"lower": "federative"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "brazil"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "federativa"}, {"lower": "do"}, {"lower": "brasil"}]}
+{"label": "GPE", "pattern": [{"lower": "british"}, {"lower": "indian"}, {"lower": "ocean"}, {"lower": "territory"}]}
+{"label": "GPE", "pattern": [{"lower": "io"}]}
+{"label": "GPE", "pattern": [{"lower": "united"}, {"lower": "states"}, {"lower": "minor"}, {"lower": "outlying"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "um"}]}
+{"label": "GPE", "pattern": [{"lower": "virgin"}, {"lower": "islands"}, {"lower": "("}, {"lower": "british"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "vg"}]}
+{"label": "GPE", "pattern": [{"lower": "virgin"}, {"lower": "islands"}, {"lower": "("}, {"lower": "u.s."}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "vi"}]}
+{"label": "GPE", "pattern": [{"lower": "usvi"}]}
+{"label": "GPE", "pattern": [{"lower": "american"}, {"lower": "virgin"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "u.s."}, {"lower": "virgin"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "brunei"}, {"lower": "darussalam"}]}
+{"label": "GPE", "pattern": [{"lower": "bn"}]}
+{"label": "GPE", "pattern": [{"lower": "nation"}, {"lower": "of"}, {"lower": "brunei"}]}
+{"label": "GPE", "pattern": [{"lower": " "}, {"lower": "the"}, {"lower": "abode"}, {"lower": "of"}, {"lower": "peace"}]}
+{"label": "GPE", "pattern": [{"lower": "bulgaria"}]}
+{"label": "GPE", "pattern": [{"lower": "bg"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "bulgaria"}]}
+{"label": "GPE", "pattern": [{"lower": "република"}, {"lower": "българия"}]}
+{"label": "GPE", "pattern": [{"lower": "burkina"}, {"lower": "faso"}]}
+{"label": "GPE", "pattern": [{"lower": "bf"}]}
+{"label": "GPE", "pattern": [{"lower": "burundi"}]}
+{"label": "GPE", "pattern": [{"lower": "bi"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "burundi"}]}
+{"label": "GPE", "pattern": [{"lower": "republika"}, {"lower": "y'uburundi"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "du"}, {"lower": "burundi"}]}
+{"label": "GPE", "pattern": [{"lower": "cambodia"}]}
+{"label": "GPE", "pattern": [{"lower": "kh"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "cambodia"}]}
+{"label": "GPE", "pattern": [{"lower": "cameroon"}]}
+{"label": "GPE", "pattern": [{"lower": "cm"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "cameroon"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "du"}, {"lower": "cameroun"}]}
+{"label": "GPE", "pattern": [{"lower": "canada"}]}
+{"label": "GPE", "pattern": [{"lower": "ca"}]}
+{"label": "GPE", "pattern": [{"lower": "cabo"}, {"lower": "verde"}]}
+{"label": "GPE", "pattern": [{"lower": "cv"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "cabo"}, {"lower": "verde"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "cabo"}, {"lower": "verde"}]}
+{"label": "GPE", "pattern": [{"lower": "cayman"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "ky"}]}
+{"label": "GPE", "pattern": [{"lower": "central"}, {"lower": "african"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "cf"}]}
+{"label": "GPE", "pattern": [{"lower": "central"}, {"lower": "african"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "centrafricaine"}]}
+{"label": "GPE", "pattern": [{"lower": "chad"}]}
+{"label": "GPE", "pattern": [{"lower": "td"}]}
+{"label": "GPE", "pattern": [{"lower": "tchad"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "chad"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "du"}, {"lower": "tchad"}]}
+{"label": "GPE", "pattern": [{"lower": "chile"}]}
+{"label": "GPE", "pattern": [{"lower": "cl"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "chile"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "chile"}]}
+{"label": "GPE", "pattern": [{"lower": "china"}]}
+{"label": "GPE", "pattern": [{"lower": "cn"}]}
+{"label": "GPE", "pattern": [{"lower": "zhōngguó"}]}
+{"label": "GPE", "pattern": [{"lower": "zhongguo"}]}
+{"label": "GPE", "pattern": [{"lower": "zhonghua"}]}
+{"label": "GPE", "pattern": [{"lower": "people"}, {"lower": "'s"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "china"}]}
+{"label": "GPE", "pattern": [{"lower": "中华人民共和国"}]}
+{"label": "GPE", "pattern": [{"lower": "zhōnghuá"}, {"lower": "rénmín"}, {"lower": "gònghéguó"}]}
+{"label": "GPE", "pattern": [{"lower": "christmas"}, {"lower": "island"}]}
+{"label": "GPE", "pattern": [{"lower": "cx"}]}
+{"label": "GPE", "pattern": [{"lower": "territory"}, {"lower": "of"}, {"lower": "christmas"}, {"lower": "island"}]}
+{"label": "GPE", "pattern": [{"lower": "cocos"}, {"lower": "("}, {"lower": "keeling"}, {"lower": ")"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "cc"}]}
+{"label": "GPE", "pattern": [{"lower": "territory"}, {"lower": "of"}, {"lower": "the"}, {"lower": "cocos"}, {"lower": "("}, {"lower": "keeling"}, {"lower": ")"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "keeling"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "colombia"}]}
+{"label": "GPE", "pattern": [{"lower": "co"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "colombia"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "colombia"}]}
+{"label": "GPE", "pattern": [{"lower": "comoros"}]}
+{"label": "GPE", "pattern": [{"lower": "km"}]}
+{"label": "GPE", "pattern": [{"lower": "union"}, {"lower": "of"}, {"lower": "the"}, {"lower": "comoros"}]}
+{"label": "GPE", "pattern": [{"lower": "union"}, {"lower": "des"}, {"lower": "comores"}]}
+{"label": "GPE", "pattern": [{"lower": "udzima"}, {"lower": "wa"}, {"lower": "komori"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}, {"lower": "-"}, {"lower": "ittiḥād"}, {"lower": "al"}, {"lower": "-"}, {"lower": "qumurī"}]}
+{"label": "GPE", "pattern": [{"lower": "congo"}]}
+{"label": "GPE", "pattern": [{"lower": "cg"}]}
+{"label": "GPE", "pattern": [{"lower": "congo"}, {"lower": "-"}, {"lower": "brazzaville"}]}
+{"label": "GPE", "pattern": [{"lower": "congo"}, {"lower": "("}, {"lower": "democratic"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "the"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "cd"}]}
+{"label": "GPE", "pattern": [{"lower": "dr"}, {"lower": "congo"}]}
+{"label": "GPE", "pattern": [{"lower": "congo"}, {"lower": "-"}, {"lower": "kinshasa"}]}
+{"label": "GPE", "pattern": [{"lower": "drc"}]}
+{"label": "GPE", "pattern": [{"lower": "cook"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "ck"}]}
+{"label": "GPE", "pattern": [{"lower": "kūki"}, {"lower": "'"}, {"lower": "āirani"}]}
+{"label": "GPE", "pattern": [{"lower": "costa"}, {"lower": "rica"}]}
+{"label": "GPE", "pattern": [{"lower": "cr"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "costa"}, {"lower": "rica"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "costa"}, {"lower": "rica"}]}
+{"label": "GPE", "pattern": [{"lower": "croatia"}]}
+{"label": "GPE", "pattern": [{"lower": "hr"}]}
+{"label": "GPE", "pattern": [{"lower": "hrvatska"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "croatia"}]}
+{"label": "GPE", "pattern": [{"lower": "republika"}, {"lower": "hrvatska"}]}
+{"label": "GPE", "pattern": [{"lower": "cuba"}]}
+{"label": "GPE", "pattern": [{"lower": "cu"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "cuba"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "cuba"}]}
+{"label": "GPE", "pattern": [{"lower": "curaçao"}]}
+{"label": "GPE", "pattern": [{"lower": "cw"}]}
+{"label": "GPE", "pattern": [{"lower": "curacao"}]}
+{"label": "GPE", "pattern": [{"lower": "kòrsou"}]}
+{"label": "GPE", "pattern": [{"lower": "country"}, {"lower": "of"}, {"lower": "curaçao"}]}
+{"label": "GPE", "pattern": [{"lower": "land"}, {"lower": "curaçao"}]}
+{"label": "GPE", "pattern": [{"lower": "pais"}, {"lower": "kòrsou"}]}
+{"label": "GPE", "pattern": [{"lower": "cyprus"}]}
+{"label": "GPE", "pattern": [{"lower": "cy"}]}
+{"label": "GPE", "pattern": [{"lower": "kýpros"}]}
+{"label": "GPE", "pattern": [{"lower": "kıbrıs"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "cyprus"}]}
+{"label": "GPE", "pattern": [{"lower": "κυπριακή"}, {"lower": "δημοκρατία"}]}
+{"label": "GPE", "pattern": [{"lower": "kıbrıs"}, {"lower": "cumhuriyeti"}]}
+{"label": "GPE", "pattern": [{"lower": "czech"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "cz"}]}
+{"label": "GPE", "pattern": [{"lower": "česká"}, {"lower": "republika"}]}
+{"label": "GPE", "pattern": [{"lower": "česko"}]}
+{"label": "GPE", "pattern": [{"lower": "denmark"}]}
+{"label": "GPE", "pattern": [{"lower": "dk"}]}
+{"label": "GPE", "pattern": [{"lower": "danmark"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "denmark"}]}
+{"label": "GPE", "pattern": [{"lower": "kongeriget"}, {"lower": "danmark"}]}
+{"label": "GPE", "pattern": [{"lower": "djibouti"}]}
+{"label": "GPE", "pattern": [{"lower": "dj"}]}
+{"label": "GPE", "pattern": [{"lower": "jabuuti"}]}
+{"label": "GPE", "pattern": [{"lower": "gabuuti"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "djibouti"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "de"}, {"lower": "djibouti"}]}
+{"label": "GPE", "pattern": [{"lower": "gabuutih"}, {"lower": "ummuuno"}]}
+{"label": "GPE", "pattern": [{"lower": "jamhuuriyadda"}, {"lower": "jabuuti"}]}
+{"label": "GPE", "pattern": [{"lower": "dominica"}]}
+{"label": "GPE", "pattern": [{"lower": "dm"}]}
+{"label": "GPE", "pattern": [{"lower": "dominique"}]}
+{"label": "GPE", "pattern": [{"lower": "wai‘tu"}, {"lower": "kubuli"}]}
+{"label": "GPE", "pattern": [{"lower": "commonwealth"}, {"lower": "of"}, {"lower": "dominica"}]}
+{"label": "GPE", "pattern": [{"lower": "dominican"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "do"}]}
+{"label": "GPE", "pattern": [{"lower": "ecuador"}]}
+{"label": "GPE", "pattern": [{"lower": "ec"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "ecuador"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "del"}, {"lower": "ecuador"}]}
+{"label": "GPE", "pattern": [{"lower": "egypt"}]}
+{"label": "GPE", "pattern": [{"lower": "eg"}]}
+{"label": "GPE", "pattern": [{"lower": "arab"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "egypt"}]}
+{"label": "GPE", "pattern": [{"lower": "el"}, {"lower": "salvador"}]}
+{"label": "GPE", "pattern": [{"lower": "sv"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "el"}, {"lower": "salvador"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "el"}, {"lower": "salvador"}]}
+{"label": "GPE", "pattern": [{"lower": "equatorial"}, {"lower": "guinea"}]}
+{"label": "GPE", "pattern": [{"lower": "gq"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "equatorial"}, {"lower": "guinea"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "guinea"}, {"lower": "ecuatorial"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "de"}, {"lower": "guinée"}, {"lower": "équatoriale"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "da"}, {"lower": "guiné"}, {"lower": "equatorial"}]}
+{"label": "GPE", "pattern": [{"lower": "eritrea"}]}
+{"label": "GPE", "pattern": [{"lower": "er"}]}
+{"label": "GPE", "pattern": [{"lower": "state"}, {"lower": "of"}, {"lower": "eritrea"}]}
+{"label": "GPE", "pattern": [{"lower": "ሃገረ"}, {"lower": "ኤርትራ"}]}
+{"label": "GPE", "pattern": [{"lower": "dawlat"}, {"lower": "iritriyá"}]}
+{"label": "GPE", "pattern": [{"lower": "ʾertrā"}]}
+{"label": "GPE", "pattern": [{"lower": "iritriyā"}]}
+{"label": "GPE", "pattern": [{"lower": "estonia"}]}
+{"label": "GPE", "pattern": [{"lower": "ee"}]}
+{"label": "GPE", "pattern": [{"lower": "eesti"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "estonia"}]}
+{"label": "GPE", "pattern": [{"lower": "eesti"}, {"lower": "vabariik"}]}
+{"label": "GPE", "pattern": [{"lower": "ethiopia"}]}
+{"label": "GPE", "pattern": [{"lower": "et"}]}
+{"label": "GPE", "pattern": [{"lower": "ʾītyōṗṗyā"}]}
+{"label": "GPE", "pattern": [{"lower": "federal"}, {"lower": "democratic"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "ethiopia"}]}
+{"label": "GPE", "pattern": [{"lower": "የኢትዮጵያ"}, {"lower": "ፌዴራላዊ"}, {"lower": "ዲሞክራሲያዊ"}, {"lower": "ሪፐብሊክ"}]}
+{"label": "GPE", "pattern": [{"lower": "falkland"}, {"lower": "islands"}, {"lower": "("}, {"lower": "malvinas"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "fk"}]}
+{"label": "GPE", "pattern": [{"lower": "islas"}, {"lower": "malvinas"}]}
+{"label": "GPE", "pattern": [{"lower": "faroe"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "fo"}]}
+{"label": "GPE", "pattern": [{"lower": "føroyar"}]}
+{"label": "GPE", "pattern": [{"lower": "færøerne"}]}
+{"label": "GPE", "pattern": [{"lower": "fiji"}]}
+{"label": "GPE", "pattern": [{"lower": "fj"}]}
+{"label": "GPE", "pattern": [{"lower": "viti"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "fiji"}]}
+{"label": "GPE", "pattern": [{"lower": "matanitu"}, {"lower": "ko"}, {"lower": "viti"}]}
+{"label": "GPE", "pattern": [{"lower": "fijī"}, {"lower": "gaṇarājya"}]}
+{"label": "GPE", "pattern": [{"lower": "finland"}]}
+{"label": "GPE", "pattern": [{"lower": "fi"}]}
+{"label": "GPE", "pattern": [{"lower": "suomi"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "finland"}]}
+{"label": "GPE", "pattern": [{"lower": "suomen"}, {"lower": "tasavalta"}]}
+{"label": "GPE", "pattern": [{"lower": "republiken"}, {"lower": "finland"}]}
+{"label": "GPE", "pattern": [{"lower": "france"}]}
+{"label": "GPE", "pattern": [{"lower": "fr"}]}
+{"label": "GPE", "pattern": [{"lower": "french"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "française"}]}
+{"label": "GPE", "pattern": [{"lower": "french"}, {"lower": "guiana"}]}
+{"label": "GPE", "pattern": [{"lower": "gf"}]}
+{"label": "GPE", "pattern": [{"lower": "guiana"}]}
+{"label": "GPE", "pattern": [{"lower": "guyane"}]}
+{"label": "GPE", "pattern": [{"lower": "french"}, {"lower": "polynesia"}]}
+{"label": "GPE", "pattern": [{"lower": "pf"}]}
+{"label": "GPE", "pattern": [{"lower": "polynésie"}, {"lower": "française"}]}
+{"label": "GPE", "pattern": [{"lower": "french"}, {"lower": "polynesia"}]}
+{"label": "GPE", "pattern": [{"lower": "pōrīnetia"}, {"lower": "farāni"}]}
+{"label": "GPE", "pattern": [{"lower": "french"}, {"lower": "southern"}, {"lower": "territories"}]}
+{"label": "GPE", "pattern": [{"lower": "tf"}]}
+{"label": "GPE", "pattern": [{"lower": "gabon"}]}
+{"label": "GPE", "pattern": [{"lower": "ga"}]}
+{"label": "GPE", "pattern": [{"lower": "gabonese"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "gabonaise"}]}
+{"label": "GPE", "pattern": [{"lower": "gambia"}]}
+{"label": "GPE", "pattern": [{"lower": "gm"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "the"}, {"lower": "gambia"}]}
+{"label": "GPE", "pattern": [{"lower": "georgia"}]}
+{"label": "GPE", "pattern": [{"lower": "ge"}]}
+{"label": "GPE", "pattern": [{"lower": "sakartvelo"}]}
+{"label": "GPE", "pattern": [{"lower": "germany"}]}
+{"label": "GPE", "pattern": [{"lower": "de"}]}
+{"label": "GPE", "pattern": [{"lower": "federal"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "germany"}]}
+{"label": "GPE", "pattern": [{"lower": "bundesrepublik"}, {"lower": "deutschland"}]}
+{"label": "GPE", "pattern": [{"lower": "ghana"}]}
+{"label": "GPE", "pattern": [{"lower": "gh"}]}
+{"label": "GPE", "pattern": [{"lower": "gibraltar"}]}
+{"label": "GPE", "pattern": [{"lower": "gi"}]}
+{"label": "GPE", "pattern": [{"lower": "greece"}]}
+{"label": "GPE", "pattern": [{"lower": "gr"}]}
+{"label": "GPE", "pattern": [{"lower": "elláda"}]}
+{"label": "GPE", "pattern": [{"lower": "hellenic"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "ελληνική"}, {"lower": "δημοκρατία"}]}
+{"label": "GPE", "pattern": [{"lower": "greenland"}]}
+{"label": "GPE", "pattern": [{"lower": "gl"}]}
+{"label": "GPE", "pattern": [{"lower": "grønland"}]}
+{"label": "GPE", "pattern": [{"lower": "grenada"}]}
+{"label": "GPE", "pattern": [{"lower": "gd"}]}
+{"label": "GPE", "pattern": [{"lower": "guadeloupe"}]}
+{"label": "GPE", "pattern": [{"lower": "gp"}]}
+{"label": "GPE", "pattern": [{"lower": "gwadloup"}]}
+{"label": "GPE", "pattern": [{"lower": "guam"}]}
+{"label": "GPE", "pattern": [{"lower": "gu"}]}
+{"label": "GPE", "pattern": [{"lower": "guåhån"}]}
+{"label": "GPE", "pattern": [{"lower": "guatemala"}]}
+{"label": "GPE", "pattern": [{"lower": "gt"}]}
+{"label": "GPE", "pattern": [{"lower": "guernsey"}]}
+{"label": "GPE", "pattern": [{"lower": "gg"}]}
+{"label": "GPE", "pattern": [{"lower": "bailiwick"}, {"lower": "of"}, {"lower": "guernsey"}]}
+{"label": "GPE", "pattern": [{"lower": "bailliage"}, {"lower": "de"}, {"lower": "guernesey"}]}
+{"label": "GPE", "pattern": [{"lower": "guinea"}]}
+{"label": "GPE", "pattern": [{"lower": "gn"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "guinea"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "de"}, {"lower": "guinée"}]}
+{"label": "GPE", "pattern": [{"lower": "guinea"}, {"lower": "-"}, {"lower": "bissau"}]}
+{"label": "GPE", "pattern": [{"lower": "gw"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "guinea"}, {"lower": "-"}, {"lower": "bissau"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "da"}, {"lower": "guiné"}, {"lower": "-"}, {"lower": "bissau"}]}
+{"label": "GPE", "pattern": [{"lower": "guyana"}]}
+{"label": "GPE", "pattern": [{"lower": "gy"}]}
+{"label": "GPE", "pattern": [{"lower": "co"}, {"lower": "-"}, {"lower": "operative"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "guyana"}]}
+{"label": "GPE", "pattern": [{"lower": "haiti"}]}
+{"label": "GPE", "pattern": [{"lower": "ht"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "haiti"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "d'haïti"}]}
+{"label": "GPE", "pattern": [{"lower": "repiblik"}, {"lower": "ayiti"}]}
+{"label": "GPE", "pattern": [{"lower": "heard"}, {"lower": "island"}, {"lower": "and"}, {"lower": "mcdonald"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "hm"}]}
+{"label": "GPE", "pattern": [{"lower": "holy"}, {"lower": "see"}]}
+{"label": "GPE", "pattern": [{"lower": "sancta"}, {"lower": "sedes"}]}
+{"label": "GPE", "pattern": [{"lower": "vatican"}]}
+{"label": "GPE", "pattern": [{"lower": "the"}, {"lower": "vatican"}]}
+{"label": "GPE", "pattern": [{"lower": "honduras"}]}
+{"label": "GPE", "pattern": [{"lower": "hn"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "honduras"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "honduras"}]}
+{"label": "GPE", "pattern": [{"lower": "hong"}, {"lower": "kong"}]}
+{"label": "GPE", "pattern": [{"lower": "hk"}]}
+{"label": "GPE", "pattern": [{"lower": "香港"}]}
+{"label": "GPE", "pattern": [{"lower": "hungary"}]}
+{"label": "GPE", "pattern": [{"lower": "hu"}]}
+{"label": "GPE", "pattern": [{"lower": "iceland"}]}
+{"label": "GPE", "pattern": [{"lower": "is"}]}
+{"label": "GPE", "pattern": [{"lower": "island"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "iceland"}]}
+{"label": "GPE", "pattern": [{"lower": "lýðveldið"}, {"lower": "ísland"}]}
+{"label": "GPE", "pattern": [{"lower": "india"}]}
+{"label": "GPE", "pattern": [{"lower": "in"}]}
+{"label": "GPE", "pattern": [{"lower": "bhārat"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "india"}]}
+{"label": "GPE", "pattern": [{"lower": "bharat"}, {"lower": "ganrajya"}]}
+{"label": "GPE", "pattern": [{"lower": "indonesia"}]}
+{"label": "GPE", "pattern": [{"lower": "id"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "indonesia"}]}
+{"label": "GPE", "pattern": [{"lower": "republik"}, {"lower": "indonesia"}]}
+{"label": "GPE", "pattern": [{"lower": "côte"}, {"lower": "d'ivoire"}]}
+{"label": "GPE", "pattern": [{"lower": "ci"}]}
+{"label": "GPE", "pattern": [{"lower": "ivory"}, {"lower": "coast"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "côte"}, {"lower": "d'ivoire"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "de"}, {"lower": "côte"}, {"lower": "d'ivoire"}]}
+{"label": "GPE", "pattern": [{"lower": "iran"}, {"lower": "("}, {"lower": "islamic"}, {"lower": "republic"}, {"lower": "of"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "ir"}]}
+{"label": "GPE", "pattern": [{"lower": "islamic"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "iran"}]}
+{"label": "GPE", "pattern": [{"lower": "jomhuri"}, {"lower": "-"}, {"lower": "ye"}, {"lower": "eslāmi"}, {"lower": "-"}, {"lower": "ye"}, {"lower": "irān"}]}
+{"label": "GPE", "pattern": [{"lower": "iraq"}]}
+{"label": "GPE", "pattern": [{"lower": "iq"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "iraq"}]}
+{"label": "GPE", "pattern": [{"lower": "jumhūriyyat"}, {"lower": "al-‘irāq"}]}
+{"label": "GPE", "pattern": [{"lower": "ireland"}]}
+{"label": "GPE", "pattern": [{"lower": "ie"}]}
+{"label": "GPE", "pattern": [{"lower": "éire"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "ireland"}]}
+{"label": "GPE", "pattern": [{"lower": "poblacht"}, {"lower": "na"}, {"lower": "héireann"}]}
+{"label": "GPE", "pattern": [{"lower": "isle"}, {"lower": "of"}, {"lower": "man"}]}
+{"label": "GPE", "pattern": [{"lower": "im"}]}
+{"label": "GPE", "pattern": [{"lower": "ellan"}, {"lower": "vannin"}]}
+{"label": "GPE", "pattern": [{"lower": "mann"}]}
+{"label": "GPE", "pattern": [{"lower": "mannin"}]}
+{"label": "GPE", "pattern": [{"lower": "israel"}]}
+{"label": "GPE", "pattern": [{"lower": "il"}]}
+{"label": "GPE", "pattern": [{"lower": "state"}, {"lower": "of"}, {"lower": "israel"}]}
+{"label": "GPE", "pattern": [{"lower": "medīnat"}, {"lower": "yisrā'el"}]}
+{"label": "GPE", "pattern": [{"lower": "italy"}]}
+{"label": "GPE", "pattern": [{"lower": "it"}]}
+{"label": "GPE", "pattern": [{"lower": "italian"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "repubblica"}, {"lower": "italiana"}]}
+{"label": "GPE", "pattern": [{"lower": "jamaica"}]}
+{"label": "GPE", "pattern": [{"lower": "jm"}]}
+{"label": "GPE", "pattern": [{"lower": "japan"}]}
+{"label": "GPE", "pattern": [{"lower": "jp"}]}
+{"label": "GPE", "pattern": [{"lower": "nippon"}]}
+{"label": "GPE", "pattern": [{"lower": "nihon"}]}
+{"label": "GPE", "pattern": [{"lower": "jersey"}]}
+{"label": "GPE", "pattern": [{"lower": "je"}]}
+{"label": "GPE", "pattern": [{"lower": "bailiwick"}, {"lower": "of"}, {"lower": "jersey"}]}
+{"label": "GPE", "pattern": [{"lower": "bailliage"}, {"lower": "de"}, {"lower": "jersey"}]}
+{"label": "GPE", "pattern": [{"lower": "bailliage"}, {"lower": "dé"}, {"lower": "jèrri"}]}
+{"label": "GPE", "pattern": [{"lower": "jordan"}]}
+{"label": "GPE", "pattern": [{"lower": "jo"}]}
+{"label": "GPE", "pattern": [{"lower": "hashemite"}, {"lower": "kingdom"}, {"lower": "of"}, {"lower": "jordan"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}, {"lower": "-"}, {"lower": "mamlakah"}, {"lower": "al"}, {"lower": "-"}, {"lower": "urdunīyah"}, {"lower": "al"}, {"lower": "-"}, {"lower": "hāshimīyah"}]}
+{"label": "GPE", "pattern": [{"lower": "kazakhstan"}]}
+{"label": "GPE", "pattern": [{"lower": "kz"}]}
+{"label": "GPE", "pattern": [{"lower": "qazaqstan"}]}
+{"label": "GPE", "pattern": [{"lower": "казахстан"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "kazakhstan"}]}
+{"label": "GPE", "pattern": [{"lower": "қазақстан"}, {"lower": "республикасы"}]}
+{"label": "GPE", "pattern": [{"lower": "qazaqstan"}, {"lower": "respublïkası"}]}
+{"label": "GPE", "pattern": [{"lower": "республика"}, {"lower": "казахстан"}]}
+{"label": "GPE", "pattern": [{"lower": "respublika"}, {"lower": "kazakhstan"}]}
+{"label": "GPE", "pattern": [{"lower": "kenya"}]}
+{"label": "GPE", "pattern": [{"lower": "ke"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "kenya"}]}
+{"label": "GPE", "pattern": [{"lower": "jamhuri"}, {"lower": "ya"}, {"lower": "kenya"}]}
+{"label": "GPE", "pattern": [{"lower": "kiribati"}]}
+{"label": "GPE", "pattern": [{"lower": "ki"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "kiribati"}]}
+{"label": "GPE", "pattern": [{"lower": "ribaberiki"}, {"lower": "kiribati"}]}
+{"label": "GPE", "pattern": [{"lower": "kuwait"}]}
+{"label": "GPE", "pattern": [{"lower": "kw"}]}
+{"label": "GPE", "pattern": [{"lower": "state"}, {"lower": "of"}, {"lower": "kuwait"}]}
+{"label": "GPE", "pattern": [{"lower": "dawlat"}, {"lower": "al"}, {"lower": "-"}, {"lower": "kuwait"}]}
+{"label": "GPE", "pattern": [{"lower": "kyrgyzstan"}]}
+{"label": "GPE", "pattern": [{"lower": "kg"}]}
+{"label": "GPE", "pattern": [{"lower": "киргизия"}]}
+{"label": "GPE", "pattern": [{"lower": "kyrgyz"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "кыргыз"}, {"lower": "республикасы"}]}
+{"label": "GPE", "pattern": [{"lower": "kyrgyz"}, {"lower": "respublikasy"}]}
+{"label": "GPE", "pattern": [{"lower": "lao"}, {"lower": "people"}, {"lower": "'s"}, {"lower": "democratic"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "la"}]}
+{"label": "GPE", "pattern": [{"lower": "lao"}]}
+{"label": "GPE", "pattern": [{"lower": "laos"}]}
+{"label": "GPE", "pattern": [{"lower": "lao"}, {"lower": "people"}, {"lower": "'s"}, {"lower": "democratic"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "sathalanalat"}, {"lower": "paxathipatai"}, {"lower": "paxaxon"}, {"lower": "lao"}]}
+{"label": "GPE", "pattern": [{"lower": "latvia"}]}
+{"label": "GPE", "pattern": [{"lower": "lv"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "latvia"}]}
+{"label": "GPE", "pattern": [{"lower": "latvijas"}, {"lower": "republika"}]}
+{"label": "GPE", "pattern": [{"lower": "lebanon"}]}
+{"label": "GPE", "pattern": [{"lower": "lb"}]}
+{"label": "GPE", "pattern": [{"lower": "lebanese"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}, {"lower": "-"}, {"lower": "jumhūrīyah"}, {"lower": "al"}, {"lower": "-"}, {"lower": "libnānīyah"}]}
+{"label": "GPE", "pattern": [{"lower": "lesotho"}]}
+{"label": "GPE", "pattern": [{"lower": "ls"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "lesotho"}]}
+{"label": "GPE", "pattern": [{"lower": "muso"}, {"lower": "oa"}, {"lower": "lesotho"}]}
+{"label": "GPE", "pattern": [{"lower": "liberia"}]}
+{"label": "GPE", "pattern": [{"lower": "lr"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "liberia"}]}
+{"label": "GPE", "pattern": [{"lower": "libya"}]}
+{"label": "GPE", "pattern": [{"lower": "ly"}]}
+{"label": "GPE", "pattern": [{"lower": "state"}, {"lower": "of"}, {"lower": "libya"}]}
+{"label": "GPE", "pattern": [{"lower": "dawlat"}, {"lower": "libya"}]}
+{"label": "GPE", "pattern": [{"lower": "liechtenstein"}]}
+{"label": "GPE", "pattern": [{"lower": "li"}]}
+{"label": "GPE", "pattern": [{"lower": "principality"}, {"lower": "of"}, {"lower": "liechtenstein"}]}
+{"label": "GPE", "pattern": [{"lower": "fürstentum"}, {"lower": "liechtenstein"}]}
+{"label": "GPE", "pattern": [{"lower": "lithuania"}]}
+{"label": "GPE", "pattern": [{"lower": "lt"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "lithuania"}]}
+{"label": "GPE", "pattern": [{"lower": "lietuvos"}, {"lower": "respublika"}]}
+{"label": "GPE", "pattern": [{"lower": "luxembourg"}]}
+{"label": "GPE", "pattern": [{"lower": "lu"}]}
+{"label": "GPE", "pattern": [{"lower": "grand"}, {"lower": "duchy"}, {"lower": "of"}, {"lower": "luxembourg"}]}
+{"label": "GPE", "pattern": [{"lower": "grand"}, {"lower": "-"}, {"lower": "duché"}, {"lower": "de"}, {"lower": "luxembourg"}]}
+{"label": "GPE", "pattern": [{"lower": "großherzogtum"}, {"lower": "luxemburg"}]}
+{"label": "GPE", "pattern": [{"lower": "groussherzogtum"}, {"lower": "lëtzebuerg"}]}
+{"label": "GPE", "pattern": [{"lower": "macao"}]}
+{"label": "GPE", "pattern": [{"lower": "mo"}]}
+{"label": "GPE", "pattern": [{"lower": "澳门"}]}
+{"label": "GPE", "pattern": [{"lower": "macao"}, {"lower": "special"}, {"lower": "administrative"}, {"lower": "region"}, {"lower": "of"}, {"lower": "the"}, {"lower": "people"}, {"lower": "'s"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "china"}]}
+{"label": "GPE", "pattern": [{"lower": "中華人民共和國澳門特別行政區"}]}
+{"label": "GPE", "pattern": [{"lower": "região"}, {"lower": "administrativa"}, {"lower": "especial"}, {"lower": "de"}, {"lower": "macau"}, {"lower": "da"}, {"lower": "república"}, {"lower": "popular"}, {"lower": "da"}, {"lower": "china"}]}
+{"label": "GPE", "pattern": [{"lower": "macedonia"}, {"lower": "("}, {"lower": "the"}, {"lower": "former"}, {"lower": "yugoslav"}, {"lower": "republic"}, {"lower": "of"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "mk"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "macedonia"}]}
+{"label": "GPE", "pattern": [{"lower": "република"}, {"lower": "македонија"}]}
+{"label": "GPE", "pattern": [{"lower": "madagascar"}]}
+{"label": "GPE", "pattern": [{"lower": "mg"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "madagascar"}]}
+{"label": "GPE", "pattern": [{"lower": "repoblikan'i"}, {"lower": "madagasikara"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "de"}, {"lower": "madagascar"}]}
+{"label": "GPE", "pattern": [{"lower": "malawi"}]}
+{"label": "GPE", "pattern": [{"lower": "mw"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "malawi"}]}
+{"label": "GPE", "pattern": [{"lower": "malaysia"}]}
+{"label": "GPE", "pattern": [{"lower": "my"}]}
+{"label": "GPE", "pattern": [{"lower": "maldives"}]}
+{"label": "GPE", "pattern": [{"lower": "mv"}]}
+{"label": "GPE", "pattern": [{"lower": "maldive"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "the"}, {"lower": "maldives"}]}
+{"label": "GPE", "pattern": [{"lower": "dhivehi"}, {"lower": "raajjeyge"}, {"lower": "jumhooriyya"}]}
+{"label": "GPE", "pattern": [{"lower": "mali"}]}
+{"label": "GPE", "pattern": [{"lower": "ml"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "mali"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "du"}, {"lower": "mali"}]}
+{"label": "GPE", "pattern": [{"lower": "malta"}]}
+{"label": "GPE", "pattern": [{"lower": "mt"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "malta"}]}
+{"label": "GPE", "pattern": [{"lower": "repubblika"}, {"lower": "ta"}, {"lower": "'"}, {"lower": "malta"}]}
+{"label": "GPE", "pattern": [{"lower": "marshall"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "mh"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "the"}, {"lower": "marshall"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "aolepān"}, {"lower": "aorōkin"}, {"lower": "m̧ajeļ"}]}
+{"label": "GPE", "pattern": [{"lower": "martinique"}]}
+{"label": "GPE", "pattern": [{"lower": "mq"}]}
+{"label": "GPE", "pattern": [{"lower": "mauritania"}]}
+{"label": "GPE", "pattern": [{"lower": "mr"}]}
+{"label": "GPE", "pattern": [{"lower": "islamic"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "mauritania"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}, {"lower": "-"}, {"lower": "jumhūriyyah"}, {"lower": "al-ʾislāmiyyah"}, {"lower": "al"}, {"lower": "-"}, {"lower": "mūrītāniyyah"}]}
+{"label": "GPE", "pattern": [{"lower": "mauritius"}]}
+{"label": "GPE", "pattern": [{"lower": "mu"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "mauritius"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "de"}, {"lower": "maurice"}]}
+{"label": "GPE", "pattern": [{"lower": "mayotte"}]}
+{"label": "GPE", "pattern": [{"lower": "yt"}]}
+{"label": "GPE", "pattern": [{"lower": "department"}, {"lower": "of"}, {"lower": "mayotte"}]}
+{"label": "GPE", "pattern": [{"lower": "département"}, {"lower": "de"}, {"lower": "mayotte"}]}
+{"label": "GPE", "pattern": [{"lower": "mexico"}]}
+{"label": "GPE", "pattern": [{"lower": "mx"}]}
+{"label": "GPE", "pattern": [{"lower": "mexicanos"}]}
+{"label": "GPE", "pattern": [{"lower": "united"}, {"lower": "mexican"}, {"lower": "states"}]}
+{"label": "GPE", "pattern": [{"lower": "estados"}, {"lower": "unidos"}, {"lower": "mexicanos"}]}
+{"label": "GPE", "pattern": [{"lower": "micronesia"}, {"lower": "("}, {"lower": "federated"}, {"lower": "states"}, {"lower": "of"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "fm"}]}
+{"label": "GPE", "pattern": [{"lower": "federated"}, {"lower": "states"}, {"lower": "of"}, {"lower": "micronesia"}]}
+{"label": "GPE", "pattern": [{"lower": "moldova"}, {"lower": "("}, {"lower": "republic"}, {"lower": "of"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "md"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "moldova"}]}
+{"label": "GPE", "pattern": [{"lower": "republica"}, {"lower": "moldova"}]}
+{"label": "GPE", "pattern": [{"lower": "monaco"}]}
+{"label": "GPE", "pattern": [{"lower": "mc"}]}
+{"label": "GPE", "pattern": [{"lower": "principality"}, {"lower": "of"}, {"lower": "monaco"}]}
+{"label": "GPE", "pattern": [{"lower": "principauté"}, {"lower": "de"}, {"lower": "monaco"}]}
+{"label": "GPE", "pattern": [{"lower": "mongolia"}]}
+{"label": "GPE", "pattern": [{"lower": "mn"}]}
+{"label": "GPE", "pattern": [{"lower": "montenegro"}]}
+{"label": "GPE", "pattern": [{"lower": "me"}]}
+{"label": "GPE", "pattern": [{"lower": "crna"}, {"lower": "gora"}]}
+{"label": "GPE", "pattern": [{"lower": "montserrat"}]}
+{"label": "GPE", "pattern": [{"lower": "ms"}]}
+{"label": "GPE", "pattern": [{"lower": "morocco"}]}
+{"label": "GPE", "pattern": [{"lower": "ma"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "morocco"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}, {"lower": "-"}, {"lower": "mamlakah"}, {"lower": "al"}, {"lower": "-"}, {"lower": "maġribiyah"}]}
+{"label": "GPE", "pattern": [{"lower": "mozambique"}]}
+{"label": "GPE", "pattern": [{"lower": "mz"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "mozambique"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "moçambique"}]}
+{"label": "GPE", "pattern": [{"lower": "myanmar"}]}
+{"label": "GPE", "pattern": [{"lower": "mm"}]}
+{"label": "GPE", "pattern": [{"lower": "burma"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "the"}, {"lower": "union"}, {"lower": "of"}, {"lower": "myanmar"}]}
+{"label": "GPE", "pattern": [{"lower": "pyidaunzu"}, {"lower": "thanmăda"}, {"lower": "myăma"}, {"lower": "nainngandaw"}]}
+{"label": "GPE", "pattern": [{"lower": "namibia"}]}
+{"label": "GPE", "pattern": [{"lower": "na"}]}
+{"label": "GPE", "pattern": [{"lower": "namibië"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "namibia"}]}
+{"label": "GPE", "pattern": [{"lower": "nauru"}]}
+{"label": "GPE", "pattern": [{"lower": "nr"}]}
+{"label": "GPE", "pattern": [{"lower": "naoero"}]}
+{"label": "GPE", "pattern": [{"lower": "pleasant"}, {"lower": "island"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "nauru"}]}
+{"label": "GPE", "pattern": [{"lower": "ripublik"}, {"lower": "naoero"}]}
+{"label": "GPE", "pattern": [{"lower": "nepal"}]}
+{"label": "GPE", "pattern": [{"lower": "np"}]}
+{"label": "GPE", "pattern": [{"lower": "federal"}, {"lower": "democratic"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "nepal"}]}
+{"label": "GPE", "pattern": [{"lower": "loktāntrik"}, {"lower": "ganatantra"}, {"lower": "nepāl"}]}
+{"label": "GPE", "pattern": [{"lower": "netherlands"}]}
+{"label": "GPE", "pattern": [{"lower": "nl"}]}
+{"label": "GPE", "pattern": [{"lower": "holland"}]}
+{"label": "GPE", "pattern": [{"lower": "nederland"}]}
+{"label": "GPE", "pattern": [{"lower": "new"}, {"lower": "caledonia"}]}
+{"label": "GPE", "pattern": [{"lower": "nc"}]}
+{"label": "GPE", "pattern": [{"lower": "new"}, {"lower": "zealand"}]}
+{"label": "GPE", "pattern": [{"lower": "nz"}]}
+{"label": "GPE", "pattern": [{"lower": "aotearoa"}]}
+{"label": "GPE", "pattern": [{"lower": "nicaragua"}]}
+{"label": "GPE", "pattern": [{"lower": "ni"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "nicaragua"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "nicaragua"}]}
+{"label": "GPE", "pattern": [{"lower": "niger"}]}
+{"label": "GPE", "pattern": [{"lower": "ne"}]}
+{"label": "GPE", "pattern": [{"lower": "nijar"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "niger"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "du"}, {"lower": "niger"}]}
+{"label": "GPE", "pattern": [{"lower": "nigeria"}]}
+{"label": "GPE", "pattern": [{"lower": "ng"}]}
+{"label": "GPE", "pattern": [{"lower": "nijeriya"}]}
+{"label": "GPE", "pattern": [{"lower": "naíjíríà"}]}
+{"label": "GPE", "pattern": [{"lower": "federal"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "nigeria"}]}
+{"label": "GPE", "pattern": [{"lower": "niue"}]}
+{"label": "GPE", "pattern": [{"lower": "nu"}]}
+{"label": "GPE", "pattern": [{"lower": "norfolk"}, {"lower": "island"}]}
+{"label": "GPE", "pattern": [{"lower": "nf"}]}
+{"label": "GPE", "pattern": [{"lower": "territory"}, {"lower": "of"}, {"lower": "norfolk"}, {"lower": "island"}]}
+{"label": "GPE", "pattern": [{"lower": "teratri"}, {"lower": "of"}, {"lower": "norf'k"}, {"lower": "ailen"}]}
+{"label": "GPE", "pattern": [{"lower": "korea"}, {"lower": "("}, {"lower": "democratic"}, {"lower": "people"}, {"lower": "'s"}, {"lower": "republic"}, {"lower": "of"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "kp"}]}
+{"label": "GPE", "pattern": [{"lower": "democratic"}, {"lower": "people"}, {"lower": "'s"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "korea"}]}
+{"label": "GPE", "pattern": [{"lower": "조선민주주의인민공화국"}]}
+{"label": "GPE", "pattern": [{"lower": "chosŏn"}, {"lower": "minjujuŭi"}, {"lower": "inmin"}, {"lower": "konghwaguk"}]}
+{"label": "GPE", "pattern": [{"lower": "northern"}, {"lower": "mariana"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "mp"}]}
+{"label": "GPE", "pattern": [{"lower": "commonwealth"}, {"lower": "of"}, {"lower": "the"}, {"lower": "northern"}, {"lower": "mariana"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "sankattan"}, {"lower": "siha"}, {"lower": "na"}, {"lower": "islas"}, {"lower": "mariånas"}]}
+{"label": "GPE", "pattern": [{"lower": "norway"}]}
+{"label": "GPE", "pattern": [{"lower": "no"}]}
+{"label": "GPE", "pattern": [{"lower": "norge"}]}
+{"label": "GPE", "pattern": [{"lower": "noreg"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "norway"}]}
+{"label": "GPE", "pattern": [{"lower": "kongeriket"}, {"lower": "norge"}]}
+{"label": "GPE", "pattern": [{"lower": "kongeriket"}, {"lower": "noreg"}]}
+{"label": "GPE", "pattern": [{"lower": "oman"}]}
+{"label": "GPE", "pattern": [{"lower": "om"}]}
+{"label": "GPE", "pattern": [{"lower": "sultanate"}, {"lower": "of"}, {"lower": "oman"}]}
+{"label": "GPE", "pattern": [{"lower": "salṭanat"}, {"lower": "ʻumān"}]}
+{"label": "GPE", "pattern": [{"lower": "pakistan"}]}
+{"label": "GPE", "pattern": [{"lower": "pk"}]}
+{"label": "GPE", "pattern": [{"lower": "pākistān"}]}
+{"label": "GPE", "pattern": [{"lower": "islamic"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "pakistan"}]}
+{"label": "GPE", "pattern": [{"lower": "islāmī"}, {"lower": "jumhūriya'eh"}, {"lower": "pākistān"}]}
+{"label": "GPE", "pattern": [{"lower": "palau"}]}
+{"label": "GPE", "pattern": [{"lower": "pw"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "palau"}]}
+{"label": "GPE", "pattern": [{"lower": "beluu"}, {"lower": "er"}, {"lower": "a"}, {"lower": "belau"}]}
+{"label": "GPE", "pattern": [{"lower": "palestine"}, {"lower": ","}, {"lower": "state"}, {"lower": "of"}]}
+{"label": "GPE", "pattern": [{"lower": "ps"}]}
+{"label": "GPE", "pattern": [{"lower": "state"}, {"lower": "of"}, {"lower": "palestine"}]}
+{"label": "GPE", "pattern": [{"lower": "dawlat"}, {"lower": "filasṭin"}]}
+{"label": "GPE", "pattern": [{"lower": "panama"}]}
+{"label": "GPE", "pattern": [{"lower": "pa"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "panama"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "de"}, {"lower": "panamá"}]}
+{"label": "GPE", "pattern": [{"lower": "papua"}, {"lower": "new"}, {"lower": "guinea"}]}
+{"label": "GPE", "pattern": [{"lower": "pg"}]}
+{"label": "GPE", "pattern": [{"lower": "independent"}, {"lower": "state"}, {"lower": "of"}, {"lower": "papua"}, {"lower": "new"}, {"lower": "guinea"}]}
+{"label": "GPE", "pattern": [{"lower": "independen"}, {"lower": "stet"}, {"lower": "bilong"}, {"lower": "papua"}, {"lower": "niugini"}]}
+{"label": "GPE", "pattern": [{"lower": "paraguay"}]}
+{"label": "GPE", "pattern": [{"lower": "py"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "paraguay"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "del"}, {"lower": "paraguay"}]}
+{"label": "GPE", "pattern": [{"lower": "tetã"}, {"lower": "paraguái"}]}
+{"label": "GPE", "pattern": [{"lower": "peru"}]}
+{"label": "GPE", "pattern": [{"lower": "pe"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "peru"}]}
+{"label": "GPE", "pattern": [{"lower": " "}, {"lower": "república"}, {"lower": "del"}, {"lower": "perú"}]}
+{"label": "GPE", "pattern": [{"lower": "philippines"}]}
+{"label": "GPE", "pattern": [{"lower": "ph"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "the"}, {"lower": "philippines"}]}
+{"label": "GPE", "pattern": [{"lower": "repúblika"}, {"lower": "ng"}, {"lower": "pilipinas"}]}
+{"label": "GPE", "pattern": [{"lower": "pitcairn"}]}
+{"label": "GPE", "pattern": [{"lower": "pn"}]}
+{"label": "GPE", "pattern": [{"lower": "pitcairn"}, {"lower": "henderson"}, {"lower": "ducie"}, {"lower": "and"}, {"lower": "oeno"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "poland"}]}
+{"label": "GPE", "pattern": [{"lower": "pl"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "poland"}]}
+{"label": "GPE", "pattern": [{"lower": "rzeczpospolita"}, {"lower": "polska"}]}
+{"label": "GPE", "pattern": [{"lower": "portugal"}]}
+{"label": "GPE", "pattern": [{"lower": "pt"}]}
+{"label": "GPE", "pattern": [{"lower": "portuguesa"}]}
+{"label": "GPE", "pattern": [{"lower": "portuguese"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "portuguesa"}]}
+{"label": "GPE", "pattern": [{"lower": "puerto"}, {"lower": "rico"}]}
+{"label": "GPE", "pattern": [{"lower": "pr"}]}
+{"label": "GPE", "pattern": [{"lower": "commonwealth"}, {"lower": "of"}, {"lower": "puerto"}, {"lower": "rico"}]}
+{"label": "GPE", "pattern": [{"lower": "estado"}, {"lower": "libre"}, {"lower": "asociado"}, {"lower": "de"}, {"lower": "puerto"}, {"lower": "rico"}]}
+{"label": "GPE", "pattern": [{"lower": "qatar"}]}
+{"label": "GPE", "pattern": [{"lower": "qa"}]}
+{"label": "GPE", "pattern": [{"lower": "state"}, {"lower": "of"}, {"lower": "qatar"}]}
+{"label": "GPE", "pattern": [{"lower": "dawlat"}, {"lower": "qaṭar"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "kosovo"}]}
+{"label": "GPE", "pattern": [{"lower": "xk"}]}
+{"label": "GPE", "pattern": [{"lower": "република"}, {"lower": "косово"}]}
+{"label": "GPE", "pattern": [{"lower": "réunion"}]}
+{"label": "GPE", "pattern": [{"lower": "re"}]}
+{"label": "GPE", "pattern": [{"lower": "reunion"}]}
+{"label": "GPE", "pattern": [{"lower": "romania"}]}
+{"label": "GPE", "pattern": [{"lower": "ro"}]}
+{"label": "GPE", "pattern": [{"lower": "rumania"}]}
+{"label": "GPE", "pattern": [{"lower": "roumania"}]}
+{"label": "GPE", "pattern": [{"lower": "românia"}]}
+{"label": "GPE", "pattern": [{"lower": "russian"}, {"lower": "federation"}]}
+{"label": "GPE", "pattern": [{"lower": "ru"}]}
+{"label": "GPE", "pattern": [{"lower": "rossiya"}]}
+{"label": "GPE", "pattern": [{"lower": "russian"}, {"lower": "federation"}]}
+{"label": "GPE", "pattern": [{"lower": "российская"}, {"lower": "федерация"}]}
+{"label": "GPE", "pattern": [{"lower": "rossiyskaya"}, {"lower": "federatsiya"}]}
+{"label": "GPE", "pattern": [{"lower": "rwanda"}]}
+{"label": "GPE", "pattern": [{"lower": "rw"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "rwanda"}]}
+{"label": "GPE", "pattern": [{"lower": "repubulika"}, {"lower": "y'u"}, {"lower": "rwanda"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "du"}, {"lower": "rwanda"}]}
+{"label": "GPE", "pattern": [{"lower": "saint"}, {"lower": "barthélemy"}]}
+{"label": "GPE", "pattern": [{"lower": "bl"}]}
+{"label": "GPE", "pattern": [{"lower": "st."}, {"lower": "barthelemy"}]}
+{"label": "GPE", "pattern": [{"lower": "collectivity"}, {"lower": "of"}, {"lower": "saint"}, {"lower": "barthélemy"}]}
+{"label": "GPE", "pattern": [{"lower": "collectivité"}, {"lower": "de"}, {"lower": "saint"}, {"lower": "-"}, {"lower": "barthélemy"}]}
+{"label": "GPE", "pattern": [{"lower": "saint"}, {"lower": "helena"}, {"lower": ","}, {"lower": "ascension"}, {"lower": "and"}, {"lower": "tristan"}, {"lower": "da"}, {"lower": "cunha"}]}
+{"label": "GPE", "pattern": [{"lower": "sh"}]}
+{"label": "GPE", "pattern": [{"lower": "saint"}, {"lower": "kitts"}, {"lower": "and"}, {"lower": "nevis"}]}
+{"label": "GPE", "pattern": [{"lower": "kn"}]}
+{"label": "GPE", "pattern": [{"lower": "federation"}, {"lower": "of"}, {"lower": "saint"}, {"lower": "christopher"}, {"lower": "and"}, {"lower": "nevis"}]}
+{"label": "GPE", "pattern": [{"lower": "saint"}, {"lower": "lucia"}]}
+{"label": "GPE", "pattern": [{"lower": "lc"}]}
+{"label": "GPE", "pattern": [{"lower": "saint"}, {"lower": "martin"}, {"lower": "("}, {"lower": "french"}, {"lower": "part"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "mf"}]}
+{"label": "GPE", "pattern": [{"lower": "collectivity"}, {"lower": "of"}, {"lower": "saint"}, {"lower": "martin"}]}
+{"label": "GPE", "pattern": [{"lower": "collectivité"}, {"lower": "de"}, {"lower": "saint"}, {"lower": "-"}, {"lower": "martin"}]}
+{"label": "GPE", "pattern": [{"lower": "saint"}, {"lower": "pierre"}, {"lower": "and"}, {"lower": "miquelon"}]}
+{"label": "GPE", "pattern": [{"lower": "pm"}]}
+{"label": "GPE", "pattern": [{"lower": "collectivité"}, {"lower": "territoriale"}, {"lower": "de"}, {"lower": "saint"}, {"lower": "-"}, {"lower": "pierre"}, {"lower": "-"}, {"lower": "et"}, {"lower": "-"}, {"lower": "miquelon"}]}
+{"label": "GPE", "pattern": [{"lower": "saint"}, {"lower": "vincent"}, {"lower": "and"}, {"lower": "the"}, {"lower": "grenadines"}]}
+{"label": "GPE", "pattern": [{"lower": "vc"}]}
+{"label": "GPE", "pattern": [{"lower": "samoa"}]}
+{"label": "GPE", "pattern": [{"lower": "ws"}]}
+{"label": "GPE", "pattern": [{"lower": "independent"}, {"lower": "state"}, {"lower": "of"}, {"lower": "samoa"}]}
+{"label": "GPE", "pattern": [{"lower": "malo"}, {"lower": "saʻoloto"}, {"lower": "tutoʻatasi"}, {"lower": "o"}, {"lower": "sāmoa"}]}
+{"label": "GPE", "pattern": [{"lower": "san"}, {"lower": "marino"}]}
+{"label": "GPE", "pattern": [{"lower": "sm"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "san"}, {"lower": "marino"}]}
+{"label": "GPE", "pattern": [{"lower": "repubblica"}, {"lower": "di"}, {"lower": "san"}, {"lower": "marino"}]}
+{"label": "GPE", "pattern": [{"lower": "sao"}, {"lower": "tome"}, {"lower": "and"}, {"lower": "principe"}]}
+{"label": "GPE", "pattern": [{"lower": "st"}]}
+{"label": "GPE", "pattern": [{"lower": "democratic"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "são"}, {"lower": "tomé"}, {"lower": "and"}, {"lower": "príncipe"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "democrática"}, {"lower": "de"}, {"lower": "são"}, {"lower": "tomé"}, {"lower": "e"}, {"lower": "príncipe"}]}
+{"label": "GPE", "pattern": [{"lower": "saudi"}, {"lower": "arabia"}]}
+{"label": "GPE", "pattern": [{"lower": "sa"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "saudi"}, {"lower": "arabia"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}, {"lower": "-"}, {"lower": "mamlakah"}, {"lower": "al-‘arabiyyah"}, {"lower": "as"}, {"lower": "-"}, {"lower": "su‘ūdiyyah"}]}
+{"label": "GPE", "pattern": [{"lower": "senegal"}]}
+{"label": "GPE", "pattern": [{"lower": "sn"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "senegal"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "du"}, {"lower": "sénégal"}]}
+{"label": "GPE", "pattern": [{"lower": "serbia"}]}
+{"label": "GPE", "pattern": [{"lower": "rs"}]}
+{"label": "GPE", "pattern": [{"lower": "srbija"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "serbia"}]}
+{"label": "GPE", "pattern": [{"lower": "република"}, {"lower": "србија"}]}
+{"label": "GPE", "pattern": [{"lower": "republika"}, {"lower": "srbija"}]}
+{"label": "GPE", "pattern": [{"lower": "seychelles"}]}
+{"label": "GPE", "pattern": [{"lower": "sc"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "seychelles"}]}
+{"label": "GPE", "pattern": [{"lower": "repiblik"}, {"lower": "sesel"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "des"}, {"lower": "seychelles"}]}
+{"label": "GPE", "pattern": [{"lower": "sierra"}, {"lower": "leone"}]}
+{"label": "GPE", "pattern": [{"lower": "sl"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "sierra"}, {"lower": "leone"}]}
+{"label": "GPE", "pattern": [{"lower": "singapore"}]}
+{"label": "GPE", "pattern": [{"lower": "sg"}]}
+{"label": "GPE", "pattern": [{"lower": "singapura"}]}
+{"label": "GPE", "pattern": [{"lower": "republik"}, {"lower": "singapura"}]}
+{"label": "GPE", "pattern": [{"lower": "新加坡共和国"}]}
+{"label": "GPE", "pattern": [{"lower": "sint"}, {"lower": "maarten"}, {"lower": "("}, {"lower": "dutch"}, {"lower": "part"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "sx"}]}
+{"label": "GPE", "pattern": [{"lower": "slovakia"}]}
+{"label": "GPE", "pattern": [{"lower": "sk"}]}
+{"label": "GPE", "pattern": [{"lower": "slovak"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "slovenská"}, {"lower": "republika"}]}
+{"label": "GPE", "pattern": [{"lower": "slovenia"}]}
+{"label": "GPE", "pattern": [{"lower": "si"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "slovenia"}]}
+{"label": "GPE", "pattern": [{"lower": "republika"}, {"lower": "slovenija"}]}
+{"label": "GPE", "pattern": [{"lower": "solomon"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "sb"}]}
+{"label": "GPE", "pattern": [{"lower": "somalia"}]}
+{"label": "GPE", "pattern": [{"lower": "so"}]}
+{"label": "GPE", "pattern": [{"lower": "aṣ"}, {"lower": "-"}, {"lower": "ṣūmāl"}]}
+{"label": "GPE", "pattern": [{"lower": "federal"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "somalia"}]}
+{"label": "GPE", "pattern": [{"lower": "jamhuuriyadda"}, {"lower": "federaalka"}, {"lower": "soomaaliya"}]}
+{"label": "GPE", "pattern": [{"lower": "jumhūriyyat"}, {"lower": "aṣ"}, {"lower": "-"}, {"lower": "ṣūmāl"}, {"lower": "al"}, {"lower": "-"}, {"lower": "fiderāliyya"}]}
+{"label": "GPE", "pattern": [{"lower": "south"}, {"lower": "africa"}]}
+{"label": "GPE", "pattern": [{"lower": "za"}]}
+{"label": "GPE", "pattern": [{"lower": "rsa"}]}
+{"label": "GPE", "pattern": [{"lower": "suid"}, {"lower": "-"}, {"lower": "afrika"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "south"}, {"lower": "africa"}]}
+{"label": "GPE", "pattern": [{"lower": "south"}, {"lower": "georgia"}, {"lower": "and"}, {"lower": "the"}, {"lower": "south"}, {"lower": "sandwich"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "gs"}]}
+{"label": "GPE", "pattern": [{"lower": "south"}, {"lower": "georgia"}, {"lower": "and"}, {"lower": "the"}, {"lower": "south"}, {"lower": "sandwich"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "korea"}, {"lower": "("}, {"lower": "republic"}, {"lower": "of"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "kr"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "korea"}]}
+{"label": "GPE", "pattern": [{"lower": "south"}, {"lower": "sudan"}]}
+{"label": "GPE", "pattern": [{"lower": "ss"}]}
+{"label": "GPE", "pattern": [{"lower": "spain"}]}
+{"label": "GPE", "pattern": [{"lower": "es"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "spain"}]}
+{"label": "GPE", "pattern": [{"lower": "reino"}, {"lower": "de"}, {"lower": "españa"}]}
+{"label": "GPE", "pattern": [{"lower": "sri"}, {"lower": "lanka"}]}
+{"label": "GPE", "pattern": [{"lower": "lk"}]}
+{"label": "GPE", "pattern": [{"lower": "ilaṅkai"}]}
+{"label": "GPE", "pattern": [{"lower": "democratic"}, {"lower": "socialist"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "sri"}, {"lower": "lanka"}]}
+{"label": "GPE", "pattern": [{"lower": "sudan"}]}
+{"label": "GPE", "pattern": [{"lower": "sd"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "the"}, {"lower": "sudan"}]}
+{"label": "GPE", "pattern": [{"lower": "jumhūrīyat"}, {"lower": "as"}, {"lower": "-"}, {"lower": "sūdān"}]}
+{"label": "GPE", "pattern": [{"lower": "suriname"}]}
+{"label": "GPE", "pattern": [{"lower": "sr"}]}
+{"label": "GPE", "pattern": [{"lower": "sarnam"}]}
+{"label": "GPE", "pattern": [{"lower": "sranangron"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "suriname"}]}
+{"label": "GPE", "pattern": [{"lower": "republiek"}, {"lower": "suriname"}]}
+{"label": "GPE", "pattern": [{"lower": "svalbard"}, {"lower": "and"}, {"lower": "jan"}, {"lower": "mayen"}]}
+{"label": "GPE", "pattern": [{"lower": "sj"}]}
+{"label": "GPE", "pattern": [{"lower": "svalbard"}, {"lower": "and"}, {"lower": "jan"}, {"lower": "mayen"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "swaziland"}]}
+{"label": "GPE", "pattern": [{"lower": "sz"}]}
+{"label": "GPE", "pattern": [{"lower": "weswatini"}]}
+{"label": "GPE", "pattern": [{"lower": "swatini"}]}
+{"label": "GPE", "pattern": [{"lower": "ngwane"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "swaziland"}]}
+{"label": "GPE", "pattern": [{"lower": "umbuso"}, {"lower": "waseswatini"}]}
+{"label": "GPE", "pattern": [{"lower": "sweden"}]}
+{"label": "GPE", "pattern": [{"lower": "se"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "sweden"}]}
+{"label": "GPE", "pattern": [{"lower": "konungariket"}, {"lower": "sverige"}]}
+{"label": "GPE", "pattern": [{"lower": "switzerland"}]}
+{"label": "GPE", "pattern": [{"lower": "ch"}]}
+{"label": "GPE", "pattern": [{"lower": "swiss"}, {"lower": "confederation"}]}
+{"label": "GPE", "pattern": [{"lower": "schweiz"}]}
+{"label": "GPE", "pattern": [{"lower": "suisse"}]}
+{"label": "GPE", "pattern": [{"lower": "svizzera"}]}
+{"label": "GPE", "pattern": [{"lower": "svizra"}]}
+{"label": "GPE", "pattern": [{"lower": "syrian"}, {"lower": "arab"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "sy"}]}
+{"label": "GPE", "pattern": [{"lower": "syrian"}, {"lower": "arab"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}, {"lower": "-"}, {"lower": "jumhūrīyah"}, {"lower": "al-ʻarabīyah"}, {"lower": "as"}, {"lower": "-"}, {"lower": "sūrīyah"}]}
+{"label": "GPE", "pattern": [{"lower": "taiwan"}]}
+{"label": "GPE", "pattern": [{"lower": "tw"}]}
+{"label": "GPE", "pattern": [{"lower": "táiwān"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "china"}]}
+{"label": "GPE", "pattern": [{"lower": "中華民國"}]}
+{"label": "GPE", "pattern": [{"lower": "zhōnghuá"}, {"lower": "mínguó"}]}
+{"label": "GPE", "pattern": [{"lower": "tajikistan"}]}
+{"label": "GPE", "pattern": [{"lower": "tj"}]}
+{"label": "GPE", "pattern": [{"lower": "toçikiston"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "tajikistan"}]}
+{"label": "GPE", "pattern": [{"lower": "ҷумҳурии"}, {"lower": "тоҷикистон"}]}
+{"label": "GPE", "pattern": [{"lower": "çumhuriyi"}, {"lower": "toçikiston"}]}
+{"label": "GPE", "pattern": [{"lower": "tanzania"}, {"lower": ","}, {"lower": "united"}, {"lower": "republic"}, {"lower": "of"}]}
+{"label": "GPE", "pattern": [{"lower": "tz"}]}
+{"label": "GPE", "pattern": [{"lower": "united"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "tanzania"}]}
+{"label": "GPE", "pattern": [{"lower": "jamhuri"}, {"lower": "ya"}, {"lower": "muungano"}, {"lower": "wa"}, {"lower": "tanzania"}]}
+{"label": "GPE", "pattern": [{"lower": "thailand"}]}
+{"label": "GPE", "pattern": [{"lower": "th"}]}
+{"label": "GPE", "pattern": [{"lower": "prathet"}]}
+{"label": "GPE", "pattern": [{"lower": "thai"}]}
+{"label": "GPE", "pattern": [{"lower": "kingdom"}, {"lower": "of"}, {"lower": "thailand"}]}
+{"label": "GPE", "pattern": [{"lower": "ราชอาณาจักรไทย"}]}
+{"label": "GPE", "pattern": [{"lower": "ratcha"}, {"lower": "anachak"}, {"lower": "thai"}]}
+{"label": "GPE", "pattern": [{"lower": "timor"}, {"lower": "-"}, {"lower": "leste"}]}
+{"label": "GPE", "pattern": [{"lower": "tl"}]}
+{"label": "GPE", "pattern": [{"lower": "east"}, {"lower": "timor"}]}
+{"label": "GPE", "pattern": [{"lower": "democratic"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "timor"}, {"lower": "-"}, {"lower": "leste"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "democrática"}, {"lower": "de"}, {"lower": "timor"}, {"lower": "-"}, {"lower": "leste"}]}
+{"label": "GPE", "pattern": [{"lower": "repúblika"}, {"lower": "demokrátika"}, {"lower": "timór"}, {"lower": "-"}, {"lower": "leste"}]}
+{"label": "GPE", "pattern": [{"lower": "togo"}]}
+{"label": "GPE", "pattern": [{"lower": "tg"}]}
+{"label": "GPE", "pattern": [{"lower": "togolese"}]}
+{"label": "GPE", "pattern": [{"lower": "togolese"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "togolaise"}]}
+{"label": "GPE", "pattern": [{"lower": "tokelau"}]}
+{"label": "GPE", "pattern": [{"lower": "tk"}]}
+{"label": "GPE", "pattern": [{"lower": "tonga"}]}
+{"label": "GPE", "pattern": [{"lower": "to"}]}
+{"label": "GPE", "pattern": [{"lower": "trinidad"}, {"lower": "and"}, {"lower": "tobago"}]}
+{"label": "GPE", "pattern": [{"lower": "tt"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "trinidad"}, {"lower": "and"}, {"lower": "tobago"}]}
+{"label": "GPE", "pattern": [{"lower": "tunisia"}]}
+{"label": "GPE", "pattern": [{"lower": "tn"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "tunisia"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}, {"lower": "-"}, {"lower": "jumhūriyyah"}, {"lower": "at"}, {"lower": "-"}, {"lower": "tūnisiyyah"}]}
+{"label": "GPE", "pattern": [{"lower": "turkey"}]}
+{"label": "GPE", "pattern": [{"lower": "tr"}]}
+{"label": "GPE", "pattern": [{"lower": "turkiye"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "turkey"}]}
+{"label": "GPE", "pattern": [{"lower": "türkiye"}, {"lower": "cumhuriyeti"}]}
+{"label": "GPE", "pattern": [{"lower": "turkmenistan"}]}
+{"label": "GPE", "pattern": [{"lower": "tm"}]}
+{"label": "GPE", "pattern": [{"lower": "turks"}, {"lower": "and"}, {"lower": "caicos"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "tc"}]}
+{"label": "GPE", "pattern": [{"lower": "tuvalu"}]}
+{"label": "GPE", "pattern": [{"lower": "tv"}]}
+{"label": "GPE", "pattern": [{"lower": "uganda"}]}
+{"label": "GPE", "pattern": [{"lower": "ug"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "uganda"}]}
+{"label": "GPE", "pattern": [{"lower": "jamhuri"}, {"lower": "ya"}, {"lower": "uganda"}]}
+{"label": "GPE", "pattern": [{"lower": "ukraine"}]}
+{"label": "GPE", "pattern": [{"lower": "ua"}]}
+{"label": "GPE", "pattern": [{"lower": "ukrayina"}]}
+{"label": "GPE", "pattern": [{"lower": "united"}, {"lower": "arab"}, {"lower": "emirates"}]}
+{"label": "GPE", "pattern": [{"lower": "ae"}]}
+{"label": "GPE", "pattern": [{"lower": "uae"}]}
+{"label": "GPE", "pattern": [{"lower": "united"}, {"lower": "kingdom"}, {"lower": "of"}, {"lower": "great"}, {"lower": "britain"}, {"lower": "and"}, {"lower": "northern"}, {"lower": "ireland"}]}
+{"label": "GPE", "pattern": [{"lower": "gb"}]}
+{"label": "GPE", "pattern": [{"lower": "uk"}]}
+{"label": "GPE", "pattern": [{"lower": "great"}, {"lower": "britain"}]}
+{"label": "GPE", "pattern": [{"lower": "united"}, {"lower": "states"}, {"lower": "of"}, {"lower": "america"}]}
+{"label": "GPE", "pattern": [{"lower": "us"}]}
+{"label": "GPE", "pattern": [{"lower": "usa"}]}
+{"label": "GPE", "pattern": [{"lower": "united"}, {"lower": "states"}, {"lower": "of"}, {"lower": "america"}]}
+{"label": "GPE", "pattern": [{"lower": "uruguay"}]}
+{"label": "GPE", "pattern": [{"lower": "uy"}]}
+{"label": "GPE", "pattern": [{"lower": "oriental"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "uruguay"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "oriental"}, {"lower": "del"}, {"lower": "uruguay"}]}
+{"label": "GPE", "pattern": [{"lower": "uzbekistan"}]}
+{"label": "GPE", "pattern": [{"lower": "uz"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "uzbekistan"}]}
+{"label": "GPE", "pattern": [{"lower": "o‘zbekiston"}, {"lower": "respublikasi"}]}
+{"label": "GPE", "pattern": [{"lower": "ўзбекистон"}, {"lower": "республикаси"}]}
+{"label": "GPE", "pattern": [{"lower": "vanuatu"}]}
+{"label": "GPE", "pattern": [{"lower": "vu"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "vanuatu"}]}
+{"label": "GPE", "pattern": [{"lower": "ripablik"}, {"lower": "blong"}, {"lower": "vanuatu"}]}
+{"label": "GPE", "pattern": [{"lower": "république"}, {"lower": "de"}, {"lower": "vanuatu"}]}
+{"label": "GPE", "pattern": [{"lower": "venezuela"}, {"lower": "("}, {"lower": "bolivarian"}, {"lower": "republic"}, {"lower": "of"}, {"lower": ")"}]}
+{"label": "GPE", "pattern": [{"lower": "ve"}]}
+{"label": "GPE", "pattern": [{"lower": "bolivarian"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "venezuela"}]}
+{"label": "GPE", "pattern": [{"lower": "república"}, {"lower": "bolivariana"}, {"lower": "de"}, {"lower": "venezuela"}]}
+{"label": "GPE", "pattern": [{"lower": "viet"}, {"lower": "nam"}]}
+{"label": "GPE", "pattern": [{"lower": "vn"}]}
+{"label": "GPE", "pattern": [{"lower": "socialist"}, {"lower": "republic"}, {"lower": "of"}, {"lower": "vietnam"}]}
+{"label": "GPE", "pattern": [{"lower": "cộng"}, {"lower": "hòa"}, {"lower": "xã"}, {"lower": "hội"}, {"lower": "chủ"}, {"lower": "nghĩa"}, {"lower": "việt"}, {"lower": "nam"}]}
+{"label": "GPE", "pattern": [{"lower": "wallis"}, {"lower": "and"}, {"lower": "futuna"}]}
+{"label": "GPE", "pattern": [{"lower": "wf"}]}
+{"label": "GPE", "pattern": [{"lower": "territory"}, {"lower": "of"}, {"lower": "the"}, {"lower": "wallis"}, {"lower": "and"}, {"lower": "futuna"}, {"lower": "islands"}]}
+{"label": "GPE", "pattern": [{"lower": "territoire"}, {"lower": "des"}, {"lower": "îles"}, {"lower": "wallis"}, {"lower": "et"}, {"lower": "futuna"}]}
+{"label": "GPE", "pattern": [{"lower": "western"}, {"lower": "sahara"}]}
+{"label": "GPE", "pattern": [{"lower": "eh"}]}
+{"label": "GPE", "pattern": [{"lower": "taneẓroft"}, {"lower": "tutrimt"}]}
+{"label": "GPE", "pattern": [{"lower": "yemen"}]}
+{"label": "GPE", "pattern": [{"lower": "ye"}]}
+{"label": "GPE", "pattern": [{"lower": "yemeni"}, {"lower": "republic"}]}
+{"label": "GPE", "pattern": [{"lower": "al"}, {"lower": "-"}, {"lower": "jumhūriyyah"}, {"lower": "al"}, {"lower": "-"}, {"lower": "yamaniyyah"}]}
+{"label": "GPE", "pattern": [{"lower": "zambia"}]}
+{"label": "GPE", "pattern": [{"lower": "zm"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "zambia"}]}
+{"label": "GPE", "pattern": [{"lower": "zimbabwe"}]}
+{"label": "GPE", "pattern": [{"lower": "zw"}]}
+{"label": "GPE", "pattern": [{"lower": "republic"}, {"lower": "of"}, {"lower": "zimbabwe"}]}
