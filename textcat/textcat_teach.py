@@ -1,7 +1,6 @@
 # coding: utf8
 from __future__ import unicode_literals
 
-import sys
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.models.textcat import TextClassifier
@@ -23,7 +22,7 @@ import spacy
     exclude=("Names of datasets to exclude", "option", "e", split_string),
     long_text=("Enable long-text classification mode", "flag", "L", bool)
 )
-def textcat_teach(dataset, spacy_model, source=None, label=None, patterns=None,
+def textcat_teach(dataset, spacy_model, source, label=None, patterns=None,
                   exclude=None, long_text=False):
     """
     Collect the best possible training data for a text classification model
@@ -32,7 +31,7 @@ def textcat_teach(dataset, spacy_model, source=None, label=None, patterns=None,
     """
     # Load the stream from a JSONL file and return a generator that yields a
     # dictionary for each example in the data.
-    stream = JSONL(source or sys.stdin)
+    stream = JSONL(source)
 
     # Load the spaCy model
     nlp = spacy.load(spacy_model)

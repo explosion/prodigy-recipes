@@ -1,7 +1,6 @@
 # coding: utf8
 from __future__ import unicode_literals
 
-import sys
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.components.sorters import prefer_uncertain
@@ -44,7 +43,7 @@ class DummyModel(object):
     source=("The source data as a JSONL file", "positional", None, str),
     label=("One or more comma-separated labels", "option", "l", split_string)
 )
-def textcat_custom_model(dataset, source=None, label=[]):
+def textcat_custom_model(dataset, source, label=[]):
     """
     Use active learning-powered text classification with a custom model. To
     demonstrate how it works, this demo recipe uses a simple dummy model that
@@ -54,7 +53,7 @@ def textcat_custom_model(dataset, source=None, label=[]):
     """
     # Load the stream from a JSONL file and return a generator that yields a
     # dictionary for each example in the data.
-    stream = JSONL(source or sys.stdin)
+    stream = JSONL(source)
 
     # Load the dummy model
     model = DummyModel(labels=label)
