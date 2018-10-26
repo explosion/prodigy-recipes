@@ -1,7 +1,6 @@
 # coding: utf8
 from __future__ import unicode_literals
 
-import sys
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.models.matcher import PatternMatcher
@@ -21,16 +20,13 @@ import spacy
     exclude=("Names of datasets to exclude", "option", "e", split_string),
     resume=("Resume from existing dataset and update matcher accordingly", "flag", "R", bool)
 )
-def ner_match(dataset, spacy_model, source=None, patterns=None, exclude=None,
+def ner_match(dataset, spacy_model, source, patterns=None, exclude=None,
               resume=False):
     """
     Suggest phrases that match a given patterns file, and mark whether they
     are examples of the entity you're interested in. The patterns file can
     include exact strings or token patterns for use with spaCy's `Matcher`.
     """
-    # Stream from stdin by default
-    if source is None:
-        source = sys.stdin
     # Load the spaCy model
     nlp = spacy.load(spacy_model)
 
