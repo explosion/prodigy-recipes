@@ -1,6 +1,7 @@
 # coding: utf8
 from __future__ import unicode_literals
 
+import sys
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.models.ner import EntityRecognizer
@@ -30,6 +31,8 @@ def ner_teach(dataset, spacy_model, source=None, label=None, patterns=None,
     model with the model in the loop. Based on your annotations, Prodigy will
     decide which questions to ask next.
     """
+    if source is None:
+        source = sys.stdin
     # Load the stream from a JSONL file and return a generator that yields a
     # dictionary for each example in the data.
     stream = JSONL(source)
