@@ -1,6 +1,7 @@
 # coding: utf8
 from __future__ import unicode_literals
 
+import sys
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.models.ner import EntityRecognizer
@@ -17,13 +18,13 @@ import spacy
 @prodigy.recipe('ner.teach',
     dataset=("The dataset to use", "positional", None, str),
     spacy_model=("The base model", "positional", None, str),
-    source=("The source data as a JSONL file", "positional", None, str),
+    source=("The source data as a JSONL file. Defaults to stdin", "positional", None, str),
     label=("One or more comma-separated labels", "option", "l", split_string),
     patterns=("Optional match patterns", "option", "p", str),
     exclude=("Names of datasets to exclude", "option", "e", split_string),
     unsegmented=("Don't split sentences", "flag", "U", bool)
 )
-def ner_teach(dataset, spacy_model, source=None, label=None, patterns=None,
+def ner_teach(dataset, spacy_model, source=sys.stdin, label=None, patterns=None,
               exclude=None, unsegmented=False):
     """
     Collect the best possible training data for a named entity recognition

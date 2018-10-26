@@ -1,6 +1,7 @@
 # coding: utf8
 from __future__ import unicode_literals
 
+import sys
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.components.preprocess import add_tokens
@@ -14,11 +15,11 @@ import spacy
 @prodigy.recipe('ner.manual',
     dataset=("The dataset to use", "positional", None, str),
     spacy_model=("The base model", "positional", None, str),
-    source=("The source data as a JSONL file", "positional", None, str),
+    source=("The source data as a JSONL file. Defaults to stdin", "positional", None, str),
     label=("One or more comma-separated labels", "option", "l", split_string),
     exclude=("Names of datasets to exclude", "option", "e", split_string)
 )
-def ner_manual(dataset, spacy_model, source, label=None, exclude=None):
+def ner_manual(dataset, spacy_model, source=sys.stdin, label=None, exclude=None):
     """
     Mark spans manually by token. Requires only a tokenizer and no entity
     recognizer, and doesn't do any active learning.

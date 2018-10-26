@@ -1,6 +1,7 @@
 # coding: utf8
 from __future__ import unicode_literals
 
+import sys
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.models.matcher import PatternMatcher
@@ -15,12 +16,12 @@ import spacy
 @prodigy.recipe('ner.match',
     dataset=("The dataset to use", "positional", None, str),
     spacy_model=("The base model", "positional", None, str),
-    source=("The source data as a JSONL file", "positional", None, str),
+    source=("The source data as a JSONL file. Defaults to stdin", "positional", None, str),
     patterns=("Optional match patterns", "option", "p", str),
     exclude=("Names of datasets to exclude", "option", "e", split_string),
     resume=("Resume from existing dataset and update matcher accordingly", "flag", "R", bool)
 )
-def ner_match(dataset, spacy_model, source, patterns=None, exclude=None,
+def ner_match(dataset, spacy_model, source=sys.stdin, patterns=None, exclude=None,
               resume=False):
     """
     Suggest phrases that match a given patterns file, and mark whether they
