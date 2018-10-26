@@ -26,14 +26,16 @@ python -m prodigy
 ```
 
 The `prodigy` command lists the built-in recipes. To use a custom recipe script,
-simply pass the path to the file using the `-F argument`:
+simply pass the path to the file using the `-F` argument:
 
 ```bash
 python -m prodigy -F prodigy-recipes/ner/ner_teach.py
 ```
 
 Now you can edit the code in your `ner_teach.py` command, to customize how
-Prodigy behaves. Some things to try:
+Prodigy behaves.
+
+### Some things to try
 
 * Try replacing `prefer_uncertain()` with `prefer_high_scores()`.
 * Try writing a custom sorting function. It just needs to be a generator that
