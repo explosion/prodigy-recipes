@@ -3,7 +3,7 @@
 # Prodigy Recipes
 
 This repository contains a collection of recipes for [Prodigy](https://prodi.gy),
-our annotation tool powered by active learning. In order to use them, you'll
+our scriptable annotation tool for text and images. In order to use this repo, you'll
 need a license for Prodigy – [see this page](https://prodi.gy/buy) for more
 details. For questions and bug reports, please use the
 [Prodigy Support Forum](https://support.prodi.gy). If you've found a mistake or
@@ -15,6 +15,34 @@ bug, feel free to submit a
 > comments and more information, and some of them have been simplified to make
 > it easier to follow what's going on, and to use them as the basis for a
 > custom recipe.
+
+## Usage
+
+Once Prodigy is installed, you should be able to run the `prodigy` command from
+your terminal, either directly or via `python -m`:
+
+```bash
+python -m prodigy
+```
+
+The `prodigy` command lists the built-in recipes. To use a recipe script,
+simply pass the path to the file using the `-F argument`:
+
+```bash
+python -m prodigy -F prodigy-recipes/ner/ner_teach.py
+```
+
+Now you can edit the code in your `ner_teach.py` command, to customize how
+Prodigy behaves. Some things to try:
+
+* Try replacing `prefer_uncertain()` with `prefer_high_scoring()`.
+* Try writing a custom sorting function. It just needs to be a generator that
+  yields a sequence of `example` dicts, given a sequence of `(score, example)` tuples.
+* Try adding a filter that drops some questions from the stream. For instance,
+  try writing a filter that only asks you questions where the entity is two
+  words long.
+* Try customizing the `update()` callback, to include extra logging or extra
+  functionality.
 
 ## Recipes
 
@@ -54,17 +82,3 @@ bug, feel free to submit a
 | [`mark`](other/mark.py) | Click through pre-prepared examples, with no model in the loop. |
 | [`choice`](other/choice.py) | Annotate data with multiple-choice options. The annotated examples will have an additional property `"accept": []` mapping to the ID(s) of the selected option(s). |
 
-## Usage
-
-The easiest way to use and adapt the recipes is to fork and clone this
-repository, and point the `prodigy` command to the file containing the recipe
-using the `-F` argument. To see the recipe description and available arguments,
-you can use the `--help` flag:
-
-```bash
-prodigy ner.teach my_dataset en_core_web_sm my_data.jsonl -F /path/to/ner_teach.py
-```
-
-```bash
-prodigy custom_recipe --help -F /path/to/recipe.py
-```
