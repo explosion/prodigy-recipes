@@ -16,7 +16,7 @@ you've found a mistake or bug, feel free to submit a
 > it easier to follow what's going on, and to use them as the basis for a
 > custom recipe.
 
-## Usage
+## 📋 Usage
 
 Once Prodigy is installed, you should be able to run the `prodigy` command from
 your terminal, either directly or via `python -m`:
@@ -46,7 +46,7 @@ Prodigy behaves.
 * Try customizing the `update()` callback, to include extra logging or extra
   functionality.
 
-## Recipes
+## 🍳 Recipes
 
 ### Named Entity Recognition
 
@@ -83,3 +83,11 @@ Prodigy behaves.
 | --- | --- |
 | [`mark`](other/mark.py) | Click through pre-prepared examples, with no model in the loop. |
 | [`choice`](other/choice.py) | Annotate data with multiple-choice options. The annotated examples will have an additional property `"accept": []` mapping to the ID(s) of the selected option(s). |
+
+## Example Datasets and patterns
+
+To make it even easier to get started, we've also included a few
+[`example-datasets`](example-datasets), both raw data as well as data containing
+annotations created with Prodigy. For examples of token-based match patterns to
+use with recipes like `ner.teach` or `ner.match`, see the
+[`example-patterns`](example-patterns) directory.
