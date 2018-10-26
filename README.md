@@ -84,7 +84,7 @@ Prodigy behaves.
 | [`mark`](other/mark.py) | Click through pre-prepared examples, with no model in the loop. |
 | [`choice`](other/choice.py) | Annotate data with multiple-choice options. The annotated examples will have an additional property `"accept": []` mapping to the ID(s) of the selected option(s). |
 
-## Example Datasets and patterns
+## 📚 Example Datasets and Patterns
 
 To make it even easier to get started, we've also included a few
 [`example-datasets`](example-datasets), both raw data as well as data containing
