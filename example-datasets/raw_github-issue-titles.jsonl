@@ -1,0 +1,830 @@
+{"text":"\"csc.exe\" exited with code -532462766.\t","meta":{"source":"GitHub","url":"https://github.com/dotnet/roslyn/issues/21150"}}
+{"text":"Transition plan for node-github","meta":{"source":"GitHub","url":"https://github.com/octokit/discussions/issues/7"}}
+{"text":"Describe streaming arguments in docs","meta":{"source":"GitHub","url":"https://github.com/rdbc-io/rdbc/issues/86"}}
+{"text":"Making dialog titles use Book Style Capitalization [needs-docs]","meta":{"source":"GitHub","url":"https://github.com/qgis/QGIS-Documentation/issues/2009"}}
+{"text":"Merge pull request #4924 from SrNetoChan/dialog_titles","meta":{"source":"GitHub","url":"https://github.com/qgis/QGIS-Documentation/issues/2010"}}
+{"text":"Salesforce connector","meta":{"source":"GitHub","url":"https://github.com/workato/docs/issues/190"}}
+{"text":"Google Presentations","meta":{"source":"GitHub","url":"https://github.com/zotero/translators/issues/1378"}}
+{"text":"Update Garbage Collection Docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4510"}}
+{"text":"[docs] Create \"register your first application\" quick start guide","meta":{"source":"GitHub","url":"https://github.com/gravitee-io/graviteeio-access-management/issues/129"}}
+{"text":"provision Portland K8s cluster","meta":{"source":"GitHub","url":"https://github.com/mozmeao/infra/issues/366"}}
+{"text":"Breakup class to better map to Gitlabs documentation","meta":{"source":"GitHub","url":"https://github.com/pyapi-gitlab/pyapi-gitlab/issues/243"}}
+{"text":"FieldDoesNotExist on Customising generated forms","meta":{"source":"GitHub","url":"https://github.com/wagtail/wagtail/issues/3737"}}
+{"text":"[BUG] Decorated classes not included in the document","meta":{"source":"GitHub","url":"https://github.com/compodoc/compodoc/issues/245"}}
+{"text":"DOC: add documentation","meta":{"source":"GitHub","url":"https://github.com/xpdAcq/xpdSim/issues/29"}}
+{"text":"Feedback: 'OWIN HTTP Message Pass Through'","meta":{"source":"GitHub","url":"https://github.com/Particular/docs.particular.net/issues/3003"}}
+{"text":"Multiple recipients vs. git signing key","meta":{"source":"GitHub","url":"https://github.com/justwatchcom/gopass/issues/224"}}
+{"text":"Copilot support","meta":{"source":"GitHub","url":"https://github.com/seankross/twilio/issues/4"}}
+{"text":"[todo-mvvm-databinding] Task class is not actually immutable (despite docs claim)","meta":{"source":"GitHub","url":"https://github.com/googlesamples/android-architecture/issues/373"}}
+{"text":"Improve docs","meta":{"source":"GitHub","url":"https://github.com/reactjs/react-transition-group/issues/134"}}
+{"text":"Please add \"user_id\" support to CreateOrUpdateSubscriber","meta":{"source":"GitHub","url":"https://github.com/DripEmail/drip-dot-net/issues/13"}}
+{"text":"UnsupportedAlgorithm: Backend object does not implement ScryptBackend","meta":{"source":"GitHub","url":"https://github.com/pyca/cryptography/issues/3822"}}
+{"text":"GridLayers with tileSize of type Point are not supported","meta":{"source":"GitHub","url":"https://github.com/TolonUK/Leaflet.EdgeBuffer/issues/15"}}
+{"text":"Update ConfigMap Docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4509"}}
+{"text":"Double precision emulation using 2 floats (double-float)","meta":{"source":"GitHub","url":"https://github.com/arrayfire/arrayfire/issues/1886"}}
+{"text":"fs.readFile with 'utf8' option get an object when read an empty file in the ASAR ","meta":{"source":"GitHub","url":"https://github.com/electron/electron/issues/10128"}}
+{"text":"Convert processor fails to convert float to integer","meta":{"source":"GitHub","url":"https://github.com/elastic/elasticsearch/issues/25917"}}
+{"text":"[stdlib documentation] Only generate docs for public types","meta":{"source":"GitHub","url":"https://github.com/ponylang/ponyc/issues/2092"}}
+{"text":"Please add \"remove_tags\" support to CreateOrUpdateSubscriber","meta":{"source":"GitHub","url":"https://github.com/DripEmail/drip-dot-net/issues/12"}}
+{"text":"Can you please provide more information about users file?","meta":{"source":"GitHub","url":"https://github.com/nrwiersma/docker-afpd/issues/1"}}
+{"text":"Document rate limiting","meta":{"source":"GitHub","url":"https://github.com/monzo/docs/issues/66"}}
+{"text":"Add docs about /host feature","meta":{"source":"GitHub","url":"https://github.com/aerokube/ggr/issues/105"}}
+{"text":"TODOs","meta":{"source":"GitHub","url":"https://github.com/Aladdin-ADD/vue-timing-button/issues/1"}}
+{"text":"Give full schema in docs?","meta":{"source":"GitHub","url":"https://github.com/openml/website/issues/163"}}
+{"text":"onChange function does not return/provide parameter with the caller proxy context","meta":{"source":"GitHub","url":"https://github.com/OfficeDev/office-ui-fabric-react/issues/2311"}}
+{"text":"Make web pack compatible.","meta":{"source":"GitHub","url":"https://github.com/piuccio/cowsay/issues/25"}}
+{"text":"Error deploying to Dokku","meta":{"source":"GitHub","url":"https://github.com/Twilio-org/rapid-response-kit/issues/20"}}
+{"text":"set_opacity not working for Circle edge","meta":{"source":"GitHub","url":"https://github.com/WorldWideTelescope/wwt-web-client/issues/159"}}
+{"text":"Decide which tools to use for planning","meta":{"source":"GitHub","url":"https://github.com/chingu-voyage-turtles-team-5/chrome-extension-clone/issues/2"}}
+{"text":"v1.1 Project Page and Project Browse Page","meta":{"source":"GitHub","url":"https://github.com/votedevin/airtable_mysql/issues/1"}}
+{"text":"A way to trigger appear animation using Transition","meta":{"source":"GitHub","url":"https://github.com/reactjs/react-transition-group/issues/133"}}
+{"text":"Missing ruby version (2.0.0-p648) for xcode9 osx image","meta":{"source":"GitHub","url":"https://github.com/travis-ci/travis-ci/issues/8170"}}
+{"text":"thoughts on colorful test output","meta":{"source":"GitHub","url":"https://github.com/bazelbuild/rules_scala/issues/255"}}
+{"text":"Swift-SMTP - Allow headers to be replaced","meta":{"source":"GitHub","url":"https://github.com/IBM-Swift/Kitura/issues/1131"}}
+{"text":"typo in Cluster concepts documentation","meta":{"source":"GitHub","url":"https://github.com/influxdata/docs.influxdata.com/issues/1223"}}
+{"text":"tutorials/first-mvc-app/adding-model include","meta":{"source":"GitHub","url":"https://github.com/aspnet/Docs/issues/3828"}}
+{"text":"Chevron/beesting escaping issues","meta":{"source":"GitHub","url":"https://github.com/Picolab/pico-engine/issues/283"}}
+{"text":"Email Notification: Add seperate resourcelist class, docs, permissions for direct endpoints","meta":{"source":"GitHub","url":"https://github.com/fossasia/open-event-orga-server/issues/4166"}}
+{"text":"dapp not reachable when deploying with docker behind nginx","meta":{"source":"GitHub","url":"https://github.com/paritytech/parity/issues/6154"}}
+{"text":"Update Sysctls Docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4505"}}
+{"text":"Calling reindex on record subset replaces entire index","meta":{"source":"GitHub","url":"https://github.com/algolia/algoliasearch-rails/issues/247"}}
+{"text":"Node.js: Produce docs files","meta":{"source":"GitHub","url":"https://github.com/googleapis/artman/issues/245"}}
+{"text":"clarification about generated bound methods","meta":{"source":"GitHub","url":"https://github.com/decaffeinate/decaffeinate/issues/1169"}}
+{"text":"Update Volumes Docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4503"}}
+{"text":"Update Images Docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4502"}}
+{"text":"'SSM' object has no attribute 'get_parameter'","meta":{"source":"GitHub","url":"https://github.com/boto/boto3/issues/1198"}}
+{"text":"Update Docs for Container Lifecycle Hooks","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4501"}}
+{"text":"Update Cron Jobs Docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4500"}}
+{"text":"[IBRAM] - Adi\u00e7\u00e3o, visualiza\u00e7\u00e3o e altera\u00e7\u00e3o de Entidades Coletivas","meta":{"source":"GitHub","url":"https://github.com/medialab-ufg/tainacan/issues/92"}}
+{"text":"[IBRAM] - Visibilidade do bot\u00e3o de configura\u00e7\u00f5es das cole\u00e7\u00f5es","meta":{"source":"GitHub","url":"https://github.com/medialab-ufg/tainacan/issues/87"}}
+{"text":"Update Jobs Docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4499"}}
+{"text":"[IBRAM] - Adi\u00e7\u00e3o de Localiza\u00e7\u00e3o","meta":{"source":"GitHub","url":"https://github.com/medialab-ufg/tainacan/issues/76"}}
+{"text":"[IBRAM]  - Pesquisa simples e avan\u00e7ada de itens Localiza\u00e7\u00e3o","meta":{"source":"GitHub","url":"https://github.com/medialab-ufg/tainacan/issues/75"}}
+{"text":"Feature: S3 Bucket Notification Support in Cluster Configurations","meta":{"source":"GitHub","url":"https://github.com/airbnb/streamalert/issues/231"}}
+{"text":"Possible casing issue for links to docs category pages","meta":{"source":"GitHub","url":"https://github.com/Wyamio/Wyam/issues/546"}}
+{"text":"Update Docs for Managing API Resources","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4497"}}
+{"text":"`npm run pack` to build binaries is not working ","meta":{"source":"GitHub","url":"https://github.com/datahq/datahub-cli/issues/130"}}
+{"text":"Add support for cpus (Version 3 Resources Key)","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kompose/issues/730"}}
+{"text":"Update kubeconfig docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4496"}}
+{"text":"Sequencing Sagas via yield*","meta":{"source":"GitHub","url":"https://github.com/redux-saga/redux-saga/issues/1111"}}
+{"text":"Update Firewall Topics","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4495"}}
+{"text":"`.yaydoc.yml` in this repo still uses the old design","meta":{"source":"GitHub","url":"https://github.com/fossasia/yaydoc/issues/317"}}
+{"text":"Using multiple nodes (Scaling phpsocket.io on multiple servers and processes)","meta":{"source":"GitHub","url":"https://github.com/walkor/phpsocket.io/issues/102"}}
+{"text":"Swift proto file extension values empty, data showing up in unknown storage","meta":{"source":"GitHub","url":"https://github.com/apple/swift-protobuf/issues/622"}}
+{"text":"Update Autoscaling Docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4493"}}
+{"text":"lint markdown for style","meta":{"source":"GitHub","url":"https://github.com/coreos/etcd/issues/8310"}}
+{"text":"The connector can silently fail to connect to the requested database or schema","meta":{"source":"GitHub","url":"https://github.com/snowflakedb/snowflake-connector-python/issues/26"}}
+{"text":"Triggers and actions not working ","meta":{"source":"GitHub","url":"https://github.com/3Blades/3blades/issues/106"}}
+{"text":"Switch react-native-vector-icons to peerDependency","meta":{"source":"GitHub","url":"https://github.com/react-native-training/react-native-elements/issues/526"}}
+{"text":"Update Docs on Security Context and Policy","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4492"}}
+{"text":"Update DOCS for security_groups in aws_instance","meta":{"source":"GitHub","url":"https://github.com/terraform-providers/terraform-provider-aws/issues/1249"}}
+{"text":"Check TsnE docs","meta":{"source":"GitHub","url":"https://github.com/deeplearning4j/deeplearning4j/issues/3740"}}
+{"text":"End-user bug report","meta":{"source":"GitHub","url":"https://github.com/andybotting/xbmc-addon-abc-iview/issues/3032"}}
+{"text":"[Support] Need example of returning a list of objects; maybe a bug?","meta":{"source":"GitHub","url":"https://github.com/Youshido/GraphQL/issues/165"}}
+{"text":"searching for 'm', table, BRAF associations...","meta":{"source":"GitHub","url":"https://github.com/opentargets/rest_api/issues/92"}}
+{"text":"Vec::with_capacity does not work correctly for zero-sized types","meta":{"source":"GitHub","url":"https://github.com/rust-lang/rust/issues/43490"}}
+{"text":"504 Timeout but App Working, Just Slow","meta":{"source":"GitHub","url":"https://github.com/jwilder/nginx-proxy/issues/889"}}
+{"text":"Catch errors with sentry","meta":{"source":"GitHub","url":"https://github.com/xamgore/mmcs-meetups-api/issues/1"}}
+{"text":"the example /bin/pretrained segfaults","meta":{"source":"GitHub","url":"https://github.com/leonardvandriel/caffe2_cpp_tutorial/issues/6"}}
+{"text":"SocketException[Connected refused] errors","meta":{"source":"GitHub","url":"https://github.com/hazelcast/hazelcast-aws/issues/34"}}
+{"text":"Samples erroring when loaded locally","meta":{"source":"GitHub","url":"https://github.com/beakable/isometric/issues/20"}}
+{"text":"Enhance the `options` section in the DOCs","meta":{"source":"GitHub","url":"https://github.com/conan-io/docs/issues/266"}}
+{"text":"Mogelijkheid om firebase gebruikers aan te maken in adminstratiepaneel en er rollen aan te koppelen","meta":{"source":"GitHub","url":"https://github.com/DeDijlezonen/DZwelgWeb/issues/18"}}
+{"text":"Users met rollen","meta":{"source":"GitHub","url":"https://github.com/DeDijlezonen/DZwelgWeb/issues/17"}}
+{"text":"Calling \"css\" with \"undefined\" results in unfriendly error","meta":{"source":"GitHub","url":"https://github.com/jquery/jquery/issues/3737"}}
+{"text":"Example or documentation on --index-url","meta":{"source":"GitHub","url":"https://github.com/jazzband/pip-tools/issues/545"}}
+{"text":"Missing File according to doc (tests/python/gpu/test_conv.py)","meta":{"source":"GitHub","url":"https://github.com/dmlc/mxnet/issues/7204"}}
+{"text":"Mailchimp v3 use FNAME and LNAME for firstName and lastName ","meta":{"source":"GitHub","url":"https://github.com/spatie/laravel-newsletter/issues/99"}}
+{"text":"Saving empty object to a subschema does not do anything in newest mongoose","meta":{"source":"GitHub","url":"https://github.com/Automattic/mongoose/issues/5506"}}
+{"text":"making multipart/form-data requests","meta":{"source":"GitHub","url":"https://github.com/zapier/zapier-platform-cli/issues/112"}}
+{"text":"Codelabs file a bug link is broken","meta":{"source":"GitHub","url":"https://github.com/googlecodelabs/cloud-dataflow-nyc-taxi-tycoon/issues/10"}}
+{"text":"Using SITL for ArduPilot Testing","meta":{"source":"GitHub","url":"https://github.com/ArduPilot/ardupilot_wiki/issues/898"}}
+{"text":"Problem connecting to Acquia DevDesktop local site","meta":{"source":"GitHub","url":"https://github.com/felixfbecker/vscode-php-debug/issues/181"}}
+{"text":"Linux + Sublime + Xdebug = Not Stopping at Breakpoints","meta":{"source":"GitHub","url":"https://github.com/kalabox/lando/issues/231"}}
+{"text":"Ionic Apprate Usesuntilprompt","meta":{"source":"GitHub","url":"https://github.com/ionic-team/ionic-native/issues/1842"}}
+{"text":"Render Audio normally but Video to ByteBuffer only?","meta":{"source":"GitHub","url":"https://github.com/google/ExoPlayer/issues/3105"}}
+{"text":"seo","meta":{"source":"GitHub","url":"https://github.com/openrecordz/landing-page/issues/10"}}
+{"text":"amp-image: Placeholder fails to hide when unsupported source is supplied","meta":{"source":"GitHub","url":"https://github.com/ampproject/amphtml/issues/10646"}}
+{"text":"List of APIs to Implement?","meta":{"source":"GitHub","url":"https://github.com/xNinjaKittyx/KoyomiBot/issues/8"}}
+{"text":"Include more compilers on travis.ci","meta":{"source":"GitHub","url":"https://github.com/DronMDF/2out/issues/239"}}
+{"text":"Work out redux immutability issues","meta":{"source":"GitHub","url":"https://github.com/ShadowCraft/shadowcraft-ui-react/issues/46"}}
+{"text":"Noble was installed on RPi0 but I can't run it ","meta":{"source":"GitHub","url":"https://github.com/sandeepmistry/noble/issues/659"}}
+{"text":"a unfinnish work ...","meta":{"source":"GitHub","url":"https://github.com/z-pattern-matching/z/issues/24"}}
+{"text":"Start an FAQ section","meta":{"source":"GitHub","url":"https://github.com/biosustain/memote/issues/136"}}
+{"text":"Remove = from command line options in docs","meta":{"source":"GitHub","url":"https://github.com/BD2KGenomics/toil/issues/1777"}}
+{"text":"more module webpage","meta":{"source":"GitHub","url":"https://github.com/datavisyn/datavisyn.github.io/issues/9"}}
+{"text":"Improve the userscript wrapper to not break window functions","meta":{"source":"GitHub","url":"https://github.com/AdguardTeam/AdguardForWindows/issues/1869"}}
+{"text":"Remove imports of javax.security.auth.message.** classes","meta":{"source":"GitHub","url":"https://github.com/javaee/security-api/issues/54"}}
+{"text":"Replace tutorials in the user guide with links to the guides","meta":{"source":"GitHub","url":"https://github.com/gradle/guides/issues/156"}}
+{"text":"Importing User Certificate in new iOS Cisco AnyConnect App","meta":{"source":"GitHub","url":"https://github.com/jlund/streisand/issues/838"}}
+{"text":"Update Networking Docs","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes.github.io/issues/4489"}}
+{"text":"Moving from MySQL to Hybrid SQL","meta":{"source":"GitHub","url":"https://github.com/akeneo/pim-community-dev/issues/6476"}}
+{"text":"Alumni dashboard","meta":{"source":"GitHub","url":"https://github.com/betheluniversity/portal/issues/106"}}
+{"text":"Add \"Airports Web\" API","meta":{"source":"GitHub","url":"https://github.com/APIs-guru/openapi-directory/issues/246"}}
+{"text":"AddToCart method relies on the posted productDetails","meta":{"source":"GitHub","url":"https://github.com/dotnet-architecture/eShopOnContainers/issues/250"}}
+{"text":"Build environment","meta":{"source":"GitHub","url":"https://github.com/PathwayCommons/guide/issues/23"}}
+{"text":"Strange landscapes when m/n > 0.5","meta":{"source":"GitHub","url":"https://github.com/landlab/landlab/issues/515"}}
+{"text":"xmllint error when building docs","meta":{"source":"GitHub","url":"https://github.com/akrennmair/newsbeuter/issues/586"}}
+{"text":"HTML page examples","meta":{"source":"GitHub","url":"https://github.com/webtorrent/webtorrent/issues/1165"}}
+{"text":"An error in the docs","meta":{"source":"GitHub","url":"https://github.com/inspirit/jsfeat/issues/71"}}
+{"text":"Invalid reference links provided in documentation","meta":{"source":"GitHub","url":"https://github.com/okta/okta-sdk-java/issues/113"}}
+{"text":"Add HTML legend support","meta":{"source":"GitHub","url":"https://github.com/dc-js/dc.js/issues/1325"}}
+{"text":"Uikit 3.0.0-Beta.27 - Lightbox component - add #hash option","meta":{"source":"GitHub","url":"https://github.com/uikit/uikit/issues/2808"}}
+{"text":"Re-open Camera","meta":{"source":"GitHub","url":"https://github.com/TarasOsiris/android-goodies-docs-PRO/issues/2"}}
+{"text":"Add FAQ's to the documentation","meta":{"source":"GitHub","url":"https://github.com/peterramsing/lost/issues/392"}}
+{"text":"Unexpected behavior using create-react-app ","meta":{"source":"GitHub","url":"https://github.com/inferusvv/react-odometerjs/issues/6"}}
+{"text":"Update MCW with September workshop info","meta":{"source":"GitHub","url":"https://github.com/mozilla/learning.mozilla.org/issues/2505"}}
+{"text":"Provide deployment instructions for deploying to prod kubernetes","meta":{"source":"GitHub","url":"https://github.com/k8guard/k8guard-start-from-here/issues/26"}}
+{"text":"Drop shadows only take effect if other filters are present","meta":{"source":"GitHub","url":"https://github.com/mdgriffith/style-elements/issues/49"}}
+{"text":"README","meta":{"source":"GitHub","url":"https://github.com/rpavlik/PS2-Breakout-Board/issues/3"}}
+{"text":"Remove electron references from docs","meta":{"source":"GitHub","url":"https://github.com/eclipse/che-docs/issues/267"}}
+{"text":"has_any_role() should take an array of some kind","meta":{"source":"GitHub","url":"https://github.com/Rapptz/discord.py/issues/673"}}
+{"text":"NavController docs reference goToRoot(), which does not exist","meta":{"source":"GitHub","url":"https://github.com/ionic-team/ionic/issues/12476"}}
+{"text":"Implement all Stripe errors","meta":{"source":"GitHub","url":"https://github.com/survival/donation-system/issues/1"}}
+{"text":"User Info Endpoint Handling Expects Key \"user\" in Response","meta":{"source":"GitHub","url":"https://github.com/Schine/MW-OAuth2Client/issues/3"}}
+{"text":"Unable to run rook with dataDirHostPath","meta":{"source":"GitHub","url":"https://github.com/rook/rook/issues/839"}}
+{"text":"Bad anchor tag in the contributing docs","meta":{"source":"GitHub","url":"https://github.com/blackbaud/skyux2/issues/943"}}
+{"text":"The aria-labels of checkboxes in the Select component appears as [object Object] if the label is a node.","meta":{"source":"GitHub","url":"https://github.com/grommet/grommet/issues/1514"}}
+{"text":"aio: fix links to source when path contains symlinks","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18353"}}
+{"text":"Add the hammerhead.EVENTS.unhandledRejection event","meta":{"source":"GitHub","url":"https://github.com/DevExpress/testcafe-hammerhead/issues/1247"}}
+{"text":"Default user role","meta":{"source":"GitHub","url":"https://github.com/santigarcor/laratrust/issues/173"}}
+{"text":"remark-ping: docs mention zestedesavoir, not how to set it up?","meta":{"source":"GitHub","url":"https://github.com/zestedesavoir/zmarkdown/issues/131"}}
+{"text":"remark-iframes: incorrect docs","meta":{"source":"GitHub","url":"https://github.com/zestedesavoir/zmarkdown/issues/130"}}
+{"text":"Update vendor details","meta":{"source":"GitHub","url":"https://github.com/keboola/developer-portal-ui/issues/133"}}
+{"text":"should update teracy-dev development guide","meta":{"source":"GitHub","url":"https://github.com/teracyhq/dev/issues/379"}}
+{"text":"Feature request: IPV6 Loadbalancing support","meta":{"source":"GitHub","url":"https://github.com/terraform-providers/terraform-provider-google/issues/245"}}
+{"text":"Failure to build caffe","meta":{"source":"GitHub","url":"https://github.com/intel/caffe/issues/105"}}
+{"text":"Bind Control Click to Command Click?","meta":{"source":"GitHub","url":"https://github.com/Hammerspoon/hammerspoon/issues/1503"}}
+{"text":"Use automatic port allocation","meta":{"source":"GitHub","url":"https://github.com/avojak/hydrogen/issues/13"}}
+{"text":"Get developer docs up to polish with a getting started guide","meta":{"source":"GitHub","url":"https://github.com/innovandalism/shodan/issues/6"}}
+{"text":"Installation error","meta":{"source":"GitHub","url":"https://github.com/autokey-py3/autokey/issues/93"}}
+{"text":"docker-machine can not create vm","meta":{"source":"GitHub","url":"https://github.com/docker/machine/issues/4206"}}
+{"text":"Docs","meta":{"source":"GitHub","url":"https://github.com/Girbons/rls-sdk/issues/2"}}
+{"text":"Decide what the version granularity of the docs","meta":{"source":"GitHub","url":"https://github.com/sbt/website/issues/408"}}
+{"text":"Add some docs about issue submission and expected process","meta":{"source":"GitHub","url":"https://github.com/projectcalico/canal/issues/89"}}
+{"text":"Rewrite of grid-area values","meta":{"source":"GitHub","url":"https://github.com/static-dev/axis/issues/337"}}
+{"text":"Can't understand what is this page saying....","meta":{"source":"GitHub","url":"https://github.com/circleci/circleci-docs/issues/1347"}}
+{"text":"GitBook","meta":{"source":"GitHub","url":"https://github.com/broomyocymru/allspark/issues/2"}}
+{"text":"Conan docs incorrect.","meta":{"source":"GitHub","url":"https://github.com/conan-io/conan/issues/1547"}}
+{"text":"Would notification drawer benefit from a general empty state?","meta":{"source":"GitHub","url":"https://github.com/patternfly/angular-patternfly/issues/528"}}
+{"text":"List the Permissions Required to Create Wrapped Token","meta":{"source":"GitHub","url":"https://github.com/Caiyeon/goldfish/issues/135"}}
+{"text":"Locally reference patches in Makefile aren't applied","meta":{"source":"GitHub","url":"https://github.com/geerlingguy/ansible-role-drupal/issues/52"}}
+{"text":"Avoid wrapping div if single child is provided","meta":{"source":"GitHub","url":"https://github.com/souporserious/react-popper/issues/42"}}
+{"text":"contrib.data.Dataset - doc issue with Dataset.map / tf.py_func in 1.3.0rc0","meta":{"source":"GitHub","url":"https://github.com/tensorflow/tensorflow/issues/11786"}}
+{"text":"Upgrade to pac4j v2.x","meta":{"source":"GitHub","url":"https://github.com/jooby-project/jooby/issues/840"}}
+{"text":"Protocol extension methods not available from Objective-C","meta":{"source":"GitHub","url":"https://github.com/luckymarmot/ThemeKit/issues/5"}}
+{"text":"Update lunr dependency","meta":{"source":"GitHub","url":"https://github.com/Rebilly/ReDoc/issues/310"}}
+{"text":"Environment variables not properly passed in 8.5.16","meta":{"source":"GitHub","url":"https://github.com/docker-library/tomcat/issues/77"}}
+{"text":"Add Swagger Docs","meta":{"source":"GitHub","url":"https://github.com/ndrone/phonebook-example/issues/6"}}
+{"text":"Request for documentation on how webpack processes plugins and when a plugin should call `doResolve()`","meta":{"source":"GitHub","url":"https://github.com/webpack/webpack/issues/5380"}}
+{"text":"documentation: `vars` option is missing for e.g. follow","meta":{"source":"GitHub","url":"https://github.com/aixigo/hal-http-client/issues/14"}}
+{"text":"Documentation: Starting the server","meta":{"source":"GitHub","url":"https://github.com/mathisonian/serve-folder/issues/1"}}
+{"text":"Design Review 2017-08-23","meta":{"source":"GitHub","url":"https://github.com/ampproject/amphtml/issues/10653"}}
+{"text":"Docker Hub does not have latest code from master in the head tag","meta":{"source":"GitHub","url":"https://github.com/SUSE/Portus/issues/1343"}}
+{"text":"?modelspec","meta":{"source":"GitHub","url":"https://github.com/metrumresearchgroup/mrgsolve/issues/255"}}
+{"text":"Add Workspace Items optional methods to documentation","meta":{"source":"GitHub","url":"https://github.com/atom/atom/issues/15101"}}
+{"text":"Documentation does not explain how to select a style","meta":{"source":"GitHub","url":"https://github.com/tweh/menukeys/issues/46"}}
+{"text":"Support images in the List block","meta":{"source":"GitHub","url":"https://github.com/WordPress/gutenberg/issues/2042"}}
+{"text":"Design Review 2017-08-16","meta":{"source":"GitHub","url":"https://github.com/ampproject/amphtml/issues/10652"}}
+{"text":"kvSelectColumn is not defined","meta":{"source":"GitHub","url":"https://github.com/kartik-v/yii2-grid/issues/671"}}
+{"text":"Can't start minishift due to rate limit","meta":{"source":"GitHub","url":"https://github.com/minishift/minishift/issues/1184"}}
+{"text":"Fix AOF rewrite for types missing it","meta":{"source":"GitHub","url":"https://github.com/RedisLabsModules/RediSearch/issues/117"}}
+{"text":" Error in generator gui interface when clicking generate","meta":{"source":"GitHub","url":"https://github.com/InfyOmLabs/generator-builder/issues/23"}}
+{"text":"Issue when installing: ","meta":{"source":"GitHub","url":"https://github.com/strace/strace/issues/11"}}
+{"text":"Documentation improvement regarding weechat-dev dependency.","meta":{"source":"GitHub","url":"https://github.com/khyperia/weechat-discord/issues/30"}}
+{"text":"Documentation should indicate if function is sync or async","meta":{"source":"GitHub","url":"https://github.com/mapbox/mapbox-gl-js/issues/5050"}}
+{"text":"CapabilityStatement/Conformance in CDS Hooks","meta":{"source":"GitHub","url":"https://github.com/cds-hooks/docs/issues/71"}}
+{"text":"Update documentation","meta":{"source":"GitHub","url":"https://github.com/EngSoc-IT-Team/QTap/issues/99"}}
+{"text":"Draw annotations programmatically.","meta":{"source":"GitHub","url":"https://github.com/Emigre/openseadragon-annotations/issues/15"}}
+{"text":"Functional examples","meta":{"source":"GitHub","url":"https://github.com/jcchavezs/cmb2-conditionals/issues/48"}}
+{"text":"contains function breaks if item in list starts with a dash","meta":{"source":"GitHub","url":"https://github.com/fish-shell/fish-shell/issues/4250"}}
+{"text":"Database Documentation (II)","meta":{"source":"GitHub","url":"https://github.com/LibreHealthIO/LibreEHR/issues/647"}}
+{"text":"automate location translation file updates","meta":{"source":"GitHub","url":"https://github.com/CARLI/vufind/issues/241"}}
+{"text":"migration guide / breaking changes | from 1.0.0-alpha.4 to 1.0.0-rc1","meta":{"source":"GitHub","url":"https://github.com/nuxt/nuxt.js/issues/1165"}}
+{"text":"Documentation","meta":{"source":"GitHub","url":"https://github.com/frivo/f1-3-c2p1-colmar-academy/issues/2"}}
+{"text":"unable to access website after composer update today","meta":{"source":"GitHub","url":"https://github.com/AsgardCms/Platform/issues/357"}}
+{"text":"Fixed height cards should clip partial content","meta":{"source":"GitHub","url":"https://github.com/Microsoft/AdaptiveCards/issues/517"}}
+{"text":"Update Administrator Documentation","meta":{"source":"GitHub","url":"https://github.com/jonge-democraten/website/issues/184"}}
+{"text":"SaveAs after server finishes starting writes wrong path in new location and can delete measures from old location","meta":{"source":"GitHub","url":"https://github.com/NREL/OpenStudio/issues/2702"}}
+{"text":"Documentation not found","meta":{"source":"GitHub","url":"https://github.com/atorscho/membership/issues/4"}}
+{"text":"Misleading definition of GPa conversion factor","meta":{"source":"GitHub","url":"https://github.com/libAtoms/QUIP/issues/82"}}
+{"text":"Logical file names","meta":{"source":"GitHub","url":"https://github.com/solloc/knowledge-base/issues/9"}}
+{"text":"Documentation should link to design spec","meta":{"source":"GitHub","url":"https://github.com/vanilla-framework/vanilla-framework/issues/1205"}}
+{"text":"No Mapbox page shell","meta":{"source":"GitHub","url":"https://github.com/mapbox/android-docs/issues/148"}}
+{"text":"Updated Definition","meta":{"source":"GitHub","url":"https://github.com/DataInteroperability/xapi-profiles/issues/220"}}
+{"text":"Outdated README.md","meta":{"source":"GitHub","url":"https://github.com/microsoftgraph/android-java-snippets-rest-sample/issues/31"}}
+{"text":"OracleConnection","meta":{"source":"GitHub","url":"https://github.com/laravel-doctrine/orm/issues/261"}}
+{"text":"Tests check that allowed use of `void` is an error","meta":{"source":"GitHub","url":"https://github.com/dart-lang/co19/issues/120"}}
+{"text":"7.x.3 Biomaterials migration","meta":{"source":"GitHub","url":"https://github.com/tripal/tripal/issues/134"}}
+{"text":"[Documentation] How is the AMP transformation stuff supposed to work ?","meta":{"source":"GitHub","url":"https://github.com/Automattic/facebook-instant-articles-wp/issues/734"}}
+{"text":"Multiple event temporal correlation when firing an EventAction","meta":{"source":"GitHub","url":"https://github.com/CitoEngine/cito_plugin_server/issues/10"}}
+{"text":"ResourceList does not render item as per doc","meta":{"source":"GitHub","url":"https://github.com/Shopify/polaris/issues/152"}}
+{"text":"Review assignments instruction","meta":{"source":"GitHub","url":"https://github.com/innosoft-pro/label-them/issues/31"}}
+{"text":"tf.estimate quickstart","meta":{"source":"GitHub","url":"https://github.com/tensorflow/tensorflow/issues/11783"}}
+{"text":"RHOAR Integration","meta":{"source":"GitHub","url":"https://github.com/bucharest-gold/entente/issues/171"}}
+{"text":"Boost post","meta":{"source":"GitHub","url":"https://github.com/CodingLiterature/CodingLiterature.github.io/issues/13"}}
+{"text":"Clarify coding principles","meta":{"source":"GitHub","url":"https://github.com/synchrotron-solaris/doc-solaris-dev-env/issues/7"}}
+{"text":"`DataCollection->toArray` breaks grouping","meta":{"source":"GitHub","url":"https://github.com/statamic/v2-hub/issues/1527"}}
+{"text":"Query regarding interrupt handling in OPTEE","meta":{"source":"GitHub","url":"https://github.com/OP-TEE/optee_os/issues/1719"}}
+{"text":"Something is missing","meta":{"source":"GitHub","url":"https://github.com/DaveWM/reagent-material-ui/issues/8"}}
+{"text":"How can we load the edits in another html page without rendering the editor itself","meta":{"source":"GitHub","url":"https://github.com/artf/grapesjs/issues/192"}}
+{"text":"[Documentation] Adding a custom translatable model","meta":{"source":"GitHub","url":"https://github.com/Sylius/Sylius/issues/8324"}}
+{"text":"Merge Documentation to Wiki","meta":{"source":"GitHub","url":"https://github.com/DFKI-Interactive-Machine-Learning/py-faster-rcnn/issues/2"}}
+{"text":"A guy is scamming innocent people by selling your code....","meta":{"source":"GitHub","url":"https://github.com/pepzwee/node-csgo-web-tradebot/issues/68"}}
+{"text":"azure_sd_configs api change","meta":{"source":"GitHub","url":"https://github.com/prometheus/prometheus/issues/2994"}}
+{"text":"[CoreShop2] Front-End site exemple template in PHP.","meta":{"source":"GitHub","url":"https://github.com/coreshop/CoreShop/issues/178"}}
+{"text":"[Typos / Doc] \u521b\u5efa\u65f6\u95f4\u8f74\u9875\u9762\u7684\u6587\u6863\u6709\u9519\u522b\u5b57","meta":{"source":"GitHub","url":"https://github.com/viosey/hexo-theme-material/issues/451"}}
+{"text":"http.webdav doesn't work on armv7 ","meta":{"source":"GitHub","url":"https://github.com/hacdias/caddy-webdav/issues/1"}}
+{"text":"High Availability by other storage","meta":{"source":"GitHub","url":"https://github.com/hashicorp/vault/issues/3057"}}
+{"text":"Consider publishing the API online","meta":{"source":"GitHub","url":"https://github.com/SebastianoF/bruker2nifti/issues/6"}}
+{"text":"[PRODUCTION] Displaying of Swagger file doesn't work properly in some cases","meta":{"source":"GitHub","url":"https://github.com/apinf/platform/issues/2791"}}
+{"text":"Add license badge to readme","meta":{"source":"GitHub","url":"https://github.com/sa7mon/press/issues/1"}}
+{"text":"Documentation: Installation / Running","meta":{"source":"GitHub","url":"https://github.com/swagger-api/swagger-editor/issues/1423"}}
+{"text":"Update README bootstrap logs image.","meta":{"source":"GitHub","url":"https://github.com/jdeathe/centos-ssh-mysql/issues/143"}}
+{"text":"add video to ReadMe.md","meta":{"source":"GitHub","url":"https://github.com/kris-nova/kubicorn/issues/108"}}
+{"text":"Fix: info project in README","meta":{"source":"GitHub","url":"https://github.com/labpositiva/ansible-role-monit/issues/7"}}
+{"text":"Add integration test use case to Examples section in README","meta":{"source":"GitHub","url":"https://github.com/graphcool/chromeless/issues/24"}}
+{"text":"update readme","meta":{"source":"GitHub","url":"https://github.com/rickh94/attaskcreator/issues/12"}}
+{"text":"QUIC Websockets","meta":{"source":"GitHub","url":"https://github.com/Maksims/web-udp-public/issues/1"}}
+{"text":"Built with grunt","meta":{"source":"GitHub","url":"https://github.com/asaladino/dev-docker/issues/10"}}
+{"text":"Fix: change markdown to RST","meta":{"source":"GitHub","url":"https://github.com/labpositiva/ansible-role-monit/issues/5"}}
+{"text":"Edit README","meta":{"source":"GitHub","url":"https://github.com/malpercio/sails-industrial-factory/issues/2"}}
+{"text":"\"How It Works\" link","meta":{"source":"GitHub","url":"https://github.com/blairneumann/TipJar/issues/9"}}
+{"text":"[Request] Add videojs-contrib-quality-levels","meta":{"source":"GitHub","url":"https://github.com/cdnjs/cdnjs/issues/11627"}}
+{"text":"Better README","meta":{"source":"GitHub","url":"https://github.com/nsagora/validation-components/issues/5"}}
+{"text":"\"Bind\" vs \"on\"?","meta":{"source":"GitHub","url":"https://github.com/rosshinkley/nightmare-custom-event/issues/2"}}
+{"text":"Community guidelines","meta":{"source":"GitHub","url":"https://github.com/konstantinstadler/country_converter/issues/9"}}
+{"text":"Old README","meta":{"source":"GitHub","url":"https://github.com/SEL4PROJ/camkes-arm-vm/issues/2"}}
+{"text":"Razorpay: Use a built release version of the razorpay-php library instead of the source","meta":{"source":"GitHub","url":"https://github.com/wpindiaorg/camptix-indian-payments/issues/23"}}
+{"text":"Add README","meta":{"source":"GitHub","url":"https://github.com/master-elodin/services/issues/66"}}
+{"text":"Clean up licence","meta":{"source":"GitHub","url":"https://github.com/dieechtenilente/alcoholtestapp/issues/22"}}
+{"text":"Requires Node v8","meta":{"source":"GitHub","url":"https://github.com/federicobond/solcheck/issues/11"}}
+{"text":"Could not create model","meta":{"source":"GitHub","url":"https://github.com/bloomberg/bqplot/issues/515"}}
+{"text":"asjp dist files","meta":{"source":"GitHub","url":"https://github.com/ddediu/lgfam-newick/issues/4"}}
+{"text":"Readme.md","meta":{"source":"GitHub","url":"https://github.com/SickGear/SickGear.Docker/issues/17"}}
+{"text":"[feat]: IssuesEvent","meta":{"source":"GitHub","url":"https://github.com/bleenco/abstruse/issues/24"}}
+{"text":"Outdated README?","meta":{"source":"GitHub","url":"https://github.com/BurntSushi/quickcheck/issues/178"}}
+{"text":"Create readme","meta":{"source":"GitHub","url":"https://github.com/FAC-11/week5-ASSKITTY/issues/20"}}
+{"text":"Revise the README","meta":{"source":"GitHub","url":"https://github.com/shinglyu/CodeSpell.vim/issues/21"}}
+{"text":"Create README for strings > only_letters","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/26"}}
+{"text":"Create README for strings > is_anagram","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/25"}}
+{"text":"Create README for strings > disemvowel","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/24"}}
+{"text":"Create README for strings > common_chars","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/23"}}
+{"text":"Create README for strings > censor","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/22"}}
+{"text":"Create README for numbers > sum_to_seven","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/21"}}
+{"text":"Create README for numbers > no_multiply","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/20"}}
+{"text":"Create README for numbers > no_exponenet","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/19"}}
+{"text":"Create README for numbers > is_prime","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/18"}}
+{"text":"Create README for numbers > is_integer","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/17"}}
+{"text":"Create README for numbers > is_even","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/16"}}
+{"text":"Create README for numbers > guess_number","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/15"}}
+{"text":"Create README for numbers > factorial","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/12"}}
+{"text":"Fix download command for README.","meta":{"source":"GitHub","url":"https://github.com/AkkeyLab/mac-auto-setup/issues/58"}}
+{"text":"Create README for lists > count","meta":{"source":"GitHub","url":"https://github.com/allardbrain/Python-Coding-Challenges/issues/3"}}
+{"text":"readme","meta":{"source":"GitHub","url":"https://github.com/TATJAVAPavelKlindziuk/WikiApiRetrofit2/issues/1"}}
+{"text":"How to use remotely?","meta":{"source":"GitHub","url":"https://github.com/ShopRunner/jupyter-notify/issues/9"}}
+{"text":"Not sure how to use the JBossPolicyRegistrationObjectFactory","meta":{"source":"GitHub","url":"https://github.com/marschall/policy-registration-factory/issues/1"}}
+{"text":"Consider better view for endpoint selection","meta":{"source":"GitHub","url":"https://github.com/Vrong/ovh_mail_redirections_manager_for_android/issues/2"}}
+{"text":"images for readme.md","meta":{"source":"GitHub","url":"https://github.com/jayjongcheolpark/javafx-kiosk/issues/2"}}
+{"text":"Failed Pre-Flight Check","meta":{"source":"GitHub","url":"https://github.com/snipe/snipe-it/issues/3787"}}
+{"text":"\u5728activity\u4e2d\u5199\u4e86\u51e0\u4e2afragment\uff0c\u5728fragment\u4e2d\u4f7f\u7528\u64ad\u653e\u5668\uff0c\u7136\u800c\u5168\u5c4f\u7684\u65f6\u5019\u8f6f\u4ef6\u5c31\u5d29\u6e83\u4e86","meta":{"source":"GitHub","url":"https://github.com/lipangit/JieCaoVideoPlayer/issues/1083"}}
+{"text":"TFHAZ","meta":{"source":"GitHub","url":"https://github.com/Bioconductor/Contributions/issues/428"}}
+{"text":"Spring crash [103.0.1-1237-ge0f8a3d]","meta":{"source":"GitHub","url":"https://github.com/ZeroK-RTS/CrashReports/issues/1609"}}
+{"text":"asset directory?","meta":{"source":"GitHub","url":"https://github.com/timgrossmann/InstaPy/issues/437"}}
+{"text":"While using autocomplete in modal form any click outside tags input doesn't close autocomplete items","meta":{"source":"GitHub","url":"https://github.com/Gbuomprisco/ngx-chips/issues/505"}}
+{"text":"Exclude Debug","meta":{"source":"GitHub","url":"https://github.com/xd009642/tarpaulin/issues/18"}}
+{"text":"Add me!","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/9002"}}
+{"text":"Exe file missing","meta":{"source":"GitHub","url":"https://github.com/Nemixalone/GUI-tool-for-InstaPy-script/issues/15"}}
+{"text":"React 16 beta","meta":{"source":"GitHub","url":"https://github.com/facebook/react/issues/10294"}}
+{"text":"add me","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/9001"}}
+{"text":"NITRO Compilation under Windos 7 and Visual Studio 2010","meta":{"source":"GitHub","url":"https://github.com/mdaus/nitro/issues/40"}}
+{"text":"Update home page with developer tool info","meta":{"source":"GitHub","url":"https://github.com/aaronpk/IndieAuth.com/issues/165"}}
+{"text":"Please install GAMS in Codecov testing framework","meta":{"source":"GitHub","url":"https://github.com/Pyomo/pyomo/issues/193"}}
+{"text":"Sync successful but did not pull emails to google group","meta":{"source":"GitHub","url":"https://github.com/veda-consulting/uk.co.vedaconsulting.googlegroup/issues/11"}}
+{"text":"Create examples and instructions on how to use this module","meta":{"source":"GitHub","url":"https://github.com/aviggiano/redis-roaring/issues/41"}}
+{"text":"Add support for initial table state (columns, filters, sorting) in grid properties","meta":{"source":"GitHub","url":"https://github.com/ceolter/ag-grid/issues/1785"}}
+{"text":"[PRE REVIEW]: Django Remote Submission","meta":{"source":"GitHub","url":"https://github.com/openjournals/joss-reviews/issues/336"}}
+{"text":"When i navigate from one route to another child route internally, my sidebar component doesn't work","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18357"}}
+{"text":"[PRE REVIEW]: Lcopt - An interactive tool for creating fully parameterised Life Cycle Assessment (LCA) foreground models","meta":{"source":"GitHub","url":"https://github.com/openjournals/joss-reviews/issues/335"}}
+{"text":"Add actual exercises","meta":{"source":"GitHub","url":"https://github.com/Awlexus/HappyHandBreaks.Android/issues/3"}}
+{"text":"Hide \"Add\" for stacks that already have instructions","meta":{"source":"GitHub","url":"https://github.com/johnanvik/program-wars/issues/177"}}
+{"text":"SUMMARY","meta":{"source":"GitHub","url":"https://github.com/jakalkowski/prj-rev-bwfs-tea-cozy/issues/1"}}
+{"text":"Spigot 1.11.2 Invalid plugin.yml","meta":{"source":"GitHub","url":"https://github.com/BiomeBundle/BiomeBundle/issues/89"}}
+{"text":"Add me","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/9000"}}
+{"text":"handle third-party credits and report on server","meta":{"source":"GitHub","url":"https://github.com/phetsims/chipper/issues/594"}}
+{"text":"KeyError: \"Unable to open object (Object 'dense_2' doesn't exist)\"","meta":{"source":"GitHub","url":"https://github.com/fchollet/keras/issues/7442"}}
+{"text":"Missing Guide for development setup on Windows","meta":{"source":"GitHub","url":"https://github.com/rwieruch/the-road-to-learn-react/issues/60"}}
+{"text":"Some features are not working after install","meta":{"source":"GitHub","url":"https://github.com/mobsoftware/mobsocial/issues/32"}}
+{"text":"Add -ResourceId parameter for all Get-AzureRm* commands","meta":{"source":"GitHub","url":"https://github.com/Azure/azure-powershell/issues/4366"}}
+{"text":"instructions for using the debugger","meta":{"source":"GitHub","url":"https://github.com/timitoc/LearningPointers/issues/1"}}
+{"text":"Add an Instructions block to the top of all new projects","meta":{"source":"GitHub","url":"https://github.com/crowdresearch/daemo/issues/935"}}
+{"text":"Add me please","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8998"}}
+{"text":"Not able to install with the given instructions.","meta":{"source":"GitHub","url":"https://github.com/DataTorrent/malhar-angular-dashboard/issues/199"}}
+{"text":"Using ES6 imports, everything global under AWS namespace","meta":{"source":"GitHub","url":"https://github.com/aws/amazon-cognito-identity-js/issues/483"}}
+{"text":"/config/firstboot file should be removed","meta":{"source":"GitHub","url":"https://github.com/F5Networks/f5-openstack-image-prep/issues/75"}}
+{"text":"Working AndroidTestOrchestrator example","meta":{"source":"GitHub","url":"https://github.com/googlesamples/android-testing/issues/141"}}
+{"text":"Custom Easing Logic","meta":{"source":"GitHub","url":"https://github.com/nicky-lenaers/ngx-scroll-to/issues/19"}}
+{"text":"Upgrade to 3.1.0 ","meta":{"source":"GitHub","url":"https://github.com/taigaio/taiga-back/issues/1015"}}
+{"text":"Trying to add own leds that are connected","meta":{"source":"GitHub","url":"https://github.com/mariusmotea/diyHue/issues/28"}}
+{"text":"Add me Please.","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8995"}}
+{"text":"Ubuntu 16.04 LST installation instructions","meta":{"source":"GitHub","url":"https://github.com/janverschelde/PHCpack/issues/13"}}
+{"text":"0.1.32 seems to run fine also without host application","meta":{"source":"GitHub","url":"https://github.com/passff/passff/issues/216"}}
+{"text":"RRD dependency","meta":{"source":"GitHub","url":"https://github.com/kytos/documentation/issues/58"}}
+{"text":"Rethink Select mode","meta":{"source":"GitHub","url":"https://github.com/unfoldingWord-dev/translationCore/issues/2290"}}
+{"text":"oc CMD --help output unreadable and confusing","meta":{"source":"GitHub","url":"https://github.com/openshift/origin/issues/15474"}}
+{"text":"Seitenleiste in Sidenav verpacken","meta":{"source":"GitHub","url":"https://github.com/nie-ine/raeber-website/issues/12"}}
+{"text":"Rethink what to show on the select screen when the verse is blank","meta":{"source":"GitHub","url":"https://github.com/unfoldingWord-dev/translationCore/issues/2289"}}
+{"text":"question: installing development machine error","meta":{"source":"GitHub","url":"https://github.com/pavel-demin/red-pitaya-notes/issues/500"}}
+{"text":"swagger-document compose - FAILED","meta":{"source":"GitHub","url":"https://github.com/Azure/autorest/issues/2473"}}
+{"text":"Create wiki instructions & agree a consumables pricing model for the Ricoh sublimation printer","meta":{"source":"GitHub","url":"https://github.com/DoESLiverpool/somebody-should/issues/545"}}
+{"text":"Add instructions for how to build a set-up","meta":{"source":"GitHub","url":"https://github.com/bright-tools/mbed_lcd_hid/issues/7"}}
+{"text":"Issue SV-Zanshin","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8982"}}
+{"text":"GetInstanceAttributeListService","meta":{"source":"GitHub","url":"https://github.com/digitalpetri/ethernet-ip/issues/11"}}
+{"text":"Still reproduced in IE11 after update to version 12.0.1: unable to find bean reference csvCreator while initialising #1778","meta":{"source":"GitHub","url":"https://github.com/ceolter/ag-grid/issues/1784"}}
+{"text":"Include code snippet for Sequential model Quick Start in wiki","meta":{"source":"GitHub","url":"https://github.com/lwtnn/lwtnn/issues/52"}}
+{"text":"Upgrade to Java 1.6","meta":{"source":"GitHub","url":"https://github.com/primefaces/primefaces/issues/2573"}}
+{"text":"Not able to run a new react-native project for ios","meta":{"source":"GitHub","url":"https://github.com/facebook/react-native/issues/15210"}}
+{"text":"run errors ","meta":{"source":"GitHub","url":"https://github.com/tensorflow/tensorflow/issues/11781"}}
+{"text":"Kubelet ignoring --register-schedulable=false","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes/issues/49628"}}
+{"text":"Reactive forms valueChanges method fires twice for one change on input fields.","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18350"}}
+{"text":"dp.kinect not registered after writing registration name and opening .dpreg ","meta":{"source":"GitHub","url":"https://github.com/diablodale/dp.kinect/issues/46"}}
+{"text":"Question","meta":{"source":"GitHub","url":"https://github.com/thunlp/TensorFlow-NRE/issues/24"}}
+{"text":"Is it possible to show the added section collapsed?","meta":{"source":"GitHub","url":"https://github.com/afollestad/sectioned-recyclerview/issues/56"}}
+{"text":"Please add me - Oslo, Norway","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8981"}}
+{"text":"Source for the Plant Monitoring System Notification thro Respeaker","meta":{"source":"GitHub","url":"https://github.com/respeaker/get_started_with_respeaker/issues/155"}}
+{"text":"provided solution doesn't match instructions - all in one file","meta":{"source":"GitHub","url":"https://github.com/foundersandcoders/error-handling-workshop/issues/22"}}
+{"text":"routerLinkActive applies active class to null routerLink","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18347"}}
+{"text":"Add missing temp module for sme","meta":{"source":"GitHub","url":"https://github.com/mgechev/angular-seed/issues/2035"}}
+{"text":"Wrong readme instructions ","meta":{"source":"GitHub","url":"https://github.com/kofno/BasicLambda/issues/2"}}
+{"text":"Misunderstanding about  the connection between the  HM-11 et Myo","meta":{"source":"GitHub","url":"https://github.com/vroland/MyoBridge/issues/7"}}
+{"text":"Which version to fork for new viz development?","meta":{"source":"GitHub","url":"https://github.com/tensorflow/tensorboard/issues/272"}}
+{"text":"Add instructions on the main game page not on github :P","meta":{"source":"GitHub","url":"https://github.com/rheaparekh/jezzball-clone/issues/2"}}
+{"text":"Help needed!","meta":{"source":"GitHub","url":"https://github.com/engcube/OSPF-NS3/issues/2"}}
+{"text":"mongoreplay missing from mongodb package","meta":{"source":"GitHub","url":"https://github.com/Homebrew/homebrew-core/issues/16068"}}
+{"text":"Sails.getDatastores is not a function","meta":{"source":"GitHub","url":"https://github.com/balderdashy/sails/issues/4156"}}
+{"text":"congestion","meta":{"source":"GitHub","url":"https://github.com/boramalper/magnetico/issues/134"}}
+{"text":"Steps in the exercise are too big","meta":{"source":"GitHub","url":"https://github.com/foundersandcoders/error-handling-workshop/issues/21"}}
+{"text":"How to compile on arm?","meta":{"source":"GitHub","url":"https://github.com/teeworlds/teeworlds/issues/1497"}}
+{"text":"Missing node-gyp in manual install instructions","meta":{"source":"GitHub","url":"https://github.com/michaelgrosner/tribeca/issues/157"}}
+{"text":"Call WebSocket service for Long-Running in .net core?","meta":{"source":"GitHub","url":"https://github.com/Azure-Samples/Cognitive-Speech-STT-Windows/issues/31"}}
+{"text":"How do i customize nativebase","meta":{"source":"GitHub","url":"https://github.com/GeekyAnts/NativeBase/issues/1107"}}
+{"text":"Typing Japanese with Windows IME on IE11/Edge does not fire change events","meta":{"source":"GitHub","url":"https://github.com/ckeditor/ckeditor-dev/issues/676"}}
+{"text":"Make switching to CuDNN easy","meta":{"source":"GitHub","url":"https://github.com/deeplearning4j/dl4j-examples/issues/493"}}
+{"text":"help page","meta":{"source":"GitHub","url":"https://github.com/vatrudell/the_vault/issues/10"}}
+{"text":"Readme","meta":{"source":"GitHub","url":"https://github.com/codergvbrownsville/code-rgv-pwa/issues/11"}}
+{"text":"node.exe via WSL fails with EINVAL on uv_pipe_open","meta":{"source":"GitHub","url":"https://github.com/Microsoft/BashOnWindows/issues/2370"}}
+{"text":"Failing to compile with hw and xen ","meta":{"source":"GitHub","url":"https://github.com/rumpkernel/rumprun/issues/102"}}
+{"text":"can you help to build tensorflow_amd64 w AVX/AVX2/SSE/FMA ?","meta":{"source":"GitHub","url":"https://github.com/aluo-x/tensorflow_windows/issues/2"}}
+{"text":"mvn -Pconfigure-datasource fails to build","meta":{"source":"GitHub","url":"https://github.com/52North/sos/issues/560"}}
+{"text":"Usage instructions incomplete","meta":{"source":"GitHub","url":"https://github.com/joshua-barber/Docker-powered-development/issues/4"}}
+{"text":"Rrror when running gdb hello","meta":{"source":"GitHub","url":"https://github.com/snare/voltron/issues/209"}}
+{"text":"Problem: sharing stack with closures prevents typing","meta":{"source":"GitHub","url":"https://github.com/PumpkinDB/PumpkinDB/issues/339"}}
+{"text":"Dev test","meta":{"source":"GitHub","url":"https://github.com/TheRoboKitten/zenbot/issues/6"}}
+{"text":"Build failing on OS X","meta":{"source":"GitHub","url":"https://github.com/Azure/acs-engine/issues/1106"}}
+{"text":"\u600e\u4e48\u4fee\u6539\u884c\u9ad8\u5462\uff1f\u6216\u8005\u4fee\u6539\u5176\u4ed6\u6837\u5f0f\uff1f","meta":{"source":"GitHub","url":"https://github.com/readium/SDKLauncher-Android/issues/122"}}
+{"text":"add please","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8963"}}
+{"text":"How to store file on remote server uploaded via DMS File Field","meta":{"source":"GitHub","url":"https://github.com/dms-org/web.laravel/issues/1"}}
+{"text":".gitattributes linguist-vendored attribute not working unless 'true' is set","meta":{"source":"GitHub","url":"https://github.com/github/linguist/issues/3737"}}
+{"text":"gib-da-repo-baws","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8953"}}
+{"text":"Sample course: first session: use consistent phrasing","meta":{"source":"GitHub","url":"https://github.com/TEAMMATES/teammates/issues/7847"}}
+{"text":"[Request] add readme file with dev environment setup instructions","meta":{"source":"GitHub","url":"https://github.com/pkla/Discolor/issues/1"}}
+{"text":"CF v269","meta":{"source":"GitHub","url":"https://github.com/cloudfoundry/cf-final-release-election/issues/42"}}
+{"text":"Add empty commit instructions to troubleshooting","meta":{"source":"GitHub","url":"https://github.com/platformsh/platformsh-docs/issues/605"}}
+{"text":"add instructions for standing up lab on Vagrant","meta":{"source":"GitHub","url":"https://github.com/tgross/devopsdays-workshop/issues/3"}}
+{"text":"cmd/go: cannot build go binary on Windows","meta":{"source":"GitHub","url":"https://github.com/golang/go/issues/21169"}}
+{"text":"Update to v4.2","meta":{"source":"GitHub","url":"https://github.com/awesomeWM/awesome/issues/1943"}}
+{"text":"Features","meta":{"source":"GitHub","url":"https://github.com/PeterMitrano/Climb/issues/3"}}
+{"text":"RFE: Develop an example that integrates the search box","meta":{"source":"GitHub","url":"https://github.com/smitthakkar96/ascii_binder_search_plugin/issues/9"}}
+{"text":"Count the blocks until the next turn","meta":{"source":"GitHub","url":"https://github.com/mapbox/mapbox-navigation-ios/issues/426"}}
+{"text":"npm start gives error","meta":{"source":"GitHub","url":"https://github.com/asadm/urduscript/issues/6"}}
+{"text":"/usr/local/src/a2billing/vendor does not exist","meta":{"source":"GitHub","url":"https://github.com/Star2Billing/a2billing/issues/150"}}
+{"text":"rpi:pkgsrc/security/libgcrypt","meta":{"source":"GitHub","url":"https://github.com/ebijun/NetBSD/issues/97"}}
+{"text":"GDB debugging fails for TizenRT/Artik053","meta":{"source":"GitHub","url":"https://github.com/Samsung/TizenRT/issues/316"}}
+{"text":"Azure Storage Authentication Error","meta":{"source":"GitHub","url":"https://github.com/spinnaker/halyard/issues/626"}}
+{"text":"Need an issue template","meta":{"source":"GitHub","url":"https://github.com/GenisysProPlugins/PluginRequests/issues/1"}}
+{"text":"hydro-devel Installation instructions are incomplete - missing dependencies","meta":{"source":"GitHub","url":"https://github.com/robotican-organization/optitrack_ros_bridge/issues/1"}}
+{"text":"Round out upload functions","meta":{"source":"GitHub","url":"https://github.com/azavea/raster-foundry-python-client/issues/16"}}
+{"text":"Add a link to file an issue","meta":{"source":"GitHub","url":"https://github.com/OperationCode/operationcode_frontend/issues/342"}}
+{"text":"Minimum DB User Privileges to run app","meta":{"source":"GitHub","url":"https://github.com/BookStackApp/BookStack/issues/451"}}
+{"text":"Installing Realm Node.JS SDK professional edition - Error: Cannot find module '../compiled/linux-x64/node-v57/realm-node.node'","meta":{"source":"GitHub","url":"https://github.com/realm/realm-js/issues/1161"}}
+{"text":"postinstall should determine prefix from spec not ARGV","meta":{"source":"GitHub","url":"https://github.com/Homebrew/brew/issues/2941"}}
+{"text":"Create on onClick event","meta":{"source":"GitHub","url":"https://github.com/Gbuomprisco/ngx-chips/issues/503"}}
+{"text":"Add build instructions","meta":{"source":"GitHub","url":"https://github.com/danielfm/kube-ecr-cleanup-controller/issues/2"}}
+{"text":"How i can access to Wilderness@Next?","meta":{"source":"GitHub","url":"https://github.com/colinmeinke/wilderness/issues/68"}}
+{"text":"Design \"resting state\" instructions","meta":{"source":"GitHub","url":"https://github.com/beefoo/climate-lab/issues/20"}}
+{"text":"Incorrect device parameters on SM-G930F","meta":{"source":"GitHub","url":"https://github.com/googlevr/webvr-polyfill/issues/273"}}
+{"text":"Buildpack failing - unexpected tLABEL error","meta":{"source":"GitHub","url":"https://github.com/Shopify/heroku-buildpack-mysql/issues/7"}}
+{"text":"[bug] Background images break source","meta":{"source":"GitHub","url":"https://github.com/ng-seed/universal/issues/40"}}
+{"text":"Is this tool supported?","meta":{"source":"GitHub","url":"https://github.com/corbel-platform/corbel/issues/19"}}
+{"text":"JIRA Server Test Connection fails ","meta":{"source":"GitHub","url":"https://github.com/CognizantQAHub/Cognizant-Intelligent-Test-Scripter/issues/66"}}
+{"text":"Migrate away from wordpress","meta":{"source":"GitHub","url":"https://github.com/AtlassianPS/AtlassianPS/issues/3"}}
+{"text":"Add contact details to Google Doc","meta":{"source":"GitHub","url":"https://github.com/159356-1702-Extramural/capstone/issues/9"}}
+{"text":"Feature - Generate Docs For Services Without Swagger Annotations","meta":{"source":"GitHub","url":"https://github.com/kongchen/swagger-maven-plugin/issues/508"}}
+{"text":"Commits to backport to 0.179-t","meta":{"source":"GitHub","url":"https://github.com/Teradata/presto/issues/652"}}
+{"text":"Typo in Security administration page","meta":{"source":"GitHub","url":"https://github.com/influxdata/docs.influxdata.com/issues/1224"}}
+{"text":"Usage with precommit hooks","meta":{"source":"GitHub","url":"https://github.com/gagern/node-libtidy/issues/17"}}
+{"text":"date format in pluck() for collection","meta":{"source":"GitHub","url":"https://github.com/tightenco/jigsaw/issues/127"}}
+{"text":"Susy and Sass issue ....","meta":{"source":"GitHub","url":"https://github.com/facebookincubator/create-react-app/issues/2860"}}
+{"text":"Test failure in APITestSharded.testMultipleWaitsAndGets.","meta":{"source":"GitHub","url":"https://github.com/ray-project/ray/issues/776"}}
+{"text":"Changes to the bgprocess","meta":{"source":"GitHub","url":"https://github.com/LABhf/DiaryHelper/issues/3"}}
+{"text":"Implement validity checks for each geometry type","meta":{"source":"GitHub","url":"https://github.com/georust/rust-geo/issues/127"}}
+{"text":"Fix homepage links to point to truffleframework.com/docs","meta":{"source":"GitHub","url":"https://github.com/trufflesuite/trufflesuite.github.io/issues/135"}}
+{"text":"Add Using with Stylelint section","meta":{"source":"GitHub","url":"https://github.com/tkh44/emotion/issues/185"}}
+{"text":"[Feature] webpack config being able to process either sass or scss ","meta":{"source":"GitHub","url":"https://github.com/roots/sage/issues/1931"}}
+{"text":"docs.openhab.org/configuration/services.html is a broken link","meta":{"source":"GitHub","url":"https://github.com/openhab/openhab-docs/issues/459"}}
+{"text":"Template Docs: 'packagename' replacer broken?","meta":{"source":"GitHub","url":"https://github.com/astropy/astropy/issues/6396"}}
+{"text":"Eliminate reduce() ?","meta":{"source":"GitHub","url":"https://github.com/gpleiss/efficient_densenet_pytorch/issues/4"}}
+{"text":"Update --cert-path to --tls-cert-path","meta":{"source":"GitHub","url":"https://github.com/vmware/vic-product/issues/461"}}
+{"text":"rst/Sphinx documentation for *files* module","meta":{"source":"GitHub","url":"https://github.com/epogrebnyak/mini-kep/issues/37"}}
+{"text":"How to use databaseChangeEvents?","meta":{"source":"GitHub","url":"https://github.com/Upinion/react-native-couchbase-lite/issues/12"}}
+{"text":"swiper\u4e0d\u80fd\u7528","meta":{"source":"GitHub","url":"https://github.com/cipchk/ngx-weui/issues/21"}}
+{"text":"Update documentation with get_datacenter_by_name method","meta":{"source":"GitHub","url":"https://github.com/profitbricks/profitbricks-sdk-python/issues/68"}}
+{"text":"Issue parsing 'Returns' in description","meta":{"source":"GitHub","url":"https://github.com/atom/atomdoc/issues/13"}}
+{"text":"new read.rdf that returns data frame instead of list","meta":{"source":"GitHub","url":"https://github.com/BoulderCodeHub/RWDataPlyr/issues/61"}}
+{"text":"Add a TMX parser","meta":{"source":"GitHub","url":"https://github.com/strinking/strikemon/issues/1"}}
+{"text":"Add element for Disclaimer text","meta":{"source":"GitHub","url":"https://github.com/presidential-innovation-fellows/code-gov-web/issues/281"}}
+{"text":"Update Documentation for 1.0.1b","meta":{"source":"GitHub","url":"https://github.com/FCP-INDI/C-PAC/issues/679"}}
+{"text":"Correct documentation on hybrid/branch run (section 8.3) and augment create_clone","meta":{"source":"GitHub","url":"https://github.com/ESMCI/cime/issues/1764"}}
+{"text":"Can't access scripts in v0.6.0-dev2","meta":{"source":"GitHub","url":"https://github.com/antonpup/Aurora/issues/690"}}
+{"text":"Add an FAQ page to the website","meta":{"source":"GitHub","url":"https://github.com/lagom/lagom.github.io/issues/90"}}
+{"text":"GroupProcedure DidFinish observer is not guaranteed to execute before child DidFinish observers","meta":{"source":"GitHub","url":"https://github.com/ProcedureKit/ProcedureKit/issues/778"}}
+{"text":"Move.from_uci will raise IndexError when passed a zero length string","meta":{"source":"GitHub","url":"https://github.com/niklasf/python-chess/issues/147"}}
+{"text":"Setup CI","meta":{"source":"GitHub","url":"https://github.com/smitthakkar96/ascii_binder_search_plugin/issues/20"}}
+{"text":"Docsite is out of date, specifically section on looping over dicts","meta":{"source":"GitHub","url":"https://github.com/ansible/ansible/issues/27341"}}
+{"text":"Release iOS SDK with README","meta":{"source":"GitHub","url":"https://github.com/hasura/support/issues/372"}}
+{"text":"Possible typo in query","meta":{"source":"GitHub","url":"https://github.com/chrisdickinson/npm-get-dependents/issues/2"}}
+{"text":"Requiring files for coverage not working properly","meta":{"source":"GitHub","url":"https://github.com/webpack-contrib/karma-webpack/issues/256"}}
+{"text":"RStudio Feature Request: Cheatsheet please!","meta":{"source":"GitHub","url":"https://github.com/rstudio/learnr/issues/107"}}
+{"text":"Documentation and landing page","meta":{"source":"GitHub","url":"https://github.com/antick/skyii/issues/7"}}
+{"text":"Readthedoc.io link dead","meta":{"source":"GitHub","url":"https://github.com/gunthercox/ChatterBot/issues/877"}}
+{"text":"Update the Java/Android library to parallel the .NET version","meta":{"source":"GitHub","url":"https://github.com/JamesWHurst/LogNut/issues/1"}}
+{"text":"Use \"universal\" categories for part-of-speech tags (1.10.0)","meta":{"source":"GitHub","url":"https://github.com/dkpro/dkpro-core/issues/1088"}}
+{"text":"WIKI Help Image","meta":{"source":"GitHub","url":"https://github.com/gitterHQ/sidecar/issues/61"}}
+{"text":"Detecting whether a method is chainable (and general concerns with breaking changes)","meta":{"source":"GitHub","url":"https://github.com/chaijs/chai/issues/1010"}}
+{"text":"Windows Kernelspace proxier support","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes/issues/49647"}}
+{"text":"Doxygen Comments for Test Case Functions","meta":{"source":"GitHub","url":"https://github.com/pnp-software/cordetfw/issues/67"}}
+{"text":"Add handlebars support to HTML previews","meta":{"source":"GitHub","url":"https://github.com/hal/hal.next/issues/107"}}
+{"text":"API's submissions pagination","meta":{"source":"GitHub","url":"https://github.com/formio/formio/issues/387"}}
+{"text":"Add document strings for constants","meta":{"source":"GitHub","url":"https://github.com/jameskermode/f90wrap/issues/68"}}
+{"text":"Ability to convert IllegalArgumentException as an HTTP 400 (Bad Request) response","meta":{"source":"GitHub","url":"https://github.com/rapidoid/rapidoid/issues/126"}}
+{"text":"Managing Neo field on the frontend","meta":{"source":"GitHub","url":"https://github.com/benjamminf/craft-neo/issues/107"}}
+{"text":"admin-transactional-locking link in settings webinterface","meta":{"source":"GitHub","url":"https://github.com/owncloud/documentation/issues/3243"}}
+{"text":"Example and documentation for Angular 2/4","meta":{"source":"GitHub","url":"https://github.com/AzureAD/azure-activedirectory-library-for-js/issues/600"}}
+{"text":"Documentation template","meta":{"source":"GitHub","url":"https://github.com/MateuszM/skeleton-framework/issues/4"}}
+{"text":"authentication_failure_logging mapping","meta":{"source":"GitHub","url":"https://github.com/seveas/python-hpilo/issues/143"}}
+{"text":"File variable not assigned","meta":{"source":"GitHub","url":"https://github.com/swift-lang/swift-t/issues/128"}}
+{"text":"Add Users as a supported entity","meta":{"source":"GitHub","url":"https://github.com/soccernee/prosperworks-ruby/issues/2"}}
+{"text":"Node samples should add or modify examples to match the tutorials","meta":{"source":"GitHub","url":"https://github.com/nats-io/node-nats/issues/154"}}
+{"text":"Job is run immediately if app is paused before scheduling","meta":{"source":"GitHub","url":"https://github.com/evernote/android-job/issues/240"}}
+{"text":"date_added and shelves properties on getSingleShelf results?","meta":{"source":"GitHub","url":"https://github.com/bdickason/node-goodreads/issues/35"}}
+{"text":"Would be great to add an example of custom implementation for Mongo","meta":{"source":"GitHub","url":"https://github.com/spring-projects/spring-boot/issues/9868"}}
+{"text":"Update README","meta":{"source":"GitHub","url":"https://github.com/MolSSI-SSS/QM_2017_SSS_Team11/issues/31"}}
+{"text":"No VHDL nor Verilog standard version specified in readme","meta":{"source":"GitHub","url":"https://github.com/Nic30/hdlConvertor/issues/6"}}
+{"text":"ECONNREFUSED","meta":{"source":"GitHub","url":"https://github.com/graphcool/chromeless/issues/26"}}
+{"text":"Document `Error` comparison algo","meta":{"source":"GitHub","url":"https://github.com/chaijs/deep-eql/issues/40"}}
+{"text":"Typos and such in README.md","meta":{"source":"GitHub","url":"https://github.com/bbusschots-mu/validateParams.js/issues/14"}}
+{"text":"Missing readme how to use","meta":{"source":"GitHub","url":"https://github.com/OpenViX/PlexDVRAPI/issues/5"}}
+{"text":"Implement MezaParser ","meta":{"source":"GitHub","url":"https://github.com/frictionlessdata/tabulator-py/issues/184"}}
+{"text":"\"_: Python\" in README.md results in an error","meta":{"source":"GitHub","url":"https://github.com/PyO3/pyo3/issues/62"}}
+{"text":"Step 1 in Viewing Event Details","meta":{"source":"GitHub","url":"https://github.com/ibm-apiconnect/getting-started/issues/107"}}
+{"text":"Add a README.md file for the Benchmark folder","meta":{"source":"GitHub","url":"https://github.com/louis-langholtz/PlayRho/issues/17"}}
+{"text":"[PRE REVIEW]: Pipengine","meta":{"source":"GitHub","url":"https://github.com/openjournals/joss-reviews/issues/337"}}
+{"text":"Installation instructions reference the wrong git repository. ","meta":{"source":"GitHub","url":"https://github.com/ros-drivers/phidgets_drivers/issues/14"}}
+{"text":"Installation steps in Fedora","meta":{"source":"GitHub","url":"https://github.com/bhoom10/bci-media-player/issues/3"}}
+{"text":"As a user, I want to have simple instructions for getting your google calendar loaded up","meta":{"source":"GitHub","url":"https://github.com/gpciancio/familyHub/issues/47"}}
+{"text":"When and how to use build-tests.sh and run-test.sh","meta":{"source":"GitHub","url":"https://github.com/dotnet/corefx/issues/22650"}}
+{"text":"[REVIEW]: rtimicropem: an R package supporting the analysis of RTI MicroPEM output files","meta":{"source":"GitHub","url":"https://github.com/openjournals/joss-reviews/issues/333"}}
+{"text":"Material not working in new CLI application","meta":{"source":"GitHub","url":"https://github.com/angular/material2/issues/6061"}}
+{"text":"Add instructions or a script for re-generating the list of functions in Fuchsia's core JIT snapshot","meta":{"source":"GitHub","url":"https://github.com/dart-lang/sdk/issues/30268"}}
+{"text":"Windows installation completes but won't start","meta":{"source":"GitHub","url":"https://github.com/kalabox/lando/issues/229"}}
+{"text":"CONTRIBUTING.md guidelines or template","meta":{"source":"GitHub","url":"https://github.com/ropensci/onboarding-meta/issues/13"}}
+{"text":"403 on all methods :-(","meta":{"source":"GitHub","url":"https://github.com/theoephraim/node-google-spreadsheet/issues/164"}}
+{"text":"[docs] Windows Instructions need updating.","meta":{"source":"GitHub","url":"https://github.com/tensorflow/tensorflow/issues/11784"}}
+{"text":"blasr installation with CMake does not work","meta":{"source":"GitHub","url":"https://github.com/PacificBiosciences/blasr/issues/362"}}
+{"text":"Two masters using one etcd(High Availability of Masters)","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes/issues/49634"}}
+{"text":"Compiling Problem to IOS","meta":{"source":"GitHub","url":"https://github.com/myflashlab/Firebase-ANE/issues/129"}}
+{"text":"Serps\\SearchEngine\\Google\\Exception\\InvalidDOMException","meta":{"source":"GitHub","url":"https://github.com/serp-spider/search-engine-google/issues/74"}}
+{"text":"Can't figure out how to proceed in the installation ","meta":{"source":"GitHub","url":"https://github.com/IHTSDO/snow-owl/issues/33"}}
+{"text":"kubectl --as doesn't work inside pod","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes/issues/49622"}}
+{"text":"#153 introduced compile problems with AOT","meta":{"source":"GitHub","url":"https://github.com/ngrx/platform/issues/191"}}
+{"text":"Rationalize freeway alert level thresholds","meta":{"source":"GitHub","url":"https://github.com/mapbox/mapbox-navigation-ios/issues/427"}}
+{"text":"Font Awesome icons are screwed up","meta":{"source":"GitHub","url":"https://github.com/primefaces/primeng/issues/3513"}}
+{"text":"How Do You Start?","meta":{"source":"GitHub","url":"https://github.com/stockmind/gpd-pocket-ubuntu-respin/issues/11"}}
+{"text":"runAll does not work on a default Fedora installation","meta":{"source":"GitHub","url":"https://github.com/lagom/lagom/issues/902"}}
+{"text":"Disconnected from the server after loading the example data","meta":{"source":"GitHub","url":"https://github.com/fbreitwieser/pavian/issues/16"}}
+{"text":"Please add me - Grass Valley, CA","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8958"}}
+{"text":"Error when using ibis to insert pandas dataframe","meta":{"source":"GitHub","url":"https://github.com/ibis-project/ibis-notebooks/issues/11"}}
+{"text":"how it works, please help","meta":{"source":"GitHub","url":"https://github.com/mikf/gallery-dl/issues/27"}}
+{"text":"Console error being logged with Angular Event Binding implementation","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18334"}}
+{"text":"Incorrect Temperature Readings","meta":{"source":"GitHub","url":"https://github.com/bruhautomation/ESP-MQTT-JSON-Multisensor/issues/33"}}
+{"text":"Include Build and Deploy Instructions","meta":{"source":"GitHub","url":"https://github.com/mc706/elm-clarity-ui/issues/22"}}
+{"text":"outdated example with Yahoo Finance API","meta":{"source":"GitHub","url":"https://github.com/angular/angular.js/issues/16130"}}
+{"text":"kernelinfo doesn't compile for linux_osi","meta":{"source":"GitHub","url":"https://github.com/panda-re/panda/issues/194"}}
+{"text":"Docs say \"You can also add more storage to the thin pool.\" without specifying how","meta":{"source":"GitHub","url":"https://github.com/docker/docker.github.io/issues/3972"}}
+{"text":"Bug: EffectsModule, StoreRouterConnectingModule and StoreDevtoolsModule need to be imported only after StoreModule","meta":{"source":"GitHub","url":"https://github.com/ngrx/platform/issues/184"}}
+{"text":"Document git workflow","meta":{"source":"GitHub","url":"https://github.com/mineral-ui/mineral-ui/issues/205"}}
+{"text":"Unable to load spacy model linked by a path","meta":{"source":"GitHub","url":"https://github.com/explosion/spaCy/issues/1223"}}
+{"text":"Router upgrade does not work when initial state is Angular","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18329"}}
+{"text":"How can I get the raw body of a MimeMessage","meta":{"source":"GitHub","url":"https://github.com/jstedfast/MailKit/issues/543"}}
+{"text":"Can't seem to capture models from the wishlist","meta":{"source":"GitHub","url":"https://github.com/beaston02/ChaturbateRecorder/issues/4"}}
+{"text":"Segfault in tac_plus","meta":{"source":"GitHub","url":"https://github.com/facebook/tac_plus/issues/11"}}
+{"text":"CORS issues","meta":{"source":"GitHub","url":"https://github.com/SecureAuthCorp/saidp-sdk-js/issues/1"}}
+{"text":"performance of 2013-Haswell and 2017-SkylakePurley on Skylake-SP","meta":{"source":"GitHub","url":"https://github.com/Mysticial/Flops/issues/18"}}
+{"text":"MSB1003 when *nix system has a /m file or directory","meta":{"source":"GitHub","url":"https://github.com/Microsoft/msbuild/issues/2351"}}
+{"text":"Kestrel HTTPS instructions are incomplete (preview 2)","meta":{"source":"GitHub","url":"https://github.com/aspnet/Docs/issues/3815"}}
+{"text":"Elementor 1.6 - Beta Release (RC2 updated)","meta":{"source":"GitHub","url":"https://github.com/pojome/elementor/issues/2077"}}
+{"text":"Update minishift install instructions with template callouts","meta":{"source":"GitHub","url":"https://github.com/openshiftio/appdev-documentation/issues/383"}}
+{"text":"runing django TemplateDoesNotExist","meta":{"source":"GitHub","url":"https://github.com/ehmatthes/pcc/issues/36"}}
+{"text":"Ubuntu 17.04 install - missing dep + app not working","meta":{"source":"GitHub","url":"https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/issues/2661"}}
+{"text":"Maven Dependency","meta":{"source":"GitHub","url":"https://github.com/Azure/mmlspark/issues/85"}}
+{"text":"Kinetic, compiling error","meta":{"source":"GitHub","url":"https://github.com/ethz-asl/nbvplanner/issues/18"}}
+{"text":"Encryption at rest key rotation is not working","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes/issues/49565"}}
+{"text":"Script/Tool to update package list doc","meta":{"source":"GitHub","url":"https://github.com/redhat-openstack/easyfix/issues/15"}}
+{"text":"hi","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8937"}}
+{"text":"Mail stored in Mailgun, but not appearing in Odoo","meta":{"source":"GitHub","url":"https://github.com/it-projects-llc/mail-addons/issues/109"}}
+{"text":"Create a diagnostic if ONBUILD trigger instructions are not written in uppercase","meta":{"source":"GitHub","url":"https://github.com/rcjsuen/dockerfile-language-server-nodejs/issues/102"}}
+{"text":"Update build-from-source instructions","meta":{"source":"GitHub","url":"https://github.com/tarantool/doc/issues/267"}}
+{"text":"Compiling drone","meta":{"source":"GitHub","url":"https://github.com/drone/drone/issues/2140"}}
+{"text":"Failing in starting a local cluster from jupyter notebook","meta":{"source":"GitHub","url":"https://github.com/dask/distributed/issues/1286"}}
+{"text":"Some questions about gitmint.","meta":{"source":"GitHub","url":"https://github.com/aimingoo/gitmint/issues/1"}}
+{"text":"Explain how to activate license somewhere","meta":{"source":"GitHub","url":"https://github.com/jakob/Postico/issues/404"}}
+{"text":"Test-PlasterManifest 'Error: The 'powerShellVersion' attribute is not declared.'","meta":{"source":"GitHub","url":"https://github.com/PowerShell/Plaster/issues/278"}}
+{"text":"Not able to use a custom theme / docs unclear on how to do it.","meta":{"source":"GitHub","url":"https://github.com/documentationjs/documentation/issues/849"}}
+{"text":"Question: push menu from top/bottom","meta":{"source":"GitHub","url":"https://github.com/FrDH/jQuery.mmenu/issues/774"}}
+{"text":"Autolink member properties and methods in class documentation","meta":{"source":"GitHub","url":"https://github.com/realm/jazzy/issues/865"}}
+{"text":"Documentation add on request","meta":{"source":"GitHub","url":"https://github.com/munkireport/munkireport-php/issues/846"}}
+{"text":"What is the Hero Card Attachment limit for a message in MS Teams?","meta":{"source":"GitHub","url":"https://github.com/Microsoft/BotBuilder/issues/3212"}}
+{"text":"power calculation with negative base","meta":{"source":"GitHub","url":"https://github.com/latex3/latex3/issues/385"}}
+{"text":"segmentationfault in amqp sample if started without internet connection and afterwards connecting again","meta":{"source":"GitHub","url":"https://github.com/Azure/azure-iot-sdk-c/issues/184"}}
+{"text":"does dCache use ACLs in Zookeper?!","meta":{"source":"GitHub","url":"https://github.com/dCache/dcache/issues/3365"}}
+{"text":"Document how to get started","meta":{"source":"GitHub","url":"https://github.com/gingerbreadassassin/RPiFanController/issues/4"}}
+{"text":"RPC Interface Returning Errors","meta":{"source":"GitHub","url":"https://github.com/spesmilo/electrum/issues/2641"}}
+{"text":"Distribute documentation mis-formatted","meta":{"source":"GitHub","url":"https://github.com/pallets/flask/issues/2432"}}
+{"text":"moderator docs and malformed requests","meta":{"source":"GitHub","url":"https://github.com/terascope/teraslice/issues/476"}}
+{"text":"rollaxis is weird","meta":{"source":"GitHub","url":"https://github.com/numpy/numpy/issues/9473"}}
+{"text":"Docs wrong for ionSwipe event on expandable ItemSliding","meta":{"source":"GitHub","url":"https://github.com/ionic-team/ionic-site/issues/1213"}}
+{"text":"Make it easier to use grafanalib in a project","meta":{"source":"GitHub","url":"https://github.com/weaveworks/grafanalib/issues/57"}}
+{"text":"Document math.Log template func","meta":{"source":"GitHub","url":"https://github.com/gohugoio/hugoDocs/issues/99"}}
+{"text":"Complete documentation of command line flags","meta":{"source":"GitHub","url":"https://github.com/hashicorp/consul-template/issues/983"}}
+{"text":"Add info to upgrade manual","meta":{"source":"GitHub","url":"https://github.com/Spomky-Labs/otphp/issues/88"}}
+{"text":"Resolver parameter order documented incorrectly","meta":{"source":"GitHub","url":"https://github.com/graphql/graphql.github.io/issues/358"}}
+{"text":"Documentation with examples","meta":{"source":"GitHub","url":"https://github.com/CSharpRU/vault-php/issues/2"}}
+{"text":"Not clear how to pass data to component in tests","meta":{"source":"GitHub","url":"https://github.com/glimmerjs/glimmer-component/issues/70"}}
+{"text":"Alertmanager's storage spec should reflect prometheus storage spec for Operator version v0.11.0","meta":{"source":"GitHub","url":"https://github.com/coreos/prometheus-operator/issues/516"}}
+{"text":"Errors using LDAP auth backend","meta":{"source":"GitHub","url":"https://github.com/hashicorp/vault/issues/3070"}}
+{"text":"Circle: set color, etc.","meta":{"source":"GitHub","url":"https://github.com/tomchentw/react-google-maps/issues/557"}}
+{"text":"Documentation: Emacs server (--daemon) and exwm-enable","meta":{"source":"GitHub","url":"https://github.com/ch11ng/exwm/issues/284"}}
+{"text":"Add contributing guidelines","meta":{"source":"GitHub","url":"https://github.com/rmarquis/pacaur/issues/737"}}
+{"text":"-d option do not support an absolute path","meta":{"source":"GitHub","url":"https://github.com/compodoc/compodoc/issues/246"}}
+{"text":"Proposal: deprecate SQTagUtil.java","meta":{"source":"GitHub","url":"https://github.com/samtools/htsjdk/issues/949"}}
+{"text":"Add Typings for VS Code Intellisense","meta":{"source":"GitHub","url":"https://github.com/spatialillusions/milsymbol/issues/130"}}
+{"text":"DS should force the path to the ceph.conf, keyring and CephX username of openATTIC","meta":{"source":"GitHub","url":"https://github.com/SUSE/DeepSea/issues/490"}}
+{"text":"Documentation: There is no grammar definition","meta":{"source":"GitHub","url":"https://github.com/nette/neon/issues/38"}}
+{"text":"Peak Orientation","meta":{"source":"GitHub","url":"https://github.com/daducci/COMMIT/issues/22"}}
+{"text":"Add documentation explaining how to enable dev and test modes","meta":{"source":"GitHub","url":"https://github.com/phpList/base-distribution/issues/25"}}
+{"text":"Translate homepage texts and categories","meta":{"source":"GitHub","url":"https://github.com/arduino/reference-jp/issues/13"}}
+{"text":"How to add prefix to id?","meta":{"source":"GitHub","url":"https://github.com/valeriangalliat/markdown-it-anchor/issues/29"}}
+{"text":"Document stream_iteration","meta":{"source":"GitHub","url":"https://github.com/arcosuc3m/grppi/issues/279"}}
+{"text":"Documentation needed to clarify usage","meta":{"source":"GitHub","url":"https://github.com/DimensionDataResearch/cloudcontrol-client-core/issues/2"}}
+{"text":"Website URL is down","meta":{"source":"GitHub","url":"https://github.com/eea/sparql-client/issues/12"}}
+{"text":"Docker fails when following instructions from DOCKER.md","meta":{"source":"GitHub","url":"https://github.com/gravitystorm/openstreetmap-carto/issues/2710"}}
+{"text":"Improve documentation","meta":{"source":"GitHub","url":"https://github.com/JuliaPolyhedra/Polyhedra.jl/issues/40"}}
+{"text":"Update to latest Angular version","meta":{"source":"GitHub","url":"https://github.com/angular/angular-cli/issues/7162"}}
+{"text":"Undocumented associated types get handled badly","meta":{"source":"GitHub","url":"https://github.com/realm/jazzy/issues/864"}}
+{"text":"sles12 sp2 installation loops after first stage. Never gets to stage 2.","meta":{"source":"GitHub","url":"https://github.com/cobbler/cobbler/issues/1815"}}
+{"text":"Studio 7 beta release download link not present","meta":{"source":"GitHub","url":"https://github.com/mulesoft/mulesoft-docs/issues/1641"}}
+{"text":"[feature] Tizen support","meta":{"source":"GitHub","url":"https://github.com/Placeholder-Software/Dissonance/issues/42"}}
+{"text":"Error creating pull request: Unprocessable Entity (HTTP 422) Invalid value for \"head\"","meta":{"source":"GitHub","url":"https://github.com/github/hub/issues/1518"}}
+{"text":"There are no commands defined in the \"permission\" namespace.","meta":{"source":"GitHub","url":"https://github.com/spatie/laravel-permission/issues/377"}}
+{"text":"REPL in the website ?","meta":{"source":"GitHub","url":"https://github.com/cljs/site/issues/26"}}
+{"text":"Add `Ezelia/eureca.io` project","meta":{"source":"GitHub","url":"https://github.com/michaelrambeau/bestofjs/issues/98"}}
+{"text":"service documentation links to all nodes need updated.","meta":{"source":"GitHub","url":"https://github.com/watson-developer-cloud/node-red-node-watson/issues/311"}}
+{"text":"Url to load test in cerberus queue ?","meta":{"source":"GitHub","url":"https://github.com/cerberustesting/cerberus-source/issues/1405"}}
+{"text":"Plugin tries to clean project dir","meta":{"source":"GitHub","url":"https://github.com/thebignet/swagger-codegen-gradle-plugin/issues/55"}}
+{"text":"PortalScripting typings are missing constructor for ScriptCall","meta":{"source":"GitHub","url":"https://github.com/otris/vscode-janus-debug/issues/98"}}
+{"text":"Need Documentation of functions which can be called using python SDK","meta":{"source":"GitHub","url":"https://github.com/deep-security/deep-security-py/issues/20"}}
+{"text":"[Prerelease] v0.1.0 ","meta":{"source":"GitHub","url":"https://github.com/MessageKit/MessageKit/issues/12"}}
+{"text":"Git version without Github","meta":{"source":"GitHub","url":"https://github.com/arabold/serverless-sentry-plugin/issues/14"}}
+{"text":"[Question] Smooth scrolling, when clicking an anchor link","meta":{"source":"GitHub","url":"https://github.com/noeldelgado/gemini-scrollbar/issues/52"}}
+{"text":"Cannot find libzmq in linux","meta":{"source":"GitHub","url":"https://github.com/bastibe/transplant/issues/44"}}
+{"text":"Markdown link open a new tab/window","meta":{"source":"GitHub","url":"https://github.com/swagger-api/swagger-ui/issues/3473"}}
+{"text":"Login, promptToInstall: false, opens Google Play Store for downloading LinkedIn app on Android","meta":{"source":"GitHub","url":"https://github.com/zyra/cordova-plugin-linkedin/issues/29"}}
+{"text":"Inspect the Radial Point Geometry -plugin and figure out what it does or should do","meta":{"source":"GitHub","url":"https://github.com/vizorvr/vizor/issues/2034"}}
+{"text":"wishlist for next version","meta":{"source":"GitHub","url":"https://github.com/denizyuret/AutoGrad.jl/issues/25"}}
+{"text":"TinyTracker project","meta":{"source":"GitHub","url":"https://github.com/tinytracker/tinytracker/issues/1"}}
+{"text":"Where to Run the swarm_setup.sh Script","meta":{"source":"GitHub","url":"https://github.com/sendwyre/swarm-mode/issues/1"}}
+{"text":"When custom domain used for azure storage - SDK breaks signature","meta":{"source":"GitHub","url":"https://github.com/Microsoft/ApplicationInsights-dotnet-server/issues/652"}}
+{"text":"python3 Question","meta":{"source":"GitHub","url":"https://github.com/lbl-srg/BuildingsPy/issues/169"}}
+{"text":"Documentation out of date","meta":{"source":"GitHub","url":"https://github.com/abdulhaq-e/ngrx-json-api/issues/214"}}
+{"text":"Development of the library with own solutions","meta":{"source":"GitHub","url":"https://github.com/MIT-LCP/wfdb-python/issues/65"}}
+{"text":"Problem: no man page for zmq_msg[_set]_group APis","meta":{"source":"GitHub","url":"https://github.com/zeromq/libzmq/issues/2634"}}
+{"text":"Setting timeout option in Start-AzureRmVm","meta":{"source":"GitHub","url":"https://github.com/Azure/azure-powershell/issues/4374"}}
+{"text":"Problem with \"carriage return\" in Markdown Syntax","meta":{"source":"GitHub","url":"https://github.com/schemaspy/schemaspy/issues/124"}}
+{"text":"Setting up Heroku Server documentation","meta":{"source":"GitHub","url":"https://github.com/dmhacker/dmhacker-youtube/issues/1"}}
+{"text":"can you predict the output for the below example ? as per the documentation it should give two winners. However, giving me only one winner and that too precedence of the player in the array passed. ","meta":{"source":"GitHub","url":"https://github.com/goldfire/pokersolver/issues/10"}}
+{"text":"Labels","meta":{"source":"GitHub","url":"https://github.com/balancap/SSD-Tensorflow/issues/114"}}
+{"text":"How do I swap between modules during runtime?","meta":{"source":"GitHub","url":"https://github.com/tensorflow/serving/issues/537"}}
+{"text":"Starting documentation","meta":{"source":"GitHub","url":"https://github.com/alexandruchircu/lp-lo/issues/1"}}
+{"text":"Indendation rule bugged","meta":{"source":"GitHub","url":"https://github.com/eslint/eslint/issues/9020"}}
+{"text":"Language starter specs","meta":{"source":"GitHub","url":"https://github.com/zach-king/Kraken/issues/9"}}
+{"text":"HTML documentation on UntrustedRootOK looks strange","meta":{"source":"GitHub","url":"https://github.com/ForNeVeR/Jabber-Net/issues/89"}}
+{"text":"Documentation needs update","meta":{"source":"GitHub","url":"https://github.com/datasciencebr/serenata-toolbox/issues/118"}}
+{"text":"Complete Documentation","meta":{"source":"GitHub","url":"https://github.com/endeav0r/falcon/issues/12"}}
+{"text":"Migrate from imp to importlib","meta":{"source":"GitHub","url":"https://github.com/micheles/plac/issues/24"}}
+{"text":"T3, Semantic Segmentation Project - vgg_data","meta":{"source":"GitHub","url":"https://github.com/udacity/sdc-issue-reports/issues/961"}}
+{"text":"sysadm generate gigabytes of logs and causes system stalls","meta":{"source":"GitHub","url":"https://github.com/trueos/trueos-core/issues/1458"}}
+{"text":"load_latlngJSON documentation not listed on website","meta":{"source":"GitHub","url":"https://github.com/PurdueCAM2Project/CAM2WebUI/issues/102"}}
+{"text":"Documentation or example of creating an object with a Generic Relationship?","meta":{"source":"GitHub","url":"https://github.com/django-json-api/django-rest-framework-json-api/issues/370"}}
+{"text":"Suggestion: create a `pkgdown` style website","meta":{"source":"GitHub","url":"https://github.com/WinVector/seplyr/issues/1"}}
+{"text":"Repo needs another title update","meta":{"source":"GitHub","url":"https://github.com/solarwinds/OrionSDK/issues/87"}}
+{"text":"Documentation of HttpServer.bind and HttpServer.bindSecure is misleading","meta":{"source":"GitHub","url":"https://github.com/dart-lang/sdk/issues/30277"}}
+{"text":"Bug in writeCbModel (documentation)","meta":{"source":"GitHub","url":"https://github.com/opencobra/cobratoolbox/issues/836"}}
+{"text":"nextcloud 12 occ gallery don't exist. this is lie application is installed and worked","meta":{"source":"GitHub","url":"https://github.com/nextcloud/gallery/issues/305"}}
+{"text":"[RFC][DX] New command to debug form types","meta":{"source":"GitHub","url":"https://github.com/symfony/symfony/issues/23688"}}
+{"text":"[Docs] How to create custom components?","meta":{"source":"GitHub","url":"https://github.com/Semantic-Org/Semantic-UI/issues/5592"}}
+{"text":"Intercom initialization","meta":{"source":"GitHub","url":"https://github.com/rangle/redux-segment/issues/103"}}
+{"text":"Inconsistent strategy for .gitignore and deploy-exclude.txt files","meta":{"source":"GitHub","url":"https://github.com/acquia/blt/issues/1839"}}
+{"text":"Documentation missing for Selenium Html Runner","meta":{"source":"GitHub","url":"https://github.com/SeleniumHQ/selenium/issues/4379"}}
+{"text":"Add Installing and Deploying information","meta":{"source":"GitHub","url":"https://github.com/abdulhannanali/bitcoin-alerts/issues/1"}}
+{"text":"Improve documentation for service and token urls","meta":{"source":"GitHub","url":"https://github.com/watson-developer-cloud/swift-sdk/issues/657"}}
+{"text":"Man page fails to explain what editorconfig is or does","meta":{"source":"GitHub","url":"https://github.com/editorconfig/editorconfig-core-c/issues/27"}}
+{"text":"React \u8fdb\u9636: \u5bb9\u5668\u7ec4\u4ef6","meta":{"source":"GitHub","url":"https://github.com/ybning/blog/issues/22"}}
+{"text":"Improve readme","meta":{"source":"GitHub","url":"https://github.com/hellomd/assistdog/issues/3"}}
+{"text":"Add document type for \"ReadMe OSS\" files","meta":{"source":"GitHub","url":"https://github.com/sw360/sw360portal/issues/523"}}
+{"text":"Compilation problem with dependency Vigra","meta":{"source":"GitHub","url":"https://github.com/deeplearningais/curfil/issues/18"}}
+{"text":"nRF SDK 11 link is wrong","meta":{"source":"GitHub","url":"https://github.com/reversebias/mitosis/issues/5"}}
+{"text":"Document how to actually run the example in the `usage` section","meta":{"source":"GitHub","url":"https://github.com/graphcool/chromeless/issues/52"}}
+{"text":"Docker image to run cucumber - js","meta":{"source":"GitHub","url":"https://github.com/cucumber/cucumber-js/issues/882"}}
+{"text":"Document the client library categories per component","meta":{"source":"GitHub","url":"https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/issues/54"}}
+{"text":"README dosyas\u0131 d\u00fczenlemesi","meta":{"source":"GitHub","url":"https://github.com/crownest/doIT-Backend/issues/13"}}
+{"text":"README text / jQuery removal?","meta":{"source":"GitHub","url":"https://github.com/nathanvda/cocoon/issues/441"}}
+{"text":"fix readme","meta":{"source":"GitHub","url":"https://github.com/LLC-CERERIS/lorawan/issues/9"}}
+{"text":"Training on VOC2011","meta":{"source":"GitHub","url":"https://github.com/JihongJu/keras-fcn/issues/25"}}
+{"text":"Bogus keyword on crates.io","meta":{"source":"GitHub","url":"https://github.com/rust-lang/cargo/issues/4332"}}
+{"text":"Installation","meta":{"source":"GitHub","url":"https://github.com/Chocobozzz/OpenVPN-Admin/issues/62"}}
+{"text":"README should have overview of how algorithm works","meta":{"source":"GitHub","url":"https://github.com/ptrkkim/Genetic-Algo-Tech-Talk/issues/5"}}
+{"text":"Release 0.1.0","meta":{"source":"GitHub","url":"https://github.com/durban/seals/issues/58"}}
+{"text":"Document v1.0 features","meta":{"source":"GitHub","url":"https://github.com/o19s/elasticsearch-learning-to-rank/issues/62"}}
+{"text":"give some advice on installing Oxcal","meta":{"source":"GitHub","url":"https://github.com/ISAAKiel/oxcAAR/issues/14"}}
+{"text":"Add getting started section to README","meta":{"source":"GitHub","url":"https://github.com/abhijit-organization/website-app/issues/2"}}
+{"text":"\u5e03\u5c40\u88ab\u906e\u76d6\u95ee\u9898(1.3.4\u7248)","meta":{"source":"GitHub","url":"https://github.com/dkzwm/SmoothRefreshLayout/issues/11"}}
+{"text":"Clarify the license situation (closed source?)","meta":{"source":"GitHub","url":"https://github.com/afterlogic/webmail-pro-8/issues/1"}}
+{"text":"Explanation for pg:outliers headers","meta":{"source":"GitHub","url":"https://github.com/heroku/heroku-pg-extras/issues/142"}}
+{"text":"Update the README.md","meta":{"source":"GitHub","url":"https://github.com/ciena-frost/ember-frost-action-bar/issues/7"}}
+{"text":"add a readme file","meta":{"source":"GitHub","url":"https://github.com/aran91/-/issues/1"}}
+{"text":"Inconsistency with the sample code and the explanation","meta":{"source":"GitHub","url":"https://github.com/wso2/msf4j/issues/435"}}
+{"text":"Refactor readme to an table of content","meta":{"source":"GitHub","url":"https://github.com/IMSmobile/app/issues/534"}}
+{"text":"Feedback","meta":{"source":"GitHub","url":"https://github.com/Frewabebe/hangman/issues/1"}}
+{"text":"Wrong script path in Readme","meta":{"source":"GitHub","url":"https://github.com/alfaproject/ng-iframe-resizer/issues/4"}}
+{"text":"Add usage in README.md","meta":{"source":"GitHub","url":"https://github.com/Takkiiii/NSWindowExtensions/issues/1"}}
+{"text":"Document deployment profiles in readme","meta":{"source":"GitHub","url":"https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/issues/98"}}
+{"text":"[Feature Request] LaTeX with Chinese support","meta":{"source":"GitHub","url":"https://github.com/hyrious/Telegram.Bot/issues/2"}}
+{"text":"ReadMe add","meta":{"source":"GitHub","url":"https://github.com/mebble/Float/issues/1"}}
+{"text":"Id generation ","meta":{"source":"GitHub","url":"https://github.com/mkaminaga/system_library/issues/14"}}
+{"text":"Add support for GraphQL","meta":{"source":"GitHub","url":"https://github.com/acquia/reservoir/issues/59"}}
+{"text":"README.md img","meta":{"source":"GitHub","url":"https://github.com/suroxdesigns/orion/issues/1"}}
+{"text":"QFlightInstruments README misleading / incomplete","meta":{"source":"GitHub","url":"https://github.com/JdeRobot/ThirdParty/issues/12"}}
+{"text":"Embed README images","meta":{"source":"GitHub","url":"https://github.com/jtof-fap/verifHostname/issues/1"}}
+{"text":"could you share how to install is plugin?","meta":{"source":"GitHub","url":"https://github.com/joaoasrosa/nppxmltreeview/issues/21"}}
+{"text":"\u041f\u0435\u0440\u0435\u0441\u0442\u0430\u043b\u0438 \u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0438 \u043d\u0430 \u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0438 \u0432 README.md","meta":{"source":"GitHub","url":"https://github.com/Andrew8xx8/kirpich/issues/32"}}
+{"text":"Compiling from source: no such module 'SourceKittenFramework'","meta":{"source":"GitHub","url":"https://github.com/realm/SwiftLint/issues/1715"}}
+{"text":"License?","meta":{"source":"GitHub","url":"https://github.com/ruippeixotog/think-bayes-scala/issues/8"}}
+{"text":"broken link in ABOUT","meta":{"source":"GitHub","url":"https://github.com/autokey-py3/autokey/issues/94"}}
+{"text":"CMAKE_INSTALL_DIR is unused","meta":{"source":"GitHub","url":"https://github.com/codeplaysoftware/computecpp-sdk/issues/37"}}
+{"text":"Test overriding","meta":{"source":"GitHub","url":"https://github.com/dazinator/DotNet.Cabinet/issues/6"}}
+{"text":"readme images","meta":{"source":"GitHub","url":"https://github.com/facn2/Alpha.HAML/issues/82"}}
+{"text":"FILESYSTEM_CHARSET setting - README update (?)","meta":{"source":"GitHub","url":"https://github.com/dmwarren/nirvana/issues/1"}}
+{"text":"Update readme to reflect the new repo location","meta":{"source":"GitHub","url":"https://github.com/zooniverse/aggregation-for-caesar/issues/1"}}
+{"text":"Please update README.md","meta":{"source":"GitHub","url":"https://github.com/giuseppe/libocispec/issues/24"}}
+{"text":"issues\u7df4\u7fd2\u3000README.md\u7de8\u96c6","meta":{"source":"GitHub","url":"https://github.com/utsumi0730/test/issues/1"}}
+{"text":"Badge for readme files","meta":{"source":"GitHub","url":"https://github.com/CompuIves/codesandbox-client/issues/89"}}
+{"text":"Adjust readme about Capture","meta":{"source":"GitHub","url":"https://github.com/zalando/riptide/issues/212"}}
+{"text":"suggestion for readme.md","meta":{"source":"GitHub","url":"https://github.com/mikejhale/starter-plugin/issues/1"}}
+{"text":"https://github.com/daisykd/hello-world/blob/master/README.md","meta":{"source":"GitHub","url":"https://github.com/daisykd/hello-world/issues/2"}}
+{"text":"Import cheatsheet","meta":{"source":"GitHub","url":"https://github.com/cljs/site/issues/25"}}
+{"text":"ReferenceError: Textarea is not defined","meta":{"source":"GitHub","url":"https://github.com/yuku-t/textcomplete/issues/114"}}
+{"text":"ReferenceError: regeneratorRuntime is not defined with Create React App","meta":{"source":"GitHub","url":"https://github.com/wojtekmaj/react-pdf/issues/39"}}
+{"text":"Readme file should be styled as Markdown","meta":{"source":"GitHub","url":"https://github.com/FluidSynth/fluidsynth/issues/181"}}
+{"text":"No long work with Vue 1.x since v.0.8.0","meta":{"source":"GitHub","url":"https://github.com/charliekassel/vuejs-datepicker/issues/233"}}
+{"text":"502 bad gateway on web Server ","meta":{"source":"GitHub","url":"https://github.com/maxking/docker-mailman/issues/103"}}
+{"text":"There is a bug when you click the number in the center of the dialog.","meta":{"source":"GitHub","url":"https://github.com/ch-muhammad-adil/Android-Material-Picker-Dialog/issues/1"}}
+{"text":"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0432 readme.md","meta":{"source":"GitHub","url":"https://github.com/dimsemenov/Magnific-Popup/issues/1010"}}
+{"text":"7.0.44 hangs on startup","meta":{"source":"GitHub","url":"https://github.com/dolphinsmalltalk/DolphinVM/issues/137"}}
+{"text":"Latest doctrine/instantiator bugs out with patchwork","meta":{"source":"GitHub","url":"https://github.com/sebastianbergmann/phpunit/issues/2746"}}
+{"text":"Loading problem","meta":{"source":"GitHub","url":"https://github.com/DavideViolante/Angular-Full-Stack/issues/92"}}
+{"text":"bad output in sha1","meta":{"source":"GitHub","url":"https://github.com/boazsegev/facil.io/issues/19"}}
+{"text":"Visibility of the examples is poor","meta":{"source":"GitHub","url":"https://github.com/cprogrammer1994/ModernGL/issues/133"}}
+{"text":"Which licence is this issued under?","meta":{"source":"GitHub","url":"https://github.com/better-js-logging/angular-logger2/issues/3"}}
+{"text":"Create a folder","meta":{"source":"GitHub","url":"https://github.com/ChaoticFuzz/Skill-Fish/issues/3"}}
+{"text":"Half empty debian","meta":{"source":"GitHub","url":"https://github.com/davetcoleman/ros_control_boilerplate/issues/13"}}
+{"text":"auto refresh page feature?","meta":{"source":"GitHub","url":"https://github.com/lihaoyi/Scalatex/issues/59"}}
+{"text":"self invocating function doesn't require explicit call.","meta":{"source":"GitHub","url":"https://github.com/jjsquillante/special-tribble/issues/1"}}
+{"text":"Native library fails to load in docker container","meta":{"source":"GitHub","url":"https://github.com/xerial/snappy-java/issues/181"}}
+{"text":"Azure deploy Error: Cannot find module 'user-home'","meta":{"source":"GitHub","url":"https://github.com/nightscout/cgm-remote-monitor/issues/2709"}}
+{"text":"\u4f60\u4e0d\u539a\u9053\u554a\u5144\u5f1f","meta":{"source":"GitHub","url":"https://github.com/LuLuCodes/vue-back-end-template/issues/2"}}
+{"text":"readme\u5efa\u8bae\u5199\u6e05\u695a\u652f\u6301\u7684api\u7b49\u7ea7","meta":{"source":"GitHub","url":"https://github.com/MagicMashRoom/SuperCalendar/issues/21"}}
+{"text":"demo\u662f\u65e0\u6548\u94fe\u63a5\uff0c\u8bf7\u95eedemo\u80fd\u8be6\u7ec6\u4e00\u70b9\u5417\uff1f","meta":{"source":"GitHub","url":"https://github.com/MoePlayer/vue-dplayer/issues/6"}}
+{"text":"player.flvjs is not a function","meta":{"source":"GitHub","url":"https://github.com/mister-ben/videojs-flvjs/issues/3"}}
+{"text":"Link to repo","meta":{"source":"GitHub","url":"https://github.com/goodenough/mosaico-backend/issues/21"}}
+{"text":"Unable to find \"crypto-json\" (\"dt\") in the registry","meta":{"source":"GitHub","url":"https://github.com/typings/typings/issues/812"}}
+{"text":"Is there a README to introduce the tool ?","meta":{"source":"GitHub","url":"https://github.com/youkidkk/java.util.console/issues/1"}}
+{"text":"loops-test.js and instructions don't match for whileLoop(n)","meta":{"source":"GitHub","url":"https://github.com/learn-co-curriculum/javascript-intro-to-looping/issues/34"}}
+{"text":"Amp-Analytics - feature ability to trigger multiple GA Event tags on page load","meta":{"source":"GitHub","url":"https://github.com/ampproject/amphtml/issues/10667"}}
+{"text":"headless service with no port definition finds no endpoint","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes/issues/49722"}}
+{"text":"CKWebSpeech Voice to Text Plugin not working","meta":{"source":"GitHub","url":"https://github.com/ckeditor/ckeditor-dev/issues/685"}}
+{"text":"last release Phoenix 1.3 RC 3...isn't support?","meta":{"source":"GitHub","url":"https://github.com/infinitered/torch/issues/70"}}
+{"text":"Issue when using function convertUTCtoTT","meta":{"source":"GitHub","url":"https://github.com/Tudat/tudat/issues/224"}}
+{"text":"issue creating multiple docker nodes with vmwarefusion driver","meta":{"source":"GitHub","url":"https://github.com/docker/machine/issues/4208"}}
+{"text":"Bindings not working properly after replacing FormArray using setControl() and adding new controls","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18376"}}
+{"text":"Update to Angular 4","meta":{"source":"GitHub","url":"https://github.com/juristr/angular-testing-recipes/issues/1"}}
+{"text":"win-simple with Domino on Windows","meta":{"source":"GitHub","url":"https://github.com/Lone-Coder/letsencrypt-win-simple/issues/484"}}
+{"text":"Router not reusing parent component when changing only the child route","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18374"}}
+{"text":"Future direction of SoftFloat and its development model","meta":{"source":"GitHub","url":"https://github.com/ucb-bar/berkeley-softfloat-3/issues/5"}}
+{"text":"snap fails after \u00b4\u00b4main.go:220: WARNING: cannot create syslog logger","meta":{"source":"GitHub","url":"https://github.com/Microsoft/BashOnWindows/issues/2374"}}
+{"text":"Animation Rotation Direction not correct in certain degrees","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18372"}}
+{"text":"macOS install requires files in `IHaskell/.stack-work`?","meta":{"source":"GitHub","url":"https://github.com/gibiansky/IHaskell/issues/733"}}
+{"text":"Missing public key for apt-get update","meta":{"source":"GitHub","url":"https://github.com/terrycain/razer-drivers/issues/344"}}
+{"text":"[Feature Request] more protocols for links","meta":{"source":"GitHub","url":"https://github.com/turnermm/ckgdoku/issues/23"}}
+{"text":"Help me be a better debugger?  ","meta":{"source":"GitHub","url":"https://github.com/espressif/arduino-esp32/issues/537"}}
+{"text":"`composer create-project` fails with \"No such file or directory\"","meta":{"source":"GitHub","url":"https://github.com/phpList/base-distribution/issues/23"}}
+{"text":"saving the file","meta":{"source":"GitHub","url":"https://github.com/learn-co-curriculum/js-from-dom-to-node/issues/15"}}
+{"text":"Choropleth Map","meta":{"source":"GitHub","url":"https://github.com/gavinr/geojson-csv-join/issues/3"}}
+{"text":"Cell Renderer Issues After 11.0.0 -> 12.0.2 Upgrade","meta":{"source":"GitHub","url":"https://github.com/ceolter/ag-grid/issues/1789"}}
+{"text":"[Hidden] not working in platform-server","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18377"}}
+{"text":"Using a type needed by the injectable class in the injectable class leads to \"Can't resolve all parameters for\"","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18371"}}
+{"text":"Copy sample behat config file via Composer","meta":{"source":"GitHub","url":"https://github.com/paulgibbs/behat-wordpress-extension/issues/117"}}
+{"text":"Unable to right click on the hamburger menu filter","meta":{"source":"GitHub","url":"https://github.com/ceolter/ag-grid/issues/1787"}}
+{"text":"Create diagnostics for issues found in an ONBUILD's trigger instruction","meta":{"source":"GitHub","url":"https://github.com/rcjsuen/dockerfile-language-server-nodejs/issues/112"}}
+{"text":"How to run tests","meta":{"source":"GitHub","url":"https://github.com/konstantinstadler/country_converter/issues/11"}}
+{"text":"https://angular.io/guide/webpack Missing class view-SideNav in aio-shell","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18370"}}
+{"text":"What's the state of Animated Markers?","meta":{"source":"GitHub","url":"https://github.com/airbnb/react-native-maps/issues/1512"}}
+{"text":"rowStyleClass in DataTable fires indefinitely","meta":{"source":"GitHub","url":"https://github.com/primefaces/primeng/issues/3520"}}
+{"text":"HLAx without docker","meta":{"source":"GitHub","url":"https://github.com/humanlongevity/HLA/issues/7"}}
+{"text":"Error establishing a database connection","meta":{"source":"GitHub","url":"https://github.com/drlogout/wordpress-duplicator/issues/2"}}
+{"text":"Instructions for using the markdown editor","meta":{"source":"GitHub","url":"https://github.com/timitoc/LearningPointers/issues/2"}}
+{"text":"Multidimensional slicing doesn't work as shown","meta":{"source":"GitHub","url":"https://github.com/zackchase/mxnet-the-straight-dope/issues/28"}}
+{"text":"Rename \"Isoccluded\" to \"Partially covered\"","meta":{"source":"GitHub","url":"https://github.com/innosoft-pro/label-them/issues/34"}}
+{"text":"Team discussion of next steps","meta":{"source":"GitHub","url":"https://github.com/gslab-econ/template/issues/56"}}
+{"text":"Nodemailer not working :(","meta":{"source":"GitHub","url":"https://github.com/nodejs/help/issues/755"}}
+{"text":"Video tutorial","meta":{"source":"GitHub","url":"https://github.com/timgrossmann/InstaPy/issues/439"}}
+{"text":"mubahood","meta":{"source":"GitHub","url":"https://github.com/ParticleCore/Particle/issues/537"}}
+{"text":"Whitespace stripped from 'classic' javascript elements might lead to illegal empty elements","meta":{"source":"GitHub","url":"https://github.com/camac/Swiper/issues/19"}}
+{"text":"CMAKE instructions for C++ are not exactly correct","meta":{"source":"GitHub","url":"https://github.com/grpc/grpc/issues/11949"}}
+{"text":"Move webUI functions into a separate file.","meta":{"source":"GitHub","url":"https://github.com/ray-project/ray/issues/780"}}
+{"text":"Updated build instructions for 16.04.1-Ubuntu missing","meta":{"source":"GitHub","url":"https://github.com/facebook/folly/issues/644"}}
+{"text":"Missing simulation.launch","meta":{"source":"GitHub","url":"https://github.com/davetcoleman/ros_control_boilerplate/issues/11"}}
+{"text":"datetime (convert_datetime_type) seems to add in extra milliseconds","meta":{"source":"GitHub","url":"https://github.com/bokeh/bokeh/issues/6680"}}
+{"text":"Slow omnicompletion for object members","meta":{"source":"GitHub","url":"https://github.com/ternjs/tern_for_vim/issues/174"}}
+{"text":"Guest Users should be able to register for an account","meta":{"source":"GitHub","url":"https://github.com/summer17-csc648-team1/warehausmedia/issues/3"}}
+{"text":"Users should be able to log in and log out","meta":{"source":"GitHub","url":"https://github.com/summer17-csc648-team1/warehausmedia/issues/2"}}
+{"text":"Why not add another formula for selective system python shadowing?","meta":{"source":"GitHub","url":"https://github.com/Homebrew/homebrew-core/issues/16087"}}
+{"text":"Examples, failed to load qml","meta":{"source":"GitHub","url":"https://github.com/qmlweb/qmlweb/issues/411"}}
+{"text":"DMCHMM","meta":{"source":"GitHub","url":"https://github.com/Bioconductor/Contributions/issues/430"}}
+{"text":"Add Selenium Testing to main repository","meta":{"source":"GitHub","url":"https://github.com/159356-1702-Extramural/capstone/issues/10"}}
+{"text":"cryptography 2.0.1 segfaults on Ubuntu 12.04","meta":{"source":"GitHub","url":"https://github.com/pyca/cryptography/issues/3824"}}
+{"text":"cmd/compile: bad position information for inlined functions","meta":{"source":"GitHub","url":"https://github.com/golang/go/issues/21184"}}
+{"text":"Failed building JavaScript bundle","meta":{"source":"GitHub","url":"https://github.com/facebook/react-native/issues/15219"}}
+{"text":"Cli default output regression","meta":{"source":"GitHub","url":"https://github.com/trailofbits/manticore/issues/418"}}
+{"text":"Do you have room for one more?","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/9007"}}
+{"text":"Instructions for installing MySQL sakila-schema fail","meta":{"source":"GitHub","url":"https://github.com/jdeathe/centos-ssh-mysql/issues/145"}}
+{"text":"trouble running Oracle_cx on macOS","meta":{"source":"GitHub","url":"https://github.com/oracle/python-cx_Oracle/issues/56"}}
+{"text":"Dashes in headings","meta":{"source":"GitHub","url":"https://github.com/code-warrior/web-design-at-risd--summer-2017--assignment-1/issues/1"}}
+{"text":"API Rate limit error while downloading `oc` causes Minishift to not start","meta":{"source":"GitHub","url":"https://github.com/minishift/minishift/issues/1184"}}
+{"text":"Firebase FacebookAuthProvider class not found (in same function GoogleAuthProvider works \ud83d\udc4c)","meta":{"source":"GitHub","url":"https://github.com/flutter/flutter/issues/11414"}}
+{"text":"Can't connect to torrent client qBitTorrent v3.3.14","meta":{"source":"GitHub","url":"https://github.com/SchizoDuckie/DuckieTV/issues/928"}}
+{"text":"MacOS Sierra 10.12.6 inc_vendor.cl file not found","meta":{"source":"GitHub","url":"https://github.com/hashcat/hashcat/issues/1308"}}
+{"text":"\"bad marshal data\" when loading model that was saved with python 2.7 into python 3.4.","meta":{"source":"GitHub","url":"https://github.com/fchollet/keras/issues/7440"}}
+{"text":"build fails with gcc 6.2","meta":{"source":"GitHub","url":"https://github.com/OSSIA/libossia/issues/119"}}
+{"text":"CNI doesnt work on Windows","meta":{"source":"GitHub","url":"https://github.com/kubernetes/kubernetes/issues/49646"}}
+{"text":"Website","meta":{"source":"GitHub","url":"https://github.com/nighres/nighres/issues/27"}}
+{"text":"Problem getting jest to work with vue and webpack","meta":{"source":"GitHub","url":"https://github.com/vire/jest-vue-preprocessor/issues/27"}}
+{"text":"Paper Airplanes  Folding Instructions","meta":{"source":"GitHub","url":"https://github.com/OrigamiKids/Origamikids/issues/605"}}
+{"text":"Infinite loop when calling `brew style --fix`","meta":{"source":"GitHub","url":"https://github.com/Homebrew/brew/issues/2948"}}
+{"text":"can't create xunit project for .NET Core 2.0 Preview 2","meta":{"source":"GitHub","url":"https://github.com/xunit/xunit/issues/1381"}}
+{"text":"Unexpected behavior when onlyFromAutocomplete=false with focusFirstElement=true","meta":{"source":"GitHub","url":"https://github.com/Gbuomprisco/ngx-chips/issues/504"}}
+{"text":"Overview of deprecated stuff","meta":{"source":"GitHub","url":"https://github.com/keboola/kbc-ui/issues/1075"}}
+{"text":"no way to build, missing \"CodecDecoder.h\"","meta":{"source":"GitHub","url":"https://github.com/julianlatest/Pedestrian_Counter/issues/5"}}
+{"text":"Multiple ShellComponent instance","meta":{"source":"GitHub","url":"https://github.com/ngx-rocket/generator-ngx-rocket/issues/109"}}
+{"text":"How do I do this? [transpiler]","meta":{"source":"GitHub","url":"https://github.com/xaksis/vue-good-table/issues/36"}}
+{"text":"How to import a sublime/textmate theme","meta":{"source":"GitHub","url":"https://github.com/thlorenz/brace/issues/95"}}
+{"text":"running yamp with docker","meta":{"source":"GitHub","url":"https://github.com/alesssia/YAMP/issues/1"}}
+{"text":"\"499 Client Error: Client Disconnected for url: https://upload.pypi.org/legacy/\"","meta":{"source":"GitHub","url":"https://github.com/pypa/pypi-legacy/issues/675"}}
+{"text":"Docker for Windows fails to start","meta":{"source":"GitHub","url":"https://github.com/docker/for-win/issues/955"}}
+{"text":"Development Environment:  ValueError: Protocol message has no non-repeated submessage field \"metadata\"","meta":{"source":"GitHub","url":"https://github.com/tensorflow/tensorboard/issues/271"}}
+{"text":"arek - Project 3 - Gtihub instructions","meta":{"source":"GitHub","url":"https://github.com/udacity/robotics-beta-test-issues/issues/563"}}
+{"text":"Notebooks not executing","meta":{"source":"GitHub","url":"https://github.com/spatialaudio/nbsphinx/issues/117"}}
+{"text":"/bin/bash: no such file or directory","meta":{"source":"GitHub","url":"https://github.com/SynoCommunity/spksrc/issues/2844"}}
+{"text":"Some click events are not dispatched in WebWorker mode","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18342"}}
+{"text":"How to establish a blood relationship to the two tables?","meta":{"source":"GitHub","url":"https://github.com/linkedin/WhereHows/issues/619"}}
+{"text":"Model name has no instructions","meta":{"source":"GitHub","url":"https://github.com/juju/juju-gui/issues/3099"}}
+{"text":"Allow rendering of choral page even if there is no data","meta":{"source":"GitHub","url":"https://github.com/ChoralCloud/ChoralWeb/issues/116"}}
+{"text":"undefined method `head?' for nil:NilClass when Golang has update","meta":{"source":"GitHub","url":"https://github.com/Homebrew/brew/issues/2944"}}
+{"text":"Search string not parsing properly","meta":{"source":"GitHub","url":"https://github.com/graulund/tweetnest/issues/89"}}
+{"text":"Unsigned subtraction should be signed subtraction","meta":{"source":"GitHub","url":"https://github.com/klee/klee/issues/731"}}
+{"text":"Extend a shareable config from another package - do not support npm3 dir structure","meta":{"source":"GitHub","url":"https://github.com/eslint/eslint/issues/9009"}}
+{"text":"Document Step-by-Step instructions to the Installer Generation process","meta":{"source":"GitHub","url":"https://github.com/slamdata/slamdata/issues/2026"}}
+{"text":"Request - please add an option to read the movie ID at the front of the filename","meta":{"source":"GitHub","url":"https://github.com/DoctorD1501/JAVMovieScraper/issues/194"}}
+{"text":"Please add me.","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8957"}}
+{"text":"Please add me for access to this repo - San Jose , CA","meta":{"source":"GitHub","url":"https://github.com/githubschool/open-enrollment-classes-introduction-to-github/issues/8952"}}
+{"text":"Dates on Firefox Android seem not to work","meta":{"source":"GitHub","url":"https://github.com/angular/angular/issues/18337"}}
+{"text":"Dropdown: filter: Keypress up/down does not work","meta":{"source":"GitHub","url":"https://github.com/primefaces/primeng/issues/3511"}}
