@@ -34,10 +34,12 @@ def ner_silver_to_gold(silver_dataset, gold_dataset, spacy_model, label=[]):
 
     # Load the spaCy model
     nlp = spacy.load(spacy_model)
+    if not label:
+        label = get_labels(nlp.get_pipe('ner'))
 
     # Initialize Prodigy's entity recognizer model, which uses beam search to
     # find all possible analyses and outputs (score, example) tuples
-    model = EntityRecognizer(nlp)
+    model = EntityRecognizer(nlp, label=label)
 
     # Merge all annotations and find the best possible analyses
     stream = model.make_best(silver_data)
@@ -53,6 +55,11 @@ def ner_silver_to_gold(silver_dataset, gold_dataset, spacy_model, label=[]):
         'stream': stream,        # Incoming stream of examples
         'config': {              # Additional config settings, mostly for app UI
             'lang': nlp.lang,
-            'labels': label     # Selectable label options
+            'labels': label
         }
     }
+
+def get_labels(ner):
+    moves = ner.move_names
+    labels = [move.split('-')[1] for move in moves if move[0] in 'BUIL']
+    return sorted(set(labels))
