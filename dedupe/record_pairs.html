@@ -1,0 +1,34 @@
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    table, td, th {
+        border: 1px solid gray;
+        vertical-align: top;
+    }
+    .title {
+        text-align: left;
+        line-height: 0;
+    }
+</style>
+<h2 class='title'>Link Duplicate Records</h2>
+<table>
+    <tr>
+        <th>Field</th>
+        <th>Record A</th>
+        <th>Record B</th>
+    </tr>
+    {{#fields}}
+    <tr>
+        <td>{{name}}</td>
+        {{#exact_match}}
+            <td style="background: #DFF0D8">{{a_value}}</td>
+            <td style="background: #DFF0D8">{{b_value}}</td>
+        {{/exact_match}}
+        {{#not_exact_match}}
+            <td style="background: #F2DEDE">{{a_value}}</td>
+            <td style="background: #F2DEDE">{{b_value}}</td>
+        {{/not_exact_match}}
+    </tr>
+    {{/fields}}
+</table>

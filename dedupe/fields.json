@@ -1,0 +1,6 @@
+[
+    {"field": "title", "type": "String"},
+    {"field": "title", "type": "Text", "corpus": "[descriptions]"},
+    {"field": "description", "type": "Text", "has missing": true, "corpus": "[descriptions]"},
+    {"field" : "price", "type" : "Price", "has missing" : true}
+]
