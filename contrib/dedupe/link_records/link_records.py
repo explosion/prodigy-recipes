@@ -134,9 +134,9 @@ def validate_field(field):
 # the function). Descriptions are also shown when typing --help.
 @prodigy.recipe('records.link',
     dataset=("The dataset to use", "positional", None, str),
-    left_record_file_path=("One of two files to dedupe and conflate across. Will be on the left in annotation UI", "positional", None, str),
-    right_record_file_path=("One of two files to dedupe and conflate across. Will be on the right in annotation UI", "positional", None, str),
-    fields_json_file_path=("The path to a JSON config file for field dedupe", "positional", None, str)
+    left_record_file_path=("One of two files to dedupe and conflate across. Will be on the left in annotation UI", "option", "left", str),
+    right_record_file_path=("One of two files to dedupe and conflate across. Will be on the right in annotation UI", "option", "right", str),
+    fields_json_file_path=("The path to a JSON config file for field dedupe", "option", "fields", str)
 )
 def link_records(dataset, left_record_file_path, right_record_file_path, fields_json_file_path):
     """
