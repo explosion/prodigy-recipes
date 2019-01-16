@@ -1,0 +1,2 @@
+dedupe==1.9.4
+unidecode==1.0.23
