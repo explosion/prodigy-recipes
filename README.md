@@ -83,6 +83,7 @@ Prodigy behaves.
 | --- | --- |
 | [`mark`](other/mark.py) | Click through pre-prepared examples, with no model in the loop. |
 | [`choice`](other/choice.py) | Annotate data with multiple-choice options. The annotated examples will have an additional property `"accept": []` mapping to the ID(s) of the selected option(s). |
+| [`question_answering`](other/question_answering.py) | Annotate question/answer pairs with a custom HTML interface. |
 
 ## 📚 Example Datasets and Patterns
 
