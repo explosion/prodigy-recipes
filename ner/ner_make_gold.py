@@ -43,7 +43,7 @@ def make_tasks(nlp, stream, labels):
     dataset=("The dataset to use", "positional", None, str),
     spacy_model=("The base model", "positional", None, str),
     source=("The source data as a JSONL file", "positional", None, str),
-    label=("One or more comma-separated labels", "options", "l", split_string),
+    label=("One or more comma-separated labels", "option", "l", split_string),
     exclude=("Names of datasets to exclude", "option", "e", split_string)
 )
 def ner_make_gold(dataset, spacy_model, source, label=None, exclude=None):
