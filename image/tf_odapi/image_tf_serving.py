@@ -3,6 +3,7 @@ import grpc
 import numpy as np
 import copy
 import io
+from time import time
 
 from tensorflow_serving.apis import predict_pb2
 from tensorflow_serving.apis import prediction_service_pb2_grpc
@@ -151,10 +152,13 @@ def get_span(prediction, pil_image, hidden=True):
 def _tf_odapi_client(image, ip, port, model_name,
                      signature_name="detection_signature", input_name="inputs",
                      timeout=300):
+    start_time = time()
     result = _generic_tf_serving_client(image, ip, port,
                                         model_name, signature_name,
                                         input_name, timeout
                                         )
+    log("time taken for image shape {} is {} secs".format(image.shape,
+                                                          time()-start_time))
     # boxes are ymin.xmin,ymax,xmax
     boxes = np.array(result.outputs['detection_boxes'].float_val)
     classes = np.array(result.outputs['detection_classes'].float_val)
