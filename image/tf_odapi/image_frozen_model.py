@@ -21,7 +21,7 @@ detection_graph = None
 @recipe(
     "image.frozenmodel",
     dataset=recipe_args["dataset"],
-    frozen_model_path=("Path to frozen model", "positional", None, str),
+    frozen_model_path=("Path to frozen_model.pb", "positional", None, str),
     label_map_path=("Path to label_map.pbtxt", "positional", None, str),
     source=recipe_args["source"],
     threshold=("Score threshold", "option", "t", float, None, 0.5),

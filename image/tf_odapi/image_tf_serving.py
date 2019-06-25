@@ -19,7 +19,7 @@ from object_detection.utils import label_map_util
 @recipe(
     "image.servingmodel",
     dataset=recipe_args["dataset"],
-    ip=("Path to frozen model", "positional", None, str),
+    ip=("Tensorflow serving ip", "positional", None, str),
     port=("Tensorflow serving port", "positional", None, str),
     model_name=("Tensorflow serving model name", "positional", None, str),
     label_map_path=("Path to label_map.pbtxt", "positional", None, str),
