@@ -68,8 +68,6 @@ def image_tfodapimodel(dataset,
 
 
 def get_image_stream(stream, class_mapping_dict, thresh):
-    print(thresh)
-    print(type(thresh))
     for eg in stream:
         if not eg["image"].startswith("data"):
             msg = "Expected base64-encoded data URI, but got: '{}'."
