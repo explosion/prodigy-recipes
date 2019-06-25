@@ -6,6 +6,7 @@ import numpy as np
 import copy
 import io
 from PIL import Image
+from time import time
 
 from prodigy.components.loaders import get_stream
 from prodigy.components.preprocess import fetch_images
@@ -14,8 +15,8 @@ from prodigy.util import log, b64_uri_to_bytes
 
 from object_detection.utils import label_map_util
 
-# global
 detection_graph = None
+sess = None
 
 
 @recipe(
@@ -46,6 +47,8 @@ def image_tfodapimodel(dataset,
             serialized_graph = fid.read()
             od_graph_def.ParseFromString(serialized_graph)
             tf.import_graph_def(od_graph_def, name='')
+    global sess
+    sess = tf.Session(graph=detection_graph)
     log("RECIPE: Loaded frozen model")
     # key class names
     reverse_class_mapping_dict = label_map_util.get_label_map_dict(
@@ -117,25 +120,27 @@ def preprocess_pil_image(pil_img, color_mode='rgb', target_size=None):
 
 def get_predictions(numpy_image, class_mapping_dict):
     global detection_graph
-    with detection_graph.as_default():
-        with tf.Session(graph=detection_graph) as sess:
-            image_tensor = detection_graph.get_tensor_by_name(
-                'image_tensor:0')
-            detection_boxes = detection_graph.get_tensor_by_name(
-                'detection_boxes:0')
-            detection_scores = detection_graph.get_tensor_by_name(
-                'detection_scores:0')
-            detection_classes = detection_graph.get_tensor_by_name(
-                'detection_classes:0')
-            num_detections = detection_graph.get_tensor_by_name(
-                'num_detections:0')
+    global sess
+    image_tensor = detection_graph.get_tensor_by_name(
+        'image_tensor:0')
+    detection_boxes = detection_graph.get_tensor_by_name(
+        'detection_boxes:0')
+    detection_scores = detection_graph.get_tensor_by_name(
+        'detection_scores:0')
+    detection_classes = detection_graph.get_tensor_by_name(
+        'detection_classes:0')
+    num_detections = detection_graph.get_tensor_by_name(
+        'num_detections:0')
 
-            image_np_expanded = np.expand_dims(numpy_image, axis=0)
-            (boxes, scores, class_ids, num) = sess.run(
-                [detection_boxes, detection_scores,
-                 detection_classes, num_detections],
-                feed_dict={image_tensor: image_np_expanded}
-            )
+    image_np_expanded = np.expand_dims(numpy_image, axis=0)
+    start_time = time()
+    (boxes, scores, class_ids, num) = sess.run(
+        [detection_boxes, detection_scores,
+         detection_classes, num_detections],
+        feed_dict={image_tensor: image_np_expanded}
+    )
+    log("time taken for image shape {} is {} secs".format(numpy_image.shape,
+                                                          time()-start_time))
     boxes = np.squeeze(boxes)
     class_ids = np.squeeze(class_ids).astype(np.int32)
     class_names = np.array([class_mapping_dict[class_id]
@@ -179,4 +184,6 @@ def get_span(prediction, pil_image, hidden=True):
 def free_graph(ctrl):
     global detection_graph
     tf.reset_default_graph()
+    global sess
+    sess.close()
     del detection_graph
