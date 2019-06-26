@@ -119,8 +119,8 @@ if __name__ == "__main__":
                                     warm_up_itr=args.warm_up_itr,
                                     study_itr=args.study_itr)
         model_names.append(os.path.basename(dir))
-        total_times.append(total_time)
-        average_times.append(avg_time)
+        total_times.append(int(total_time*1000))
+        average_times.append(int(avg_time*1000))
 
         print("\n##########################################################\n")
 
@@ -128,7 +128,7 @@ if __name__ == "__main__":
         "model_name": model_names,
         "warm_up_itr": args.warm_up_itr,
         "study_itr": args.study_itr,
-        "total_time": total_times,
-        "average_time": average_times
+        "total_time_in_ms": total_times,
+        "average_time_in_ms": average_times
     })
     df.to_csv(args.output_csv_file)

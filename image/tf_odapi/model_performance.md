@@ -7,29 +7,32 @@ The document contains **Speed and Accuracy trade-off** between different models 
 *   **Input image size**: (600, 1000, 3). This size is chosen because, The original [Faster-RCNN paper](https://arxiv.org/abs/1506.01497) resizes the images to this shape.
 *   **GPU used**: Nvidia GTX 1060 with 6GB memory
 *   **CPU used**: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
-*   The CPU version of tensorflow was **not** compiled with AVX2 and other available optimizations (`pip install tensorflow`). Using optimized tensorflow CPU binary should increase the speed further. See this [blog](https://www.anaconda.com/tensorflow-in-anaconda/) for more details.
+*   **RAM**: 16 GB
+*   **CPU 1**: This is the unoptimzed version of **tensorflow**. Installed from `pip install tensorflow`.
+*   **CPU 2**: This **tensorflow** binary is optimized with **Intel® MKL-DNN**. Installed from `conda install tensorflow`. See this [blog](https://www.anaconda.com/tensorflow-in-anaconda/) for more details.
 *   The script used for this study is [time_study.py](./misc/time_study.py)
 
 ## Models trained on MS-COCO Dataset
 
-| S.No |  Model Name                                                   | GPU time (ms) | CPU time (ms) | mAP  |
-|------|---------------------------------------------------------------|---------------|---------------|------|
-| 1    | faster_rcnn_inception_resnet_v2_atrous_coco                   | 1093          | 14685         | 37   |
-| 2    | faster_rcnn_inception_resnet_v2_atrous_lowproposals_coco      | 560           | 6333          |      |
-| 3    | faster_rcnn_inception_v2_coco                                 | 92            | 670           | 28   |
-| 4    | faster_rcnn_resnet101_coco                                    | 188           | 2697          | 32   |
-| 5    | faster_rcnn_resnet101_lowproposals_coco                       | 171           | 1655          |      |
-| 6    | faster_rcnn_resnet50_coco                                     | 178           | 1731          | 30   |
-| 7    | faster_rcnn_resnet50_lowproposals_coco                        | 121           | 994           |      |
-| 8    | rfcn_resnet101_coco                                           | 180           | 2071          | 30   |
-| 9    | ssd_inception_v2_coco                                         | 34            | 85            | 24   |
-| 10   | ssd_mobilenet_v1_0.75_coco                                    | 23            | 32            | 18   |
-| 11   | ssd_mobilenet_v1_coco                                         | 20            | 41            | 21   |
-| 12   | ssd_mobilenet_v1_fpn_coco                                     | 107           | 909           | 32   |
-| 13   | ssd_mobilenet_v1_ppn_coco                                     | 20            | 39            | 20   |
-| 14   | ssd_mobilenet_v2_coco                                         | 25            | 56            | 22   |
-| 15   | ssd_resnet50_fpn_coco                                         | 136           | 1322          | 35   |
-| 16   | ssdlite_mobilenet_v2_coco                                     | 21            | 43            | 22   |
+| S.No | model_name                                                    | GPU time (ms) | CPU time 1 (ms) | CPU time 2 (ms) | mAP |
+|------|---------------------------------------------------------------|---------------|-----------------|-----------------|-----|
+| 1    | faster_rcnn_inception_resnet_v2_atrous_coco                   | 1093          | 14080           | 8982            | 37  |
+| 2    | faster_rcnn_inception_resnet_v2_atrous_lowproposals_coco      | 560           | 5958            | 4151            |     |
+| 3    | faster_rcnn_inception_v2_coco                                 | 92            | 607             | 355             | 28  |
+| 4    | faster_rcnn_resnet101_coco                                    | 188           | 2332            | 1388            | 32  |
+| 5    | faster_rcnn_resnet101_lowproposals_coco                       | 171           | 1572            | 835             |     |
+| 6    | faster_rcnn_resnet50_coco                                     | 178           | 1727            | 933             | 30  |
+| 7    | faster_rcnn_resnet50_lowproposals_coco                        | 121           | 967             | 513             |     |
+| 8    | rfcn_resnet101_coco                                           | 180           | 2039            | 1081            | 30  |
+| 9    | ssd_inception_v2_coco                                         | 34            | 86              | 123             | 24  |
+| 10   | ssd_mobilenet_v1_0.75_depth_300x300_coco                      | 23            | 33              | 55              | 18  |
+| 11   | ssd_mobilenet_v1_coco                                         | 20            | 42              | 68              | 21  |
+| 12   | ssd_mobilenet_v1_fpn_shared_box_predictor_coco                | 107           | 936             | 698             | 32  |
+| 13   | ssd_mobilenet_v1_ppn_shared_box_predictor_coco                | 20            | 42              | 62              | 20  |
+| 14   | ssd_mobilenet_v2_coco                                         | 25            | 58              | 116             | 22  |
+| 15   | ssd_resnet50_v1_fpn_shared_box_predictor_coco                 | 136           | 1335            | 830             | 35  |
+| 16   | ssdlite_mobilenet_v2_coco                                     | 21            | 44              | 85              | 22  |
+
 
 
 ## NOTES:
