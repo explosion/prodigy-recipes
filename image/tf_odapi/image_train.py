@@ -1,6 +1,7 @@
 import os
 import io
 import copy
+import grpc
 import functools
 import numpy as np
 import tensorflow as tf
@@ -8,10 +9,13 @@ import tensorflow as tf
 from PIL import Image
 from time import time
 
+from tensorflow_serving.apis import predict_pb2
+from tensorflow_serving.apis import prediction_service_pb2_grpc
+
 from prodigy.components.loaders import get_stream
 from prodigy.components.preprocess import fetch_images
 from prodigy.core import recipe, recipe_args
-from prodigy.util import log, b64_uri_to_bytes
+from prodigy.util import log, b64_uri_to_bytes, split_string
 
 from object_detection.utils import config_util, label_map_util
 from object_detection.utils import dataset_util
@@ -22,9 +26,7 @@ from object_detection.inputs import create_eval_input_fn
 from object_detection.inputs import create_predict_input_fn
 from object_detection.model_hparams import create_hparams
 
-from utils import get_span, tf_odapi_client, create_a_tf_example
-
-estimator = None
+tf.logging.set_verbosity(10)
 
 
 @recipe(
@@ -36,18 +38,21 @@ estimator = None
     port=("Tensorflow serving port", "positional", None, str),
     model_name=("Tensorflow serving model name", "positional", None, str),
     label_map_path=("Labelmap.pbtxt path. Overrides the value given in \
-    tfodapi config", "option", "lmp", float, None, None),
+        tfodapi config", "option", "lmp", float, None, None),
+    label=("One or more comma-separated labels.\
+        If not given inferred from labelmap",
+           "option", "l", split_string, None, None),
     model_dir=("Path to save model checkpoints and Tensorboard events",
-               "option", "md", float, None, os.path.join(".", "model_dir")),
+               "option", "md", str, None, os.path.join(".", "model_dir")),
     export_dir=("Path to save temporary SavedModels for Tensorflow Serving",
-                "option", "ed", float, None, os.path.join(".", "export_dir")),
+                "option", "ed", str, None, os.path.join(".", "export_dir")),
     data_dir=("Path to store temporary TFrecords used for training",
-              "option", "dd", float, None, os.path.join(".", "data_dir")),
+              "option", "dd", str, None, os.path.join(".", "data_dir")),
     steps_per_epoch=("Number of training steps per epoch.\
-    If 0, inferred automatically. If higher than the dataset size,\
-    the dataset is looped over",
+        If 0, inferred automatically. If higher than the dataset size,\
+        the dataset is looped over",
                      "option", "spe", int, None, 0),
-    threshold=("Score threshold", "option", "t", float, None, 0.5),
+    threshold=("Score threshold", "option", "t", float, None, 0.99),
     temp_files_num=("Number of recent temp files to keep",
                     "option", "tfn", int, None, 5),
     max_checkpoints_num=("Number of recent model checkpoints to keep",
@@ -63,9 +68,9 @@ estimator = None
     exclude=recipe_args["exclude"],
 )
 def image_trainmodel(dataset, source, config_path, ip, port, model_name,
-                     label_map_path=None, model_dir="model_dir",
+                     label_map_path=None, label=None, model_dir="model_dir",
                      export_dir="export_dir", data_dir="data_dir",
-                     steps_per_epoch=0, threshold=0.5, temp_files_num=5,
+                     steps_per_epoch=0, threshold=0.99, temp_files_num=5,
                      max_checkpoints_num=5, run_eval=False, eval_steps=50,
                      use_display_name=False, api=None, exclude=None
                      ):
@@ -73,11 +78,6 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
     _create_dir(model_dir)
     _create_dir(export_dir)
     _create_dir(data_dir)
-    reverse_class_mapping_dict = label_map_util.get_label_map_dict(
-        label_map_path=label_map_path,
-        use_display_name=use_display_name)
-    # key int
-    class_mapping_dict = {v: k for k, v in reverse_class_mapping_dict.items()}
     log("Building the Tensorflow Object Detection API model")
     run_config = tf.estimator.RunConfig(model_dir=model_dir,
                                         keep_checkpoint_max=max_checkpoints_num
@@ -87,6 +87,16 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
         log("Overriding label_map_path given in the odapi config file")
         odapi_configs["train_input_config"].label_map_path = label_map_path
         odapi_configs["eval_input_config"].label_map_path = label_map_path
+    else:
+        label_map_path = odapi_configs["train_input_config"].label_map_path
+
+    reverse_class_mapping_dict = label_map_util.get_label_map_dict(
+        label_map_path=label_map_path,
+        use_display_name=use_display_name)
+    if label is None:
+        label = [k for k in reverse_class_mapping_dict.keys()]
+    # key int
+    class_mapping_dict = {v: k for k, v in reverse_class_mapping_dict.items()}
 
     detection_model_fn = functools.partial(model_builder.build,
                                            model_config=odapi_configs["model"])
@@ -95,14 +105,27 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                                  configs=odapi_configs, use_tpu=False,
                                  postprocess_on_cpu=False)
     estimator = tf.estimator.Estimator(model_fn=model_func, config=run_config)
+    log("Running a single step dummy training step! \
+         else saving a model does not work")
+    train_input_config = odapi_configs["train_input_config"]
+    train_input_fn = create_train_input_fn(
+        train_config=odapi_configs["train_config"],
+        model_config=odapi_configs["model"],
+        train_input_config=train_input_config)
+    estimator.train(input_fn=train_input_fn,
+                    steps=1)
     _export_saved_model(export_dir, estimator, odapi_configs)
-    log("Make sure to start Tensorflow Serving before opening Prodigy")
+    print("Make sure to start Tensorflow Serving before opening Prodigy")
+    print("Training and evaluation (if enabled) can be monitored by \
+        pointing Tensorboard to {} directory".format(model_dir))
 
     def update_odapi_model(tasks):
         train_data_name = "{}_train.record".format(int(time()))
-        _write_tf_record(tasks=tasks, output_file=os.path.join(data_dir,
-                                                               train_data_name
-                                                               ))
+        _write_tf_record(tasks=tasks,
+                         output_file=os.path.join(data_dir,
+                                                  train_data_name),
+                         reverse_class_mapping_dict=reverse_class_mapping_dict
+                         )
         temp_configs = copy.deepcopy(odapi_configs)
         train_input_config = temp_configs["train_input_config"]
         # delete existing input paths
@@ -125,6 +148,7 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                         steps=train_steps)
         _export_saved_model(export_dir, estimator, temp_configs)
         if run_eval:
+            log("Running Evaluation")
             eval_input_config = temp_configs["eval_input_config"]
             eval_input_function = create_eval_input_fn(
                 eval_config=temp_configs["eval_config"],
@@ -145,7 +169,11 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                                    ip, port, model_name, float(threshold)),
         "exclude": exclude,
         "update": update_odapi_model,
-        "progress": lambda *args, **kwargs: 0
+        "progress": lambda *args, **kwargs: 0,
+        'config': {
+            'label': ', '.join(label) if label is not None else 'all',
+            'labels': label,       # Selectable label options,
+        }
     }
 
 
@@ -172,7 +200,7 @@ def get_predictions(single_stream, class_mapping_dict, ip, port, model_name):
     image = Image.open(encoded_image_io)
     width, height = image.size
     filename = str(single_stream["meta"]["file"])
-    file_extension = filename.split(".").lower()
+    file_extension = filename.split(".")[1].lower()
     if file_extension == "png":
         image_format = b'png'
     elif file_extension in ("jpg", "jpeg"):
@@ -180,7 +208,8 @@ def get_predictions(single_stream, class_mapping_dict, ip, port, model_name):
     else:
         log("Only 'png', 'jpeg' or 'jpg' files are supported by ODAPI.\
          Got {}. Thus treating it as `jpg` file.\
-          Might cause errors").format(file_extension)
+          Might cause errors".format(file_extension)
+            )
         image_format = b'jpg'
 
     filename = filename.encode("utf-8")
@@ -205,7 +234,7 @@ def get_predictions(single_stream, class_mapping_dict, ip, port, model_name):
 
 
 def _export_saved_model(export_dir, estimator, odapi_configs):
-    log("Exporting the model as SavedModel in {}").format(export_dir)
+    log("Exporting the model as SavedModel in {}".format(export_dir))
     # Just a placeholder
     pred_input_config = odapi_configs["eval_input_config"]
     predict_input_fn = create_predict_input_fn(odapi_configs["model"],
@@ -215,11 +244,14 @@ def _export_saved_model(export_dir, estimator, odapi_configs):
     log("Exported SavedModel!")
 
 
-def _write_tf_record(tasks, output_file):
+def _write_tf_record(tasks, output_file, reverse_class_mapping_dict):
     writer = tf.python_io.TFRecordWriter(output_file)
     for task in tasks:
-        tf_example = create_a_tf_example(task)
-        writer.write(tf_example.SerializeToString())
+        if task['answer'] == 'accept':
+            tf_example = create_a_tf_example(task, reverse_class_mapping_dict)
+            writer.write(tf_example.SerializeToString())
+        else:
+            continue
     writer.close()
     log("Successfully written {} annotations as TFRecords".format(len(tasks)))
 
@@ -230,3 +262,171 @@ def _create_dir(path):
         os.mkdir(path)
     else:
         log("Directory {} already  exists".format(path))
+
+
+def get_span(prediction, pil_image, hidden=True):
+    class_id, name, prob, box = prediction
+    name = str(name, "utf8") if not isinstance(name, str) else name
+    image_width = pil_image.width
+    image_height = pil_image.height
+    ymin, xmin, ymax, xmax = box
+
+    xmin = xmin*image_width
+    xmax = xmax*image_width
+    ymin = ymin*image_height
+    ymax = ymax*image_height
+
+    box_width = abs(xmax - xmin)
+    box_height = abs(ymax - ymin)
+
+    rel_points = [
+        [xmin, ymin],
+        [xmin, ymin+box_height],
+        [xmin+box_width, ymin+box_height],
+        [xmin+box_width, ymin]
+    ]
+    return {
+        "score": prob,
+        "label": name,
+        "label_id": int(class_id),
+        "points": rel_points,
+        "hidden": hidden,
+    }
+
+
+def tf_odapi_client(data, ip, port, model_name,
+                    signature_name="detection_signature", input_name="inputs",
+                    timeout=300):
+    """Client for using Tensorflow Serving with Tensorflow Object Detection API
+
+    Arguments:
+        data (np.ndarray/bytes): A numpy array of data or bytes. No Default
+        ip (str): IP address of tensorflow serving. No Default
+        port (str/int): Port of tensorflow serving. No Default
+        model_name (str): Model name. No Default
+        signature_name (str): Signature name. No Default
+        input_name (str): Input tensor name. No Default
+        timeout (str): timeout for API call. Default 300 secs
+
+    returns:
+        a tuple containing numpy arrays of (boxes, classes, scores)
+    """
+    start_time = time()
+    result = generic_tf_serving_client(data, ip, port,
+                                       model_name, signature_name,
+                                       input_name, timeout
+                                       )
+    log("time taken for prediction is :{} secs".format(time()-start_time))
+    # boxes are ymin.xmin,ymax,xmax
+    boxes = np.array(result.outputs['detection_boxes'].float_val)
+    classes = np.array(result.outputs['detection_classes'].float_val)
+    scores = np.array(result.outputs['detection_scores'].float_val)
+    boxes = boxes.reshape((len(scores), 4))
+    classes = np.squeeze(classes.astype(np.int32))
+    scores = np.squeeze(scores)
+
+    return (boxes, classes, scores)
+
+
+def generic_tf_serving_client(data, ip, port, model_name,
+                              signature_name, input_name, timeout=300):
+    """A generic tensorflow serving client that predicts using given data
+
+    Arguments:
+        data (np.ndarray/bytes): A numpy array of data or bytes. No Default
+        ip (str): IP address of tensorflow serving. No Default
+        port (str/int): Port of tensorflow serving. No Default
+        model_name (str): Model name. No Default
+        signature_name (str): Signature name. No Default
+        input_name (str): Input tensor name. No Default
+        timeout (str): timeout for API call. Default 300 secs
+
+    returns:
+        Prediction protobuf
+    """
+    assert isinstance(data, (np.ndarray, bytes)), \
+        "data must be a numpy array or bytes but got {}".format(type(data))
+    channel = grpc.insecure_channel('{}:{}'.format(ip, port))
+    stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
+    request = predict_pb2.PredictRequest()
+    request.model_spec.name = model_name
+    request.model_spec.signature_name = signature_name
+    request.inputs['{}'.format(input_name)
+                   ].CopyFrom(tf.contrib.util.make_tensor_proto(
+                       data,
+                   ))
+    result = stub.Predict(request, timeout)
+    return result
+
+
+def create_a_tf_example(single_stream, reverse_class_mapping_dict):
+    image_byte_stream = b64_uri_to_bytes(single_stream["image"])
+    encoded_image_io = io.BytesIO(image_byte_stream)
+    image = Image.open(encoded_image_io)
+    width, height = image.size
+    filename = str(single_stream["meta"]["file"])
+    file_extension = filename.split(".")[1].lower()
+    if file_extension == "png":
+        image_format = b'png'
+    elif file_extension in ("jpg", "jpeg"):
+        image_format = b'jpg'
+    else:
+        log("Only 'png', 'jpeg' or 'jpg' files are supported by ODAPI.\
+         Got {}. Thus treating it as `jpg` file.\
+          Might cause errors").format(file_extension)
+        image_format = b'jpg'
+
+    xmins = []
+    xmaxs = []
+    ymins = []
+    ymaxs = []
+    classes_text = []
+    classes = []
+
+    filename = filename.encode("utf-8")
+    for span in single_stream["spans"]:
+        # points are ordered counter-clockwise
+        points = span["points"]
+        # points need to be normalized
+        xmin = points[0][0]/width
+        ymin = points[0][1]/height
+        xmax = points[2][0]/width
+        ymax = points[2][1]/height
+        assert xmin < xmax
+        assert ymin < ymax
+        # Clip bounding boxes that go outside the image
+        if xmin < 0:
+            xmin = 0
+        if xmax > width:
+            xmax = width - 1
+        if ymin < 0:
+            ymin = 0
+        if ymax > height:
+            ymax = height - 1
+        xmins.append(xmin)
+        ymins.append(ymin)
+        xmaxs.append(xmax)
+        ymaxs.append(ymax)
+        classes_text.append(span["label"].encode("utf-8"))
+        classes.append(int(reverse_class_mapping_dict[span["label"]]))
+
+    tf_example = tf.train.Example(features=tf.train.Features(feature={
+        'image/height': dataset_util.int64_feature(height),
+        'image/width': dataset_util.int64_feature(width),
+        'image/filename': dataset_util.bytes_feature(filename),
+        'image/source_id': dataset_util.bytes_feature(filename),
+        'image/encoded': dataset_util.bytes_feature(image_byte_stream),
+        'image/format': dataset_util.bytes_feature(image_format),
+        'image/object/bbox/xmin': dataset_util.float_list_feature(xmins),
+        'image/object/bbox/xmax': dataset_util.float_list_feature(xmaxs),
+        'image/object/bbox/ymin': dataset_util.float_list_feature(ymins),
+        'image/object/bbox/ymax': dataset_util.float_list_feature(ymaxs),
+        'image/object/class/text':
+        dataset_util.bytes_list_feature(classes_text),
+        'image/object/class/label': dataset_util.int64_list_feature(classes),
+    }))
+    return tf_example
+
+
+def remove_garbage(dir, max_num):
+    pass

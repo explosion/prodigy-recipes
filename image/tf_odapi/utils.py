@@ -205,3 +205,7 @@ def create_a_tf_example(single_stream):
         'image/object/class/label': dataset_util.int64_list_feature(classes),
     }))
     return tf_example
+
+
+def remove_garbage(dir, max_num):
+    pass
