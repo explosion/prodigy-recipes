@@ -27,8 +27,6 @@ from object_detection.inputs import create_eval_input_fn
 from object_detection.inputs import create_predict_input_fn
 from object_detection.model_hparams import create_hparams
 
-tf.logging.set_verbosity(20)
-
 
 @recipe(
     "image.trainmodel",
@@ -66,7 +64,7 @@ tf.logging.set_verbosity(20)
     use_display_name=("Whether to use display_name in label_map.pbtxt",
                       "flag", "D", bool),
     tf_logging_level=("Log level for Tensorflow", "option",
-                      "tl", int, (10, 20, 30, 40, 50), 20),
+                      "tl", int, (10, 20, 30, 40, 50), 40),
     api=recipe_args["api"],
     exclude=recipe_args["exclude"],
 )
@@ -75,7 +73,7 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                      export_dir="export_dir", data_dir="data_dir",
                      steps_per_epoch=0, threshold=0.5, temp_files_num=5,
                      max_checkpoints_num=5, run_eval=False, eval_steps=50,
-                     use_display_name=False, tf_logging_level=20, api=None,
+                     use_display_name=False, tf_logging_level=40, api=None,
                      exclude=None):
     tf.logging.set_verbosity(tf_logging_level)
     # key class names
