@@ -27,7 +27,7 @@ from object_detection.inputs import create_eval_input_fn
 from object_detection.inputs import create_predict_input_fn
 from object_detection.model_hparams import create_hparams
 
-tf.logging.set_verbosity(10)
+tf.logging.set_verbosity(20)
 
 
 @recipe(
@@ -65,6 +65,8 @@ tf.logging.set_verbosity(10)
                 "option", "es", int, None, 50),
     use_display_name=("Whether to use display_name in label_map.pbtxt",
                       "flag", "D", bool),
+    tf_logging_level=("Log level for Tensorflow", "option",
+                      "tl", int, (10, 20, 30, 40, 50), 20),
     api=recipe_args["api"],
     exclude=recipe_args["exclude"],
 )
@@ -73,8 +75,9 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                      export_dir="export_dir", data_dir="data_dir",
                      steps_per_epoch=0, threshold=0.5, temp_files_num=5,
                      max_checkpoints_num=5, run_eval=False, eval_steps=50,
-                     use_display_name=False, api=None, exclude=None
-                     ):
+                     use_display_name=False, tf_logging_level=20, api=None,
+                     exclude=None):
+    tf.logging.set_verbosity(tf_logging_level)
     # key class names
     _create_dir(model_dir)
     _create_dir(export_dir)
@@ -118,18 +121,19 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                                  configs=odapi_configs, use_tpu=False,
                                  postprocess_on_cpu=False)
     estimator = tf.estimator.Estimator(model_fn=model_func, config=run_config)
-    log("Running a single step dummy training step! \
-         else saving a model does not work")
-    train_input_config = odapi_configs["train_input_config"]
-    train_input_fn = create_train_input_fn(
-        train_config=odapi_configs["train_config"],
-        model_config=odapi_configs["model"],
-        train_input_config=train_input_config)
-    estimator.train(input_fn=train_input_fn,
-                    steps=1)
-    _export_saved_model(export_dir, estimator, odapi_configs)
-    print("Make sure to start Tensorflow Serving before opening Prodigy")
-    print("Training and evaluation (if enabled) can be monitored by \
+    if estimator.latest_checkpoint() is None:
+        log("Running a single dummy training step!\
+        else saving SavedModel for Tensorflow Serving does not work")
+        train_input_config = odapi_configs["train_input_config"]
+        train_input_fn = create_train_input_fn(
+            train_config=odapi_configs["train_config"],
+            model_config=odapi_configs["model"],
+            train_input_config=train_input_config)
+        estimator.train(input_fn=train_input_fn,
+                        steps=1)
+        _export_saved_model(export_dir, estimator, odapi_configs)
+    log("Make sure to start Tensorflow Serving before opening Prodigy")
+    log("Training and evaluation (if enabled) can be monitored by \
         pointing Tensorboard to {} directory".format(model_dir))
 
     stream = get_stream(source, api=api, loader="images", input_key="image")
@@ -172,6 +176,8 @@ def get_image_stream(stream, class_mapping_dict, ip, port, model_name, thresh):
         eg["height"] = pil_image.height
         eg["spans"] = [get_span(pred, pil_image)
                        for pred in zip(*predictions) if pred[2] >= thresh]
+        log("Using threshold {}, got {} predictions for file {}".format(
+            thresh, len(eg["spans"]), eg["meta"]["file"]))
         task = copy.deepcopy(eg)
         yield task
 
@@ -198,10 +204,10 @@ def update_odapi_model(tasks, estimator, data_dir, reverse_class_mapping_dict,
         train_config=odapi_configs["train_config"],
         model_config=odapi_configs["model"],
         train_input_config=train_input_config)
-    log("Training for {} steps".format(steps_per_epoch))
     train_steps = steps_per_epoch
     if train_steps == 0:
         train_steps = len(tasks)
+    log("Training for {} steps".format(train_steps))
     estimator.train(input_fn=train_input_fn,
                     steps=train_steps)
     _export_saved_model(export_dir, estimator, odapi_configs)
@@ -355,12 +361,10 @@ def tf_odapi_client(data, ip, port, model_name,
     returns:
         a tuple containing numpy arrays of (boxes, classes, scores)
     """
-    start_time = time()
     result = generic_tf_serving_client(data, ip, port,
                                        model_name, signature_name,
                                        input_name, timeout
                                        )
-    log("time taken for prediction is :{} secs".format(time()-start_time))
     # boxes are ymin.xmin,ymax,xmax
     boxes = np.array(result.outputs['detection_boxes'].float_val)
     classes = np.array(result.outputs['detection_classes'].float_val)
@@ -388,6 +392,7 @@ def generic_tf_serving_client(data, ip, port, model_name,
     returns:
         Prediction protobuf
     """
+    start_time = time()
     assert isinstance(data, (np.ndarray, bytes)), \
         "data must be a numpy array or bytes but got {}".format(type(data))
     channel = grpc.insecure_channel('{}:{}'.format(ip, port))
@@ -400,6 +405,10 @@ def generic_tf_serving_client(data, ip, port, model_name,
                        data,
                    ))
     result = stub.Predict(request, timeout)
+    log("time taken for prediction using model {} \
+    version {} is :{} secs".format(
+        str(result.model_spec.name), result.model_spec.version.value,
+        time()-start_time))
     return result
 
 
