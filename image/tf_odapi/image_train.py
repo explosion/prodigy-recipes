@@ -2,6 +2,7 @@ import os
 import io
 import copy
 import grpc
+import shutil
 import functools
 import numpy as np
 import tensorflow as tf
@@ -52,7 +53,7 @@ tf.logging.set_verbosity(10)
         If 0, inferred automatically. If higher than the dataset size,\
         the dataset is looped over",
                      "option", "spe", int, None, 0),
-    threshold=("Score threshold", "option", "t", float, None, 0.99),
+    threshold=("Score threshold", "option", "t", float, None, 0.5),
     temp_files_num=("Number of recent temp files to keep",
                     "option", "tfn", int, None, 5),
     max_checkpoints_num=("Number of recent model checkpoints to keep",
@@ -70,7 +71,7 @@ tf.logging.set_verbosity(10)
 def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                      label_map_path=None, label=None, model_dir="model_dir",
                      export_dir="export_dir", data_dir="data_dir",
-                     steps_per_epoch=0, threshold=0.99, temp_files_num=5,
+                     steps_per_epoch=0, threshold=0.5, temp_files_num=5,
                      max_checkpoints_num=5, run_eval=False, eval_steps=50,
                      use_display_name=False, api=None, exclude=None
                      ):
@@ -89,6 +90,18 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
         odapi_configs["eval_input_config"].label_map_path = label_map_path
     else:
         label_map_path = odapi_configs["train_input_config"].label_map_path
+
+    # Set input reader config low to make sure you don't hit memory errors
+    train_input_config = odapi_configs["train_input_config"]
+    train_input_config.shuffle = False
+    train_input_config.num_readers = 1
+    train_input_config.num_parallel_batches = 1
+    train_input_config.num_prefetch_batches = -1  # autotune
+    train_input_config.queue_capacity = 2
+    train_input_config.min_after_dequeue = 1
+    train_input_config.read_block_length = 10
+    train_input_config.prefetch_size = 2
+    train_input_config.num_parallel_map_calls = 2
 
     reverse_class_mapping_dict = label_map_util.get_label_map_dict(
         label_map_path=label_map_path,
@@ -119,56 +132,25 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
     print("Training and evaluation (if enabled) can be monitored by \
         pointing Tensorboard to {} directory".format(model_dir))
 
-    def update_odapi_model(tasks):
-        train_data_name = "{}_train.record".format(int(time()))
-        _write_tf_record(tasks=tasks,
-                         output_file=os.path.join(data_dir,
-                                                  train_data_name),
-                         reverse_class_mapping_dict=reverse_class_mapping_dict
-                         )
-        temp_configs = copy.deepcopy(odapi_configs)
-        train_input_config = temp_configs["train_input_config"]
-        # delete existing input paths
-        old_input_paths = train_input_config.tf_record_input_reader.input_path
-        for i in range(len(old_input_paths)):
-            del train_input_config.tf_record_input_reader.input_path[i]
-        train_input_config.tf_record_input_reader.input_path.append(
-            os.path.join(data_dir,
-                         train_data_name
-                         ))
-        train_input_fn = create_train_input_fn(
-            train_config=temp_configs["train_config"],
-            model_config=temp_configs["model"],
-            train_input_config=train_input_config)
-        log("Training for {} steps".format(steps_per_epoch))
-        train_steps = steps_per_epoch
-        if train_steps == 0:
-            train_steps = len(tasks)
-        estimator.train(input_fn=train_input_fn,
-                        steps=train_steps)
-        _export_saved_model(export_dir, estimator, temp_configs)
-        if run_eval:
-            log("Running Evaluation")
-            eval_input_config = temp_configs["eval_input_config"]
-            eval_input_function = create_eval_input_fn(
-                eval_config=temp_configs["eval_config"],
-                eval_input_config=eval_input_config,
-                model_config=temp_configs["model"])
-            eval_dict = estimator.evaluate(input_fn=eval_input_function,
-                                           steps=eval_steps)
-            return eval_dict["loss"]
-        else:
-            return None
-
     stream = get_stream(source, api=api, loader="images", input_key="image")
     stream = fetch_images(stream)
+    update_fn = functools.partial(
+        update_odapi_model, estimator=estimator,
+        data_dir=data_dir,
+        reverse_class_mapping_dict=reverse_class_mapping_dict,
+        odapi_configs=odapi_configs,
+        steps_per_epoch=steps_per_epoch,
+        export_dir=export_dir, run_eval=run_eval,
+        eval_steps=eval_steps,
+        temp_files_num=temp_files_num)
+
     return {
         "view_id": "image_manual",
         "dataset": dataset,
         "stream": get_image_stream(stream, class_mapping_dict,
                                    ip, port, model_name, float(threshold)),
         "exclude": exclude,
-        "update": update_odapi_model,
+        "update": update_fn,
         "progress": lambda *args, **kwargs: 0,
         'config': {
             'label': ', '.join(label) if label is not None else 'all',
@@ -192,6 +174,68 @@ def get_image_stream(stream, class_mapping_dict, ip, port, model_name, thresh):
                        for pred in zip(*predictions) if pred[2] >= thresh]
         task = copy.deepcopy(eg)
         yield task
+
+
+def update_odapi_model(tasks, estimator, data_dir, reverse_class_mapping_dict,
+                       odapi_configs, steps_per_epoch, export_dir, run_eval,
+                       eval_steps, temp_files_num):
+    train_data_name = "{}_train.record".format(int(time()))
+    _write_tf_record(tasks=tasks,
+                     output_file=os.path.join(data_dir,
+                                              train_data_name),
+                     reverse_class_mapping_dict=reverse_class_mapping_dict
+                     )
+    train_input_config = odapi_configs["train_input_config"]
+    # delete existing input paths
+    old_input_paths = train_input_config.tf_record_input_reader.input_path
+    for i in range(len(old_input_paths)):
+        del train_input_config.tf_record_input_reader.input_path[i]
+    train_input_config.tf_record_input_reader.input_path.append(
+        os.path.join(data_dir,
+                     train_data_name
+                     ))
+    train_input_fn = create_train_input_fn(
+        train_config=odapi_configs["train_config"],
+        model_config=odapi_configs["model"],
+        train_input_config=train_input_config)
+    log("Training for {} steps".format(steps_per_epoch))
+    train_steps = steps_per_epoch
+    if train_steps == 0:
+        train_steps = len(tasks)
+    estimator.train(input_fn=train_input_fn,
+                    steps=train_steps)
+    _export_saved_model(export_dir, estimator, odapi_configs)
+    # Keep only recent temp_files_num in temp dirs
+    _remove_garbage(folder=export_dir,
+                    max_num_to_keep=temp_files_num,
+                    garbage_type="folder",
+                    filter_string=None)
+
+    _remove_garbage(folder=data_dir,
+                    max_num_to_keep=temp_files_num,
+                    garbage_type="file",
+                    filter_string=".record")
+    if run_eval:
+        log("Running evaluation for {} steps".format(eval_steps))
+        eval_input_config = odapi_configs["eval_input_config"]
+        eval_input_config.shuffle = False
+        eval_input_config.num_readers = 1
+        eval_input_config.num_parallel_batches = 1
+        eval_input_config.num_prefetch_batches = -1  # autotune
+        eval_input_config.queue_capacity = 2
+        eval_input_config.min_after_dequeue = 1
+        eval_input_config.read_block_length = 10
+        eval_input_config.prefetch_size = 2
+        eval_input_config.num_parallel_map_calls = 2
+        eval_input_function = create_eval_input_fn(
+            eval_config=odapi_configs["eval_config"],
+            eval_input_config=eval_input_config,
+            model_config=odapi_configs["model"])
+        eval_dict = estimator.evaluate(input_fn=eval_input_function,
+                                       steps=eval_steps)
+        return eval_dict["loss"]
+    else:
+        return None
 
 
 def get_predictions(single_stream, class_mapping_dict, ip, port, model_name):
@@ -385,13 +429,14 @@ def create_a_tf_example(single_stream, reverse_class_mapping_dict):
 
     filename = filename.encode("utf-8")
     for span in single_stream["spans"]:
-        # points are ordered counter-clockwise
-        points = span["points"]
+        points = np.array(span["points"])
+        xmin, ymin = np.amin(points, axis=0)
+        xmax, ymax = np.amax(points, axis=0)
         # points need to be normalized
-        xmin = points[0][0]/width
-        ymin = points[0][1]/height
-        xmax = points[2][0]/width
-        ymax = points[2][1]/height
+        xmin = xmin/width
+        ymin = ymin/height
+        xmax = xmax/width
+        ymax = ymax/height
         assert xmin < xmax
         assert ymin < ymax
         # Clip bounding boxes that go outside the image
@@ -428,5 +473,25 @@ def create_a_tf_example(single_stream, reverse_class_mapping_dict):
     return tf_example
 
 
-def remove_garbage(dir, max_num):
-    pass
+def _remove_garbage(folder, max_num_to_keep, garbage_type="file",
+                    filter_string=None):
+    contents = [os.path.join(folder, f) for f in os.listdir(folder)]
+    if garbage_type.lower() == "file":
+        contents = list(filter(lambda x: os.path.isfile(x), contents))
+    elif garbage_type.lower() == "folder":
+        contents = list(
+            filter(lambda x: os.path.isdir(x) and "temp" not in str(x),
+                   contents))
+    else:
+        raise ValueError("garbage_type type must be one of 'file', 'folder'")
+    if filter_string:
+        contents = list(filter(lambda x: filter_string in os.path.basename(x),
+                               contents))
+    if len(contents) > max_num_to_keep:
+        recent_n_contents = sorted(contents)[::-1][:max_num_to_keep]
+        contents_to_delete = list(set(contents) - set(recent_n_contents))
+        for content_to_delete in contents_to_delete:
+            if garbage_type == "file":
+                os.remove(content_to_delete)
+            elif garbage_type == "folder":
+                shutil.rmtree(content_to_delete, ignore_errors=True)
