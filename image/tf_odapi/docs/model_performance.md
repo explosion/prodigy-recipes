@@ -10,7 +10,7 @@ The document contains **Speed and Accuracy trade-off** between different models 
 *   **RAM**: 16 GB
 *   **CPU 1**: This is the unoptimzed version of **tensorflow**. Installed from `pip install tensorflow`.
 *   **CPU 2**: This **tensorflow** binary is optimized with **Intel® MKL-DNN**. Installed from `conda install tensorflow`. See this [blog](https://www.anaconda.com/tensorflow-in-anaconda/) for more details.
-*   The script used for this study is [time_study.py](./misc/time_study.py)
+*   The script used for this study is [time_study.py](../misc/time_study.py)
 
 ## Models trained on MS-COCO Dataset
 
