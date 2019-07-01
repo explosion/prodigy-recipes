@@ -60,6 +60,19 @@ def image_servingmodel(dataset,
 
 
 def get_image_stream(stream, class_mapping_dict, ip, port, model_name, thresh):
+    """Function that gets the image stream with bounding box information
+
+    Arguments:
+        stream (iterable): input image image stream
+        class_mapping_dict (dict): with key as int and value as class name
+        ip (str): tensorflow serving IP
+        port (str): tensorflow serving port
+        model_name (str): model name in tensorflow serving
+        thresh (float): score threshold for predictions
+
+    Returns:
+        A generator that constantly yields a prodigy task
+    """
     for eg in stream:
         if not eg["image"].startswith("data"):
             msg = "Expected base64-encoded data URI, but got: '{}'."
@@ -79,6 +92,19 @@ def get_image_stream(stream, class_mapping_dict, ip, port, model_name, thresh):
 
 
 def get_predictions(numpy_image, class_mapping_dict, ip, port, model_name):
+    """Gets predictions for a single image using Tensorflow serving
+
+    Arguments:
+        numpy_image (np.ndarray): numpy array of image
+        class_mapping_dict (dict): with key as int and value as class name
+        ip (str): tensorflow serving IP
+        port (str): tensorflow serving port
+        model_name (str): model name in tensorflow serving
+
+    Returns:
+        A tuple containing numpy arrays:
+        (class_ids, class_names, scores, boxes)
+    """
     if len(numpy_image.shape) == 3:
         numpy_image = np.expand_dims(numpy_image, axis=0)
     boxes, class_ids, scores = _tf_odapi_client(numpy_image,
@@ -120,6 +146,17 @@ def preprocess_pil_image(pil_img, color_mode='rgb', target_size=None):
 
 
 def get_span(prediction, pil_image, hidden=True):
+    """Function which returns a prodigy span
+
+    Arguments:
+        prediction (iterable): containing one class_id, name, prob, box
+        pil_image (pil.Image): A PIL image
+        hidden (bool)
+
+    Returns:
+        A span (dict) with following keys:
+        score, label, label_id, points, hidden
+    """
     class_id, name, prob, box = prediction
     name = str(name, "utf8") if not isinstance(name, str) else name
     image_width = pil_image.width
@@ -152,6 +189,20 @@ def get_span(prediction, pil_image, hidden=True):
 def _tf_odapi_client(image, ip, port, model_name,
                      signature_name="detection_signature", input_name="inputs",
                      timeout=300):
+    """Client for using Tensorflow Serving with Tensorflow Object Detection API
+
+    Arguments:
+        data (np.ndarray/bytes): A numpy array of data or bytes. No Default
+        ip (str): IP address of tensorflow serving. No Default
+        port (str/int): Port of tensorflow serving. No Default
+        model_name (str): Model name. No Default
+        signature_name (str): Signature name. Default "detection_signature".
+        input_name (str): Input tensor name. Default "inputs".
+        timeout (str): timeout for API call. Default 300 secs
+
+    returns:
+        a tuple containing numpy arrays of (boxes, classes, scores)
+    """
     start_time = time()
     result = _generic_tf_serving_client(image, ip, port,
                                         model_name, signature_name,

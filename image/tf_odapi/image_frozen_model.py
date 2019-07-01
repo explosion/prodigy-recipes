@@ -71,6 +71,16 @@ def image_tfodapimodel(dataset,
 
 
 def get_image_stream(stream, class_mapping_dict, thresh):
+    """Function that gets the image stream with bounding box information
+
+    Arguments:
+        stream (iterable): input image image stream
+        class_mapping_dict (dict): with key as int and value as class name
+        thresh (float): score threshold for predictions
+
+    Returns:
+        A generator that constantly yields a prodigy task
+    """
     for eg in stream:
         if not eg["image"].startswith("data"):
             msg = "Expected base64-encoded data URI, but got: '{}'."
@@ -119,6 +129,16 @@ def preprocess_pil_image(pil_img, color_mode='rgb', target_size=None):
 
 
 def get_predictions(numpy_image, class_mapping_dict):
+    """Gets predictions for a single image using Frozen Model
+
+    Arguments:
+        numpy_image (np.ndarray): A single numpy image
+        class_mapping_dict (dict): with key as int and value as class name
+
+    Returns:
+        A tuple containing numpy arrays:
+        (class_ids, class_names, scores, boxes)
+    """
     global detection_graph
     global sess
     image_tensor = detection_graph.get_tensor_by_name(
@@ -150,6 +170,17 @@ def get_predictions(numpy_image, class_mapping_dict):
 
 
 def get_span(prediction, pil_image, hidden=True):
+    """Function which returns a prodigy span
+
+    Arguments:
+        prediction (iterable): containing one class_id, name, prob, box
+        pil_image (pil.Image): A PIL image
+        hidden (bool)
+
+    Returns:
+        A span (dict) with following keys:
+        score, label, label_id, points, hidden
+    """
     class_id, name, prob, box = prediction
     name = str(name, "utf8") if not isinstance(name, str) else name
     image_width = pil_image.width

@@ -76,7 +76,6 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                      use_display_name=False, tf_logging_level=40, api=None,
                      exclude=None):
     tf.logging.set_verbosity(tf_logging_level)
-    # key class names
     _create_dir(model_dir)
     _create_dir(export_dir)
     _create_dir(data_dir)
@@ -104,6 +103,7 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
     train_input_config.prefetch_size = 2
     train_input_config.num_parallel_map_calls = 2
 
+    # key class names
     reverse_class_mapping_dict = label_map_util.get_label_map_dict(
         label_map_path=label_map_path,
         use_display_name=use_display_name)
@@ -162,6 +162,19 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
 
 
 def get_image_stream(stream, class_mapping_dict, ip, port, model_name, thresh):
+    """Function that gets the image stream with bounding box information
+
+    Arguments:
+        stream (iterable): input image image stream
+        class_mapping_dict (dict): with key as int and value as class name
+        ip (str): tensorflow serving IP
+        port (str): tensorflow serving port
+        model_name (str): model name in tensorflow serving
+        thresh (float): score threshold for predictions
+
+    Returns:
+        A generator that constantly yields a prodigy task
+    """
     for eg in stream:
         if not eg["image"].startswith("data"):
             msg = "Expected base64-encoded data URI, but got: '{}'."
@@ -183,6 +196,24 @@ def get_image_stream(stream, class_mapping_dict, ip, port, model_name, thresh):
 def update_odapi_model(tasks, estimator, data_dir, reverse_class_mapping_dict,
                        odapi_configs, steps_per_epoch, export_dir, run_eval,
                        eval_steps, temp_files_num):
+    """Update the object detection api model with annotations from prodigy
+
+    Arguments:
+        tasks (iterable): prodigy's tasks
+        estimator (tf.estimator.Estimator): detection model as tf estimator
+        data_dir (str): directory to store temp train TF-Records
+        reverse_class_mapping_dict (dict): key as class name and value as int
+        odapi_configs (dict): Object detection api pipeline.config object
+        steps_per_epoch (int): Number of training steps.
+        export_dir (str): directory to export temp SavedModels for TF serving
+        run_eval (bool): Whether to run evaluation
+        eval_steps (int): Number of steps for evaluations
+        temp_files_num (int): Number of recent files/folders to keep in export\
+        and data directories
+
+    Returns:
+        None if run_eval is False else evaluation loss (float)
+    """
     train_data_name = "{}_train.record".format(int(time()))
     _write_tf_record(tasks=tasks,
                      output_file=os.path.join(data_dir,
@@ -243,6 +274,19 @@ def update_odapi_model(tasks, estimator, data_dir, reverse_class_mapping_dict,
 
 
 def get_predictions(single_stream, class_mapping_dict, ip, port, model_name):
+    """Gets predictions for a single image using Tensorflow serving
+
+    Arguments:
+        single_stream (dict): A single prodigy stream
+        class_mapping_dict (dict): with key as int and value as class name
+        ip (str): tensorflow serving IP
+        port (str): tensorflow serving port
+        model_name (str): model name in tensorflow serving
+
+    Returns:
+        A tuple containing numpy arrays:
+        (class_ids, class_names, scores, boxes)
+    """
     image_byte_stream = b64_uri_to_bytes(single_stream["image"])
     encoded_image_io = io.BytesIO(image_byte_stream)
     image = Image.open(encoded_image_io)
@@ -282,6 +326,15 @@ def get_predictions(single_stream, class_mapping_dict, ip, port, model_name):
 
 
 def _export_saved_model(export_dir, estimator, odapi_configs):
+    """Private function which exports a SavedModel from estimator
+    Arguments:
+        export_dir (str): directory to export temp SavedModels for TF serving
+        estimator (tf.estimator.Estimator): detection model as tf estimator
+        odapi_configs (dict): Object detection api pipeline.config object
+
+    Returns:
+        None
+    """
     log("Exporting the model as SavedModel in {}".format(export_dir))
     # Just a placeholder
     pred_input_config = odapi_configs["eval_input_config"]
@@ -293,6 +346,16 @@ def _export_saved_model(export_dir, estimator, odapi_configs):
 
 
 def _write_tf_record(tasks, output_file, reverse_class_mapping_dict):
+    """Private function which writes training TF-Record file
+
+    Arguments:
+        tasks (iterable): prodigy's tasks
+        output_file (str): output TF-Record filename
+        reverse_class_mapping_dict (dict): key as class name and value as int
+
+    Returns:
+        None
+    """
     writer = tf.python_io.TFRecordWriter(output_file)
     for task in tasks:
         if task['answer'] == 'accept':
@@ -305,6 +368,14 @@ def _write_tf_record(tasks, output_file, reverse_class_mapping_dict):
 
 
 def _create_dir(path):
+    """A private function which creates a directory if it does not exists
+
+    Arguments:
+        path (str): Directory path
+
+    Returns:
+        None
+    """
     if not os.path.isdir(path):
         log("Creating a directory {}".format(path))
         os.mkdir(path)
@@ -313,12 +384,23 @@ def _create_dir(path):
 
 
 def get_span(prediction, pil_image, hidden=True):
+    """Function which returns a prodigy span
+
+    Arguments:
+        prediction (iterable): containing one class_id, name, prob, box
+        pil_image (pil.Image): A PIL image
+        hidden (bool)
+
+    Returns:
+        A span (dict) with following keys:
+        score, label, label_id, points, hidden
+    """
     class_id, name, prob, box = prediction
     name = str(name, "utf8") if not isinstance(name, str) else name
     image_width = pil_image.width
     image_height = pil_image.height
     ymin, xmin, ymax, xmax = box
-
+    # un-normalize the coordinates
     xmin = xmin*image_width
     xmax = xmax*image_width
     ymin = ymin*image_height
@@ -343,8 +425,7 @@ def get_span(prediction, pil_image, hidden=True):
 
 
 def tf_odapi_client(data, ip, port, model_name,
-                    signature_name="detection_signature", input_name="inputs",
-                    timeout=300):
+                    signature_name, input_name, timeout=300):
     """Client for using Tensorflow Serving with Tensorflow Object Detection API
 
     Arguments:
@@ -411,6 +492,15 @@ def generic_tf_serving_client(data, ip, port, model_name,
 
 
 def create_a_tf_example(single_stream, reverse_class_mapping_dict):
+    """Function to create a single training Tf.Example object
+
+    Arguments:
+        single_stream (dict): A single prodigy stream
+        reverse_class_mapping_dict (dict): key as class name and value as int
+
+    Returns:
+        A single training tf.Example compatible with object detection API
+    """
     image_byte_stream = b64_uri_to_bytes(single_stream["image"])
     encoded_image_io = io.BytesIO(image_byte_stream)
     image = Image.open(encoded_image_io)
@@ -480,8 +570,20 @@ def create_a_tf_example(single_stream, reverse_class_mapping_dict):
     return tf_example
 
 
-def _remove_garbage(folder, max_num_to_keep, garbage_type="file",
+def _remove_garbage(folder, max_num_to_keep, garbage_type,
                     filter_string=None):
+    """Private function which keeps only max_num_to_keep files/folders
+    in a given directory
+
+    Arguments:
+        folder (str): Folder to monitor
+        max_num_to_keep (int): maximum number of recent files/folders to keep
+        garbage_type (str): one of ('file' or 'folder').
+        filer (str): optional pattern to look for. Default None
+
+    Returns:
+        None
+    """
     contents = [os.path.join(folder, f) for f in os.listdir(folder)]
     if garbage_type.lower() == "file":
         contents = list(filter(lambda x: os.path.isfile(x), contents))
@@ -490,7 +592,7 @@ def _remove_garbage(folder, max_num_to_keep, garbage_type="file",
             filter(lambda x: os.path.isdir(x) and "temp" not in str(x),
                    contents))
     else:
-        raise ValueError("garbage_type type must be one of 'file', 'folder'")
+        raise ValueError("garbage_type must be one of 'file', 'folder'")
     if filter_string:
         contents = list(filter(lambda x: filter_string in os.path.basename(x),
                                contents))
