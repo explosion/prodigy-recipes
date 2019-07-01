@@ -129,7 +129,8 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
             train_input_config=train_input_config)
         estimator.train(input_fn=train_input_fn,
                         steps=1)
-        _export_saved_model(export_dir, estimator, odapi_configs)
+
+    _export_saved_model(export_dir, estimator, odapi_configs)
     log("Make sure to start Tensorflow Serving before opening Prodigy")
     log("Training and evaluation (if enabled) can be monitored by \
         pointing Tensorboard to {} directory".format(model_dir))
@@ -153,7 +154,7 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                                    ip, port, model_name, float(threshold)),
         "exclude": exclude,
         "update": update_fn,
-        "progress": lambda *args, **kwargs: 0,
+        # "progress": lambda *args, **kwargs: 0,
         'config': {
             'label': ', '.join(label) if label is not None else 'all',
             'labels': label,       # Selectable label options,
@@ -357,14 +358,16 @@ def _write_tf_record(tasks, output_file, reverse_class_mapping_dict):
         None
     """
     writer = tf.python_io.TFRecordWriter(output_file)
+    counter = 0
     for task in tasks:
         if task['answer'] == 'accept':
             tf_example = create_a_tf_example(task, reverse_class_mapping_dict)
             writer.write(tf_example.SerializeToString())
+            counter += 1
         else:
             continue
     writer.close()
-    log("Successfully written {} annotations as TFRecords".format(len(tasks)))
+    log("Successfully written {} annotations as TFRecords".format(counter))
 
 
 def _create_dir(path):
