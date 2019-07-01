@@ -13,13 +13,14 @@ Running this recipe will create the following 3 folders if not already present:
 The general flow of the recipe is as follows:
 
 1. Create the object detection model as given in the pipeline.config and convert is as a **custom** [Tensorflow Estimator](https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator)
-2. Check if **export** directory has a SavedModel (if resuming annotations) else, do a dummy training for 1 step and save the model as SavedModel in the **export** directory. The dummy one step training is required because, the [Tensorflow Estimator](https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator) does not allow **SavedModel** creation without having a checkpoint in **model** dir
-3. Start [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving) and point it to **export** directory so that it can load updated models automatically for **predictions**
-4. Perform assisted annotations in prodigy with predictions coming from **Tensorflow Serving**.
-5. Use the annotations to train the model in the loop and optionally run evaluation, save the trained model as a **model.ckpt** in the **model** directory and **SavedModel** in **export dir**.
-6. Run the **garbage collector**.
-7. **Tensorflow Serving** automatically picks up the recent model present in the **export** and downs the previous model.
-8. Repeat 4 and 5 until satisfied.
+2. Check if **model** directory has a checkpoint (if resuming annotations) else, do a dummy training for 1 step. The dummy one step training is required because, the [Tensorflow Estimator](https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator) does not allow **SavedModel** creation without having a checkpoint in **model** dir
+3. Save the model as SavedModel in the **export** directory.
+4. Start [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving) and point it to **export** directory so that it can load updated models automatically for **predictions**
+5. Perform assisted annotations in prodigy with predictions coming from **Tensorflow Serving**.
+6. Use the annotations to train the model in the loop and optionally run evaluation, save the trained model as a **model.ckpt** in the **model** directory and **SavedModel** in **export** directory.
+7. Run the **garbage collector**.
+8. **Tensorflow Serving** automatically picks up the recent model present in the **export** directory and downs the previous model.
+9. Repeat 4 and 5 until satisfied.
 
 In a nutshell, **predictions** happen in **Tensorflow Serving** and the training happens parallely inside **Prodigy**. This structure ensures that, **predictions** can run parallely in a different hardware resource (CPU/GPU) and **training** and **evaluation** can run in another hardware resource(GPU/CPU). **GPU** for **training** and **evaluation** is highly recommended!
 
@@ -48,11 +49,10 @@ eval_input_reader {
 N number of samples are sampled from this **validation.record** (set by `eval_steps` argument) and evaluation is run on these examples. Supports all the [evaluation protocols](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/evaluation_protocols.md) supported by the Object Detection API
 
 ## Logging
-* Set Prodigy logging level to `basic` to view detailed logs from this recipe. Optionally you can also set 10/20 for Tensorflow
+* Set Prodigy logging level to `basic` to view detailed logs from this recipe.
 * Optionally set [Tensorflow Logging](https://www.tensorflow.org/api_docs/python/tf/logging) to 10/20 if you want to see detailed Tensorflow logs. This is set by **tf_logging_level** argument
 
 ## Notes and Recommendations
-* Set Prodigy logging level to `basic` to view detailed logs from this recipe. Optionally you can also set 10/20 for Tensorflow
 * Object detection algorithms are extremely resource hungry! So, make sure that you run this recipe with **Tensorflow GPU**. However, you can choose to run **Tensorflow Serving** in **CPU** without much loss in performance.
 * Point **TensorBoard** to **model** directory to view the training progress. The TensorBoard is really well populated. Especially with **evaluation** enabled.
 * The recipe also supports all of the `data augmentations` provided by the Object Detection API out of the box. This can be enabled in the **pipeline_config**. This is especially useful if you are setting the **steps_per_epoch** argument to be more than the number of annotated examples.
