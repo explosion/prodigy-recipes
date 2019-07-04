@@ -36,10 +36,10 @@ from object_detection.model_hparams import create_hparams
     ip=("Tensorflow serving ip", "positional", None, str),
     port=("Tensorflow serving port", "positional", None, str),
     model_name=("Tensorflow serving model name", "positional", None, str),
-    label_map_path=("Labelmap.pbtxt path. Overrides the value given in \
-        tfodapi config", "option", "lmp", float, None, None),
-    label=("One or more comma-separated labels.\
-        If not given inferred from labelmap",
+    label_map_path=(("Labelmap.pbtxt path. Overrides the value given in "
+                     "tfodapi config"), "option", "lmp", float, None, None),
+    label=(("One or more comma-separated labels. "
+            "If not given inferred from labelmap"),
            "option", "l", split_string, None, None),
     model_dir=("Path to save model checkpoints and Tensorboard events",
                "option", "md", str, None, os.path.join(".", "model_dir")),
@@ -47,17 +47,18 @@ from object_detection.model_hparams import create_hparams
                 "option", "ed", str, None, os.path.join(".", "export_dir")),
     data_dir=("Path to store temporary TFrecords used for training",
               "option", "dd", str, None, os.path.join(".", "data_dir")),
-    steps_per_epoch=("Number of training steps per epoch.\
-        If 0, inferred automatically. If higher than the dataset size,\
-        the dataset is looped over",
+    steps_per_epoch=(("Number of training steps per epoch. "
+                      "If 0, inferred automatically. "
+                      "If higher than the dataset size, "
+                      "the dataset is looped over"),
                      "option", "spe", int, None, 0),
     threshold=("Score threshold", "option", "t", float, None, 0.5),
     temp_files_num=("Number of recent temp files to keep",
                     "option", "tfn", int, None, 5),
     max_checkpoints_num=("Number of recent model checkpoints to keep",
                          "option", "mcn", int, None, 5),
-    run_eval=("Whether to run evaluation. If enabling, eval_config\
-    and eval_input_reader must be set in tfodapi config",
+    run_eval=(("Whether to run evaluation. If enabling, eval_config "
+               "and eval_input_reader must be set in tfodapi config"),
               "flag", "E", bool),
     eval_steps=("Number of steps for evaluation",
                 "option", "es", int, None, 50),
@@ -120,8 +121,8 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                                  postprocess_on_cpu=False)
     estimator = tf.estimator.Estimator(model_fn=model_func, config=run_config)
     if estimator.latest_checkpoint() is None:
-        log("Running a single dummy training step!\
-        else saving SavedModel for Tensorflow Serving does not work")
+        log(("Running a single dummy training step! "
+             "Else saving SavedModel for Tensorflow Serving does not work"))
         train_input_config = odapi_configs["train_input_config"]
         train_input_fn = create_train_input_fn(
             train_config=odapi_configs["train_config"],
@@ -132,8 +133,8 @@ def image_trainmodel(dataset, source, config_path, ip, port, model_name,
 
     _export_saved_model(export_dir, estimator, odapi_configs)
     log("Make sure to start Tensorflow Serving before opening Prodigy")
-    log("Training and evaluation (if enabled) can be monitored by \
-        pointing Tensorboard to {} directory".format(model_dir))
+    log(("Training and evaluation (if enabled) can be monitored by "
+         "pointing Tensorboard to {} directory").format(model_dir))
 
     stream = get_stream(source, api=api, loader="images", input_key="image")
     stream = fetch_images(stream)
@@ -209,18 +210,22 @@ def update_odapi_model(tasks, estimator, data_dir, reverse_class_mapping_dict,
         export_dir (str): directory to export temp SavedModels for TF serving
         run_eval (bool): Whether to run evaluation
         eval_steps (int): Number of steps for evaluations
-        temp_files_num (int): Number of recent files/folders to keep in export\
+        temp_files_num (int): Number of recent files/folders to keep in export
         and data directories
 
     Returns:
         None if run_eval is False else evaluation loss (float)
     """
     train_data_name = "{}_train.record".format(int(time()))
-    _write_tf_record(tasks=tasks,
-                     output_file=os.path.join(data_dir,
-                                              train_data_name),
-                     reverse_class_mapping_dict=reverse_class_mapping_dict
-                     )
+    num_examples = _write_tf_record(
+        tasks=tasks,
+        output_file=os.path.join(data_dir,
+                                 train_data_name),
+        reverse_class_mapping_dict=reverse_class_mapping_dict
+    )
+    if num_examples == 0:
+        log("No training data found! Skipping model update")
+        return None
     train_input_config = odapi_configs["train_input_config"]
     # delete existing input paths
     old_input_paths = train_input_config.tf_record_input_reader.input_path
@@ -236,7 +241,7 @@ def update_odapi_model(tasks, estimator, data_dir, reverse_class_mapping_dict,
         train_input_config=train_input_config)
     train_steps = steps_per_epoch
     if train_steps == 0:
-        train_steps = len(tasks)
+        train_steps = num_examples
     log("Training for {} steps".format(train_steps))
     estimator.train(input_fn=train_input_fn,
                     steps=train_steps)
@@ -299,10 +304,10 @@ def get_predictions(single_stream, class_mapping_dict, ip, port, model_name):
     elif file_extension in ("jpg", "jpeg"):
         image_format = b'jpg'
     else:
-        log("Only 'png', 'jpeg' or 'jpg' files are supported by ODAPI.\
-         Got {}. Thus treating it as `jpg` file.\
-          Might cause errors".format(file_extension)
-            )
+        log(("Only 'png', 'jpeg' or 'jpg' files are supported by ODAPI. "
+             "Got {}. Thus treating it as `jpg` file. "
+             "Might cause errors".format(file_extension)
+             ))
         image_format = b'jpg'
 
     filename = filename.encode("utf-8")
@@ -355,7 +360,7 @@ def _write_tf_record(tasks, output_file, reverse_class_mapping_dict):
         reverse_class_mapping_dict (dict): key as class name and value as int
 
     Returns:
-        None
+        a counter containing number of examples returned
     """
     writer = tf.python_io.TFRecordWriter(output_file)
     counter = 0
@@ -368,6 +373,7 @@ def _write_tf_record(tasks, output_file, reverse_class_mapping_dict):
             continue
     writer.close()
     log("Successfully written {} annotations as TFRecords".format(counter))
+    return counter
 
 
 def _create_dir(path):
@@ -487,8 +493,8 @@ def generic_tf_serving_client(data, ip, port, model_name,
                        data,
                    ))
     result = stub.Predict(request, timeout)
-    log("time taken for prediction using model {} \
-    version {} is :{} secs".format(
+    log(("time taken for prediction using model {} "
+         "version {} is: {} secs").format(
         str(result.model_spec.name), result.model_spec.version.value,
         time()-start_time))
     return result
@@ -515,9 +521,10 @@ def create_a_tf_example(single_stream, reverse_class_mapping_dict):
     elif file_extension in ("jpg", "jpeg"):
         image_format = b'jpg'
     else:
-        log("Only 'png', 'jpeg' or 'jpg' files are supported by ODAPI.\
-         Got {}. Thus treating it as `jpg` file.\
-          Might cause errors").format(file_extension)
+        log(("Only 'png', 'jpeg' or 'jpg' files are supported by ODAPI. "
+             "Got {}. Thus treating it as `jpg` file. "
+             "Might cause errors".format(file_extension)
+             ))
         image_format = b'jpg'
 
     xmins = []
