@@ -48,10 +48,10 @@ from object_detection.model_hparams import create_hparams
     data_dir=("Path to store temporary TFrecords used for training",
               "option", "dd", str, None, os.path.join(".", "data_dir")),
     steps_per_epoch=(("Number of training steps per epoch. "
-                      "If 0, inferred automatically. "
+                      "If -1, inferred automatically. "
                       "If higher than the dataset size, "
                       "the dataset is looped over"),
-                     "option", "spe", int, None, 0),
+                     "option", "spe", int, None, -1),
     threshold=("Score threshold", "option", "t", float, None, 0.5),
     temp_files_num=("Number of recent temp files to keep",
                     "option", "tfn", int, None, 5),
@@ -72,7 +72,7 @@ from object_detection.model_hparams import create_hparams
 def image_trainmodel(dataset, source, config_path, ip, port, model_name,
                      label_map_path=None, label=None, model_dir="model_dir",
                      export_dir="export_dir", data_dir="data_dir",
-                     steps_per_epoch=0, threshold=0.5, temp_files_num=5,
+                     steps_per_epoch=-1, threshold=0.5, temp_files_num=5,
                      max_checkpoints_num=5, run_eval=False, eval_steps=50,
                      use_display_name=False, tf_logging_level=40, api=None,
                      exclude=None):
@@ -240,7 +240,7 @@ def update_odapi_model(tasks, estimator, data_dir, reverse_class_mapping_dict,
         model_config=odapi_configs["model"],
         train_input_config=train_input_config)
     train_steps = steps_per_epoch
-    if train_steps == 0:
+    if train_steps in (0, -1):
         train_steps = num_examples
     log("Training for {} steps".format(train_steps))
     estimator.train(input_fn=train_input_fn,

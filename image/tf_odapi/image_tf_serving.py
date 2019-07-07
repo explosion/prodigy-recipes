@@ -28,6 +28,8 @@ from object_detection.utils import label_map_util
     threshold=("Score threshold", "option", "t", float, None, 0.5),
     api=recipe_args["api"],
     exclude=recipe_args["exclude"],
+    use_display_name=("Whether to use display_name in label_map.pbtxt",
+                      "flag", "D", bool),
 )
 def image_servingmodel(dataset,
                        ip,
@@ -37,14 +39,15 @@ def image_servingmodel(dataset,
                        source=None,
                        threshold=0.5,
                        api=None,
-                       exclude=None
+                       exclude=None,
+                       use_display_name=False
                        ):
     log("RECIPE: Starting recipe image.servingmodel", locals())
 
     # key class names
     reverse_class_mapping_dict = label_map_util.get_label_map_dict(
         label_map_path=label_map_path,
-        use_display_name=True)
+        use_display_name=use_display_name)
     # key int
     class_mapping_dict = {v: k for k, v in reverse_class_mapping_dict.items()}
     stream = get_stream(source, api=api, loader="images", input_key="image")
