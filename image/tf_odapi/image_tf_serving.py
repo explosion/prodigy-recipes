@@ -12,7 +12,7 @@ from PIL import Image
 from prodigy.components.loaders import get_stream
 from prodigy.components.preprocess import fetch_images
 from prodigy.core import recipe, recipe_args
-from prodigy.util import log, b64_uri_to_bytes
+from prodigy.util import log, b64_uri_to_bytes, split_string
 
 from object_detection.utils import label_map_util
 
@@ -30,6 +30,9 @@ from object_detection.utils import label_map_util
     exclude=recipe_args["exclude"],
     use_display_name=("Whether to use display_name in label_map.pbtxt",
                       "flag", "D", bool),
+    label=(("One or more comma-separated labels. "
+            "If not given inferred from labelmap"),
+           "option", "l", split_string, None, None),
 )
 def image_servingmodel(dataset,
                        ip,
@@ -40,7 +43,8 @@ def image_servingmodel(dataset,
                        threshold=0.5,
                        api=None,
                        exclude=None,
-                       use_display_name=False
+                       use_display_name=False,
+                       label=None
                        ):
     log("RECIPE: Starting recipe image.servingmodel", locals())
 
@@ -48,6 +52,8 @@ def image_servingmodel(dataset,
     reverse_class_mapping_dict = label_map_util.get_label_map_dict(
         label_map_path=label_map_path,
         use_display_name=use_display_name)
+    if label is None:
+        label = [k for k in reverse_class_mapping_dict.keys()]
     # key int
     class_mapping_dict = {v: k for k, v in reverse_class_mapping_dict.items()}
     stream = get_stream(source, api=api, loader="images", input_key="image")
@@ -59,6 +65,10 @@ def image_servingmodel(dataset,
         "stream": get_image_stream(stream, class_mapping_dict,
                                    ip, port, model_name, float(threshold)),
         "exclude": exclude,
+        'config': {
+            'label': ', '.join(label) if label is not None else 'all',
+            'labels': label,       # Selectable label options,
+        }
     }
 
 
