@@ -12,6 +12,9 @@ import spacy
 import srsly
 
 
+API_URL = ""
+
+
 @prodigy.recipe('phrases.teach',
     dataset=recipe_args["dataset"],
     seeds=("One or more comma-separated seed terms", "option", "se", split_string),
@@ -48,7 +51,7 @@ def phrases_teach(dataset, seeds, threshold=0.85, batch_size=5, resume=False):
 
     def sense2vec(phrase, threshold):
         """Call sense2vec API to get similar "senses" (phrases)"""
-        res = requests.post('https://api.explosion.ai/sense2vec/find', {
+        res = requests.post(API_URL, {
             "sense": "auto",
             "word": phrase
         })
