@@ -36,11 +36,13 @@ API_URL = "https://api.explosion.ai/sense2vec/find"
 
 After you setup the `API_URL` you can run this recipe the same way you'd run terms.teach:
 
-1. Create your dataset
+1. ### Create your dataset
 
 ```bash
 prodigy dataset shoe_brands
 ```
+2. ### Run the phrases.teach recipe
+
 
 ```bash
 prodigy phrases.teach shoe_brands --seeds "Jordans,New Balance,Steve Madden" -F prodigy-recipes/contrib/phrases/phrases.py
@@ -56,9 +58,9 @@ You can also specify optional arguments:
     > NOTE: if you still see this Loading screen forever, your seed phrases probably don't exist in sense2vec
 
 
-After training your phrase list, you'll want to export some patterns for training your NER or Text Classification model.
+3. ### After training your phrase list, you'll want to export some patterns for training your NER or Text Classification model.
 
-You can do that with:
+
 ```bash
 prodigy phrases.to-patterns shoe_brands ./shoe_brands_patterns.jsonl -F prodigy-recipes/contrib/phrases/phrases.py
 ```
