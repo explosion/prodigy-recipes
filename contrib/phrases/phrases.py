@@ -19,7 +19,7 @@ API_URL = ""
     dataset=recipe_args["dataset"],
     seeds=("One or more comma-separated seed terms", "option", "se", split_string),
     threshold=("Similarity threshold for sense2vec", "option", "t", float),
-    batch_size=("Similarity threshold for sense2vec", "option", "bs", int),
+    batch_size=("Batch size to use", "option", "bs", int),
     resume=("Resume from existing phrases dataset", "flag", "R", bool)
 )
 def phrases_teach(dataset, seeds, threshold=0.85, batch_size=5, resume=False):
