@@ -76,6 +76,9 @@ Prodigy behaves.
 | Recipe | Description |
 | --- | --- |
 | [`image.manual`](image/image_manual.py) | Manually annotate images by drawing rectangular bounding boxes or polygon shapes on the image. |
+| [`image.frozenmodel`](image/tf_odapi/image_frozen_model.py) | Model in loop manual annotation using [Tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). |
+| [`image.servingmodel`](image/tf_odapi/image_tf_serving.py) | Model in loop manual annotation using [Tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). This uses [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving)|
+| [`image.trainmodel`](image/tf_odapi/image_train.py) | Model in loop manual annotation and training using [Tensorflow's Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection).|
 
 ### Other
 
