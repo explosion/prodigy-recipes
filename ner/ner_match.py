@@ -1,27 +1,32 @@
-# coding: utf8
-from __future__ import unicode_literals
-
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.models.matcher import PatternMatcher
 from prodigy.components.db import connect
 from prodigy.util import split_string
 import spacy
+from typing import List, Optional
 
 
 # Recipe decorator with argument annotations: (description, argument type,
 # shortcut, type / converter function called on value before it's passed to
 # the function). Descriptions are also shown when typing --help.
-@prodigy.recipe('ner.match',
+@prodigy.recipe(
+    "ner.match",
     dataset=("The dataset to use", "positional", None, str),
     spacy_model=("The base model", "positional", None, str),
     source=("The source data as a JSONL file", "positional", None, str),
     patterns=("Optional match patterns", "option", "p", str),
     exclude=("Names of datasets to exclude", "option", "e", split_string),
-    resume=("Resume from existing dataset and update matcher accordingly", "flag", "R", bool)
+    resume=("Resume from existing dataset and update matcher", "flag", "R", bool),
 )
-def ner_match(dataset, spacy_model, source, patterns=None, exclude=None,
-              resume=False):
+def ner_match(
+    dataset: str,
+    spacy_model: str,
+    source: str,
+    patterns: Optional[str] = None,
+    exclude: Optional[List[str]] = None,
+    resume: bool = False,
+):
     """
     Suggest phrases that match a given patterns file, and mark whether they
     are examples of the entity you're interested in. The patterns file can
@@ -50,11 +55,9 @@ def ner_match(dataset, spacy_model, source, patterns=None, exclude=None,
     stream = (eg for score, eg in matcher(stream))
 
     return {
-        'view_id': 'ner',       # Annotation interface to use
-        'dataset': dataset,     # Name of dataset to save annotations
-        'stream': stream,       # Incoming stream of examples
-        'exclude': exclude,     # List of dataset names to exclude
-        'config': {             # Additional config settings, mostly for app UI
-            'lang': nlp.lang
-        }
+        "view_id": "ner",  # Annotation interface to use
+        "dataset": dataset,  # Name of dataset to save annotations
+        "stream": stream,  # Incoming stream of examples
+        "exclude": exclude,  # List of dataset names to exclude
+        "config": {"lang": nlp.lang},  # Additional config settings, mostly for app UI
     }

@@ -1,6 +1,3 @@
-# coding: utf8
-from __future__ import unicode_literals
-
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.models.ner import EntityRecognizer
@@ -9,22 +6,31 @@ from prodigy.components.preprocess import split_sentences
 from prodigy.components.sorters import prefer_uncertain
 from prodigy.util import combine_models, split_string
 import spacy
+from typing import List, Optional
 
 
 # Recipe decorator with argument annotations: (description, argument type,
 # shortcut, type / converter function called on value before it's passed to
 # the function). Descriptions are also shown when typing --help.
-@prodigy.recipe('ner.teach',
+@prodigy.recipe(
+    "ner.teach",
     dataset=("The dataset to use", "positional", None, str),
     spacy_model=("The base model", "positional", None, str),
     source=("The source data as a JSONL file", "positional", None, str),
     label=("One or more comma-separated labels", "option", "l", split_string),
     patterns=("Optional match patterns", "option", "p", str),
     exclude=("Names of datasets to exclude", "option", "e", split_string),
-    unsegmented=("Don't split sentences", "flag", "U", bool)
+    unsegmented=("Don't split sentences", "flag", "U", bool),
 )
-def ner_teach(dataset, spacy_model, source=None, label=None, patterns=None,
-              exclude=None, unsegmented=False):
+def ner_teach(
+    dataset: str,
+    spacy_model: str,
+    source: str,
+    label: Optional[List[str]] = None,
+    patterns: Optional[str] = None,
+    exclude: Optional[List[str]] = None,
+    unsegmented: bool = False,
+):
     """
     Collect the best possible training data for a named entity recognition
     model with the model in the loop. Based on your annotations, Prodigy will
@@ -63,13 +69,10 @@ def ner_teach(dataset, spacy_model, source=None, label=None, patterns=None,
     stream = prefer_uncertain(predict(stream))
 
     return {
-        'view_id': 'ner',       # Annotation interface to use
-        'dataset': dataset,     # Name of dataset to save annotations
-        'stream': stream,       # Incoming stream of examples
-        'update': update,       # Update callback, called with batch of answers
-        'exclude': exclude,     # List of dataset names to exclude
-        'config': {             # Additional config settings, mostly for app UI
-            'lang': nlp.lang,
-            'label': ', '.join(label) if label is not None else 'all'
-        }
+        "view_id": "ner",  # Annotation interface to use
+        "dataset": dataset,  # Name of dataset to save annotations
+        "stream": stream,  # Incoming stream of examples
+        "update": update,  # Update callback, called with batch of answers
+        "exclude": exclude,  # List of dataset names to exclude
+        "config": {"lang": nlp.lang},  # Additional config settings, mostly for app UI
     }

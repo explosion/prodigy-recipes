@@ -1,6 +1,3 @@
-# coding: utf8
-from __future__ import unicode_literals
-
 import prodigy
 from prodigy.components.loaders import JSONL
 
@@ -13,7 +10,7 @@ from prodigy.components.loaders import JSONL
     dataset=("The dataset to use", "positional", None, str),
     source=("The source data as a JSONL file", "positional", None, str),
 )
-def question_answering(dataset, source):
+def question_answering(dataset: str, source: str):
     """
     Annotate question/answer pairs with a custom HTML interface. Expects an
     input file with records that look like this:

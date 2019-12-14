@@ -88,6 +88,16 @@ Prodigy behaves.
 | [`choice`](other/choice.py) | Annotate data with multiple-choice options. The annotated examples will have an additional property `"accept": []` mapping to the ID(s) of the selected option(s). |
 | [`question_answering`](other/question_answering.py) | Annotate question/answer pairs with a custom HTML interface. |
 
+
+### Community recipes
+
+| Recipe | Author | Description |
+| --- | --- |
+| `phrases.teach` | @kabirkhan | Now part of [`sense2vec`](https://github.com/explosion/sense2vec). |
+| `phrases.to-patterns` | @kabirkhan | Now part of [`sense2vec`](https://github.com/explosion/sense2vec). |
+| [`records.link`](contrib/dedupe) | @kabirkhan | Link records across multiple datasets using the [`dedupe`](https://github.com/dedupeio/dedupe) library. |
+
+
 ## 📚 Example Datasets and Patterns
 
 To make it even easier to get started, we've also included a few
