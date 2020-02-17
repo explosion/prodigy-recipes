@@ -43,8 +43,14 @@ def terms_teach(dataset: str, vectors: str, seeds: List[str]):
             return 0.5
         # Use spaCy's .similarity() method to compare the term to the
         # accepted and rejected Doc
-        accept_score = max(term.similarity(accept_doc), 0.0)
-        reject_score = max(term.similarity(reject_doc), 0.0)
+        if len(accept_doc) and accept_doc.vector_norm != 0.0:
+            accept_score = max(term.similarity(accept_doc), 0.0)
+        else:
+            accept_score = 0.0
+        if len(reject_doc) and reject_doc.vector_norm != 0:
+            reject_score = max(term.similarity(reject_doc), 0.0)
+        else:
+            reject_score = 0.0
         score = accept_score / (accept_score + reject_score + 0.2)
         return max(score, 0.0)
 
@@ -72,7 +78,7 @@ def terms_teach(dataset: str, vectors: str, seeds: List[str]):
         while True:
             seen = set(w.orth for w in accept_doc)
             seen.update(set(w.orth for w in reject_doc))
-            lexemes = [w for w in lexemes if w.orth not in seen]
+            lexemes = [w for w in lexemes if w.orth not in seen and w.vector_norm]
             by_score = [(predict(lex), lex) for lex in lexemes]
             by_score.sort(reverse=True)
             for _, term in by_score:
