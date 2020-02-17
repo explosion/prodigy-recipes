@@ -92,7 +92,7 @@ Prodigy behaves.
 ### Community recipes
 
 | Recipe | Author | Description |
-| --- | --- |
+| --- | --- | --- |
 | `phrases.teach` | @kabirkhan | Now part of [`sense2vec`](https://github.com/explosion/sense2vec). |
 | `phrases.to-patterns` | @kabirkhan | Now part of [`sense2vec`](https://github.com/explosion/sense2vec). |
 | [`records.link`](contrib/dedupe) | @kabirkhan | Link records across multiple datasets using the [`dedupe`](https://github.com/dedupeio/dedupe) library. |
