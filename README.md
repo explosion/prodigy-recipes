@@ -29,13 +29,14 @@ The `prodigy` command lists the built-in recipes. To use a custom recipe script,
 simply pass the path to the file using the `-F` argument:
 
 ```bash
-python -m prodigy -F prodigy-recipes/ner/ner_teach.py
+python -m prodigy ner.teach your_dataset en_core_web_sm ./data.jsonl --label PERSON -F prodigy-recipes/ner/ner_teach.py
 ```
 
-Now you can edit the code in your `ner_teach.py` command, to customize how
-Prodigy behaves.
+You can also use the `--help` flag for an overview of the available arguments of a recipe, e.g. `prodigy ner.teach -F ner_teach_.py --help`.
 
 ### Some things to try
+
+You can edit the code in the recipe script to customize how Prodigy behaves.
 
 - Try replacing `prefer_uncertain()` with `prefer_high_scores()`.
 - Try writing a custom sorting function. It just needs to be a generator that
