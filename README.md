@@ -2,9 +2,9 @@
 
 # Prodigy Recipes
 
-This repository contains a collection of recipes for [Prodigy](https://prodi.gy),
-our scriptable annotation tool for text, images and other data. In order to use
-this repo, you'll need a license for Prodigy –
+This repository contains a collection of recipes for
+[Prodigy](https://prodi.gy), our scriptable annotation tool for text, images and
+other data. In order to use this repo, you'll need a license for Prodigy –
 [see this page](https://prodi.gy/buy) for more details. For questions and bug
 reports, please use the [Prodigy Support Forum](https://support.prodi.gy). If
 you've found a mistake or bug, feel free to submit a
@@ -13,8 +13,8 @@ you've found a mistake or bug, feel free to submit a
 > ✨ **Important note:** The recipes in this repository aren't 100% identical to
 > the built-in recipes shipped with Prodigy. They've been edited to include
 > comments and more information, and some of them have been simplified to make
-> it easier to follow what's going on, and to use them as the basis for a
-> custom recipe.
+> it easier to follow what's going on, and to use them as the basis for a custom
+> recipe.
 
 ## 📋 Usage
 
@@ -40,7 +40,8 @@ You can edit the code in the recipe script to customize how Prodigy behaves.
 
 - Try replacing `prefer_uncertain()` with `prefer_high_scores()`.
 - Try writing a custom sorting function. It just needs to be a generator that
-  yields a sequence of `example` dicts, given a sequence of `(score, example)` tuples.
+  yields a sequence of `example` dicts, given a sequence of `(score, example)`
+  tuples.
 - Try adding a filter that drops some questions from the stream. For instance,
   try writing a filter that only asks you questions where the entity is two
   words long.
