@@ -1,3 +1,4 @@
+"""This recipe requires Prodigy v1.10+."""
 from typing import List, Optional, Union, Iterable, Dict, Any
 from tokenizers import BertWordPieceTokenizer
 from prodigy.components.loaders import get_stream
