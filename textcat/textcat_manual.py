@@ -1,9 +1,21 @@
 from typing import List, Optional
 import prodigy
 from prodigy.components.loaders import JSONL
-from prodigy.components.preprocess import add_label_options, add_labels_to_stream
 from prodigy.util import split_string
 
+
+# Helper functions for adding user provided labels to annotation tasks
+def add_label_options_to_stream(stream, label):
+    options = [{"id": label, "text": label} for label in labels]
+    for task in stream:
+        task["options"] = options
+        yield task
+
+def add_labels_to_stream(stream, label):
+    for task in stream:
+        for label_name in label:
+            task["label"] = label_name
+            yield task
 
 # Recipe decorator with argument annotations: (description, argument type,
 # shortcut, type / converter function called on value before it's passed to
@@ -38,7 +50,7 @@ def textcat_manual(
     #Add labels to each task in stream
     has_options = len(label) > 1
     if has_options:
-        stream = add_label_options(stream, label)
+        stream = add_label_options_to_stream(stream, label)
     else:
         stream = add_labels_to_stream(stream, label)
 

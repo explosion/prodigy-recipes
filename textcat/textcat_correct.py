@@ -2,13 +2,20 @@ import copy
 from typing import List, Optional
 import prodigy
 from prodigy.components.loaders import JSONL
-from prodigy.components.preprocess import make_raw_doc
-from prodigy.components.preprocess import add_label_options, add_labels_to_stream
 from prodigy.models.textcat import infer_exclusive
 from prodigy.util import split_string
 import spacy
+from spacy.tokens import Doc
 from spacy.training import Example
 
+# Helper function for generating Doc object reusing the existing tokenization if available
+def make_raw_doc(nlp, eg):
+    tokens = eg.get("tokens", [])
+    if tokens:
+        words = [token["text"] for token in tokens]
+        spaces = [token.get("ws", True) for token in tokens]
+        return Doc(nlp.vocab, words=words, spaces=spaces)
+    return nlp.make_doc(eg["text"])
 
 # Recipe decorator with argument annotations: (description, argument type,
 # shortcut, type / converter function called on value before it's passed to
@@ -106,7 +113,7 @@ def textcat_correct(
         "config": {  # Additional config settings, mostly for app UI
             "choice_style": "single" if exclusive and len(label) > 1 else "multiple",\
                  # Style of choice interface
-            "exclude_by": "input", # hash value to filter out seen examples
-            "auto_count_stream": not update,
+            "exclude_by": "input", # Hash value to filter out seen examples
+            "auto_count_stream": not update, # Whether to recount the stream at initialization 
         },
     }
