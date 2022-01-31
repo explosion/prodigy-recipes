@@ -63,10 +63,10 @@ def ner_fuzzy_manual(
     
 ):
     """
-    Mark spans manually by token with suggestions from patterns pre-highlighted.
+    Mark spans manually by token with suggestions from spaCy phrase patterns pre-highlighted.
     The suggestions are entity spans matched by spaczz fuzzy matcher ignoring the case.
-    Note, that if token patterns are required spaczz syntax for token patterns should be observed
-    and custom parsing function should be implemented. Please check spaczz documentation
+    Note, that if spaCy token patterns are required, spaczz syntax for token patterns should be observed
+    and a custom parsing function should be implemented. Please check spaczz documentation
     for details: https://spacy.io/universe/project/spaczz.
     The recipe doesn't require any entity recognizer, and it doesn't do any active learning.
     It will present all examples in order, so even examples without matches are shown.
@@ -84,7 +84,7 @@ def ner_fuzzy_manual(
     for pattern_label, patterns in phrase_patterns.items():
         for (pattern_hash, pattern) in patterns:
             fuzzy_matcher.add(pattern_hash, [nlp(pattern)], kwargs= [{"ignorecase": True}])
-            # Build pattern hash to pattern map to recover the source pattern for UI
+            # Build pattern_hash to pattern map to recover the source pattern for UI.
             pattern_labels[pattern_hash] = pattern_label
 
     # Load the stream from a JSONL file and return a generator that yields a
@@ -96,7 +96,7 @@ def ner_fuzzy_manual(
     # faster highlighting, because the selection can "snap" to token boundaries.
     stream = add_tokens(nlp, stream)
 
-    # Apply the spaczz matcher to the stream.
+    # Apply the spaczz matcher to the stream and add matched spans to each task for pre-highlighting.
     stream = apply_fuzzy_matcher(stream, nlp, fuzzy_matcher, pattern_labels, line_numbers)
 
     return {
