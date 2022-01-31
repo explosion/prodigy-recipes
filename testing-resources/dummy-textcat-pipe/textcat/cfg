@@ -1,8 +1,0 @@
-{
-  "labels":[
-    "PERSON",
-    "ORG"
-  ],
-  "threshold":0.5,
-  "positive_label":null
-}
