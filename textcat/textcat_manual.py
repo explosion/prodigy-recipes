@@ -5,7 +5,7 @@ from prodigy.util import split_string
 
 
 # Helper functions for adding user provided labels to annotation tasks
-def add_label_options_to_stream(stream, label):
+def add_label_options_to_stream(stream, labels):
     options = [{"id": label, "text": label} for label in labels]
     for task in stream:
         task["options"] = options

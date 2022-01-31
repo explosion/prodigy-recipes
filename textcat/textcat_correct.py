@@ -8,7 +8,7 @@ import spacy
 from spacy.tokens import Doc
 from spacy.training import Example
 
-# Helper function for generating Doc object reusing the existing tokenization if available
+# Helper function for generating Doc object reusing the existing tokenization if available.
 def make_raw_doc(nlp, eg):
     tokens = eg.get("tokens", [])
     if tokens:
@@ -86,7 +86,7 @@ def textcat_correct(
             task["accept"] = selected
             yield task
 
-    # Update the model with the corrected examples
+    # Update the model with the corrected examples.
     def make_update(answers):
         examples=[]
         for eg in answers:
@@ -96,12 +96,11 @@ def textcat_correct(
                     opt["id"]: 1.0 if opt["id"] in selected else 0.0
                     for opt in eg.get("options", [])
                 }
-                # Create a doc object reusing the existing tokens if available; otherwise apply the pipeline tokenizer
                 doc = make_raw_doc(nlp, eg)
-                examples.append(spacy.training.Example.from_dict(doc, {"cats": cats}))
+                examples.append(Example.from_dict(doc, {"cats": cats}))
         nlp.update(examples)
 
-    # Add model's predictions to the tasks in the stream
+    # Add model's predictions to the tasks in the stream.
     stream = add_suggestions(stream)
 
     return {

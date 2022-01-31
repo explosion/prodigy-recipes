@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 import pytest
 import tempfile
-import spacy
+from pathlib import Path
 from contextlib import contextmanager
 from prodigy.components.db import connect
 from prodigy.util import write_jsonl, INPUT_HASH_ATTR, TASK_HASH_ATTR
@@ -17,6 +17,7 @@ from ner.ner_silver_to_gold import ner_silver_to_gold
 from textcat.textcat_teach import textcat_teach
 from textcat.textcat_custom_model import textcat_custom_model
 from textcat.textcat_manual import textcat_manual
+from textcat.textcat_correct import textcat_correct
 from terms.terms_teach import terms_teach
 from image.image_manual import image_manual
 from other.mark import mark
@@ -174,6 +175,15 @@ def test_textcat_custom_model(dataset, source, labels):
 
 def test_textcat_manual(dataset, source, labels):
     recipe = textcat_manual(dataset, source, labels)
+    stream = list(recipe['stream'])
+    assert recipe['view_id'] == 'choice'
+    assert recipe['dataset'] == dataset
+    assert len(stream) == 2
+    assert 'options' in stream[0]
+
+def test_textcat_correct(dataset, source, labels): 
+    spacy_textcat = Path(Path(__file__).parent / "testing-resources" / "dummy-textcat-pipe")
+    recipe = textcat_correct(dataset, spacy_textcat, source, labels)
     stream = list(recipe['stream'])
     assert recipe['view_id'] == 'choice'
     assert recipe['dataset'] == dataset
