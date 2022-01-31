@@ -3,11 +3,15 @@ from __future__ import unicode_literals
 
 import pytest
 import tempfile
+import shutil
 from pathlib import Path
 from contextlib import contextmanager
 from prodigy.components.db import connect
 from prodigy.util import write_jsonl, INPUT_HASH_ATTR, TASK_HASH_ATTR
 from prodigy.models.ner import merge_spans
+
+from spacy.language import Language
+from spacy.lang.en import English
 
 from ner.ner_teach import ner_teach
 from ner.ner_match import ner_match
@@ -24,6 +28,7 @@ from other.mark import mark
 from other.choice import choice
 
 
+
 @pytest.fixture()
 def dataset():
     return False
@@ -32,6 +37,23 @@ def dataset():
 @pytest.fixture
 def spacy_model():
     return 'en_core_web_sm'
+
+
+@pytest.fixture
+@Language.component("dummy_textcat")
+def dummy_textcat_pipe(doc):
+    if doc == 'This is a text about David Bowie':
+        doc.cats = {"PERSON": 1.0, "ORG": 0.0}
+    elif doc =='Apple makes iPhones':
+        doc.cats = {"PERSON": 0.0, "ORG": 1.0}
+    else:
+        doc.cats = {"PERSON": 0.0, "ORG": 0.0}
+    return doc
+
+
+@pytest.fixture(scope="session")
+def nlp():
+    return English()
 
 
 @pytest.fixture
@@ -68,6 +90,15 @@ def tmp_dataset(name, examples=[]):
     DB.add_examples(examples, datasets=[name])
     yield examples
     DB.drop_dataset(name)
+
+
+@contextmanager
+def make_tmpdir():
+    d = Path(tempfile.mkdtemp())
+    try:
+        yield d
+    finally:
+        shutil.rmtree(d)
 
 
 def test_ner_teach(dataset, spacy_model, source, labels, patterns):
@@ -181,14 +212,19 @@ def test_textcat_manual(dataset, source, labels):
     assert len(stream) == 2
     assert 'options' in stream[0]
 
-def test_textcat_correct(dataset, source, labels): 
-    spacy_textcat = Path(Path(__file__).parent / "testing-resources" / "dummy-textcat-pipe")
-    recipe = textcat_correct(dataset, spacy_textcat, source, labels)
+
+def test_textcat_correct(dataset, nlp, source, labels):
+    component = "dummy_textcat"
+    dummy_textcat_component = nlp.add_pipe(component)
+    with make_tmpdir() as tempdir:
+        nlp.to_disk(tempdir)
+        recipe = textcat_correct(dataset, tempdir, source, labels, False, None, 0.5, component)
     stream = list(recipe['stream'])
     assert recipe['view_id'] == 'choice'
     assert recipe['dataset'] == dataset
     assert len(stream) == 2
     assert 'options' in stream[0]
+    assert 'options' in stream[1]
 
 
 def test_terms_teach(dataset, vectors):
