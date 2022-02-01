@@ -4,7 +4,7 @@ from prodigy.components.loaders import JSONL
 from prodigy.util import split_string
 
 
-# Helper functions for adding user provided labels to annotation tasks
+# Helper functions for adding user provided labels to annotation tasks.
 def add_label_options_to_stream(stream, labels):
     options = [{"id": label, "text": label} for label in labels]
     for task in stream:
