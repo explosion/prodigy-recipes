@@ -60,8 +60,7 @@ def textcat_manual(
         "exclude": exclude,  # List of dataset names to exclude
         "config": {  # Additional config settings, mostly for app UI
             "choice_style": "single" if exclusive else "multiple", # Style of choice interface
-            "exclude_by": "input" if has_options else "task",\
-                 # Hash value used to filter out already seen examples
+            "exclude_by": "input" if has_options else "task", # Hash value used to filter out already seen examples
         },
     }
     
