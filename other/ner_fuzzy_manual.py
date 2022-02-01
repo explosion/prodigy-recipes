@@ -5,13 +5,26 @@ import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.components.preprocess import add_tokens
 from prodigy.util import split_string, set_hashes
-from prodigy.models.matcher import parse_patterns
 import spacy
 from spacy.tokens import Span
 from spaczz.matcher import FuzzyMatcher
 
 
-def apply_fuzzy_matcher(stream, nlp, fuzzy_matcher, pattern_labels, line_numbers):
+def parse_phrase_patterns(patterns):
+    """ A parser for patterns file. It assumes spaCy phrase patterns format"""
+    phrase_patterns = defaultdict(list)
+    # Auxiliary map to recover the pattern id as line number in the UI
+    line_numbers = {}
+     for i, entry in enumerate(patterns):
+        label = entry["label"]
+        pattern = entry["pattern"]
+        line_number = i+1
+        phrase_patterns[label].append((line_number, pattern))
+        line_numbers[line_number] = label
+    return phrase_patterns, line_numbers
+
+
+def apply_fuzzy_matcher(stream, nlp, fuzzy_matcher, line_numbers):
     """Add a 'spans' key to each example, with fuzzy pattern matches."""
     # Process the stream using spaCy's nlp.pipe, which yields doc objects.
     # If as_tuples=True is set, you can pass in (text, context) tuples.
@@ -19,22 +32,25 @@ def apply_fuzzy_matcher(stream, nlp, fuzzy_matcher, pattern_labels, line_numbers
     for doc, eg in nlp.pipe(texts_examples, as_tuples=True):
         task = copy.deepcopy(eg)
         matched_spans = []
-        for match_id, start_token, end_token, _ in fuzzy_matcher(doc):
-            span_obj = Span(doc, start_token, end_token)
+        for line_number, start_token, end_token, _ in fuzzy_matcher(doc):
+            #span_obj = Span(doc, start_token, end_token)
             span = {
-                        "text": span_obj.text,
-                        "start": span_obj.start_char,
-                        "end": span_obj.end_char,
-                        "pattern": span_obj.label,
-                        "token_start": span_obj.start,
-                        "token_end": span_obj.end - 1,
-                        "label": pattern_labels[match_id],
-                        "pattern_hash": match_id
+                        "text": doc[start_token, end_token],
+                        "token_start": start_token,
+                        "token_end": end_token - 1,
+                        "start": start_token[0],
+                        "end": end_token[-1],
+                        "label": line_numbers[line_number],
+                        "line_number": line_number
                     }
             matched_spans.append(span)
         if matched_spans:
             task["spans"] = matched_spans
-            all_ids = [line_numbers[s["pattern_hash"]]+1 for s in task["spans"]]
+            all_ids = []
+            for s in task["spans"]:
+                all_ids.append(s["line_number"])
+                # Not needed anymore
+                del s["line_number"]
             task["meta"]["pattern"] = ", ".join([f"{p}" for p in all_ids])
             task = set_hashes(task)
         yield task
@@ -63,10 +79,10 @@ def ner_fuzzy_manual(
     
 ):
     """
-    Mark spans manually by token with suggestions from spaCy phrase patterns pre-highlighted.
-    The suggestions are entity spans matched by spaczz fuzzy matcher ignoring the case.
-    Note, that if spaCy token patterns are required, spaczz syntax for token patterns should be observed
-    and a custom parsing function should be implemented. Please check spaczz documentation
+    Mark spans manually by token with suggestions from phrase patterns pre-highlighted.
+    The suggestions are spans matched by spaczz fuzzy matcher ignoring the case.
+    Note, that if token patterns are required, spaczz syntax for token patterns should be observed
+    and a the parsing function should be modified accordingly. Please check spaczz documentation
     for details: https://spacy.io/universe/project/spaczz.
     The recipe doesn't require any entity recognizer, and it doesn't do any active learning.
     It will present all examples in order, so even examples without matches are shown.
@@ -79,13 +95,11 @@ def ner_fuzzy_manual(
 
     # Load phrase patterns and feed them to spaczz matcher
     patterns = JSONL(patterns)
-    _, phrase_patterns, line_numbers = parse_patterns(list(patterns))
-    pattern_labels = defaultdict(str)
+    phrase_patterns, line_numbers = parse_patterns(list(patterns))
     for pattern_label, patterns in phrase_patterns.items():
-        for (pattern_hash, pattern) in patterns:
-            fuzzy_matcher.add(pattern_hash, [nlp(pattern)], kwargs= [{"ignorecase": True}])
-            # Build pattern_hash to pattern map to recover the source pattern for UI.
-            pattern_labels[pattern_hash] = pattern_label
+        for (line_number, pattern) in patterns:
+            # Use the line number from the patterns source file as the pattern_id
+            fuzzy_matcher.add(line_number, [nlp(pattern)], kwargs= [{"ignorecase": True}])
 
     # Load the stream from a JSONL file and return a generator that yields a
     # dictionary for each example in the data.
@@ -96,8 +110,8 @@ def ner_fuzzy_manual(
     # faster highlighting, because the selection can "snap" to token boundaries.
     stream = add_tokens(nlp, stream)
 
-    # Apply the spaczz matcher to the stream and add matched spans to each task for pre-highlighting.
-    stream = apply_fuzzy_matcher(stream, nlp, fuzzy_matcher, pattern_labels, line_numbers)
+    # Apply the spaczz matcher to the stream.
+    stream = apply_fuzzy_matcher(stream, nlp, fuzzy_matcher, line_numbers)
 
     return {
         "view_id": "ner_manual",  # Annotation interface to use
