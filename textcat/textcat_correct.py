@@ -2,20 +2,11 @@ import copy
 from typing import List, Optional
 import prodigy
 from prodigy.components.loaders import JSONL
-from prodigy.models.textcat import infer_exclusive
 from prodigy.util import split_string
 import spacy
 from spacy.tokens import Doc
 from spacy.training import Example
 
-# Helper function for generating Doc object reusing the existing tokenization if available.
-def make_raw_doc(nlp, eg):
-    tokens = eg.get("tokens", [])
-    if tokens:
-        words = [token["text"] for token in tokens]
-        spaces = [token.get("ws", True) for token in tokens]
-        return Doc(nlp.vocab, words=words, spaces=spaces)
-    return nlp.make_doc(eg["text"])
 
 # Recipe decorator with argument annotations: (description, argument type,
 # shortcut, type / converter function called on value before it's passed to
@@ -46,8 +37,9 @@ def textcat_correct(
     """
     Correct the textcat model's predictions manually. Only the predictions
     above the threshold will be pre-selected. By default, all labels with a score 0.5 and above will
-    be accepted automatically. Prodigy will infer whether the categories should be mutualy exclusive
-    based on the component configuration.
+    be accepted automatically. In the built-in "textcat.correct" recipe Prodigy would infer whether
+    the categories should be mutualy exclusive based on the component configuration.
+    Here, for demo purposes, we show how it can be inferred from the pipeline config.
     """
     # Load the stream from a JSONL file and return a generator that yields a
     # dictionary for each example in the data.
@@ -60,14 +52,16 @@ def textcat_correct(
     if not component:
         component = "textcat" if "textcat" in nlp.pipe_names else "textcat_multilabel"
 
-    # Infer exclusive
-    exclusive = infer_exclusive(nlp, component)
+    # Infer whether the labels are exclusive from pipeline config
+    pipe_config = nlp.get_pipe_config(component)
+    exclusive = pipe_config.get("model", {}).get("exclusive_classes", True)
 
-    # Get labels from the models in case none are provided
-    if not label:
-        label = nlp.pipe_labels.get(component, [])
+    # Get labels from the model in case they are not provided
+    labels = label
+    if not labels:
+        labels = nlp.pipe_labels.get(component, [])
     
-    # Add classifier predictions to each task in stream: 'options' key with the score per category
+    # Add classifier predictions to each task in stream under 'options' key with the score per category
     # and 'selected' key with the categories above the threshold.
     def add_suggestions(stream):
         texts = ((eg["text"], eg) for eg in stream)
@@ -78,7 +72,7 @@ def textcat_correct(
             options = []
             selected = []
             for cat, score in doc.cats.items():
-                if cat in label:
+                if cat in labels:
                     options.append({"id": cat, "text": cat, "meta": f"{score:.2f}"})
                     if score >= threshold:
                         selected.append(cat)
@@ -96,7 +90,10 @@ def textcat_correct(
                     opt["id"]: 1.0 if opt["id"] in selected else 0.0
                     for opt in eg.get("options", [])
                 }
-                doc = make_raw_doc(nlp, eg)
+                # Create a doc object to be used as a training example in the model update.
+                # If your examples contain tokenization make sure not to loose this information
+                # by initializing a doc object from scratch.
+                doc = nlp.make_doc(eg["text"])
                 examples.append(Example.from_dict(doc, {"cats": cats}))
         nlp.update(examples)
 

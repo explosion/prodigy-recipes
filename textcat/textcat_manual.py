@@ -11,11 +11,10 @@ def add_label_options_to_stream(stream, labels):
         task["options"] = options
         yield task
 
-def add_labels_to_stream(stream, label):
+def add_labels_to_stream(stream, labels):
     for task in stream:
-        for label_name in label:
-            task["label"] = label_name
-            yield task
+        task["label"] = label[0]
+        yield task
 
 # Recipe decorator with argument annotations: (description, argument type,
 # shortcut, type / converter function called on value before it's passed to
