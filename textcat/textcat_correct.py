@@ -20,8 +20,7 @@ from spacy.training import Example
     update=("Whether to update the model during annotation", "flag", "UP", bool),
     exclude=("Names of datasets to exclude", "option", "e", split_string),
     threshold=("Score threshold to pre-select label", "option", "t", float),
-    component=("Name of text classifier component in the pipeline \
-                (will be guessed from pipeline if not set)", "option", "c", str),
+    component=("Name of text classifier component in the pipeline (will be guessed from pipeline if not set)", "option", "c", str),
 )
 
 def textcat_correct(
@@ -107,8 +106,8 @@ def textcat_correct(
         "update": make_update if update else None,
         "exclude": exclude,  # List of dataset names to exclude
         "config": {  # Additional config settings, mostly for app UI
-            "choice_style": "single" if exclusive and len(label) > 1 else "multiple",\
-                 # Style of choice interface
+            # Style of choice interface
+            "choice_style": "single" if exclusive and len(label) > 1 else "multiple",
             "exclude_by": "input", # Hash value to filter out seen examples
             "auto_count_stream": not update, # Whether to recount the stream at initialization 
         },
