@@ -11,7 +11,10 @@ from spaczz.matcher import FuzzyMatcher
 
 
 def parse_phrase_patterns(patterns):
-    """ A parser for patterns file. It assumes spaCy phrase patterns format"""
+    """
+        A parser for patterns file.
+        It assumes Prodigy's patterns format with string patterns such as {"pattern": "some pattern", "label": "SOME_LABEL"}.
+    """
     phrase_patterns = defaultdict(list)
     # Auxiliary map to recover the pattern id as line number in the UI
     line_numbers = {}
