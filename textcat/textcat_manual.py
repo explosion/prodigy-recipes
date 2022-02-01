@@ -63,4 +63,3 @@ def textcat_manual(
             "exclude_by": "input" if has_options else "task", # Hash value used to filter out already seen examples
         },
     }
-    
