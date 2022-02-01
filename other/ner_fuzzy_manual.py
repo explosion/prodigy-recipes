@@ -15,7 +15,7 @@ def parse_phrase_patterns(patterns):
     phrase_patterns = defaultdict(list)
     # Auxiliary map to recover the pattern id as line number in the UI
     line_numbers = {}
-     for i, entry in enumerate(patterns):
+    for i, entry in enumerate(patterns):
         label = entry["label"]
         pattern = entry["pattern"]
         line_number = i+1
@@ -33,13 +33,13 @@ def apply_fuzzy_matcher(stream, nlp, fuzzy_matcher, line_numbers):
         task = copy.deepcopy(eg)
         matched_spans = []
         for line_number, start_token, end_token, _ in fuzzy_matcher(doc):
-            #span_obj = Span(doc, start_token, end_token)
+            span_obj = Span(doc, start_token, end_token)
             span = {
-                        "text": doc[start_token, end_token],
-                        "token_start": start_token,
-                        "token_end": end_token - 1,
-                        "start": start_token[0],
-                        "end": end_token[-1],
+                        "text": span_obj.text,
+                        "start": span_obj.start_char,
+                        "end": span_obj.end_char,
+                        "token_start": span_obj.start,
+                        "token_end": span_obj.end -1,
                         "label": line_numbers[line_number],
                         "line_number": line_number
                     }
@@ -52,6 +52,7 @@ def apply_fuzzy_matcher(stream, nlp, fuzzy_matcher, line_numbers):
                 # Not needed anymore
                 del s["line_number"]
             task["meta"]["pattern"] = ", ".join([f"{p}" for p in all_ids])
+            # Rehash the newly created task so that hashes reflect added data
             task = set_hashes(task)
         yield task
 
@@ -95,7 +96,7 @@ def ner_fuzzy_manual(
 
     # Load phrase patterns and feed them to spaczz matcher
     patterns = JSONL(patterns)
-    phrase_patterns, line_numbers = parse_patterns(list(patterns))
+    phrase_patterns, line_numbers = parse_phrase_patterns(list(patterns))
     for pattern_label, patterns in phrase_patterns.items():
         for (line_number, pattern) in patterns:
             # Use the line number from the patterns source file as the pattern_id
