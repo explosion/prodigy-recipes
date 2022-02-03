@@ -3,10 +3,15 @@ from __future__ import unicode_literals
 
 import pytest
 import tempfile
+import shutil
+from pathlib import Path
 from contextlib import contextmanager
 from prodigy.components.db import connect
 from prodigy.util import write_jsonl, INPUT_HASH_ATTR, TASK_HASH_ATTR
 from prodigy.models.ner import merge_spans
+
+from spacy.language import Language
+from spacy.lang.en import English
 
 from ner.ner_teach import ner_teach
 from ner.ner_match import ner_match
@@ -15,10 +20,13 @@ from ner.ner_make_gold import ner_make_gold
 from ner.ner_silver_to_gold import ner_silver_to_gold
 from textcat.textcat_teach import textcat_teach
 from textcat.textcat_custom_model import textcat_custom_model
+from textcat.textcat_manual import textcat_manual
+from textcat.textcat_correct import textcat_correct
 from terms.terms_teach import terms_teach
 from image.image_manual import image_manual
 from other.mark import mark
 from other.choice import choice
+
 
 
 @pytest.fixture()
@@ -32,6 +40,23 @@ def spacy_model():
 
 
 @pytest.fixture
+@Language.component("dummy_textcat")
+def dummy_textcat_pipe(doc):
+    if doc == 'This is a text about David Bowie':
+        doc.cats = {"PERSON": 1.0, "ORG": 0.0}
+    elif doc =='Apple makes iPhones':
+        doc.cats = {"PERSON": 0.0, "ORG": 1.0}
+    else:
+        doc.cats = {"PERSON": 0.0, "ORG": 0.0}
+    return doc
+
+
+@pytest.fixture(scope="session")
+def nlp():
+    return English()
+
+
+@pytest.fixture
 def vectors():
     return 'en_core_web_md'
 
@@ -39,7 +64,6 @@ def vectors():
 @pytest.fixture
 def labels():
     return ['PERSON', 'ORG']
-
 
 @pytest.fixture()
 def source():
@@ -66,6 +90,15 @@ def tmp_dataset(name, examples=[]):
     DB.add_examples(examples, datasets=[name])
     yield examples
     DB.drop_dataset(name)
+
+
+@contextmanager
+def make_tmpdir():
+    d = Path(tempfile.mkdtemp())
+    try:
+        yield d
+    finally:
+        shutil.rmtree(d)
 
 
 def test_ner_teach(dataset, spacy_model, source, labels, patterns):
@@ -169,6 +202,29 @@ def test_textcat_custom_model(dataset, source, labels):
     assert recipe['dataset'] == dataset
     assert len(stream) >= 1
     assert 'label' in stream[0]
+
+
+def test_textcat_manual(dataset, source, labels):
+    recipe = textcat_manual(dataset, source, labels)
+    stream = list(recipe['stream'])
+    assert recipe['view_id'] == 'choice'
+    assert recipe['dataset'] == dataset
+    assert len(stream) == 2
+    assert 'options' in stream[0]
+
+
+def test_textcat_correct(dataset, nlp, source, labels):
+    component = "dummy_textcat"
+    dummy_textcat_component = nlp.add_pipe(component)
+    with make_tmpdir() as tempdir:
+        nlp.to_disk(tempdir)
+        recipe = textcat_correct(dataset, tempdir, source, labels, False, None, 0.5, component)
+    stream = list(recipe['stream'])
+    assert recipe['view_id'] == 'choice'
+    assert recipe['dataset'] == dataset
+    assert len(stream) == 2
+    assert 'options' in stream[0]
+    assert 'options' in stream[1]
 
 
 def test_terms_teach(dataset, vectors):
