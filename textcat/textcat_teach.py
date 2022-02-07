@@ -48,7 +48,11 @@ def textcat_teach(
     # Initialize classification pipeline from scratch (using a dummy training example) or from the base model if available.
     if name not in nlp.pipe_names:
         pipe = nlp.add_pipe(name)
-        pipe.initialize(get_examples=lambda: [Example.from_dict(nlp.make_doc("hello"), {"cats":{label: 0.5 for label in labels}})])
+        # dummy doc
+        doc = nlp.make_doc("hello")
+        # dummy weights
+        cats = {label: 0.5 for label in labels} 
+        pipe.initialize(get_examples=lambda: [Example.from_dict(doc, {"cats":cats})])
     else:
         pipe = nlp.get_pipe(name)
 
