@@ -1,11 +1,12 @@
+from typing import List, Optional
+import spacy
+from spacy.training import Example
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.models.textcat import TextClassifier
 from prodigy.models.matcher import PatternMatcher
 from prodigy.components.sorters import prefer_uncertain
 from prodigy.util import combine_models, split_string
-import spacy
-from typing import List, Optional
 
 
 # Recipe decorator with argument annotations: (description, argument type,
@@ -33,6 +34,7 @@ def textcat_teach(
     with the model in the loop. Based on your annotations, Prodigy will decide
     which questions to ask next.
     """
+    labels = label
     # Load the stream from a JSONL file and return a generator that yields a
     # dictionary for each example in the data.
     stream = JSONL(source)
@@ -40,9 +42,23 @@ def textcat_teach(
     # Load the spaCy model
     nlp = spacy.load(spacy_model)
 
+    # Specify the name of the classifier pipeline.
+    name = "textcat_multilabel"
+
+    # Initialize classification pipeline from scratch (using a dummy training example) or from the base model if available.
+    if name not in nlp.pipe_names:
+        pipe = nlp.add_pipe(name)
+        # dummy doc
+        doc = nlp.make_doc("hello")
+        # dummy weights
+        cats = {label: 0.5 for label in labels} 
+        pipe.initialize(get_examples=lambda: [Example.from_dict(doc, {"cats":cats})])
+    else:
+        pipe = nlp.get_pipe(name)
+
     # Initialize Prodigy's text classifier model, which outputs
     # (score, example) tuples
-    model = TextClassifier(nlp, label)
+    model = TextClassifier(nlp, labels, name)
 
     if patterns is None:
         # No patterns are used, so just use the model to suggest examples
