@@ -86,7 +86,7 @@ def ner_fuzzy_manual(
     Mark spans manually by token with suggestions from phrase patterns pre-highlighted.
     The suggestions are spans matched by spaczz fuzzy matcher ignoring the case.
     Note, that if token patterns are required, spaczz syntax for token patterns should be observed
-    and a the parsing function should be modified accordingly. Please check spaczz documentation
+    and the parsing function should be modified accordingly. Please check spaczz documentation
     for details: https://spacy.io/universe/project/spaczz.
     The recipe doesn't require any entity recognizer, and it doesn't do any active learning.
     It will present all examples in order, so even examples without matches are shown.
