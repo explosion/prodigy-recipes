@@ -16,8 +16,9 @@ from spacy.lang.en import English
 from ner.ner_teach import ner_teach
 from ner.ner_match import ner_match
 from ner.ner_manual import ner_manual
-from ner.ner_make_gold import ner_make_gold
+from ner.ner_correct import ner_correct
 from ner.ner_silver_to_gold import ner_silver_to_gold
+from ner.ner_eval_ab import ner_eval_ab
 from textcat.textcat_teach import textcat_teach
 from textcat.textcat_custom_model import textcat_custom_model
 from textcat.textcat_manual import textcat_manual
@@ -137,8 +138,8 @@ def test_ner_manual(dataset, spacy_model, source, labels):
     assert 'tokens' in stream[1]
 
 
-def test_ner_make_gold(dataset, spacy_model, source, labels):
-    recipe = ner_make_gold(dataset, spacy_model, source, labels)
+def test_ner_correct(dataset, spacy_model, source, labels):
+    recipe = ner_correct(dataset, spacy_model, source, labels)
     stream = list(recipe['stream'])
     assert recipe['view_id'] == 'ner_manual'
     assert recipe['dataset'] == dataset
@@ -183,6 +184,14 @@ def test_ner_silver_to_gold(dataset, spacy_model):
     assert stream[1]['text'] == 'This is a test'
     assert 'tokens' in stream[1]
 
+def test_ner_eval_ab(dataset, spacy_model, source):
+    recipe = ner_eval_ab(dataset, spacy_model, "blank:en", source, ["ORG"])
+    stream = list(recipe['stream'])
+    print(stream[0])
+    assert stream[0]["A"]["spans"][0]["label"] == "ORG"
+    assert len(stream[0]["B"]["spans"]) == 0
+    assert len(stream[0]["options"]) == 2
+    assert hasattr(recipe['on_exit'], '__call__')
 
 def test_textcat_teach(dataset, spacy_model, source, labels, patterns):
     recipe = textcat_teach(dataset, spacy_model, source, labels, patterns)
