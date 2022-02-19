@@ -56,7 +56,7 @@ def get_compare_questions(a_questions, b_questions):
             order = ["B", "A"]
         else:
             order = ["A", "B"]
-        # Add options for choice interface.
+        # Add options for the choice interface.
         question["options"] = []
         for model_id in order:
             option = question[model_id]
@@ -79,7 +79,7 @@ def print_results(ctrl):
             selected = eg.get("accept", [])
             if not selected or len(selected) != 1 or eg["answer"] != "accept":
                 continue
-        answers[eg["id"]] = (eg["answer"], selected[0])
+            answers[eg["id"]] = (eg["answer"], selected[0])
     for answer, selected in answers.values():
         if answer == "ignore":
             counts["ignore"] += 1
@@ -136,15 +136,16 @@ def ner_eval_ab(
     # Load the stream from a JSONL file and return a generator that yields a
     # dictionary for each example in the data.
     stream = JSONL(source)
+
     if not unsegmented:
         # Use spaCy to split text into sentences
         stream = list(split_sentences(before_nlp, stream))
 
-    # Generate tasks for both streams with the predictions of the models
+    # Generate tasks for both streams with the predictions of the models.
     before_stream = list(make_tasks(before_nlp, label, stream))
     after_stream = list(make_tasks(after_nlp, label, stream))
    
-    # Generate choice tasks with models' predictions as options
+    # Generate choice tasks with models' predictions as options.
     stream = get_compare_questions(before_stream, after_stream)
 
 

@@ -7,6 +7,33 @@ from prodigy.components.loaders import JSONL
 from prodigy.components.preprocess import add_tokens, split_sentences
 from prodigy.util import split_string, set_hashes
 
+def make_tasks(nlp, stream, labels):
+    """Add a 'spans' key to each example, with predicted entities."""
+    # Process the stream using spaCy's nlp.pipe, which yields doc objects.
+    # If as_tuples=True is set, you can pass in (text, context) tuples.
+    texts = ((eg["text"], eg) for eg in stream)
+    for doc, eg in nlp.pipe(texts, as_tuples=True):
+        task = copy.deepcopy(eg)
+        spans = []
+        for ent in doc.ents:
+            # Ignore if the predicted entity is not in the selected labels.
+            if labels and ent.label_ not in labels:
+                continue
+            # Create a span dict for the predicted entity.
+            spans.append(
+                {
+                    "token_start": ent.start,
+                    "token_end": ent.end - 1,
+                    "start": ent.start_char,
+                    "end": ent.end_char,
+                    "text": ent.text,
+                    "label": ent.label_,
+                }
+            )
+        task["spans"] = spans
+        # Rehash the newly created task so that hashes reflect added data.
+        task = set_hashes(task)
+        yield task
 
 
 # Recipe decorator with argument annotations: (description, argument type,
@@ -37,17 +64,17 @@ def ner_correct(
     Create gold-standard data by correcting a model's predictions manually.
     This recipe used to be called `ner.make-gold`.
     """
-    # Load the spaCy model
+    # Load the spaCy model.
     nlp = spacy.load(spacy_model)
 
     labels = label
 
-    # Get existing model labels, if available
+    # Get existing model labels, if available.
     if component not in nlp.pipe_names:
         raise ValueError(f"Can't find component '{component}' in the provided pipeline.")
     model_labels = nlp.pipe_labels.get(component, [])
 
-    # Check if we're annotating all labels present in the model or a subset
+    # Check if we're annotating all labels present in the model or a subset.
     use_all_model_labels = len(set(labels).intersection(set(model_labels))) == len(model_labels)
 
     # Load the stream from a JSONL file and return a generator that yields a
@@ -55,7 +82,7 @@ def ner_correct(
     stream = JSONL(source)
 
     if not unsegmented:
-        # Use spaCy to split text into sentences
+        # Use spaCy to split text into sentences.
         stream = split_sentences(nlp, stream)
 
     # Tokenize the incoming examples and add a "tokens" property to each
@@ -63,59 +90,30 @@ def ner_correct(
     # faster highlighting, because the selection can "snap" to token boundaries.
     stream = add_tokens(nlp, stream)
 
-
-    def make_tasks(nlp, stream, labels):
-        """Add a 'spans' key to each example, with predicted entities."""
-        # Process the stream using spaCy's nlp.pipe, which yields doc objects.
-        # If as_tuples=True is set, you can pass in (text, context) tuples.
-        texts = ((eg["text"], eg) for eg in stream)
-        for doc, eg in nlp.pipe(texts, as_tuples=True):
-            task = copy.deepcopy(eg)
-            spans = []
-            for ent in doc.ents:
-                # Continue if predicted entity is not selected in labels
-                if labels and ent.label_ not in labels:
-                    continue
-                # Create span dict for the predicted entitiy
-                spans.append(
-                    {
-                        "token_start": ent.start,
-                        "token_end": ent.end - 1,
-                        "start": ent.start_char,
-                        "end": ent.end_char,
-                        "text": ent.text,
-                        "label": ent.label_,
-                    }
-                )
-            task["spans"] = spans
-            # Rehash the newly created task so that hashes reflect added data
-            task = set_hashes(task)
-            yield task
+    # Add the entities predicted by the model to the tasks in the stream.
+    stream = make_tasks(nlp, stream, labels)
 
     def make_update(answers):
         """Update the model with the received answers to improve future suggestions"""
         examples = []
-        # Set the default label for the tokens outside provided spans
+        # Set the default label for the tokens outside the provided spans.
         default_label = "outside" if use_all_model_labels else "missing"
         for eg in answers:
             if eg["answer"] == "accept":
                 # Create a "predicted" doc object and a "reference" doc objects to be used
                 # as a training example in the model update. If your examples contain tokenization
-                # make sure not to loose this information by initializing a doc object from scratch.
-                doc = nlp.make_doc(eg["text"])
+                # make sure not to loose this information by initializing the doc object from scratch.
+                pred = nlp.make_doc(eg["text"])
                 ref = nlp.make_doc(eg["text"])
                 spans = [
-                        doc.char_span(span["start"], span["end"], label=span["label"])
-                        for span in eg.get("spans", [])
-                    ]
+                    pred.char_span(span["start"], span["end"], label=span["label"])
+                    for span in eg.get("spans", [])
+                ]
                 # Use the information in spans to set named entites in the document specifying
                 # how to handle the tokens outside the provided spans.
                 ref.set_ents(spans, default=default_label)
-                examples.append(Example(doc, ref))
+                examples.append(Example(pred, ref))
         nlp.update(examples)
-
-    # Add the entities predicted by the model to the tasks in the stream
-    stream = make_tasks(nlp, stream, labels)
 
     return {
         "view_id": "ner_manual",  # Annotation interface to use

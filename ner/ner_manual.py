@@ -49,7 +49,7 @@ def ner_manual(
     The recipe will present all examples in order, so even examples without matches are shown.
     If character highlighting is enabled, no "tokens" are saved to the database.
     """
-    # Load the spaCy model for tokenization
+    # Load the spaCy model for tokenization.
     nlp = spacy.load(spacy_model)
 
     # Load the stream from a JSONL file and return a generator that yields a
@@ -57,8 +57,8 @@ def ner_manual(
     stream = JSONL(source)
 
     # If patterns are provided, apply matcher to the stream, which returns (score, example) tuples.
-    # `all_examples` will display all examples, including the ones without any matches and
-    # `combine_matches` will show all matches in one task as opposed to splitting them to different tasks.
+    # `all_examples=True` will display all examples, including the ones without any matches and
+    # `combine_matches=True` will show all matches in one task as opposed to splitting them to different tasks.
     if patterns is not None:
         pattern_matcher = PatternMatcher(nlp, combine_matches=True, all_examples=True)
         pattern_matcher = pattern_matcher.from_disk(patterns)
