@@ -1,18 +1,17 @@
 from collections import Counter
 from typing import List, Optional
 import random
-import murmurhash
 from tabulate import tabulate
 import spacy
 import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.util import split_string
-from prodigy.components.preprocess import split_sentences
+from prodigy.components.preprocess import split_sentences, set_hashes
 
 
-def make_tasks(nlp, labels, stream, name):
+def make_tasks(nlp, labels, stream):
     """
-        Generate a task for each example in a stream so that contains:
+        Generate a task for each example in a stream so that it contains:
         a unique id, text input and model's predictions as output.
     """
     texts = ((eg["text"], eg) for eg in stream)
@@ -31,20 +30,16 @@ def make_tasks(nlp, labels, stream, name):
             "input": {"text": eg["text"]},
             "output": {"text": eg["text"], "spans": spans},
         }
-        # Set the hashes for the newly created task so as to differentiate
-        # between `before` and `after` streams. Since `before` and `after` are not keys
-        # in the task dictionary the hashes need to be set from scratch
-        # (rather than using Prodigy `set_hashes` utility).
-        task["_input_hash"] = murmurhash.hash(name + str(i))
-        task["_task_hash"] = murmurhash.hash(name + str(i))
+        # Set the hashes for the newly created task
+        task = set_hashes(task)
         yield task
 
 def get_compare_questions(a_questions, b_questions):
-    """Generate evaluation stream that consists of choice type tasks"""
+    """Generate evaluation stream that consists of choice type tasks."""
     a_questions = {a["id"]: a for a in a_questions}
     b_questions = {b["id"]: b for b in b_questions}
     for id_, a in a_questions.items():
-        # Ignore the questions that do not appear in both streams
+        # Ignore the questions that do not appear in both streams.
         if id_ not in b_questions:
             continue
         question = {
@@ -53,47 +48,46 @@ def get_compare_questions(a_questions, b_questions):
             "A": a["output"],
             "B": b_questions[id_]["output"],
         }
-        # Ignore if the answers from both models are the same
+        # Ignore if the answers from both models are the same.
         if question["A"] == question["B"]:
             continue
-        # Randomize the outputs of the compared models
+        # Randomize the order of the outputs of the compared models.
         if  random.random() >= 0.5:
-            question["mapping"] = {"B": "accept", "A": "reject"}
+            order = ["B", "A"]
         else:
-            question["mapping"] = {"A": "accept", "B": "reject"}
-        # Add options for choice interface
+            order = ["A", "B"]
+        # Add options for choice interface.
         question["options"] = []
-        for key in question["mapping"]:
-            option = question[key]
-            option["id"] = key
+        for model_id in order:
+            option = question[model_id]
+            option["id"] = model_id
             question["options"].append(option)
         yield question
-    
+
 def print_results(ctrl):
-    """Print the results of the evaluation to stout"""
+    """Print the results of the evaluation to stout."""
+    # Set the mapping from stream identifiers used in the tasks to meanigful stream names
+    # to be used in the report.
     streamnames = {"A": "Before", "B": "After"}
     examples = ctrl.db.get_dataset(ctrl.dataset)
     counts = Counter()
     answers = {}
-    # Get last example per ID
     for eg in examples:
-        if "answer" not in eg or "mapping" not in eg:
+        if "answer" not in eg:
             continue
-        if "reject" not in eg:  # task created with choice UI
+        if "options" in eg:  # task created with choice UI
             selected = eg.get("accept", [])
             if not selected or len(selected) != 1 or eg["answer"] != "accept":
                 continue
-            eg["answer"] = eg["mapping"].get(selected[0])
-        answers[eg["id"]] = (eg["answer"], eg["mapping"])
-    for answer, mapping in answers.values():
+        answers[eg["id"]] = (eg["answer"], selected[0])
+    for answer, selected in answers.values():
         if answer == "ignore":
             counts["ignore"] += 1
         else:
-            inverse = {v: k for k, v in mapping.items()}
-            answer = inverse[answer]
-            counts[answer] += 1
+            counts[selected] += 1
     if not counts:
-        raise ValueError("No answers found")
+        raise ValueError("No answers found!")
+
     print("Evaluation results")
     pref, _ = counts.most_common(1)[0]
     if counts["A"] == counts["B"]:
@@ -133,24 +127,25 @@ def ner_eval_ab(
     unsegmented: bool = False,
 ):
     """
-    Evaluate two NER models by comparing their predictions and building an evaluation set from a stream.
+    Evaluate two NER models by comparing their predictions and building an evaluation set from the stream.
     """
 
     before_nlp = spacy.load(before_model)
     after_nlp = spacy.load(after_model)
 
-    # Load the stream from a JSONL file and convert the resulting generator to a list of
-    # dictionaries of examples.
-    # In this recipe we need to work with entire streams as lists to be able to generate comparison tasks.
-    stream = list(JSONL(source))
+    # Load the stream from a JSONL file and return a generator that yields a
+    # dictionary for each example in the data.
+    stream = JSONL(source)
     if not unsegmented:
         # Use spaCy to split text into sentences
         stream = list(split_sentences(before_nlp, stream))
-    
-    before_stream = list(make_tasks(before_nlp, label, stream, "before"))
-    after_stream = list(make_tasks(after_nlp, label, stream, "after"))
-    
-    stream = list(get_compare_questions(before_stream, after_stream))
+
+    # Generate tasks for both streams with the predictions of the models
+    before_stream = list(make_tasks(before_nlp, label, stream))
+    after_stream = list(make_tasks(after_nlp, label, stream))
+   
+    # Generate choice tasks with models' predictions as options
+    stream = get_compare_questions(before_stream, after_stream)
 
 
     return {
@@ -160,5 +155,5 @@ def ner_eval_ab(
         "on_exit": print_results,
         # Action to perform when the user stops the server. Here: print the evaluation results to stdout
         "exclude": exclude, # List of dataset names to exclude
-        "config": {"auto_count_stream": True}, # Whether to recount the stream at initialization 
+        "config": {"auto_count_stream": True}, # Whether to recount the stream at initialization
     }
