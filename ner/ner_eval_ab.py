@@ -1,7 +1,7 @@
 from collections import Counter
 from typing import List, Optional
 import random
-from tabulate import tabulate
+from wasabi import msg
 import spacy
 import prodigy
 from prodigy.components.loaders import JSONL
@@ -88,20 +88,20 @@ def print_results(ctrl):
     if not counts:
         raise ValueError("No answers found!")
 
-    print("Evaluation results")
+    msg.divider("Evaluation results")
     pref, _ = counts.most_common(1)[0]
     if counts["A"] == counts["B"]:
-        print("You had no preference")
+        msg.info("You had no preference")
         pref = None
     else:
-        print(f"You preferred {pref} ({streamnames.get(pref)})")
+        msg.good(f"You preferred {pref} ({streamnames.get(pref)})")
     rows = [
         ("A", counts["A"], streamnames.get("A")),
         ("B", counts["B"], streamnames.get("B")),
         ("Ignored", counts["ignore"], ""),
         ("Total", sum(counts.values()), ""),
     ]
-    print(tabulate(rows))
+    msg.table(rows, aligns=("l", "r", "l"))
 
 
 # Recipe decorator with argument annotations: (description, argument type,
