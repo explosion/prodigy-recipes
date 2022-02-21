@@ -65,7 +65,7 @@ def get_compare_questions(a_questions, b_questions):
         yield question
 
 def print_results(ctrl):
-    """Print the results of the evaluation to stout."""
+    """Print the results of the evaluation to stdout."""
     # Set the mapping from stream identifiers used in the tasks to meanigful stream names
     # to be used in the report.
     streamnames = {"A": "Before", "B": "After"}
