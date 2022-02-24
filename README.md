@@ -59,9 +59,10 @@ You can edit the code in the recipe script to customize how Prodigy behaves.
 | [`ner.manual`](ner/ner_manual.py)                    | Mark spans manually by token. Requires only a tokenizer and no entity recognizer, and doesn't do any active learning. Optionally, pre-highlight spans based on patterns.
 | [`ner.fuzzy_manual`](ner/ner_fuzzy_manual.py)                    | Like `ner.manual` but use `FuzzyMatcher` from [`spaczz`](https://github.com/gandersen101/spaczz) library to pre-highlight candidates.   |
 | [`ner.manual.bert`](other/transformers_tokenizers.py) | Use BERT word piece tokenizer for efficient manual NER annotation for transformer models.                                                                                                                                                                 |
-| [`ner.correct`](ner/ner_correct.py)              | Create gold-standard data by correcting a model's predictions manually. This recipe used to be called `ner.make_gold`.                                                                                                                                                                                  |
+| [`ner.correct`](ner/ner_correct.py)              | Create gold-standard data by correcting a model's predictions manually. This recipe used to be called [`ner.make_gold`](ner/ner_make_gold.py).                                                                                                                                                                                  |
 | [`ner.silver-to-gold`](ner/ner_silver_to_gold.py)    | Take an existing "silver" dataset with binary accept/reject annotations, merge the annotations to find the best possible analysis given the constraints defined in the annotations, and manually edit it to create a perfect and complete "gold" dataset. |
 | [`ner.eval_ab`](ner/ner_eval_ab.py)    | Evaluate two NER models by comparing their predictions and building an evaluation set from the stream. |
+| [`ner_fuzzy_manual`](ner/ner_fuzzy_manual.py) | Mark spans manually by token with suggestions from [`spaczz fuzzy`](https://spacy.io/universe/project/spaczz) matcher pre-highlighted.
 
 ### Text Classification
 
@@ -95,7 +96,6 @@ You can edit the code in the recipe script to customize how Prodigy behaves.
 | [`mark`](other/mark.py)                             | Click through pre-prepared examples, with no model in the loop.                                                                                                    |
 | [`choice`](other/choice.py)                         | Annotate data with multiple-choice options. The annotated examples will have an additional property `"accept": []` mapping to the ID(s) of the selected option(s). |
 | [`question_answering`](other/question_answering.py) | Annotate question/answer pairs with a custom HTML interface.                                                                                                       |
-| [`ner_fuzzy_manual`](other/ner_fuzzy_manual.py) | Mark spans manually by token with suggestions from [`spaczz fuzzy`](https://spacy.io/universe/project/spaczz) matcher pre-highlighted.
 
 ### Community recipes
 
