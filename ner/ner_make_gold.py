@@ -55,6 +55,9 @@ def ner_make_gold(
     exclude: Optional[List[str]] = None,
 ):
     """
+    There exist an updated version of this recipe called `ner_correct.py`.
+    This recipe is kept for legacy reasons.
+
     Create gold-standard data by correcting a model's predictions manually.
     """
     # Load the spaCy model
