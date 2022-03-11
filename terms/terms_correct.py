@@ -64,18 +64,18 @@ def add_spans(stream):
     "terms.correct",
     dataset=("The dataset to use", "positional", None, str),
     vectors=("Loadable spaCy model with word vectors", "positional", None, str),
-    seeds=("One or more comma-separated seed terms or patterns file", "option", "s", get_seeds),
+    seeds=("One or more comma-separated seed terms or patterns file", "positional", None, get_seeds),
     labels=("One or more comma-separated labels or txt file with one label per line", "option", "l", get_labels),
 )
-def terms_correct(dataset: str, vectors: str, seeds:  Optional[Union[str, Path]], labels:  Optional[Union[str, Path]]):
+def terms_correct(dataset: str, vectors: str, seeds: Union[str, Path], labels:  Optional[Union[str, Path]]):
     """
         Bootstrap a terminology list with word vectors and seed terms. Prodigy
-        will suggest similar terms based on the word vectors, and update the
-        target semantic model accordingly. The suggestions from the semantic model
+        will suggest similar terms based on the provided word vectors, and update the
+        target semantic model according to the user's feedback. The suggestions from the vectors    
         can be edited manually by highlighting a substring of interest.
         This is especially useful when working with multiword expressions. If labels
-        are provided, they will be suggested as well with the possibility to correct them
-        (remove the label or select another label from the list).
+        are provided, they will be suggested as well with the possibility to correct them 
+        by removing the label or selecting another label from the list.
     """
 
     # Load the spaCy model with vectors
