@@ -1,0 +1,3 @@
+recordlinkage==0.14
+jupyterlab==3.0.0
+clumper==0.2.15
