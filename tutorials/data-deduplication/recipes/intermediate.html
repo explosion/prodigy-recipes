@@ -1,0 +1,55 @@
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;
+        overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px;
+        font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+    .highlight{
+        background-color: #fcd4bc;
+    }
+    .highlight-lite{
+        background-color: #faead4;
+    }
+</style>
+<h2>Are these items similar?</h2>
+<table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-0pky {{ 'highlight' if item1['given_name'] != item2['given_name'] }}">given_name</th>
+        <th class="tg-0pky {{ 'highlight' if item1['surname'] != item2['surname'] }}">surname</th>
+        <th class="tg-0pky {{ 'highlight' if item1['street_number'] != item2['street_number'] }}">street_number</th>
+        <th class="tg-0lax {{ 'highlight' if item1['address_1'] != item2['address_1'] }}">address_1</th>
+        <th class="tg-0lax {{ 'highlight' if item1['address_2'] != item2['address_2'] }}">address_2</th>
+        <th class="tg-0lax {{ 'highlight' if item1['suburb'] != item2['suburb'] }}">suburb</th>
+        <th class="tg-0lax {{ 'highlight' if item1['postcode'] != item2['postcode'] }}">postcode</th>
+        <th class="tg-0lax {{ 'highlight' if item1['state'] != item2['state'] }}">state</th>
+        <th class="tg-0lax {{ 'highlight' if item1['soc_sec_id'] != item2['soc_sec_id'] }}">soc_sec_id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="tg-0pky {{ 'highlight-lite' if item1['given_name'] != item2['given_name'] }}">{{item1['given_name']}}</th>
+        <th class="tg-0pky {{ 'highlight-lite' if item1['surname'] != item2['surname'] }}">{{item1['surname']}}</th>
+        <th class="tg-0pky {{ 'highlight-lite' if item1['street_number'] != item2['street_number'] }}">{{item1['street_number']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['address_1'] != item2['address_1'] }}">{{item1['address_1']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['address_2'] != item2['address_2'] }}">{{item1['address_2']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['suburb'] != item2['suburb'] }}">{{item1['suburb']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['postcode'] != item2['postcode'] }}">{{item1['postcode']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['state'] != item2['state'] }}">{{item1['state']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['soc_sec_id'] != item2['soc_sec_id'] }}">{{item1['soc_sec_id']}}</th>
+      </tr>
+      <tr>
+        <th class="tg-0pky {{ 'highlight-lite' if item1['given_name'] != item2['given_name'] }}">{{item2['given_name']}}</th>
+        <th class="tg-0pky {{ 'highlight-lite' if item1['surname'] != item2['surname'] }}">{{item2['surname']}}</th>
+        <th class="tg-0pky {{ 'highlight-lite' if item1['street_number'] != item2['street_number'] }}">{{item2['street_number']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['address_1'] != item2['address_1'] }}">{{item2['address_1']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['address_2'] != item2['address_2'] }}">{{item2['address_2']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['suburb'] != item2['suburb'] }}">{{item2['suburb']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['postcode'] != item2['postcode'] }}">{{item2['postcode']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['state'] != item2['state'] }}">{{item2['state']}}</th>
+        <th class="tg-0lax {{ 'highlight-lite' if item1['soc_sec_id'] != item2['soc_sec_id'] }}">{{item2['soc_sec_id']}}</th>
+      </tr>
+    </tbody>
+</table>
