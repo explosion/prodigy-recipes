@@ -1,4 +1,4 @@
-jupyterlab==3.0.0
+jupyterlab==3.0.17
 clumper==0.2.15
 fastapi==0.68.2
 matplotlib==3.5.1
