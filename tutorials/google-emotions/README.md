@@ -1,6 +1,6 @@
 # prodigy-google-emotions-demo
 
-This project contains a few recipes to find bad labels in the [Google Emotions dataset](https://github.com/google-research/google-research/tree/master/goemotions). In particular, we will try to find bad labels for the "excitement" emotion.
+This project contains a few tricks to find bad labels in the [Google Emotions dataset](https://github.com/google-research/google-research/tree/master/goemotions). In particular, we will try to find bad labels for the "excitement" emotion.
 
 ![](demo.png)
 
