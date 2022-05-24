@@ -10,7 +10,8 @@ If you're curious, this project is the end-result of [this Youtube tutorial](htt
 
 The dataset comes from Reddit, which is known for vulgar language. An effort
 has been made to clean the data of the most horrible comments, but one should
-beware of the highly insensitive nature of some of the comments. 
+beware of the highly insensitive nature of some of the comments. To learn more
+about how the data was cleaned, read the [paper](https://arxiv.org/abs/2005.00547).
 
 ## Installation 
 
