@@ -1,0 +1,4 @@
+pandas==1.3.5
+doubtlab==0.2.3
+whatlies[tfhub]==0.6.5
+jupyterlab==3.3.4
