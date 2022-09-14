@@ -48,7 +48,7 @@ def validate_answer(answer: TaskType, *, known_answers: List[TaskType]):
                 if expected_spans:
                     error_msg += "\n"
                     for span_msg in expected_spans:
-                        error_msg += f"- {span_msg}"
+                        error_msg += f"\t- {span_msg}"
                     error_msg += "\n"
                 raise ValueError(error_msg)
 
