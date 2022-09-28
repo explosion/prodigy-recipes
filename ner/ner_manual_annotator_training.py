@@ -14,42 +14,56 @@ from prodigy.recipes.ner import remove_tokens
 
 
 def spans_equal(s1: Dict[str, Any], s2: Dict[str, Any]) -> bool:
-    return s1["label"] == s2["label"] and s1["start"] == s2["start"] and s1["end"] == s2["end"]
+    return s1["start"] == s2["start"] and s1["end"] == s2["end"]
+
+
+def labels_equal(s1: Dict[str, Any], s2: Dict[str, Any]) -> bool:
+    return s1["label"] == s2["label"]
 
 
 def ensure_span_text(eg: TaskType) -> TaskType:
     for span in eg["spans"]:
         if "text" not in span:
-            span["text"] = eg["text"][span["start"]:span["end"]]
+            span["text"] = eg["text"][span["start"] : span["end"]]
     return eg
 
 
 def validate_answer(answer: TaskType, *, known_answers: List[TaskType]):
-
+    explanation_boundary = 'Se debe anotar el nombre completo sin signos de puntuación ni determinantes a no ser que forman parte del nombre completo.\nPara más información consulte Paso 2 en el documento "Descripción de Tarea"'
     for known_answer in known_answers:
         known_answer = ensure_span_text(known_answer)
         if known_answer[INPUT_HASH_ATTR] == answer[INPUT_HASH_ATTR]:
             errors = []
             known_spans = known_answer["spans"]
             answer_spans = answer["spans"]
+            explanation_label = known_answer["meta"]["explanation_label"]
+            #explanation_boundary = known_answer["meta"]["explanation_boundary"]
 
             if len(known_spans) > len(answer_spans):
-                errors.append("You annotated less spans than expected for this answer.")
+                errors.append('Anotó menos entidades de los esperados para esta respuesta. Todas las menciones deben estár anotadas.\nPara mas información consulte el apartado C2 de la Guía.'
+                )
             elif len(known_spans) < len(answer_spans):
-                errors.append("You annotated more spans than expected for this answer.")
+                errors.append(
+                    "Anotó más entidades de los esperados para esta respuesta."
+                )
             for known_span, span in zip(known_answer["spans"], answer["spans"]):
                 if not spans_equal(known_span, span):
-                    errors.append("Your NER annotations differed from the expected annoations for this answer.")
+                    # boundary error
+                    errors.append(explanation_boundary)
+                elif not labels_equal(known_span, span):
+                    # label error
+                    errors.append(explanation_label)
 
             if len(errors) > 0:
                 error_msg = "\n".join(errors)
-                expected_spans = [f'[{s["text"]}]: {s["label"]}' for s in known_answer["spans"]]
-                error_msg += f"\nExpected Annotations:"
+                expected_spans = [
+                    f'[{s["text"]}]: {s["label"]}' for s in known_answer["spans"]
+                ]
+                error_msg += f"\n\nAnotaciones esperadas:"
                 if expected_spans:
                     error_msg += "\n"
                     for span_msg in expected_spans:
-                        error_msg += f"\t- {span_msg}"
-                    error_msg += "\n"
+                        error_msg += span_msg + "\n"
                 raise ValueError(error_msg)
 
 
@@ -101,12 +115,14 @@ def annotator_training(
         input_key="text",
         is_binary=False,
     )
-    known_answers = list(get_stream(
-        source,
-        loader=loader,
-        input_key="text",
-        is_binary=False,
-    ))
+    known_answers = list(
+        get_stream(
+            known_answers,
+            loader=loader,
+            input_key="text",
+            is_binary=False,
+        )
+    )
     if patterns is not None:
         pattern_matcher = PatternMatcher(nlp, combine_matches=True, all_examples=True)
         pattern_matcher = pattern_matcher.from_disk(patterns)
