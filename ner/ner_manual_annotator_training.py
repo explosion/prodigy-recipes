@@ -29,41 +29,45 @@ def ensure_span_text(eg: TaskType) -> TaskType:
 
 
 def validate_answer(answer: TaskType, *, known_answers: List[TaskType]):
-    explanation_boundary = 'Se debe anotar el nombre completo sin signos de puntuación ni determinantes a no ser que forman parte del nombre completo.\nPara más información consulte Paso 2 en el documento "Descripción de Tarea"'
     for known_answer in known_answers:
         known_answer = ensure_span_text(known_answer)
         if known_answer[INPUT_HASH_ATTR] == answer[INPUT_HASH_ATTR]:
             errors = []
-            known_spans = known_answer["spans"]
-            answer_spans = answer["spans"]
-            explanation_label = known_answer["meta"]["explanation_label"]
-            #explanation_boundary = known_answer["meta"]["explanation_boundary"]
+            known_spans = known_answer.get("spans",[])
+            answer_spans = answer.get("spans",[])
+            explanation_label = known_answer.get("meta",{}).get("explanation_label")
+            explanation_boundaries = known_answer.get("meta", {}).get("explanation_boundary")
+            if not explanation_boundaries:
+                explanation_boundaries = 'Se debe anotar el nombre completo sin signos de puntuación,  determinantes o modificadores, a no ser que forman parte del nombre propio. Para más información consulte Paso 2 en el documento \"Descripción de la tarea\"'
 
             if len(known_spans) > len(answer_spans):
-                errors.append('Anotó menos entidades de los esperados para esta respuesta. Todas las menciones deben estár anotadas.\nPara mas información consulte el apartado C2 de la Guía.'
+                errors.append('Anotó menos entidades de las esperadas para esta respuesta. Todas las menciones deben estar anotadas. Para más información consulte el apartado C2 de la Guía'
                 )
             elif len(known_spans) < len(answer_spans):
                 errors.append(
-                    "Anotó más entidades de los esperados para esta respuesta."
+                    'Anotó más entidades de las esperadas para esta respuesta.' 
                 )
-            for known_span, span in zip(known_answer["spans"], answer["spans"]):
+            for known_span, span in zip(known_answer.get("spans",[]), answer.get("spans",[])):
                 if not spans_equal(known_span, span):
                     # boundary error
-                    errors.append(explanation_boundary)
+                    errors.append(explanation_boundaries)
                 elif not labels_equal(known_span, span):
                     # label error
                     errors.append(explanation_label)
 
             if len(errors) > 0:
                 error_msg = "\n".join(errors)
-                expected_spans = [
-                    f'[{s["text"]}]: {s["label"]}' for s in known_answer["spans"]
-                ]
-                error_msg += f"\n\nAnotaciones esperadas:"
-                if expected_spans:
-                    error_msg += "\n"
-                    for span_msg in expected_spans:
-                        error_msg += span_msg + "\n"
+                if known_spans:
+                    expected_spans = [
+                        f'[{s["text"]}]: {s["label"]}' for s in known_spans
+                    ]
+                    error_msg += f"\n\nAnotaciones esperadas:"
+                    if expected_spans:
+                        error_msg += "\n"
+                        for span_msg in expected_spans:
+                            error_msg += span_msg + "\n"
+                else:
+                    error_msg += f"\n\nNo hay entidades para anotar"
                 raise ValueError(error_msg)
 
 
@@ -127,6 +131,9 @@ def annotator_training(
         pattern_matcher = PatternMatcher(nlp, combine_matches=True, all_examples=True)
         pattern_matcher = pattern_matcher.from_disk(patterns)
         stream = (eg for _, eg in pattern_matcher(stream))
+
+    default_explanation_boundaries = 'Se debe anotar el nombre completo sin signos de puntuación,  determinantes o modificadores, a no ser que forman parte del nombre propio. Para más información consulte Paso 2 en el documento \"Descripción de la tarea\"'
+
     # Add "tokens" key to the tasks, either with words or characters
     stream = add_tokens(nlp, stream, use_chars=highlight_chars)
 
