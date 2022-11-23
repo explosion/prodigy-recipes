@@ -105,6 +105,15 @@ You can edit the code in the recipe script to customize how Prodigy behaves.
 | `phrases.to-patterns`            | @kabirkhan | Now part of [`sense2vec`](https://github.com/explosion/sense2vec).                                      |
 | [`records.link`](contrib/dedupe) | @kabirkhan | Link records across multiple datasets using the [`dedupe`](https://github.com/dedupeio/dedupe) library. |
 
+### Tutorial recipes
+
+These recipes have made an appearance in one of our tutorials. 
+
+| Recipe                                            | Description                                                                                             |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [`span-and-textcat`](tutorials/span-and-textcat/) | Do both spancat and textcat annotations at the same time. Great for chatbots!                           |
+| [`terms.from-ner`](tutorials/terms-from-ner/)     | Generate terms from previous NER annotations                                                            |
+
 ## 📚 Example Datasets and Patterns
 
 To make it even easier to get started, we've also included a few

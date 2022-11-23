@@ -6,7 +6,7 @@ This folder contains a recipe that allows you to turn your pre-existing NER anno
 
 ## Try it out 
 
-To try this recipe, you can start by first annotating some data from `news_headlines.jsonl`, via; 
+To try this recipe, you can start by first annotating some data from `news_headlines.jsonl` (found in the `example-datasets` folder), via; 
 
 ```
 python -m prodigy ner.manual news_demo blank:en news_headlines.jsonl --label PERSON,ORG,PRODUCT,LOCATION
