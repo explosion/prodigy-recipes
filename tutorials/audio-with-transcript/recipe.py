@@ -1,6 +1,5 @@
-import prodigy 
 from typing import List, Optional, Union, Iterable
-
+import prodigy 
 from prodigy.components.loaders import get_stream
 from prodigy.components.preprocess import fetch_media as fetch_media_preprocessor
 from prodigy.util import log, msg, get_labels, split_string

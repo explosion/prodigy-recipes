@@ -112,7 +112,7 @@ These recipes have made an appearance in one of our tutorials.
 | Recipe                                                      | Description                                                                                   |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | [`span-and-textcat`](tutorials/span-and-textcat/)           | Do both spancat and textcat annotations at the same time. Great for chatbots!                 |
-| [`terms.from-ner`](tutorials/terms-from-ner/)               | Generate terms from previous NER annotations                                                  |
+| [`terms.from-ner`](tutorials/terms-from-ner/)               | Generate terms from previous NER annotations.                                                 |
 | [`audio-with-transcript`](tutorials/audio-with-transcript/) | Handles both manual audio annotation as well as transcription.                                |
 | [`progress`](tutorials/progress-update)                     | Demo of an `update`-callback that tracks annotation speed.                                    |
 
