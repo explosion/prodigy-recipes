@@ -6,4 +6,4 @@ This project shows a demo of the `update()` callback that can keep track of your
 
 ![](demo.png)
 
-It was part of [this prodigy short])(https://youtu.be/uBtOebwnTRs).
+It was part of [this prodigy short](https://youtu.be/uBtOebwnTRs).
