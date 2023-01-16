@@ -13,7 +13,7 @@ def add_label_options_to_stream(stream, labels):
 
 def add_labels_to_stream(stream, labels):
     for task in stream:
-        task["label"] = label[0]
+        task["label"] = labels[0]
         yield task
 
 # Recipe decorator with argument annotations: (description, argument type,
