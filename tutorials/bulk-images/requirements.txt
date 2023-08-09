@@ -4,3 +4,4 @@ jupyterlab==3.4.8
 embetter[vision]==0.2.0 
 scikit-learn==1.1.2
 umap-learn==0.5.3
+bokeh<3
