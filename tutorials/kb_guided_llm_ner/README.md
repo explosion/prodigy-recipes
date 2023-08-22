@@ -11,11 +11,11 @@ It uses DBpedia Spotlight entity linker as a KB via [`spacy-dbpedia-spotlight`](
 
 ## Try it out 
 
-To try this recipe make sure you have at least Prodigy 1.13 installed as well as `dpacy-dbpedia-spotlight` (listed in `requirements.txt`).
+To try this recipe make sure you have at least Prodigy 1.13 installed as well as `spacy-dbpedia-spotlight` (listed in `requirements.txt`).
 
 Have some input data available, for example `news_headlines.jsonl` (found in the `example-datasets` folder).
 
-Adapt the `spacy-llm` config file: `spacy.cfg` to use the LLM of your choice (make sure the name of the component is `llm`).
+Adapt the `spacy-llm` config file: `spacy.cfg` to use the LLM of your choice (make sure the name of the component is `llm`). Here you can find our [guide](https://prodi.gy/docs/large-language-models#getting-started-spacy-llm) on how to work with [`spacy-llm`](https://github.com/explosion/spacy-llm)
 
 To start the server run (assuming the environment variables for the LLM API are in `.env` file):
 ```
@@ -28,4 +28,7 @@ You can now curate the examples and flag the ones that require some further post
 
 DBpedia spotlight is a general domain knowledge base, but you can use your domain specific knowledge base in a similar way to even better constraint the LLM annotations and find new entities to feed back to your KB.
 
-Please note the usability of this workflow depends a lot on how good your entity linker is. 
+## Things to watch out for
+
+* Please note the usability of this workflow depends a lot on how good your entity linker is.
+* Another assumption of this workflow is that there is a correspondence between the LLM labels and the KB labels. This the reason we use `Person` and `Organisation` and not `PER` and `ORG`. You need to get familiar with DBPedia types to extend/adjust it to other labels.
