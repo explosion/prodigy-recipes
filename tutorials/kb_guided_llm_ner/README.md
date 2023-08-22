@@ -30,5 +30,7 @@ DBpedia spotlight is a general domain knowledge base, but you can use your domai
 
 ## Things to watch out for
 
-* Please note the usability of this workflow depends a lot on how good your entity linker is.
-* Another assumption of this workflow is that there is a correspondence between the LLM labels and the KB labels. This the reason we use `Person` and `Organisation` and not `PER` and `ORG`. You need to get familiar with DBPedia types to extend/adjust it to other labels.
+The main objective of this recipe is to show how LLMs and KBs can be used in tandem to facilitate the annotation process, not to provide a flexible solution. You will probably need to adjust it quite a lot to your use case and for that there are some caveates that should be highlighted upfront:
+
+* Please note the usefulness of this workflow depends a lot on how good your entity linker is.
+* Another assumption is that there is a correspondence between the LLM labels and the KB labels. This the reason we use `Person` and `Organisation` and not `PER` and `ORG`. You need to get familiar with DBPedia types to extend/adjust it to other labels.
