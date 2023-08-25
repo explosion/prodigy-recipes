@@ -1,6 +1,6 @@
 # Bootstrapping NER annotations with a Large Language Model and a Knowledge Base
 
-This folders contains a recipe which uses both a LLM and a KB to pre-annotate text with NER labels.
+This folders contains a recipe which uses both an LLM and a KB to pre-annotate text with NER labels.
 Whenever LLM annotations are not present in the KB or the labels do not correspond a warning is shown in the UI.
 If the LLM annotations are successfully validated by the KB, the annotations can be automatically accepted reducing the number of examples that an annotator must curate.
 
