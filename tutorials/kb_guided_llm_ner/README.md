@@ -22,7 +22,7 @@ To start the server run (assuming the environment variables for the LLM API are 
 dotenv run -- python -m prodigy ner.llm.kb.correct ner-annotated spacy.cfg news_headlines.jsonl Person,Organisation -F ner_llm_kb_correct.py
 ```
 
-When setting `-V` flag, the examples that are successfully validated by the KB will be automatically accepted.
+When setting the `-V` flag, the examples that are successfully validated by the KB will be automatically accepted.
 
 You can now curate the examples and flag the ones that require some further postprocessing. For example, you could use the [flag feature](https://prodi.gy/docs/api-web-app#flagging) to mark the examples that should be used for augmenting your custom KB.
 
