@@ -24,7 +24,7 @@ dotenv run -- python -m prodigy ner.llm.kb.correct ner-annotated spacy.cfg news_
 
 When setting `-V` flag, the examples that are successfully validated by the KB will be automatically accepted.
 
-You can now curate the examples and flag the ones that require some further postprocessing. For example, you could use the flag feature to mark the examples that should be used for augmenting your custom KB.
+You can now curate the examples and flag the ones that require some further postprocessing. For example, you could use the [flag feature](https://prodi.gy/docs/api-web-app#flagging) to mark the examples that should be used for augmenting your custom KB.
 
 DBpedia spotlight is a general domain knowledge base, but you can use your domain specific knowledge base in a similar way to even better constraint the LLM annotations and find new entities to feed back to your KB.
 
