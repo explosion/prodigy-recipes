@@ -4,7 +4,7 @@ This folders contains a recipe which uses both a LLM and a KB to pre-annotate te
 Whenever LLM annotations are not present in the KB or the labels do not correspond a warning is shown in the UI.
 If the LLM annotations are successfully validated by the KB, the annotations can be automatically accepted reducing the number of examples that an annotator must curate.
 
-This recipe is a customised (and simplified) version of Prodigy `ner.llm.correct` recipe.
+This recipe is a customised (and simplified) version of Prodigy [`ner.llm.correct`](https://prodi.gy/docs/recipes#ner-llm.correct) recipe.
 It uses DBpedia Spotlight entity linker as a KB via [`spacy-dbpedia-spotlight`](https://github.com/MartinoMensio/spacy-dbpedia-spotlight) library. 
 
 ![](demo.png)
