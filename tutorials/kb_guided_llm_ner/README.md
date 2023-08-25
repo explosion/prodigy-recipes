@@ -1,10 +1,10 @@
 # Bootstrapping NER annotations with a Large Language Model and a Knowledge Base
 
-This folders contains a recipe which uses both an LLM and a KB to pre-annotate text with NER labels.
+This folder contains a recipe which uses both an LLM and a KB to pre-annotate text with NER labels.
 Whenever LLM annotations are not present in the KB or the labels do not correspond a warning is shown in the UI.
 If the LLM annotations are successfully validated by the KB, the annotations can be automatically accepted reducing the number of examples that an annotator must curate.
 
-This recipe is a customised (and simplified) version of Prodigy [`ner.llm.correct`](https://prodi.gy/docs/recipes#ner-llm.correct) recipe.
+This recipe is a customised (and simplified) version of the Prodigy [`ner.llm.correct`](https://prodi.gy/docs/recipes#ner-llm.correct) recipe.
 It uses DBpedia Spotlight entity linker as a KB via [`spacy-dbpedia-spotlight`](https://github.com/MartinoMensio/spacy-dbpedia-spotlight) library. 
 
 ![](demo.png)
@@ -19,14 +19,18 @@ Adapt the `spacy-llm` config file: `spacy.cfg` to use the LLM of your choice (ma
 
 To start the server run (assuming the environment variables for the LLM API are in `.env` file):
 ```
-dotenv run -- python -m prodigy ner.llm.kb.correct ner-annotated spacy.cfg news_headlines.jsonl Person,Organisation -F ner_llm_kb_correct.py
+dotenv run -- python -m prodigy ner.llm.kb.correct ner-annotated spacy.cfg news_headlines.jsonl -F ner_llm_kb_correct.py
 ```
+
+Please note that the NER labels to be used will be sourced from the spaCy config provided (here `spact.cfg`)
 
 When setting the `-V` flag, the examples that are successfully validated by the KB will be automatically accepted.
 
 You can now curate the examples and flag the ones that require some further postprocessing. For example, you could use the [flag feature](https://prodi.gy/docs/api-web-app#flagging) to mark the examples that should be used for augmenting your custom KB.
 
 DBpedia spotlight is a general domain knowledge base, but you can use your domain specific knowledge base in a similar way to even better constraint the LLM annotations and find new entities to feed back to your KB.
+
+If you're interested in building a custom KB as a spaCy pipeline we recommend considering spaCy [`KnowledgeBase`](https://spacy.io/api/kb/#:~:text=The%20KnowledgeBase%20object%20is%20an%20abstract%20class%20providing,as%20its%20frequency%20in%20text%20and%20possible%20aliases.). If your KB is behing a REST API (just like DBPedia Spotlight here) that also can be built into a spaCy component. You can find some examples in spaCy [docs](https://spacy.io/usage/processing-pipelines/#component-example3).
 
 ## Things to watch out for
 

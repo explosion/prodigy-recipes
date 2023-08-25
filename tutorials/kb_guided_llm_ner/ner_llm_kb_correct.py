@@ -154,7 +154,7 @@ def add_ner_annotations(
     dataset=("Dataset to save answers to", "positional", None, str),
     config_path=("Path to the spacy-llm config file", "positional", None, str),
     source=("Data to annotate (file path or '-' to read from standard input)", "positional", None, str),
-    labels=("Comma-separated label(s) to annotate or text file with one label per line", "positional", None, split_string),
+    lang=("Language to be used for DBpedia Spotlight. Defaults to English", "option", "l", str),
     loader=("Loader (guessed from file extension if not set)", "option", "lo", str),
     segment=("Split articles into sentences", "flag", "S", bool),
     skip_validated=("Skip examples that are validated by KB", "flag", "V", bool),
@@ -164,7 +164,7 @@ def llm_kb_correct_ner(
     dataset: str,
     config_path: Path,
     source: Union[str, Iterable[dict]],
-    labels: List[str],
+    lang: str = "en",
     loader: Optional[str] = None,
     segment: bool = False,
     skip_validated: bool = False,
@@ -177,9 +177,11 @@ def llm_kb_correct_ner(
     config_overrides = {}
     config_overrides["components.llm.save_io"] = True
     config_overrides["components.dbpedia-spotlight.overwrite_ents"] = False
-    # In case of API auth errors the following call to `assemble` will throw a UserWarning
-    # rather than an Exception, which makes it hard for us to gracefully handle here.
+    config_overrides["components.dbpedia-spotlight.language_code"] = lang
+   
     nlp = assemble(config_path, overrides=config_overrides)
+    nlp_labels = nlp.pipe_labels["llm"]
+
     stream = get_stream(
         source,
         loader=loader,
@@ -194,7 +196,7 @@ def llm_kb_correct_ner(
 
     stream.apply(add_tokens, nlp=nlp, stream=stream)
 
-    stream.apply(add_ner_annotations, nlp=nlp, labels=labels)
+    stream.apply(add_ner_annotations, nlp=nlp, labels=nlp_labels)
     stream.apply(validate_predictions)
     if skip_validated:
         stream.apply(filter_validated, stream=stream)
@@ -204,7 +206,7 @@ def llm_kb_correct_ner(
         "stream": stream,
         "config": {
             "batch_size": DEFAULT_BATCH_SIZE,
-            "labels": labels,
+            "labels": nlp_labels,
             "exclude_by": "input",
             "blocks": [
                 {"view_id": "ner_manual"},

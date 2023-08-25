@@ -1,1 +1,1 @@
-spacy-dbpedia-spotlight
+spacy-dbpedia-spotlight>=0.2.6,<0.3.0
