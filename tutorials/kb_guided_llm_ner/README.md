@@ -30,9 +30,9 @@ You can now curate the examples and flag the ones that require some further post
 
 DBpedia spotlight is a general domain knowledge base, but you can use your domain specific knowledge base in a similar way to even better constraint the LLM annotations and find new entities to feed back to your KB.
 
-If you have an non-English LLM backend that supports, you can also set DBpedia Spotlight accordingly by setting `-l` flag on the CLI. You can check the list of supported languages [here](https://github.com/MartinoMensio/spacy-dbpedia-spotlight#using-dbpedia-in-a-specific-language).
+If you have an non-English LLM backend, you can also set DBpedia Spotlight accordingly by setting `-l` flag on the CLI. You can check the list of supported languages [here](https://github.com/MartinoMensio/spacy-dbpedia-spotlight#using-dbpedia-in-a-specific-language).
 
-If you're interested in building a custom KB as a spaCy pipeline we recommend considering spaCy [`KnowledgeBase`](https://spacy.io/api/kb/#:~:text=The%20KnowledgeBase%20object%20is%20an%20abstract%20class%20providing,as%20its%20frequency%20in%20text%20and%20possible%20aliases.). If your KB is behing a REST API (just like DBPedia Spotlight here) that also can be built into a spaCy component. You can find some examples in spaCy [docs](https://spacy.io/usage/processing-pipelines/#component-example3).
+If you're interested in building a custom KB as a spaCy pipeline we recommend considering spaCy [`KnowledgeBase`](https://spacy.io/api/kb/#:~:text=The%20KnowledgeBase%20object%20is%20an%20abstract%20class%20providing,as%20its%20frequency%20in%20text%20and%20possible%20aliases.) API. If your KB is behing a REST API (just like [DBPedia Spotlight](https://www.dbpedia-spotlight.org/) here) that also can be built into a spaCy component. You can find some examples in the spaCy [docs](https://spacy.io/usage/processing-pipelines/#component-example3).
 
 ## Things to watch out for
 
