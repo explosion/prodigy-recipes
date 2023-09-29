@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Iterable, Optional, Union
+from typing import Iterable, Optional, Union, List
 
 import srsly
 from spacy.cli._util import parse_config_overrides
@@ -47,7 +47,6 @@ def add_model_check_suggestions(stream: StreamType) -> StreamType:
     loader=("Loader (guessed from file extension if not set)", "option", "lo", str),
     segment=("Split articles into sentences", "flag", "S", bool),
     component=("Name of the component to use for annotation", "option", "c", str),
-    overrides=("Overrides for the spacy-llm config file", "positional", None, str),
     # fmt: on
 )
 def llm_correct_ner_model_check(
@@ -57,13 +56,13 @@ def llm_correct_ner_model_check(
     loader: Optional[str] = None,
     segment: bool = False,
     component: str = "llm",
-    *overrides: str,
+    _extra: List[str] = [],
 ) -> ControllerComponentsDict:
     """
     Perform zero- or few-shot annotation with the aid of large language models.
     """
     log("RECIPE: Starting recipe ner.llm.correct", locals())
-    config_overrides = parse_config_overrides(list(overrides)) if overrides else {}
+    config_overrides = parse_config_overrides(list(_extra)) if _extra else {}
     config_overrides[f"components.{component}.save_io"] = True
     # In case of API auth errors the following call to `assemble` will throw a UserWarning
     # rather than an Exception, which makes it hard for us to gracefully handle here.
