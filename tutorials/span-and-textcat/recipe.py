@@ -23,7 +23,7 @@ def custom_recipe(dataset, lang, file_in):
 
     nlp = spacy.blank(lang)
     stream = JSONL(file_in)
-    stream = add_tokens(nlp, stream, use_chars=None)
+    stream = add_tokens(nlp, stream)
 
     stream = add_options(stream)
     blocks = [
