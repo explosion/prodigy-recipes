@@ -1,22 +1,18 @@
 import copy
-from typing import Dict, Iterable, List, Callable, Tuple, Optional, Any
-from prodigy.components.stream import get_stream
-from prodigy.core import recipe, Arg
-from prodigy.types import StreamType
-from prodigy.protocols import ControllerComponentsDict
-from prodigy.util import log
-from prodigy.components.preprocess import split_sentences
-import spacy
-from prodigy.core import Controller
 from collections import Counter
-from wasabi import msg
-from prodigy.util import set_hashes
+from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple
+
+import spacy
+from prodigy.components.preprocess import (make_ner_suggestions,
+                                           make_spancat_suggestions,
+                                           resolve_labels, split_sentences)
+from prodigy.components.stream import get_stream
+from prodigy.core import Arg, Controller, recipe
+from prodigy.protocols import ControllerComponentsDict
 from prodigy.recipes.train import setup_gpu
-from prodigy.components.preprocess import (
-    make_ner_suggestions,
-    make_spancat_suggestions,
-    resolve_labels,
-)
+from prodigy.types import StreamType
+from prodigy.util import log, set_hashes
+from wasabi import msg
 
 
 def get_errors(gold: Dict, pred: Dict) -> Dict:
