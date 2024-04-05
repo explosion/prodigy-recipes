@@ -3,9 +3,12 @@ from collections import Counter
 from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple
 
 import spacy
-from prodigy.components.preprocess import (make_ner_suggestions,
-                                           make_spancat_suggestions,
-                                           resolve_labels, split_sentences)
+from prodigy.components.preprocess import (
+    make_ner_suggestions,
+    make_spancat_suggestions,
+    resolve_labels,
+    split_sentences,
+)
 from prodigy.components.stream import get_stream
 from prodigy.core import Arg, Controller, recipe
 from prodigy.protocols import ControllerComponentsDict
@@ -25,22 +28,19 @@ def get_errors(gold: Dict, pred: Dict) -> Dict:
         errors: Dict, dictionary of erroneouns spans with keys "FP", "FN", "TP"
     """
     errors: Dict[str, List[Dict[Any, Any]]] = {"FP": [], "FN": [], "TP": []}
-    all_spans = set([tuple(d.items()) for d in gold["spans"]]).union(
-        set([tuple(d.items()) for d in pred["spans"]])
+    all_spans = set([tuple(d.items()) for d in gold.get("spans", [])]).union(
+        set([tuple(d.items()) for d in pred.get("spans", [])])
     )
-
     for span_tuple in all_spans:
         span = dict(span_tuple)
-        in_gold = span in gold["spans"]
-        in_pred = span in pred["spans"]
-
+        in_gold = span in gold.get("spans", [])
+        in_pred = span in pred.get("spans", [])
         if in_gold and in_pred:
             errors["TP"].append(span)
         elif in_gold:
             errors["FN"].append(span)
         elif in_pred:
             errors["FP"].append(span)
-
     return errors
 
 
@@ -56,10 +56,6 @@ def annotate_errors(gold: Dict, pred: Dict) -> List[Dict]:
         tasks: List[Dict], list of tasks with one error per task
     """
     tasks = []
-
-    # Ensure text match between gold and pred examples
-    assert gold["text"] == pred["text"], "Mismatch in gold and pred example."
-
     # Get errors
     errors = get_errors(gold, pred)
 
@@ -208,9 +204,27 @@ def filter_labels(stream: StreamType, labels: List[str]) -> Iterable[Dict]:
         new_task: Dict, task with only the labels specified in the recipe CLI.
     """
     for task in stream:
-        new_task = copy.deepcopy(task)
-        new_task["spans"] = [span for span in task["spans"] if span["label"] in labels]
-        yield new_task
+        if "spans" not in task:
+            yield task
+        else:
+            new_task = copy.deepcopy(task)
+            new_task["spans"] = [
+                span for span in task["spans"] if span["label"] in labels
+            ]
+            yield new_task
+
+
+def filter_keys(d: Dict, keys: set) -> Dict:
+    """
+    Filter a dictionary to keep only the keys specified in the set.
+    Args:
+        d: Dict, dictionary to filter
+        keys: set, set of keys to keep
+    Returns:
+        new_d: Dict, dictionary with only the keys specified in the set.
+    """
+    new_d = {key: value for key, value in d.items() if key in keys}
+    return new_d
 
 
 @recipe(
@@ -281,13 +295,16 @@ def error_analysis(
         zip(gold_examples, list(pred_stream))
     )
     stream_lst = []
+    span_keys = {"token_start", "token_end", "start", "end", "label"}
     for pair in annotation_pairs:
         gold_example, pred_example = pair
-        # we'll be comparing span dictionaries so we need to remove the source
-        for span in gold_example["spans"]:
-            span.pop("source", None)
-        for span in pred_example["spans"]:
-            span.pop("source", None)
+        # only use `token_start` and `token_end`, `start`, `end` and `label`` for comparison
+        gold_example["spans"] = [
+            filter_keys(span, span_keys) for span in gold_example.get("spans", [])
+        ]
+        pred_example["spans"] = [
+            filter_keys(span, span_keys) for span in pred_example.get("spans", [])
+        ]
         # generate task list, one task per error
         tasks = annotate_errors(gold_example, pred_example)
         stream_lst.extend(tasks)
