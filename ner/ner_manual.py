@@ -69,7 +69,7 @@ def ner_manual(
     # faster highlighting, because the selection can "snap" to token boundaries.
     # If `use_chars` is True, tokens are split into individual characters, which enables
     # character based selection as opposed to default token based selection.
-    stream = add_tokens(nlp, stream, use_chars=highlight_chars)
+    stream = add_tokens(nlp, stream)
 
     return {
         "view_id": "ner_manual",  # Annotation interface to use
@@ -81,5 +81,6 @@ def ner_manual(
         "config": {  # Additional config settings, mostly for app UI
             "lang": nlp.lang,
             "labels": label,  # Selectable label options
+            "ner_manual_highlight_chars": highlight_chars,
         },
     }
