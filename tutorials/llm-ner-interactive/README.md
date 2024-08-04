@@ -4,7 +4,7 @@ This recipe demonstrates the custom Prodigy Recipe Event Hooks feature which add
 
 Event hooks can be returned from a Prodgiy Recipe as an additional component alongside the `dataset`, `view_id`, etc. mapping the event name, to a custom function.
 
-Read more about the [Prodigy Event Hooks Docs](https://prodi.gy/event-hooks).
+Read more about the [Prodigy Event Hooks Docs](https://prodi.gy/docs/custom-interfaces#custom-events).
 
 ```python
 from prodigy import Controller, recipe
