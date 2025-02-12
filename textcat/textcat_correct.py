@@ -4,7 +4,6 @@ import prodigy
 from prodigy.components.loaders import JSONL
 from prodigy.util import split_string
 import spacy
-from spacy.tokens import Doc
 from spacy.training import Example
 
 
