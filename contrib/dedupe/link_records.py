@@ -280,3 +280,4 @@ def link_records(dataset, left_record_file_path, right_record_file_path, fields_
             'html_template': html_template
         }
     }
+
